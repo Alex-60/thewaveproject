@@ -6,6 +6,7 @@
 	
         require "facebook-php-sdk-v4-4.0-dev/autoload.php";
 
+<<<<<<< HEAD
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
@@ -83,3 +84,11 @@
 		?>
 </body>
 </html>
+=======
+echo "test";
+
+echo "zakaria essadeq";
+
+echo "TEST DOUG";
+?>
+>>>>>>> 13bf54ab9ead6ca65bc993f1faa2b4fe1418c364
