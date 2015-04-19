@@ -40,6 +40,7 @@
     <meta charset="UTF-8">
     <title>The Wave Project</title>
     <link href="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    
 </head>
 <body>
     <script>
