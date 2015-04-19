@@ -69,14 +69,29 @@
 
     <br>
        <?php
-			if($session)
+			if($session)				
 			{
-				$_SESSION['fb_token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest( $session,"GET","/me");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject(GraphUser::className());
-				echo "Bonjour ".$user->getName();
-			}else{
+				try
+					{
+
+						$_SESSION['fb_token'] = (string) $session->getAccessToken();
+						$request_user = new FacebookRequest( $session,"GET","/me");
+						$request_user_executed = $request_user->execute();
+						$user = $request_user_executed->getGraphObject(GraphUser::className());
+						echo "Bonjour ".$user->getName();
+
+					}
+				catch (Exception $e)
+					{
+						$_SESSION = null;
+						session_destroy();
+						header('Location : index.php');
+					}
+				
+				
+			}
+			else
+			{
 				$loginUrl = $helper->getLoginUrl();
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
