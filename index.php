@@ -38,10 +38,16 @@
 <html id="test1" lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <title>The Wave Project</title>
+    
+    <link href="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-    <link href="stylesheet" type="text/css" href="/bootstrap/css/wave.css">
+    
+    
     
 </head>
 <body>
@@ -103,7 +109,7 @@
 			}
 		?>
     
-    <div id="zak" style="color:red;">zakaaria</div>
+    <div id="zak">zakaaria</div>
 </body>
 </html>
 
