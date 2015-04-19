@@ -1,7 +1,6 @@
 html #test1{
-    //background: url(images/kitesurf_Optim.jpg)no-repeat center center fixed;
+    background: url(images/kitesurf_Optim.jpg)no-repeat center center fixed;
      background-size: cover;
-    background-color: red;
 }
 
 #zak
