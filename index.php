@@ -80,7 +80,7 @@
                   data-show-faces="true">
             </div>
     
-    </div>
+    
 
     <br>
        <?php
@@ -114,7 +114,7 @@
 			}
 		?>
     
-    <div id="zak">zakaaria</div>
+    </div>
 </body>
 </html>
 
