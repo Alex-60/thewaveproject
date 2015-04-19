@@ -103,7 +103,7 @@
 			}
 		?>
     
-    <div id="zak">zakaaria</div>
+    <div id="zak" style="color:red;">zakaaria</div>
 </body>
 </html>
 
