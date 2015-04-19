@@ -70,13 +70,16 @@
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
 		
+	<div id="presentation">
 		<h1>The Wave Concours</h1>
    
-   <div
-      class="fb-like"
-      data-share="true"
-      data-width="450"
-      data-show-faces="true">
+           <div>
+                  class="fb-like"
+                  data-share="true"
+                  data-width="450"
+                  data-show-faces="true">
+            </div>
+    
     </div>
 
     <br>
