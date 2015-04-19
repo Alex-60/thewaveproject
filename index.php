@@ -41,7 +41,7 @@
     
     <title>The Wave Project</title>
     
-    <link href="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
+    <link href="stylesheet" type="text/css" href="/bootstrap/css/wave.css">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
