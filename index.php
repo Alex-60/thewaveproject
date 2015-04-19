@@ -84,6 +84,7 @@
 						$user = $request_user_executed->getGraphObject(GraphUser::className());
 						var_dump($user);
 						echo "Bonjour ".$user->getName();
+                    
 
 					}
 				catch (Exception $e)
@@ -101,6 +102,8 @@
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
+    
+    <div id="zak">zakaaria</div>
 </body>
 </html>
 
