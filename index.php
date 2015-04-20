@@ -24,12 +24,26 @@
 	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
+        
+        $params = array(
+          'scope' => 'read_stream, friends_likes,public_action',
+          'redirect_uri' => 'https://www.myapp.com/post_login_page'
+        );
+
+$loginUrl = $facebook->getLoginUrl($params);
+        
+        
 	}
 	//Sinon j'affiche le lien de connection
 	else
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
+
+
+
+
+
 	
 ?>
 
