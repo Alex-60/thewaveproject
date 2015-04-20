@@ -144,7 +144,7 @@
                         // a specific album by using /ALBUM_ID as the path     
                         $response = (new FacebookRequest(
                           $session, 'POST', '/me/photos', array(
-                            'url' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                            'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
                             'message' => 'User provided message'
                           )
                         ))->execute()->getGraphObject();
