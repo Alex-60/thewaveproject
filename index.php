@@ -93,8 +93,8 @@
 						$request_user = new FacebookRequest( $session,"GET","/me");
 						$request_user_executed = $request_user->execute();
 						$user = $request_user_executed->getGraphObject(GraphUser::className());
-						var_dump($user);
 						echo "Bonjour ".$user->getName();
+                        var_dump($user);
                     
 
 					}
