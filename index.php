@@ -100,14 +100,27 @@
                     
                     //upload a user's picture
                     
-             $params = array('read_stream,publish_stream,publish_actions,offline_access');
+             //$params = array('read_stream,publish_stream,publish_actions,offline_access');
                     
-                    $response = (new FacebookRequest(
-                          $session, 'POST', '/me/photos', array(
-                            'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-                            'message' => 'User provided message'
-                          )
-                        ))->execute()->getGraphObject($params);
+                    //$response = (new FacebookRequest(
+                         // $session, 'POST', '/me/photos', array(
+                            //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                            //'message' => 'User provided message'
+                          //)
+                        //))->execute()->getGraphObject($params);
+                    
+    $response = (new FacebookRequest(
+    $session,'POST','me/photos',array(
+        'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+        'message' => 'User provided'
+    )     
+    ))->execute()->getGraphObject();
+                    
+                    if($response)
+                    {
+                        echo "yes zakiii";
+                    }
+                    
 
 					}
 				catch (Exception $e)
