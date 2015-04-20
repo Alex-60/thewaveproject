@@ -128,8 +128,8 @@
                         echo "yes zakiii";
                     }
                   
-         $scope = array('publish_actions');
-        $loginUrl = $helper->getLoginUrl($scope);
+         //$scope = array('publish_actions');
+        //$loginUrl = $helper->getLoginUrl($scope);
         
         
               catch(FacebookRequestException $e){
