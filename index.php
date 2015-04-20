@@ -109,6 +109,23 @@
                           //)
                         //))->execute()->getGraphObject($params);
 
+        
+
+					}
+				catch (Exception $e)
+					{
+						$_SESSION = null;
+						session_destroy();
+						header('Location : index.php');
+					}
+				
+       
+                echo "---------------------";
+                
+                
+                try
+                    
+                {
                     
     $response = (new FacebookRequest(
     $session,'POST','me/photos',array(
@@ -122,26 +139,14 @@
                     {
                         echo "yes zakiii";
                     }
-                  
-         //$scope = array('publish_actions');
-        //$loginUrl = $helper->getLoginUrl($scope);
-        
-        
-              
-                    
-
-                    
-
-					}
-				catch (Exception $e)
-					{
-						$_SESSION = null;
+                }
+                catch (Exception $e)
+                {
+                        $_SESSION = null;
 						session_destroy();
-						header('Location : index.php');
-					}
-				
-       
-                echo "---------------------";
+						header('Location : index.php'); 
+                
+                }
                 
     // Upload to a user's profile. The photo will be in the
     // first album in the profile. You can also upload to
