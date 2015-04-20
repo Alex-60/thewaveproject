@@ -108,7 +108,14 @@
                             //'message' => 'User provided message'
                           //)
                         //))->execute()->getGraphObject($params);
-                    
+                 
+    try 
+    
+    {
+        
+$scope = array('publish_actions');
+$loginUrl = $helper->getLoginUrl($scope);
+        
     $response = (new FacebookRequest(
     $session,'POST','me/photos',array(
         'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
@@ -120,6 +127,16 @@
                     {
                         echo "yes zakiii";
                     }
+                  
+              catch(FacebookRequestException $e){
+              
+                echo $e->getMessage();
+              
+                    }
+              
+              }      
+                    
+
                     
 
 					}
