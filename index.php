@@ -89,6 +89,8 @@
 				try
 					{
 
+                    //show the user's informations
+                    
 						$_SESSION['fb_token'] = (string) $session->getAccessToken();
 						$request_user = new FacebookRequest( $session,"GET","/me");
 						$request_user_executed = $request_user->execute();
@@ -96,6 +98,16 @@
 						var_dump($user);
 						echo "Bonjour ".$user->getName();
                     
+                    //upload a user's picture
+                    
+             $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access', redirect_uri => 'Redirect_URL' );
+                    
+                    $response = (new FacebookRequest(
+                          $session, 'POST', '/me/photos', array(
+                            'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                            'message' => 'User provided message'
+                          )
+                        ))->execute()->getLoginUrl($params);
 
 					}
 				catch (Exception $e)
@@ -130,7 +142,7 @@
                         // Upload to a user's profile. The photo will be in the
                         // first album in the profile. You can also upload to
                         // a specific album by using /ALBUM_ID as the path     
-                        $response = (new FacebookRequest(
+                       /* $response = (new FacebookRequest(
                           $session, 'POST', '/me/photos', array(
                             'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
                             'message' => 'User provided message'
@@ -142,14 +154,11 @@
 
                         echo "Posted with id: " . $response->getProperty('id');
                     
-                    
-                    
                         $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access',
-                        redirect_uri => 'Redirect_URL'
-                );
+                        redirect_uri => 'Redirect_URL' );
                   $loginUrl = $facebook->getLoginUrl($params);
               
-         
+         */
                 
 				
 			}
