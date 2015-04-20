@@ -132,7 +132,7 @@
                 /*  */
                 if ($session) {
                     
-                  $logoutUrl = $facebook->getLogoutUrl();
+                  $logoutUrl = $session->getLogoutUrl();
                     
                     
                 } else 
