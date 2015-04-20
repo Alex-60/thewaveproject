@@ -108,26 +108,28 @@
        
                 echo "yes";
                 
-                //if the album doesn't existe we create it :
-                
-                $facebook->setFileUploadSupport(true);
-                $args = array('message' => 'Photo Caption');
-                $args['image'] = '@' . realpath($FILE_PATH);
+    // Upload to a user's profile. The photo will be in the
+    // first album in the profile. You can also upload to
+    // a specific album by using /ALBUM_ID as the path     
+    $response = (new FacebookRequest(
+      $session, 'POST', '/me/photos', array(
+        'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+        'message' => 'User provided message'
+      )
+    ))->execute()->getGraphObject();
 
-                $data = $facebook->api('/images/kitesurf_Optim.jpg', 'post', $args);
-                print_r($data);
-                
-                
-                //we poste the picture
-   
-                $facebook->setFileUploadSupport(true);
-                $args = array('message' => 'Photo Caption');
-                $args['image'] = '@' . realpath($FILE_PATH);
+    //// If you're not using PHP 5.5 or later, change the file reference to:
+    // 'source' => '@/path/to/file.name'
 
-                $data = $facebook->api('/'. $ALBUM_ID . '/photos', 'post', $args);
-                print_r($data);
+    echo "Posted with id: " . $response->getProperty('id');
+
+
+
                 
                 
+                
+                
+				
 			}
 			else
 			{
