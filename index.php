@@ -129,16 +129,7 @@
                 
                 
                 
-                /*  */
-                if ($session) {
-                    
-                  //$logoutUrl = $session->getLogoutUrl();
-                    
-                    
-                } else 
-                
-                {
-                    
+              
                         // Upload to a user's profile. The photo will be in the
                         // first album in the profile. You can also upload to
                         // a specific album by using /ALBUM_ID as the path     
@@ -160,8 +151,7 @@
                         redirect_uri => 'Redirect_URL'
                 );
                   $loginUrl = $facebook->getLoginUrl($params);
-                }
-
+              
                 
                 
                 
