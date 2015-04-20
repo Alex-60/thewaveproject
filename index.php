@@ -155,10 +155,8 @@
 			}
 			else
 			{
-                $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access',
-                        redirect_uri => 'Redirect_URL'
-                                
-				$loginUrl = $helper->getLoginUrl($params);
+                
+				$loginUrl = $helper->getLoginUrl();
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
