@@ -108,29 +108,28 @@
        
                 echo "yes";
                 
-           //At the time of writing it is necessary to enable upload support in the Facebook SDK, you do this with the line:
-            $facebook->setFileUploadSupport(true);
+    // Upload to a user's profile. The photo will be in the
+    // first album in the profile. You can also upload to
+    // a specific album by using /ALBUM_ID as the path     
+    $response = (new FacebookRequest(
+      $session, 'POST', '/me/photos', array(
+        'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+        'message' => 'User provided message'
+      )
+    ))->execute()->getGraphObject();
 
-            //Create an album
-            $album_details = array(
-                    'message'=> 'Album desc',
-                    'name'=> 'Album name'
-            );
-            $create_album = $facebook->api('/me/albums', 'post', $album_details);
+    //// If you're not using PHP 5.5 or later, change the file reference to:
+    // 'source' => '@/path/to/file.name'
 
-            //Get album ID of the album you've just created
-            $album_uid = $create_album['id'];
+    echo "Posted with id: " . $response->getProperty('id');
 
-            //Upload a photo to album of ID...
-            $photo_details = array(
-                'message'=> 'Photo message'
-            );
-            $file='app.jpg'; //Example image file
-            $photo_details['image'] = '@' . realpath($file);
 
-            $upload_photo = $facebook->api('/'.$album_uid.'/photos', 'post', $photo_details);
+
                 
                 
+                
+                
+				
 			}
 			else
 			{
