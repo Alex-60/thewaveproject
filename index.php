@@ -107,7 +107,7 @@
                             'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
                             'message' => 'User provided message'
                           )
-                        ))->execute()->getLoginUrl($params);
+                        ))->execute()->getGraphObject($params);
 
 					}
 				catch (Exception $e)
