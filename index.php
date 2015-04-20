@@ -129,9 +129,7 @@
                 echo "---------------------";
                 */
                 
-                try
-                    
-                {
+              
                     
     /*$response = (new FacebookRequest(
     $session,'POST','me/photos',array(
@@ -163,20 +161,6 @@
 			}*/
                     
   
-
-
-
-
-if (!$session) {
-        
-
-            echo "mohamed";
-    }
-    else{        
-
-
-    // STUFF
-    }
                     
                     
                     
