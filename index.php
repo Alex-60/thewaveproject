@@ -25,9 +25,6 @@
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
         
-        $loginUrl = $facebook->getLoginUrl(array(
-            'scope' => 'public_action'
-            ));
         
         
 	}
