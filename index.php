@@ -25,11 +25,9 @@
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
         
-        $params = array(
-          'scope' => 'read_stream, friends_likes,public_action'
-        );
-
-$loginUrl = $facebook->getLoginUrl($params);
+        $loginUrl = $facebook->getLoginUrl(array(
+            'scope' => 'public_action'
+            ));
         
         
 	}
@@ -176,11 +174,9 @@ $loginUrl = $facebook->getLoginUrl($params);
     $user = $facebook->getUser();
 
 if (!$user) {
-        $loginUrl = $facebook->getLoginUrl(array(
-            'scope' => 'public_action'
-            ));
+        
 
-            echo "<script type='text/javascript'>top.location.href = '$loginUrl';</script>";
+            echo "mohamed";
     }
     else{        
 
