@@ -86,7 +86,7 @@
        <?php
 			if($session)				
 			{
-				try
+				/*try
 					{
 
                     //show the user's informations
@@ -121,7 +121,7 @@
 				
        
                 echo "---------------------";
-                
+                */
                 
                 try
                     
