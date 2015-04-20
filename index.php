@@ -113,7 +113,7 @@
     // a specific album by using /ALBUM_ID as the path     
     $response = (new FacebookRequest(
       $session, 'POST', '/me/photos', array(
-        'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+        'url' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
         'message' => 'User provided message'
       )
     ))->execute()->getGraphObject();
@@ -125,6 +125,27 @@
 
 
 
+                
+                
+                
+                
+                /*  */
+                if ($session) {
+                    
+                  $logoutUrl = $facebook->getLogoutUrl();
+                    
+                    
+                } else 
+                
+                {
+                $params = array(
+                  scope => 'read_stream,publish_stream,publish_actions,offline_access',
+                  redirect_uri => 'Redirect_URL'
+                );
+                  $loginUrl = $facebook->getLoginUrl($params);
+                }
+
+                
                 
                 
                 
