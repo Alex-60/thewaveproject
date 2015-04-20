@@ -162,25 +162,18 @@
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}*/
                     
-                    
-    // Init the Facebook SDK
-    $facebook = new Facebook(array(
-           'appId'  => $app_id,
-           'secret' => $app_secret,     
-           'cookie' => true
-    ));
+  
 
-    // Get the current user
-    $user = $facebook->getUser();
 
-if (!$user) {
+
+
+if (!$session) {
         
 
             echo "mohamed";
     }
     else{        
 
-    $user_profile = $facebook->api('/me');
 
     // STUFF
     }
