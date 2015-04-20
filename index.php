@@ -122,14 +122,16 @@
     )     
     ))->execute()->getGraphObject();
         
-        $scope = array('publish_actions');
-        $loginUrl = $helper->getLoginUrl($scope);
                     
                     if($response)
                     {
                         echo "yes zakiii";
                     }
                   
+         $scope = array('publish_actions');
+        $loginUrl = $helper->getLoginUrl($scope);
+        
+        
               catch(FacebookRequestException $e){
               
                 echo $e->getMessage();
