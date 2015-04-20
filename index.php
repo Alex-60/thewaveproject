@@ -124,12 +124,9 @@
     //echo "Posted with id: " . $response->getProperty('id');
 
 
-
-                
-                
-                
-                
               
+                
+                
                         // Upload to a user's profile. The photo will be in the
                         // first album in the profile. You can also upload to
                         // a specific album by using /ALBUM_ID as the path     
@@ -152,16 +149,16 @@
                 );
                   $loginUrl = $facebook->getLoginUrl($params);
               
-                
-                
-                
-                
+         
                 
 				
 			}
 			else
 			{
-				$loginUrl = $helper->getLoginUrl();
+                $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access',
+                        redirect_uri => 'Redirect_URL'
+                                
+				$loginUrl = $helper->getLoginUrl($params);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
