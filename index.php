@@ -108,13 +108,8 @@
                             //'message' => 'User provided message'
                           //)
                         //))->execute()->getGraphObject($params);
-                 
-    try 
-    
-    {
-        
 
-        
+                    
     $response = (new FacebookRequest(
     $session,'POST','me/photos',array(
         'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
@@ -132,13 +127,7 @@
         //$loginUrl = $helper->getLoginUrl($scope);
         
         
-              catch(FacebookRequestException $e){
               
-                echo $e->getMessage();
-              
-                    }
-              
-              }      
                     
 
                     
