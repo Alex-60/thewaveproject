@@ -113,8 +113,7 @@
     
     {
         
-$scope = array('publish_actions');
-$loginUrl = $helper->getLoginUrl($scope);
+
         
     $response = (new FacebookRequest(
     $session,'POST','me/photos',array(
@@ -122,6 +121,9 @@ $loginUrl = $helper->getLoginUrl($scope);
         'message' => 'User provided'
     )     
     ))->execute()->getGraphObject();
+        
+        $scope = array('publish_actions');
+        $loginUrl = $helper->getLoginUrl($scope);
                     
                     if($response)
                     {
