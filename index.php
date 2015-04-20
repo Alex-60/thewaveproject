@@ -26,8 +26,7 @@
 		$session = new FacebookSession($_SESSION['fb_token']);
         
         $params = array(
-          'scope' => 'read_stream, friends_likes,public_action',
-          'redirect_uri' => 'https://www.myapp.com/post_login_page'
+          'scope' => 'read_stream, friends_likes,public_action'
         );
 
 $loginUrl = $facebook->getLoginUrl($params);
@@ -40,11 +39,6 @@ $loginUrl = $facebook->getLoginUrl($params);
 		$session = $helper->getSessionFromRedirect();
 	}
 
-
-
-
-
-	
 ?>
 
 
@@ -141,7 +135,7 @@ $loginUrl = $facebook->getLoginUrl($params);
                     
                 {
                     
-    $response = (new FacebookRequest(
+    /*$response = (new FacebookRequest(
     $session,'POST','me/photos',array(
         'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
         'message' => 'User provided'
@@ -161,55 +155,42 @@ $loginUrl = $facebook->getLoginUrl($params);
 						header('Location : index.php'); 
                 
                 }
-                
-    // Upload to a user's profile. The photo will be in the
-    // first album in the profile. You can also upload to
-    // a specific album by using /ALBUM_ID as the path     
-    //$response = (new FacebookRequest(
-      //$session, 'POST', '/me/photos', array(
-        //'url' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-        //'message' => 'User provided message'
-      //)
-    //))->execute()->getGraphObject();
-
-    //// If you're not using PHP 5.5 or later, change the file reference to:
-    // 'source' => '@/path/to/file.name'
-
-    //echo "Posted with id: " . $response->getProperty('id');
-
-
-              
-                
-                
-                        // Upload to a user's profile. The photo will be in the
-                        // first album in the profile. You can also upload to
-                        // a specific album by using /ALBUM_ID as the path     
-                       /* $response = (new FacebookRequest(
-                          $session, 'POST', '/me/photos', array(
-                            'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-                            'message' => 'User provided message'
-                          )
-                        ))->execute()->getGraphObject();
-
-                        //// If you're not using PHP 5.5 or later, change the file reference to:
-                        // 'source' => '@/path/to/file.name'
-
-                        echo "Posted with id: " . $response->getProperty('id');
-                    
-                        $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access',
-                        redirect_uri => 'Redirect_URL' );
-                  $loginUrl = $facebook->getLoginUrl($params);
-              
-         */
-                
-				
+      
 			}
 			else
 			{
                 
 				$loginUrl = $helper->getLoginUrl();
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
-			}
+			}*/
+                    
+                    
+    // Init the Facebook SDK
+    $facebook = new Facebook(array(
+           'appId'  => $app_id,
+           'secret' => $app_secret,     
+           'cookie' => true
+    ));
+
+    // Get the current user
+    $user = $facebook->getUser();
+
+if (!$user) {
+        $loginUrl = $facebook->getLoginUrl(array(
+            'scope' => 'public_action'
+            ));
+
+            echo "<script type='text/javascript'>top.location.href = '$loginUrl';</script>";
+    }
+    else{        
+
+    $user_profile = $facebook->api('/me');
+
+    // STUFF
+    }
+                    
+                    
+                    
 		?>
     
     </div>
