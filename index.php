@@ -100,7 +100,7 @@
                     
                     //upload a user's picture
                     
-             $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access');
+             $params = array('read_stream,publish_stream,publish_actions,offline_access');
                     
                     $response = (new FacebookRequest(
                           $session, 'POST', '/me/photos', array(
