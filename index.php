@@ -108,24 +108,27 @@
        
                 echo "yes";
                 
-                //if the album doesn't existe we create it :
-                
-                $facebook->setFileUploadSupport(true);
-                $args = array('message' => 'Photo Caption');
-                $args['image'] = '@' . realpath($FILE_PATH);
+           //At the time of writing it is necessary to enable upload support in the Facebook SDK, you do this with the line:
+            $facebook->setFileUploadSupport(true);
 
-                $data = $facebook->api('/images/kitesurf_Optim.jpg', 'post', $args);
-                print_r($data);
-                
-                
-                //we poste the picture
-   
-                $facebook->setFileUploadSupport(true);
-                $args = array('message' => 'Photo Caption');
-                $args['image'] = '@' . realpath($FILE_PATH);
+            //Create an album
+            $album_details = array(
+                    'message'=> 'Album desc',
+                    'name'=> 'Album name'
+            );
+            $create_album = $facebook->api('/me/albums', 'post', $album_details);
 
-                $data = $facebook->api('/'. $ALBUM_ID . '/photos', 'post', $args);
-                print_r($data);
+            //Get album ID of the album you've just created
+            $album_uid = $create_album['id'];
+
+            //Upload a photo to album of ID...
+            $photo_details = array(
+                'message'=> 'Photo message'
+            );
+            $file='app.jpg'; //Example image file
+            $photo_details['image'] = '@' . realpath($file);
+
+            $upload_photo = $facebook->api('/'.$album_uid.'/photos', 'post', $photo_details);
                 
                 
 			}
