@@ -132,7 +132,7 @@
                 /*  */
                 if ($session) {
                     
-                  $logoutUrl = $session->getLogoutUrl();
+                  //$logoutUrl = $session->getLogoutUrl();
                     
                     
                 } else 
@@ -156,8 +156,7 @@
                     
                     
                     
-                        $params = array(
-                        scope => 'read_stream,publish_stream,publish_actions,offline_access',
+                        $params = array(scope => 'read_stream,publish_stream,publish_actions,offline_access',
                         redirect_uri => 'Redirect_URL'
                 );
                   $loginUrl = $facebook->getLoginUrl($params);
