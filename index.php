@@ -39,7 +39,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link href="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -71,7 +71,6 @@
    
 <h1>Mon Application Facebook</h1>
     
-    <h1>zak</h1>
    
    <div>
       class="fb-like"
@@ -94,10 +93,7 @@
                 
                 var_dump($user);
                 
-				echo "Bonjour ".$user->getName();
-                
-                echo "----------------";
-                
+				echo "Bonjour ".$user->getName();                
                 
                 
                 try {
