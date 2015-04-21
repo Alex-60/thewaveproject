@@ -51,6 +51,7 @@
 
 </head>
 <body>
+  <div id="prsentation">
    <script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
@@ -132,7 +133,9 @@
 			}
 		?>
         
-    
+    </div>
+    <div id="classement"></div>
+    <div id="participants"></div>
 </body>
 </html>
 
