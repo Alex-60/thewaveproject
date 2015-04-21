@@ -17,7 +17,7 @@
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 	
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
