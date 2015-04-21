@@ -10,6 +10,7 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphUser;
+    use Facebook\FacebookRequestException;
     
   
     const APPID = "767304380051847";
