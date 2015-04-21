@@ -85,7 +85,7 @@
     <br>
        <?php
 
-             $loginUrl = $facebook->getLoginUrl(array(
+             $loginUrl = $helper->getLoginUrl(array(
                 "scope" => "read_stream,publish_stream,publish_actions"
                 ));
 			//$loginUrl = $helper->getLoginUrl(['publish_stream','user_photos']);
