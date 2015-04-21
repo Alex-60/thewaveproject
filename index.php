@@ -51,7 +51,7 @@
 
 </head>
 <body>
-  <div id="prsentation">
+  <div id="presentation">
    <script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
