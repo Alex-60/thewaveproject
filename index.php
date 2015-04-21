@@ -85,9 +85,8 @@
     <br>
        <?php
 
-             $loginUrl = $helper->getLoginUrl(array(
-                "scope" => "read_stream,publish_stream,publish_actions"
-                ));
+             $loginUrl = $facebook->getLoginUrl(array("scope" => "read_stream,publish_stream,manage_pages"));
+
 			//$loginUrl = $helper->getLoginUrl(['publish_stream','user_photos']);
 			//echo "<a href='".$loginUrl."'>Se connecter</a>";
 	   
