@@ -1,4 +1,3 @@
-
 <?php
         error_reporting(E_ALL);
         ini_set("display_errors", 1);
@@ -42,9 +41,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
-    <link href="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
-    <title>Projet ESGI RS</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
+    <title>Application Facebook - The Wave</title>
     
     
 
