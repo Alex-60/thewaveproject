@@ -92,10 +92,10 @@
                 
                 $response = (new FacebookRequest(
                   $session, 'POST', '/me/photos', array(
-                    'url' => "./images/Kite_Surf.jpg",
+                    'url' => './images/Kite_Surf.jpg',
                       
                       //'source' => ('./images/Kite_Surf.jpg', 'image/png'),
-                      'source' => file_get_contents('./images/Kite_Surf.jpg'),
+                      //'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     'message' => 'User provided message',
                   )
                 ))->execute()->getGraphObject();
