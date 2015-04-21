@@ -134,8 +134,8 @@
 		?>
         
     </div>
-    <div id="classement"></div>
-    <div id="participants"></div>
+    <div id="classement">Classement</div>
+    <div id="participants">Participants</div>
 </body>
 </html>
 
