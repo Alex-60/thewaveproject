@@ -91,7 +91,8 @@
                 
                 $response = (new FacebookRequest(
                   $session, 'POST', '/me/photos', array(
-                    'url' => "./images/kitesurf_Optim.jpg",
+                    //'url' => "./images/kitesurf_Optim.jpg",
+                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/png'),
                     'message' => 'User provided message'
                   )
                 ))->execute()->getGraphObject();
@@ -101,7 +102,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['user_photos,publish_actions']);
+				$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
