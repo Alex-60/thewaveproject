@@ -92,9 +92,9 @@
                 
                
                 
-                var_dump($user);
+                //var_dump($user);
                 
-				echo "Bonjour ".$user->getName();                
+				//echo "Bonjour ".$user->getName();                
                 
                 
                 try {
