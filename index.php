@@ -18,6 +18,9 @@
     const APPID = "767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
+    $loginUrl = $facebook->getLoginUrl(array(
+    "scope" => "read_stream,publish_stream,publish_actions"
+    ));
 
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 
