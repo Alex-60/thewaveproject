@@ -99,8 +99,6 @@
                 
                 
                 try {
-                    
-                  $loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
 
 				// Upload to a user's profile. The photo will be in the
 				// first album in the profile. You can also upload to
@@ -129,7 +127,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_posts']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
