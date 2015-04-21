@@ -23,8 +23,7 @@
 	// alors je veux créer mon utilisateur à partir de cette session
 	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
-		$session = new FacebookSession($_SESSION['fb_token']);
-        
+		$session = new FacebookSession($_SESSION['fb_token']); 
         
 	}
 	//Sinon j'affiche le lien de connection
@@ -70,7 +69,7 @@
 		     js.src = "//connect.facebook.net/fr_FR/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-		</script>
+   </script>
 		
 	<div id="presentation">
 		<h1>The Wave Concours</h1>
@@ -90,7 +89,6 @@
 			{
 				try
 					{
-
                     //show the user's informations
                     
 						$_SESSION['fb_token'] = (string) $session->getAccessToken();
@@ -111,8 +109,6 @@
                           //)
                         //))->execute()->getGraphObject($params);
 
-        
-
 					}
 				catch (Exception $e)
 					{
@@ -121,7 +117,6 @@
 						header('Location : index.php');
 					}
 				
-       
                 echo "---------------------";
                 
             }
