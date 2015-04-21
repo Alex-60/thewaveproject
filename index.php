@@ -91,6 +91,8 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
                 
+                $loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
+                
                 var_dump($user);
                 
 				echo "Bonjour ".$user->getName();                
