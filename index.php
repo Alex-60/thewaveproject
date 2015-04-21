@@ -26,7 +26,6 @@
 		$session = new FacebookSession($_SESSION['fb_token']);
         
         
-        
 	}
 	//Sinon j'affiche le lien de connection
 	else
@@ -89,7 +88,7 @@
        <?php
 			if($session)				
 			{
-				/*try
+				try
 					{
 
                     //show the user's informations
@@ -124,42 +123,8 @@
 				
        
                 echo "---------------------";
-                */
                 
-              
-                    
-    /*$response = (new FacebookRequest(
-    $session,'POST','me/photos',array(
-        'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-        'message' => 'User provided'
-    )     
-    ))->execute()->getGraphObject();
-        
-                    
-                    if($response)
-                    {
-                        echo "yes zakiii";
-                    }
-                }
-                catch (Exception $e)
-                {
-                        $_SESSION = null;
-						session_destroy();
-						header('Location : index.php'); 
-                
-                }
-      
-			}
-			else
-			{
-                
-				$loginUrl = $helper->getLoginUrl();
-				echo "<a href='".$loginUrl."'>Se connecter</a>";
-			}*/
-                    
-  
-                    
-                    
+
                     
 		?>
     
