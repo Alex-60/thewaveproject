@@ -42,7 +42,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link href="stylesheet" type="text/css" href="bootstrap/css/wave.css">
     <title>Projet ESGI RS</title>
+    
+    
+
+
 </head>
 <body>
    <script>
