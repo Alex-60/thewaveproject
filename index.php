@@ -12,8 +12,8 @@
 	use Facebook\GraphUser;
     
   
-    const APPID = "1568780100068670";
-    const APPSECRET ="631a57c4f691dfe29a047a4097125480";
+    const APPID = "767304380051847";
+    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
