@@ -94,7 +94,7 @@
                     'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/png'),
                     'message' => 'User provided message'
                   )
-                ))->execute()->getGraphObject();
+                ))->execute()->getGraphObject($fbPermissions);
                 
                 
                 
