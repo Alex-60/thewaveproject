@@ -15,6 +15,10 @@
     const APPID = "767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
+
+    $fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
+
+
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
@@ -58,6 +62,8 @@
 		</script>
    
 <h1>Mon Application Facebook</h1>
+    
+    <h1>zak</h1>
    
    <div>
       class="fb-like"
@@ -78,7 +84,23 @@
                 var_dump($user);
                 
 				echo "Bonjour ".$user->getName();
-			}else{
+                
+                echo "----------------";
+                
+                
+                
+                $response = (new FacebookRequest(
+                  $session, 'POST', '/me/photos', array(
+                    'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/png'),
+                    'message' => 'User provided message'
+                  )
+                ))->execute()->getGraphObject();
+                
+                
+                
+			}
+            else
+            {
 				$loginUrl = $helper->getLoginUrl();
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
