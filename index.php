@@ -16,7 +16,7 @@
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
 
-    $fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
+    //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
