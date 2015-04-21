@@ -4,6 +4,9 @@
      background: url(../../images/kitesurf_Optim.jpg)no-repeat center center fixed;
      background-size: cover;
 }
+body{
+    margin-top: 10%;
+}
 #presentation{
     width: 60%;
     height: auto;
