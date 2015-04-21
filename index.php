@@ -15,9 +15,16 @@
     use Facebook\FacebookRequestException;
     
   
-    const APPID = "767304380051847";
-    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
+    //const APPID = "767304380051847";
+    //const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
+
+
+    $facebook = new Facebook(array(
+      'appId' => "767304380051847",
+      'secret' => "7f0e4cac931818f7f7dc86d722dd5e0e",
+      'cookie' => true
+    ));
    
 
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
