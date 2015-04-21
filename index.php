@@ -92,9 +92,9 @@
                 
                 $response = (new FacebookRequest(
                   $session, 'POST', '/me/photos', array(
-                    'url' => "./images/Kite_Surf.jpg",
+                    //'url' => "./images/Kite_Surf.jpg",
                       
-                      //'source' => ('./images/Kite_Surf.jpg', 'image/png'),
+                      'source' => ('./images/Kite_Surf.jpg', 'image/png'),
                       //'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     'message' => 'User provided message',
                   )
@@ -105,7 +105,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
+				$loginUrl = $helper->getLoginUrl(['publish_stream','user_photos']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
