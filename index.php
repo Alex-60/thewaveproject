@@ -92,7 +92,7 @@
                 $response = (new FacebookRequest(
                   $session, 'POST', '/me/photos', array(
                     //'url' => "./images/kitesurf_Optim.jpg",
-                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/png'),
+                      'source' => ('./images/kitesurf_Optim.jpg', 'image/png'),
                     'message' => 'User provided message'
                   )
                 ))->execute()->getGraphObject();
