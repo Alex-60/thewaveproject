@@ -119,7 +119,7 @@
 				// a specific album by using /ALBUM_ID as the path     
 				$response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
-					'url' => './images/Kite_Surf.jpg',
+					'source' => './images/Kite_Surf.jpg',
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
