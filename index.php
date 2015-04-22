@@ -120,7 +120,7 @@
 				$response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					//'source' => file_get_contents('./images/Kite_Surf.jpg'),
-                      'source' => '@'.realpath('./images/Kite_Surf.jpg'),
+                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
@@ -144,7 +144,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
