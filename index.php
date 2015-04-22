@@ -121,7 +121,7 @@
 				  $session, "POST", '/me/photos', array(
 					//'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      'source' => new CURLFile('./images/Kite_Surf.jpg', 'image/jpg'),
+                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
