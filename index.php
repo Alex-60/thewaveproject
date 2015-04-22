@@ -10,6 +10,7 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphUser;
+
     use Facebook\FacebookPermissions;
     use Facebook\FacebookPermissionException;
     use Facebook\FacebookRequestException;
@@ -56,8 +57,6 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
     <title>Application Facebook - The Wave</title>
     
-    
-
 
 </head>
 <body>
@@ -113,7 +112,7 @@
                 
                 try {
                     
-                  //$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
+                //$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
 
 				// Upload to a user's profile. The photo will be in the
 				// first album in the profile. You can also upload to
@@ -136,13 +135,12 @@
 				echo "Exception occured, code: " . $e->getCode();
 				echo " with message: " . $e->getMessage();
 
-				} 
-                
+				}  
               
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
