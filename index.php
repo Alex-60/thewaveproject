@@ -105,7 +105,7 @@
                 
                
                 
-                //var_dump($user);
+                var_dump($user);
                 
 				//echo "Bonjour ".$user->getName();                
                 
