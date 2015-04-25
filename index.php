@@ -181,7 +181,7 @@
                 echo "</br>";
                 echo "</br>";
                 
-                echo "<p>récupération des utilisateur<p>";
+                echo "<p>récupération des utilisateurs de l'appli<p>";
                 
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
