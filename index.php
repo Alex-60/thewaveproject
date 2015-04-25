@@ -190,9 +190,17 @@
                 echo "</br>";
                 echo "</br>";
                 
+                
+                
+                
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
-            $request = new FacebookRequest($session,'GET','/me/friends');
+                try{
+                
+                
+                    
+                    
+                         $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
@@ -200,7 +208,7 @@
                 
                 
                 
-                //echo "Bonjour ".$result->name();  
+                echo "Bonjour ".$graphObject->name();  
             
                 
                 var_dump($graphObject);
@@ -219,6 +227,16 @@
                     echo $friends[1]['name']; //show the name of the user 0
                 }
 
+                    
+                    
+                }catch(FacebookRequestException $e) 
+                {
+
+				echo "Exception occured, code: " . $e->getCode();
+				echo " with message: " . $e->getMessage();
+
+				}  
+       
                 
             
                 
