@@ -196,16 +196,14 @@
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
             
-                
-                var_dump($session);
-                    
+             
              
            
-           /*$request = new FacebookRequest($session,'GET','me/friends?fields=name,first_name,picture&access_token='$_SESSION['fb_token']'');
+          $request = new FacebookRequest($session,'GET','me/friends');
            $response = $request->execute();
            $graphObject = $response->getGraphObject(GraphUser::className());
                   
-            
+            $result = $graphObject->asArray();
             
                 $friends = $result['data'];
                 
@@ -216,6 +214,7 @@
                      echo $friends[0]['id']; //show the id of the user 0
                     echo "|"; 
                     echo $friends[0]['name']; //show the name of the user 0
+                    $image='https://graph.facebook.com/'.$friends[0]['id'].'/picture?width=300';
                 }
 
                     
