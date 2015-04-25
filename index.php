@@ -146,6 +146,31 @@
                 
                 echo "zakaria";
                 
+                echo "--------------------------";
+                
+                
+                
+                // Récupère la liste de tous les albums
+                    FB.api('/me/albums', function (response) {
+                     for (album in response.data) {
+                     // Extrait la photo de profile de l’album
+                        if (response.data[album].name == "Profile Pictures") {
+                          // Get a list of all photos in that album.
+                          FB.api(response.data[album].id + "/photos", function(response) {
+                            // Lien vers l’image
+                            image = response.data[0].images[0].source;
+                          });
+                        }
+                      }
+                    });
+                
+                
+                
+                echo "--------------------------";
+                
+                
+                
+                
                 
                 
               
