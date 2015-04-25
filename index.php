@@ -213,6 +213,9 @@
                 $friends = $result['data'][0];
                 
                     echo $friends->name;
+                    
+                    echo "----";
+                    echo $friends->id;
                     //var_dump ($friends[0]);
                     die();
                 
