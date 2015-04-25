@@ -155,12 +155,12 @@
                 
                 $name = $user->getName();
                 $id=$user->getId();
-                //$image='https://graph.facebook.com'.$id.'/picture?width=300';
+                $image='https://graph.facebook.com'.$id.'/picture?width=300';
                 
                 
                 echo $name;
                 echo $id;
-                
+                echo $image;
                 
                 echo "--------------------------";
                 
