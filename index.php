@@ -182,9 +182,11 @@
                 
                    
             
-                $user_friends=$facebook->api('/me/friends');
+                $request_user = new FacebookRequest( $session,"GET","/me/friends");
+                
+                //$user_friends=$facebook->api('/me/friends');
               
-                  var_dump($user_friends);
+                  var_dump($request_user);
                 
                 echo "--------------------------";
                 
