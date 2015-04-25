@@ -168,13 +168,16 @@
                 
                  echo "</br>";
                 
-                echo $name;
+                //echo $name;
                 
-                echo "</br>";
+                //echo "</br>";
                 
-                echo $id;
+                //echo $id;
                 
-                echo "</br>";
+                //echo "</br>";
+                
+                
+                echo "<p>récupération de la photo<p>";
                 
                 echo "<p><img src='$image' /></p>";
                 
