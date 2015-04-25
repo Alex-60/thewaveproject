@@ -184,6 +184,8 @@
                 $graphObject = $response->getGraphObject();
                 /* handle the result */
                 
+                
+                echo $graphObject;
                 echo "--------------------------";
                 
                 
