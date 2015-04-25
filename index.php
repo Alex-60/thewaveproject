@@ -175,9 +175,13 @@
                 
            
                   
-                  $friends = $facebook->api('/me/friends');
-
-                    var_dump($friends);
+                
+                
+                $request_user = new FacebookRequest( $session,"GET","/me/friends");
+				$request_user_executed = $request_user->execute();
+                
+                   var_dump($request_user_executed);
+                
                 echo "--------------------------";
                 
                 
