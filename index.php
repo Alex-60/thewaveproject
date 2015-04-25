@@ -208,7 +208,7 @@
 
                     $result = $graphObject->asArray();
                     
-                    var_dump($result['name']);
+                    var_dump($result[0]);
                     
                     die();
                     
