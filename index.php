@@ -46,7 +46,8 @@
 
     if( isset($_REQUEST['logout']))
     {
-        unset($_SESSION['fb_token']);
+        //unset($_SESSION['fb_token']);
+        FB.Logout();
         
     }
 
