@@ -200,11 +200,17 @@
                echo $_SESSION['fb_token']; 
            
            $request = new FacebookRequest($session,'GET','me/friends?fields=name,first_name,picture&access_token='$_SESSION['fb_token']'');
+                    
+                    echo $request;
+                    die();
+                    
            $response = $request->execute();
            $graphObject = $response->getGraphObject(GraphUser::className());
                   
             
                     var_dump($graphObject);
+                    
+                    die();
             
                 $friends = $result['data'];
                 
