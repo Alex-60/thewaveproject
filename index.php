@@ -208,12 +208,15 @@
                 
                 
                 
-                echo "Bonjour ".$graphObject->name();  
+                //echo "Bonjour ".$graphObject->name();  
             
                 
                 //var_dump($graphObject);
                 
-                
+                $friends= $facebook->api('/me/friends?token='.$session['access_token']);
+                var_dump($friends);
+                    
+                    
                 die();
                 
                 $friends = $result['data'];
