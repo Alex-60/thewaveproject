@@ -47,7 +47,8 @@
     if( isset($_REQUEST['logout']))
     {
         //unset($_SESSION['fb_token']);
-        FB.Logout();
+        session_destroy();
+        header('Location: '.'https://thewave.herokuapp.com');
         
     }
 
