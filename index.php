@@ -104,7 +104,7 @@
 	   
 
 //logout
-//$logout= 'https://thewave.herokuapp.com/';
+$logout= 'https://thewave.herokuapp.com&logout=true';
 
 
 			if($session)
