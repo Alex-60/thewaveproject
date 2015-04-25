@@ -111,11 +111,24 @@
                
                 
                 
-                $request = new FacebookRequest($session,'GET','/me/friends');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
-                
-                var_dump($graphObject);
+               \Facebook\FacebookSession::setDefaultApplication('id','secret');
+
+                $session = new \Facebook\FacebookSession('access_token');
+
+                // Check user's token is valid or not.
+                $me = (new \Facebook\FacebookRequest(
+                $session, 'GET', '/me/friends'
+                ))->execute()->getGraphObject(\Facebook\GraphUser::className());
+
+                $result = $me->asArray();
+
+                // Get user's friends
+                $friends = $result['data'];
+
+                // Converting classes to array
+                foreach ($friends as $key => $value) {
+                    $friends[$key] = (array)$value;
+                }
                 
                 
                 //var_dump($user);
