@@ -199,7 +199,12 @@
                $result = $graphObject->asArray();
                 
                 
+                
+                echo "Bonjour ".$result->getName();    
+                
                 var_dump($result);
+                
+                
                 die();
                 
                 $friends = $result['data'];
