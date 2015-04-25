@@ -44,15 +44,7 @@
 
      //si l'utilsateur veut se déconnecté
 
-    if( isset($_REQUEST['logout']))
-    {
-
-        session_destroy($_SESSION['fb_token']);
-     
-    }
-
-
-
+ 
 
 	
 ?>
@@ -106,7 +98,7 @@
 	   
 
 //logout
-$logout= 'https://thewave.herokuapp.com';
+
 
 
 			if($session)
@@ -161,14 +153,15 @@ $logout= 'https://thewave.herokuapp.com';
                 
                 echo "--------------------------";
                 
-                
+                $name = $user->getName();
+                echo $name;
              
                 
                 echo "--------------------------";
                 
                 
                 
-                echo "<a href='".$logout."'>logout</a>";
+              
                 
                 
               
