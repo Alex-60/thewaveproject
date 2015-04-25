@@ -208,10 +208,10 @@
                 
                 
                 
-                echo "Bonjour ".$graphObject->getName();  
+                echo "Bonjour ".$graphObject->getId();  
             
                 
-                var_dump($graphObject);
+                //var_dump($graphObject);
                 
                 
                 die();
