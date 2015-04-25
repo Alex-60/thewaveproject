@@ -208,7 +208,7 @@
 
                     $result = $graphObject->asArray();
                     
-                    echo $result->name;
+                    echo $result->name();
                     
                     die();
                     
