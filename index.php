@@ -210,7 +210,7 @@
               //var_dump($result);
                     //die();
                 
-                $friends = $result['data'][0]['name'];
+                $friends = $result['data'][0][0];
                 
                     var_dump ($friends);
                     die();
