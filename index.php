@@ -198,6 +198,10 @@
                   
                $result = $graphObject->asArray();
                 
+                
+                var_dump($result);
+                die();
+                
                 $friends = $result['data'];
                 
                 
