@@ -198,27 +198,15 @@
                 try{
                 
                 
-                    $request = new FacebookRequest(
-                      $session,
-                      'GET',
-                      '/me/friends'
-                    );
-                    $response = $request->execute();
-                    $graphObject = $response->getGraphObject();
-
-                    $result = $graphObject->asArray();
-                    
-                    echo $result->getName();
-                    
-                    die();
-                    
-                    
-                    
+           
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
-            $result = $graphObject->asArray();
+            
+            $graphObject->getProperty('last_name');
+                    
+                    die();
                 
             
               
