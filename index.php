@@ -213,7 +213,7 @@
                 
                 //var_dump($graphObject);
                 
-                $friends= new FacebookRequest('/me/friends?token='.$session['access_token']);
+                $friends= new FacebookRequest($session,'Get','/me/friends');
                 var_dump($friends);
                     
                     
