@@ -200,7 +200,7 @@
                 
                     
                     
-                         $request = new FacebookRequest($session,'GET','/me/friends');
+            $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
@@ -208,7 +208,7 @@
                 
                 
                 
-                echo "Bonjour ".$graphObject->name();  
+                echo "Bonjour ".$graphObject->getName();  
             
                 
                 var_dump($graphObject);
