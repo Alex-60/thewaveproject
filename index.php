@@ -195,7 +195,7 @@
                 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
-                try{
+      
                 
                 
                     
@@ -211,17 +211,24 @@
                     //die();
                 
                 $friends = $result['data'][0];
-                
                     echo $friends->name;
-                    
                     echo "----";
                     echo $friends->id;
                     $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
                     echo "<p><img src='$image' /></p>";
                     //var_dump ($friends[0]);
-                    die();
                 
-                foreach ($friends as $key => $value) 
+                
+                
+                $friends = $result['data'][1];
+                    echo $friends->name;
+                    echo "----";
+                    echo $friends->id;
+                    $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
+                    echo "<p><img src='$image' /></p>";
+                
+                
+               /* foreach ($friends as $key => $value) 
                 {
                     $friends[$key] = (array)$value;
                      echo $friends[0]['id']; //show the id of the user 0
@@ -234,18 +241,11 @@
                     echo $friends[1]['name']; //show the name of the user 0
                     
                     
-                }
+                }*/
                     
 
                     
-                    
-                }catch(FacebookRequestException $e) 
-                {
 
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
-
-				}  
        
                 
             
