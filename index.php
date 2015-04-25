@@ -113,21 +113,6 @@
                 
          
 
-                // Check user's token is valid or not.
-                $me = (new \Facebook\FacebookRequest(
-                $session, 'GET', '/me/friends'
-                ))->execute()->getGraphObject(\Facebook\GraphUser::className());
-
-                $result = $me->asArray();
-
-                // Get user's friends
-                $friends = $result['data'];
-
-                // Converting classes to array
-                foreach ($friends as $key => $value) {
-                    $friends[$key] = (array)$value;
-                }
-                
                 
                 //var_dump($user);
                 
@@ -196,6 +181,8 @@
                 echo "</br>";
                 
                 
+                $user = $facebook->api('/me/friends');
+                var_dump($user);
            
                   
                 
@@ -213,7 +200,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
                 
