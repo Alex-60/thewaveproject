@@ -189,7 +189,7 @@
             $response = $request->execute();
             $graphObject = $response->getGraphObject();
                   
-                echo $graphObject;
+                echo $graphObject[0];
                    
             
                 
