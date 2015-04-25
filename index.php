@@ -181,15 +181,11 @@
                 echo "</br>";
                 
                 
-            $request = new FacebookRequest(
-              $session,
-              'GET',
-              '/me/friends'
-            );
+            $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
-            $graphObject = $response->getGraphObject();
+            $graphObject = $response->getGraphObject(GraphUser::className());
                   
-                echo $graphObject[0];
+                echo $graphObject;
                    
             
                 
