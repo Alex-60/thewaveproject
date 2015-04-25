@@ -185,7 +185,7 @@
             $response = $request->execute();
             $graphObject = $response->getGraphObject();
                   
-                var_dump($graphObject);
+                var_dump($graphObject[0]);
                    
             
                 
