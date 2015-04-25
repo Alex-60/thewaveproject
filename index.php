@@ -183,9 +183,9 @@
                 
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
-            $graphObject = $response->getGraphObject(GraphUser::className());
+            $graphObject = $response->getGraphObject();
                   
-                echo $graphObject;
+                var_dump($graphObject);
                    
             
                 
