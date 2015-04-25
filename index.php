@@ -185,8 +185,19 @@
             $response = $request->execute();
             $graphObject = $response->getGraphObject();
                   
-                var_dump($graphObject[0]);
-                   
+               $result = $graphObject->asArray();
+                
+                $friends = $result['data'];
+                
+                
+                foreach ($friends as $key => $value) 
+                {
+                    $friends[$key] = (array)$value;
+                     echo $friends[0]['id']; //show the id of the user 0
+                    echo "|";       
+                }
+
+                
             
                 
                 echo "--------------------------";
