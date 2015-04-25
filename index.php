@@ -168,7 +168,7 @@
                 
                 echo "</br>";
                 
-                echo "<img src='$image' />";
+                echo "<p><img src='$image' /></p>";
                 
                 echo "</br>";
                 
