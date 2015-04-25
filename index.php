@@ -21,12 +21,13 @@
 
 
 
-    /*$facebook = new Facebook(array(
-      'appId' => "767304380051847",
-      'secret' => "7f0e4cac931818f7f7dc86d722dd5e0e",
-      'cookie' => true
-    ));*/
-   
+   //si l'utilsateur veut se déconnecté
+
+    if(isset($_REQUEST['logout']))
+    {
+        unset($_SESSION['fb_token']);
+        
+    }
 
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 
@@ -96,6 +97,11 @@
 			//$loginUrl = $helper->getLoginUrl(['publish_stream','user_photos']);
 			//echo "<a href='".$loginUrl."'>Se connecter</a>";
 	   
+
+//logout
+$logout= 'https://thewave.herokuapp.com/';
+
+
 			if($session)
 			{
 				$_SESSION['fb_token'] = (string) $session->getAccessToken();
@@ -149,22 +155,13 @@
                 echo "--------------------------";
                 
                 
-               /* PHP SDK v4.0.0 */
-                /* make the API call */
-                $request = new FacebookRequest(
-                  $session,
-                  'GET',
-                  '/{user-id}/picture'
-                );
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject();
-                /* handle the result */
+             
                 
                 echo "--------------------------";
                 
                 
                 
-                
+                echo "<a href='".$logout."'>logout</a>";
                 
                 
               
@@ -173,6 +170,8 @@
             {
 				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
+                
+                
 			}
 		?>
         
