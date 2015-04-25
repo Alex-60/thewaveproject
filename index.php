@@ -185,7 +185,7 @@
                 /* handle the result */
                 
                 
-                echo $graphObject;
+                var_dump($graphObject);
                 echo "--------------------------";
                 
                 
