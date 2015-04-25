@@ -173,11 +173,10 @@
                 echo "</br>";
                 
                 
-               $session = $facebook->getSession();
-                if ($session) {
-                    $uid = $facebook->getUser();
+           
+                  
                     $me = $facebook->api('/me/friends');
-                }
+            
                 print_r($me);
                 echo "--------------------------";
                 
