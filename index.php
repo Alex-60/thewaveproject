@@ -207,11 +207,13 @@
             $result = $graphObject->asArray();
                 
             
-              var_dump($result);
-                    die();
+              //var_dump($result);
+                    //die();
                 
                 $friends = $result['data'];
                 
+                    echo $friends;
+                    die();
                 
                 foreach ($friends as $key => $value) 
                 {
