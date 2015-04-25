@@ -200,7 +200,7 @@
                 
                 
                 
-                echo "Bonjour ".$result->name();  
+                //echo "Bonjour ".$result->name();  
                 
                  echo "Bonjour ".$resul['name'];  
                 
