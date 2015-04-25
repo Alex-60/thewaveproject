@@ -184,7 +184,7 @@
                 $friends = $request_user_executed->getGraphObject(GraphUser::className());
                 
                 
-                  echo $friends;
+                  var_dump ($friends);
                 
                 echo "--------------------------";
                 
