@@ -198,6 +198,18 @@
                 try{
                 
                 
+                    $request = new FacebookRequest(
+                      $session,
+                      'GET',
+                      '/me/friends'
+                    );
+                    $response = $request->execute();
+                    $graphObject = $response->getGraphObject();
+
+                    var_dump($graphObject);
+                    
+                    die();
+                    
                     
                     
             $request = new FacebookRequest($session,'GET','/me/friends');
