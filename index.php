@@ -182,9 +182,9 @@
                 
                    
             
-                
+                $user_friends=$facebook->api('/me/friends');
               
-                  
+                  var_dump($user_friends);
                 
                 echo "--------------------------";
                 
