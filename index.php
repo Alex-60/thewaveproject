@@ -200,7 +200,7 @@
                 
                 
                 
-                echo "Bonjour ".$result[0];    
+                echo "Bonjour ".$result[0][0];    
                 
                 var_dump($result);
                 
