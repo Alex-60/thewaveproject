@@ -199,11 +199,12 @@
                 
                 
            
-           $request = new FacebookRequest($session,'GET','/me/friends');
+           $request = new FacebookRequest($session,'GET','me/friends?fields=name,first_name,picture&access_token=CAAK52ZCkB8YcBADU2nwSWeq0ksu3PCnYyahgUWRUOKYDudJfesMxLD44a0GZACxUb9O2odP941QvRNZCnZBqCyCkHk88WYjZA2YZCNtIubZBjZAQunGaWMy5v8HZAKhlRIoucNZAEhcZBVkjL4MxCfXoO7HIuYRM4RUmXSGQLj1CCIWeXHKlnHqUiB9dnU1Ggi7Bgm45nIMBgtAQYlNZC2hqkIx3');
            $response = $request->execute();
            $graphObject = $response->getGraphObject(GraphUser::className());
                   
             
+                    var_dump($graphObject);
             
                 $friends = $result['data'];
                 
