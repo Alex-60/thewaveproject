@@ -112,9 +112,9 @@
                 
                 
          
-                echo $_SESSION['fb_token'];
+
                 
-                //var_dump($user);
+                var_dump($user);
                 
 				//echo "Bonjour ".$user->getName();                
                 
@@ -155,7 +155,7 @@
                 
                 
                 
-                echo "------------------------------------------------------------------------------";
+                echo "--------------------------";
                 
                 
              
@@ -195,16 +195,20 @@
                 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
-            
-             
-             
-           
-          $request = new FacebookRequest($session,'GET','me/friends');
-           $response = $request->execute();
-           $graphObject = $response->getGraphObject(GraphUser::className());
+                try{
+                
+                
+                    
+                    
+            $request = new FacebookRequest($session,'GET','/me/friends');
+            $response = $request->execute();
+            $graphObject = $response->getGraphObject(GraphUser::className());
                   
             $result = $graphObject->asArray();
+                
             
+              
+                
                 $friends = $result['data'];
                 
                 
@@ -217,10 +221,24 @@
                 }
 
                     
+                    
+                }catch(FacebookRequestException $e) 
+                {
+
+				echo "Exception occured, code: " . $e->getCode();
+				echo " with message: " . $e->getMessage();
+
+				}  
+       
                 
-                echo "<p>-------------------------------------------------------------------------------------------</p>";
+            
                 
- 
+                echo "<p>--------------------------</p>";
+                
+                
+                
+              
+                
                 
               
 			}
