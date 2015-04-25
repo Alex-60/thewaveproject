@@ -4,7 +4,7 @@
     
         session_start();
 	
-        //require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
+    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
@@ -213,7 +213,7 @@
                 
                 //var_dump($graphObject);
                 
-                $friends= $facebook->api('/me/friends?token='.$session['access_token']);
+                $friends= new FacebookRequest('/me/friends?token='.$session['access_token']);
                 var_dump($friends);
                     
                     
