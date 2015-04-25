@@ -42,14 +42,15 @@
 		$session = $helper->getSessionFromRedirect();
 	}
 
+     //si l'utilsateur veut se déconnecté
 
- //si l'utilsateur veut se déconnecté
-
-    if(isset($_REQUEST['logout']))
+    if( isset($_REQUEST['logout']))
     {
         unset($_SESSION['fb_token']);
         
     }
+
+
 
 
 	
@@ -104,7 +105,7 @@
 	   
 
 //logout
-$logout= 'https://thewave.herokuapp.com&logout=true';
+$logout= 'https://thewave.herokuapp.com';
 
 
 			if($session)
