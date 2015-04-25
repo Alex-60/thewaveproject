@@ -110,6 +110,14 @@
                 
                
                 
+                
+                $request = new FacebookRequest($session,'GET','/me/friends');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject();
+                
+                var_dump($graphObject);
+                
+                
                 //var_dump($user);
                 
 				//echo "Bonjour ".$user->getName();                
@@ -182,11 +190,6 @@
                 
                    
             
-                $request_user = new FacebookRequest( $session,"GET","/me/friends");
-                
-                //$user_friends=$facebook->api('/me/friends');
-              
-                  var_dump($request_user);
                 
                 echo "--------------------------";
                 
