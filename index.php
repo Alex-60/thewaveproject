@@ -154,6 +154,10 @@
                 echo "--------------------------";
                 
                 
+             
+                
+                
+                
                 $name = $user->getName();
                 $id=$user->getId();
                 $image='https://graph.facebook.com/'.$id.'/picture?width=300';
@@ -176,15 +180,22 @@
            
                   
                 
-                
-                $request_user = new FacebookRequest( $session,"GET","/me/friends");
-				$request_user_executed = $request_user->execute();
-                
-                
-                $friends = $request_user_executed->getGraphObject(GraphUser::className());
+                   
+                $response = (new FacebookRequest(
+				  $session, "GET", '/me/friends', 
+				))->execute()->getGraphObject();
                 
                 
-                  var_dump ($friends);
+                var_dump ($response);
+                
+                //$request_user = new FacebookRequest($session,"GET","/me/friends");
+				//$request_user_executed = $request_user->execute();
+                
+                
+               // $friends = $request_user_executed->getGraphObject(GraphUser::className());
+                
+                
+                  
                 
                 echo "--------------------------";
                 
