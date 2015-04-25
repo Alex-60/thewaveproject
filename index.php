@@ -159,8 +159,16 @@
                 
                 
                 echo $name;
+                
+                echo "</br>";
+                
                 echo $id;
-                echo $image;
+                
+                echo "</br>";
+                
+                echo "<img src='$image'>";
+                
+                echo "</br>";
                 
                 echo "--------------------------";
                 
