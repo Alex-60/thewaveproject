@@ -153,10 +153,12 @@
                 
                 echo "--------------------------";
                 
+                
                 $name = $user->getName();
                 $id=$user->getId();
                 $image='https://graph.facebook.com'.$id.'/picture?width=300';
                 
+                 echo "</br>";
                 
                 echo $name;
                 
@@ -166,7 +168,7 @@
                 
                 echo "</br>";
                 
-                echo "<img src='$image'>";
+                echo "<img src='$image' />";
                 
                 echo "</br>";
                 
