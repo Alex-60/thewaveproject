@@ -172,6 +172,11 @@
                 
                 echo "</br>";
                 
+                
+                $friends = $facebook->api('/me/friends');
+                
+                echo $friends;
+                
                 echo "--------------------------";
                 
                 
