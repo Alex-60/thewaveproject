@@ -112,7 +112,7 @@
                 
                 
          
-
+                echo $_SESSION['fb_token'];
                 
                 //var_dump($user);
                 
@@ -199,25 +199,12 @@
                 
                 
            
-           // $request = new FacebookRequest($session,'GET','/me/friends');
-           // $response = $request->execute();
-            //$graphObject = $response->getGraphObject(GraphUser::className());
+           $request = new FacebookRequest($session,'GET','/me/friends');
+           $response = $request->execute();
+           $graphObject = $response->getGraphObject(GraphUser::className());
                   
             
             
-            $request = new FacebookRequest($_SESSION['facebook'], 'GET', '/me');
-			$response = $request->execute();
-			$graphObject = $response->getGraphObject();     
-                    
-            $graphObject->getProperty('last_name');
-                    
-                
-                    
-                    die();
-                
-            
-              
-                
                 $friends = $result['data'];
                 
                 
