@@ -212,7 +212,8 @@
                 
                 $friends = $result['data'][0];
                 
-                    var_dump ($friends);
+                    echo $friends[0];
+                    //var_dump ($friends[0]);
                     die();
                 
                 foreach ($friends as $key => $value) 
