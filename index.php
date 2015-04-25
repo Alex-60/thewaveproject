@@ -216,6 +216,8 @@
                     
                     echo "----";
                     echo $friends->id;
+                    $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
+                    echo "<p><img src='$image' /></p>";
                     //var_dump ($friends[0]);
                     die();
                 
