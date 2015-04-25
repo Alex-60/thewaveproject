@@ -149,7 +149,7 @@
 				}  
                 
                 
-                echo "zakaria";
+                
                 
                 echo "--------------------------";
                 
@@ -173,19 +173,12 @@
                 echo "</br>";
                 
                 
-                /* PHP SDK v4.0.0 */
-                /* make the API call */
-                $request = new FacebookRequest(
-                  $session,
-                  'GET',
-                  '/me/friends'
-                );
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject();
-                /* handle the result */
-                
-                
-                var_dump($graphObject);
+               $session = $facebook->getSession();
+                if ($session) {
+                    $uid = $facebook->getUser();
+                    $me = $facebook->api('/me/friends');
+                }
+                print_r($me);
                 echo "--------------------------";
                 
                 
