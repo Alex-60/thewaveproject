@@ -113,7 +113,7 @@
                 
                 $request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
-                $graphObject = $response->getGraphObject();
+                $graphObject = $response->getGraphObject(GraphUser::className());
                 
                 var_dump($graphObject);
                 
