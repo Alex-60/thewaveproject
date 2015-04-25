@@ -180,7 +180,7 @@
                 $request_user = new FacebookRequest( $session,"GET","/me/friends");
 				$request_user_executed = $request_user->execute();
                 
-                   var_dump($request_user_executed);
+                  echo $request_user_executed;
                 
                 echo "--------------------------";
                 
