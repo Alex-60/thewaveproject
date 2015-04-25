@@ -21,13 +21,7 @@
 
 
 
-   //si l'utilsateur veut se déconnecté
-
-    if(isset($_REQUEST['logout']))
-    {
-        unset($_SESSION['fb_token']);
-        
-    }
+  
 
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 
@@ -47,6 +41,17 @@
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
+
+
+ //si l'utilsateur veut se déconnecté
+
+    if(isset($_REQUEST['logout']))
+    {
+        unset($_SESSION['fb_token']);
+        
+    }
+
+
 	
 ?>
 
@@ -99,7 +104,7 @@
 	   
 
 //logout
-$logout= 'https://thewave.herokuapp.com/';
+//$logout= 'https://thewave.herokuapp.com/';
 
 
 			if($session)
