@@ -121,8 +121,8 @@
 				  $session, "POST", '/me/photos', array(
 					//'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					'message' => 'User provided message'
+                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+					//'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
 
@@ -141,6 +141,12 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
+                
+                
+                echo "zakaria";
+                
+                
+                
               
 			}
             else
