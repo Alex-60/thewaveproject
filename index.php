@@ -46,10 +46,13 @@
 
     if( isset($_REQUEST['logout']))
     {
-        //unset($_SESSION['fb_token']);
-        session_destroy();
-        header('Location: '.'https://thewave.herokuapp.com');
+    
         
+        $token = $facebook->getAccessToken();
+        $url = 'https://www.facebook.com/logout.php?next='.'https://thewave.herokuapp.com' .
+          '&access_token='.$token;
+        session_destroy();
+        header('Location: '.$url);
     }
 
 
