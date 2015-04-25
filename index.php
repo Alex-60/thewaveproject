@@ -180,7 +180,11 @@
                 $request_user = new FacebookRequest( $session,"GET","/me/friends");
 				$request_user_executed = $request_user->execute();
                 
-                  echo $request_user_executed;
+                
+                $friends = $request_user_executed->getGraphObject(GraphUser::className());
+                
+                
+                  echo $friends;
                 
                 echo "--------------------------";
                 
