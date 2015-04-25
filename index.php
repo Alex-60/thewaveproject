@@ -208,7 +208,7 @@
                 
                 
                 
-                echo "Bonjour ".$graphObject->getId();  
+                echo "Bonjour ".$graphObject->getName();  
             
                 
                 //var_dump($graphObject);
