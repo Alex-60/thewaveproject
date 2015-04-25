@@ -197,7 +197,7 @@
                 
             
                 
-                echo $session;
+                var_dump($session);
                     
              
            
