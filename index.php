@@ -200,7 +200,7 @@
                 
                 
                 
-                echo "Bonjour ".$result->getName();    
+                echo "Bonjour ".$result[0];    
                 
                 var_dump($result);
                 
