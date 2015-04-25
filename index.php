@@ -114,7 +114,7 @@
          
 
                 
-                var_dump($user);
+                //var_dump($user);
                 
 				//echo "Bonjour ".$user->getName();                
                 
@@ -204,20 +204,10 @@
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
-               //$result = $graphObject->asArray();
+            $result = $graphObject->asArray();
                 
-                
-                
-                //echo "Bonjour ".$graphObject->name();  
             
-                
-                //var_dump($graphObject);
-                
-                $friends= new FacebookRequest($session,'Get','/me/friends');
-                var_dump($friends);
-                    
-                    
-                die();
+              
                 
                 $friends = $result['data'];
                 
@@ -225,9 +215,9 @@
                 foreach ($friends as $key => $value) 
                 {
                     $friends[$key] = (array)$value;
-                     echo $friends[1]['id']; //show the id of the user 0
+                     echo $friends[0]['id']; //show the id of the user 0
                     echo "|"; 
-                    echo $friends[1]['name']; //show the name of the user 0
+                    echo $friends[0]['name']; //show the name of the user 0
                 }
 
                     
