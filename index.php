@@ -195,13 +195,13 @@
                 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
-                try{
+            
                 
                 echo $session;
                     
-                    die();
+             
            
-           $request = new FacebookRequest($session,'GET','me/friends?fields=name,first_name,picture&access_token='$_SESSION['fb_token']'');
+           /*$request = new FacebookRequest($session,'GET','me/friends?fields=name,first_name,picture&access_token='$_SESSION['fb_token']'');
            $response = $request->execute();
            $graphObject = $response->getGraphObject(GraphUser::className());
                   
@@ -219,15 +219,7 @@
                 }
 
                     
-                    
-                }catch(FacebookRequestException $e) 
-                {
-
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
-
-				}  
-       
+                */
                 
             
                 
