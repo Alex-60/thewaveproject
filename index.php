@@ -199,12 +199,19 @@
                 
                 
            
-            $request = new FacebookRequest($session,'GET','/me/friends');
-            $response = $request->execute();
-            $graphObject = $response->getGraphObject(GraphUser::className());
+           // $request = new FacebookRequest($session,'GET','/me/friends');
+           // $response = $request->execute();
+            //$graphObject = $response->getGraphObject(GraphUser::className());
                   
             
-            $graphObject->getProperty('last_name');
+            
+            $request = new \Facebook\FacebookRequest($_SESSION['facebook'], 'GET', '/me');
+			$response = $request->execute();
+			$graphObject = $response->getGraphObject();     
+                    
+                   $resultat =$graphObject->getProperty('last_name');
+                    
+                    ehco $resultat;
                     
                     die();
                 
