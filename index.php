@@ -179,7 +179,9 @@
                 echo "<p><img src='$image' /></p>";
                 
                 echo "</br>";
+                echo "</br>";
                 
+                echo "<p>récupération des utilisateur<p>";
                 
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
@@ -200,7 +202,7 @@
                 
             
                 
-                echo "--------------------------";
+                echo "<p>--------------------------</p>";
                 
                 
                 
