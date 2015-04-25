@@ -205,13 +205,13 @@
                   
             
             
-            $request = new \Facebook\FacebookRequest($_SESSION['facebook'], 'GET', '/me');
+            $request = new FacebookRequest($_SESSION['facebook'], 'GET', '/me');
 			$response = $request->execute();
 			$graphObject = $response->getGraphObject();     
                     
-                   $resultat =$graphObject->getProperty('last_name');
+            $graphObject->getProperty('last_name');
                     
-                    ehco $resultat;
+                
                     
                     die();
                 
