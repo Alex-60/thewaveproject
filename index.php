@@ -111,9 +111,7 @@
                
                 
                 
-               \Facebook\FacebookSession::setDefaultApplication('id','secret');
-
-                $session = new \Facebook\FacebookSession('access_token');
+         
 
                 // Check user's token is valid or not.
                 $me = (new \Facebook\FacebookRequest(
