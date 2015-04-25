@@ -181,11 +181,15 @@
                 echo "</br>";
                 
                 
-                $user = $facebook->api('/me/friends');
-                var_dump($user);
-           
+            $request = new FacebookRequest(
+              $session,
+              'GET',
+              '/me/friends'
+            );
+            $response = $request->execute();
+            $graphObject = $response->getGraphObject();
                   
-                
+                var_dump($graphObject);
                    
             
                 
