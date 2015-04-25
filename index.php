@@ -177,7 +177,7 @@
                 //echo "</br>";
                 
                 
-                echo "<p>récupération de la photo<p>";
+                echo "<p>récupération de la photo</p>";
                 
                 echo "<p><img src='$image' /></p>";
                 
