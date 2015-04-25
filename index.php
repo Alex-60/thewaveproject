@@ -218,7 +218,15 @@
                      echo $friends[0]['id']; //show the id of the user 0
                     echo "|"; 
                     echo $friends[0]['name']; //show the name of the user 0
+                    
+                    echo "|"; 
+                          echo $friends[1]['id']; //show the id of the user 0
+                    echo "|"; 
+                    echo $friends[1]['name']; //show the name of the user 0
+                    
+                    
                 }
+                    
 
                     
                     
