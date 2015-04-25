@@ -176,7 +176,7 @@
            
                   
              
-                        $user = $facebook->getUser();
+                        $user = $user->getUser();
 
 
                         if ($user) {
