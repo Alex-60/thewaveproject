@@ -206,7 +206,9 @@
                     $response = $request->execute();
                     $graphObject = $response->getGraphObject();
 
-                    var_dump($graphObject['name']);
+                    $result = $graphObject->asArray();
+                    
+                    var_dump($result['name']);
                     
                     die();
                     
