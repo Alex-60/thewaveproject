@@ -194,17 +194,16 @@
                 
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
-            $graphObject = $response->getGraphObject();
+            $graphObject = $response->getGraphObject(GraphUser::className());
                   
-               $result = $graphObject->asArray();
+               //$result = $graphObject->asArray();
                 
                 
                 
                 //echo "Bonjour ".$result->name();  
+            
                 
-                 echo "Bonjour ".$resul['name'];  
-                
-                var_dump($result);
+                var_dump($graphObject);
                 
                 
                 die();
