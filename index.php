@@ -246,6 +246,9 @@
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 echo '</ul>';
+                                echo $cle.' = '.$valeur.' <br>';
+                                
+                                
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
                             }
