@@ -232,6 +232,9 @@
                 //var_dump($zak);
                 
                 $result['data'] = array();
+                var_dump($result['data']);
+                die();
+                
                 //$a[0][0] = "a";
                 //$a[0][1] = "b";
                 //$a[1][0] = "y";
