@@ -238,7 +238,9 @@
                 //$obj = json_decode($result['data']);
                 
                 
+                $id =  $request->getProperty('id');
                 
+                echo $id;
                 
                
                         // on fait une boucle qui lit les éléments du tableau
@@ -256,9 +258,9 @@
  
                 
                 
-                    foreach($result['data'] as $row){
+                   /* foreach($result['data'] as $row){
                         var_dump($row);
-                    }
+                    }*/
                     
 
        
