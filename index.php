@@ -200,7 +200,7 @@
                 
                     
                     
-            $request = new FacebookRequest($session,'GET','/me/{friendlist-id}');
+            $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
