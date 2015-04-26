@@ -249,9 +249,10 @@
                 
            echo "</br>";
                 
-                foreach ($result['data'] as $key => &$val) {
+                foreach ($result['data'] as $key => &value) {
                     
-                    var_dump($result['data']);
+                    unset($result['data'][$key + 1]); 
+                    echo $value . PHP_EOL; 
                     
                 }
                 
