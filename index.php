@@ -253,7 +253,7 @@
                         echo "</br>";
                         echo "</br>";
                         
-                        echo $valeur;
+                        ///echo $valeur;
                         
                         
 
