@@ -265,11 +265,11 @@
 
                     foreach ($value as $key => $valeur) 
                     {
-                        var_dump( $valeur);
+                        
+                        //var_dump( $valeur);
                         
                         echo "</br>";
                         echo "</br>";
-                        
                         
                         echo $valeur;
                         
