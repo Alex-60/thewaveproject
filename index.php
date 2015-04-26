@@ -245,9 +245,7 @@
                         foreach ($result['data'] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
-                                echo '</ul>';
-                                echo $cle.' = '.$valeur.' <br>';
-                                
+                                echo .$valeur.'</ul>';
                                 
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
