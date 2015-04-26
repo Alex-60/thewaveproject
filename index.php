@@ -229,31 +229,7 @@
                 
                 echo "<p>---------------------------------------------------------------------</p>"; 
                 
-                //var_dump($zak);
-                
-                $result = array();
- 
-               var_dump($response);
-            
-                 echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                
-                
-                var_dump($response[0]);
-                
-                
-                //$a[0][0] = "a";
-                //$a[0][1] = "b";
-                //$a[1][0] = "y";
-                //$a[1][1] = "z";
-
-                foreach ($response as $v1) {
-                    foreach ($v1 as $v2) {
-                        echo "$v2\n";
-                    }
-                }
+         
                 
                 
                 
