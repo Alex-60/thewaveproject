@@ -236,15 +236,9 @@
                     echo "</br>";
                 
                 //$obj = json_decode($result['data']);
-                
-                
-                $id =  $request->getProperty('id');
-                
-                echo $id;
-                
-               
+ 
                         // on fait une boucle qui lit les éléments du tableau
-                       /* foreach ($result['data'][] as $cle=>$valeur) {
+                        foreach ($result['data'][] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 echo '</ul>';
@@ -253,15 +247,11 @@
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
                             }
-                        }*/
+                        }
                    
  
                 
                 
-                   /* foreach($result['data'] as $row){
-                        var_dump($row);
-                    }*/
-                    
 
        
                 
