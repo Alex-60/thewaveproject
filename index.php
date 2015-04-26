@@ -207,9 +207,6 @@
             $result = $graphObject->asArray();
                 
             
-              //var_dump($result);
-                    //die();
-                
                 $friends = $result['data'][0];
                 
                 $zak=$result['data'][0];
@@ -230,7 +227,10 @@
                     echo "<p><img src='$image' /></p>";
                 
                 
-                echo "<p>----</p>"; 
+                echo "<p>---------------------------------------------------------------------</p>"; 
+                
+                var_dump($zak);
+                
                 $zak = array();
                 //$a[0][0] = "a";
                 //$a[0][1] = "b";
