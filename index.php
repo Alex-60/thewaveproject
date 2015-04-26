@@ -257,7 +257,7 @@
                 echo '</br>';
                 
                 
-                $friends = (new FacebookRequest($session, 'GET', '/me/friends'))
+                $friends = new FacebookRequest($session, 'GET', '/me/friends')
                 ->execute()
                 ->getGraphObject()
                 ->asArray();
