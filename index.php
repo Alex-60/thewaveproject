@@ -238,9 +238,14 @@
                 //$obj = json_decode($result['data']);
                 
                 
-                $id =  $request->getProperty('id');
-                
-                echo $id;
+                        
+            foreach($result['data'] as $friend) 
+            {    
+                 echo 'Name: ' . $result['name'] . '<br />';
+                    echo 'ID: ' . $result['id'] . '<br /><br />';
+                    $counter++;
+
+            }
                 
                
                         // on fait une boucle qui lit les éléments du tableau
