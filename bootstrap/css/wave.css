@@ -1,7 +1,7 @@
  html{
      margin:0;
      padding:0;
-     /*background: url(../../images/kitesurf_Optim.jpg)no-repeat center center fixed;*/
+     background: url(../../images/kitesurf_Optim.jpg)no-repeat center center fixed;
      background-size: cover;
 }
 body{
