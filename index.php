@@ -234,6 +234,9 @@
                 {
                     
                     echo $value->name;
+                    echo "</br>";
+                    echo "</br>";
+                   echo $value->id;
 
                     echo "</br>";
                     echo "</br>";
