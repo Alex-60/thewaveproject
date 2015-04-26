@@ -236,9 +236,15 @@
                     echo "</br>";
                 
                 //$obj = json_decode($result['data']);
- 
+                
+                
+                $id =  $request->getProperty('id');
+                
+                echo $id;
+                
+               
                         // on fait une boucle qui lit les éléments du tableau
-                        foreach ($result['data'][] as $cle=>$valeur) {
+                       /* foreach ($result['data'][] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 echo '</ul>';
@@ -247,14 +253,15 @@
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
                             }
-                        }
+                        }*/
                    
  
                 
-                echo '</br>';
                 
-                
-                
+                   /* foreach($result['data'] as $row){
+                        var_dump($row);
+                    }*/
+                    
 
        
                 
@@ -271,7 +278,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','read_friendlists','publish_stream','user_friends']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
                 
