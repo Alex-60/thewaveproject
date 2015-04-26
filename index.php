@@ -241,9 +241,9 @@
                 
                 var_dump($result['data']);
                 
-              var_dump($result['data']);
+             
                 
-                var_dump ($session);
+               
                 
                 
            echo "</br>";
