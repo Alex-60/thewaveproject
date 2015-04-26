@@ -256,6 +256,12 @@
                     
                     
                     var_dump( $value); 
+                   
+                foreach ($value as $key => $value) 
+                {
+                    var_dump( $value);
+                        
+                }
                     
                 }
                 
