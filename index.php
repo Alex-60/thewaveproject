@@ -255,7 +255,7 @@
                 {
                     
                     
-                    echo $value; 
+                    var_dump( $value); 
                     
                 }
                 
