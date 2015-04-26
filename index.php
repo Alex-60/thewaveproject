@@ -237,7 +237,7 @@
                 
                 //$obj = json_decode($result['data']);
                 
-                echo $graphObject->getProperty('name');
+                echo $graphObject->getName();
                 
                 die();
                         
