@@ -231,6 +231,8 @@
                     echo "</br>";
                     echo "</br>";
                    echo $value->id;
+                   
+                   $image='https://graph.facebook.com/'.$value->id.'/picture?width=300';
 
                    
                    
