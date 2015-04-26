@@ -108,13 +108,8 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
                 
-               
-                
-                
-         
 
-                
-                var_dump($user);
+                //var_dump($user);
                 
 				//echo "Bonjour ".$user->getName();                
                 
@@ -151,16 +146,8 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
-                
-                
-                
-                
+ 
                 echo "--------------------------";
-                
-                
-             
-                
-                
                 
                 $name = $user->getName();
                 $id=$user->getId();
@@ -194,11 +181,7 @@
                 
                 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
-                
-      
-                
-                
-                    
+    
                     
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
@@ -207,10 +190,8 @@
             $result = $graphObject->asArray();
                 
             
-                $friends = $result['data'][0];
-                
-                
-                
+               /* $friends = $result['data'][0];
+        
                 $zak=$result['data'][0];
                     echo $friends->name;
                     echo "----";
@@ -226,7 +207,7 @@
                     echo "----";
                     echo $friends->id;
                     $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
-                    echo "<p><img src='$image' /></p>";
+                    echo "<p><img src='$image' /></p>";*/
                 
                 
                 echo "<p>---------------------------------------------------------------------</p>"; 
@@ -237,7 +218,7 @@
              
       
                 
-        echo "récupération du nom et de la photo des utilisateur en boucle";
+        echo "récupération du nom et de la photo des utilisateurs en boucle";
                foreach ($result['data'] as $key => $value) 
                 {
                     
