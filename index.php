@@ -200,7 +200,7 @@
                 
                     
                     
-            $request = new FacebookRequest($session,'GET','/me/friends');
+            $request = new FacebookRequest($session,'GET','/me/{friendlist-id}');
             $response = $request->execute();
             $graphObject = $response->getGraphObject(GraphUser::className());
                   
@@ -278,7 +278,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','read_friendlists','publish_stream','user_friends']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
                 
