@@ -235,7 +235,7 @@
                     echo "</br>";
                     echo "</br>";
                 
-                $obj = json_decode($result['data']);
+                //$obj = json_decode($result['data']);
                 
                 
                 
@@ -243,7 +243,7 @@
                 function afficher_tableau($tableau)
                     {
                         // on fait une boucle qui lit les éléments du tableau
-                        foreach ($tableau as $cle=>$valeur) {
+                        foreach ($result['data'] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 afficher_tableau($valeur);
@@ -254,7 +254,7 @@
                         }
                     }
                 
-                afficher_tableau($obj);
+                //afficher_tableau($obj);
                 
                /* foreach ($friends as $key => $value) 
                 {
