@@ -242,22 +242,11 @@
                 var_dump($result['data']);
                 
                 
+                var_dump($result['stdClass']);
                 
                 
                 
-                
-                
-            foreach($result['data'] as $term)
-                
-            {
-               $options[$term->tid] = $term->name;
-                   foreach($term->children as $term2)
-                   {
-                     $options[$term2->tid] = $term2->name;
-
-                   }
-            }
-               
+           
        
                 
                
