@@ -247,7 +247,16 @@
                 var_dump ($session);
                 
                 
-           
+           echo "</br>";
+                
+                foreach ($result['data'] as $key => &$val) {
+                    
+                    var_dump($result['data']);
+                    
+                }
+                
+                
+       
        
                 
                
