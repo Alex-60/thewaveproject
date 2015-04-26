@@ -229,15 +229,15 @@
                 
                 echo "<p>---------------------------------------------------------------------</p>"; 
                 
-                var_dump($zak);
+                //var_dump($zak);
                 
-                $zak = array();
+                $result['data'] = array();
                 //$a[0][0] = "a";
                 //$a[0][1] = "b";
                 //$a[1][0] = "y";
                 //$a[1][1] = "z";
 
-                foreach ($zak as $v1) {
+                foreach ($result['data'] as $v1) {
                     foreach ($v1 as $v2) {
                         echo "$v2\n";
                     }
