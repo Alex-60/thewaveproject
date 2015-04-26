@@ -267,6 +267,10 @@
                     {
                         var_dump( $valeur);
                         
+                        echo "</br>";
+                        echo "</br>";
+                        
+                        
                         echo $valeur;
                         
                         
