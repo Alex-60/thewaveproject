@@ -240,8 +240,7 @@
                 
                 
                 
-                function afficher_tableau($tableau)
-                    {
+               
                         // on fait une boucle qui lit les éléments du tableau
                         foreach ($result['data'] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
@@ -252,26 +251,8 @@
                                 echo $cle.' = '.$valeur.' <br>';
                             }
                         }
-                    }
-                
-                //afficher_tableau($obj);
-                
-               /* foreach ($friends as $key => $value) 
-                {
-                    $friends[$key] = (array)$value;
-                     echo $friends[0]['id']; //show the id of the user 0
-                    echo "|"; 
-                    echo $friends[0]['name']; //show the name of the user 0
-                    
-                    echo "|"; 
-                          echo $friends[1]['id']; //show the id of the user 0
-                    echo "|"; 
-                    echo $friends[1]['name']; //show the name of the user 0
-                    
-                    
-                }*/
-                    
-
+                   
+ 
                     
 
        
