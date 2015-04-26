@@ -209,6 +209,8 @@
             
                 $friends = $result['data'][0];
                 
+                
+                
                 $zak=$result['data'][0];
                     echo $friends->name;
                     echo "----";
@@ -230,25 +232,33 @@
                 echo "<p>---------------------------------------------------------------------</p>"; 
                 
          
+                
+                
+                
+                
+                
+                
+                
                 var_dump($result['data']);
                 
-                    echo "</br>";
-                    echo "</br>";
                 
-                //$obj = json_decode($result['data']);
                 
-                echo $graphObject->getName();
                 
-                die();
-                        
-            foreach($result['data'] as $friend) 
-            {    
-                    //echo 'Name: ' . $result['data'].name. '<br />';
-                    //echo 'ID: ' . $result['data']['id'] . '<br /><br />';
-                var_dump($result['data'].name);
-                   
+                
+                
+                
+            foreach($result['data'] as $term)
+                
+            {
+               $options[$term->tid] = $term->name;
+                   foreach($term->children as $term2)
+                   {
+                     $options[$term2->tid] = $term2->name;
 
+                   }
             }
+               
+       
                 
                
                         // on fait une boucle qui lit les éléments du tableau
