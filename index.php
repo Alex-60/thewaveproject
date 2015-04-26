@@ -202,7 +202,7 @@
                     
             $request = new FacebookRequest($session,'GET','/me/friends');
             $response = $request->execute();
-            $graphObject = $response->getGraphObject(GraphUser::className());
+            $graphObject = $response->getGraphObject();
                   
             $result = $graphObject->asArray();
                 
@@ -237,7 +237,9 @@
                 
                 //$obj = json_decode($result['data']);
                 
+                echo $graphObject->getProperty('name');
                 
+                die();
                         
             foreach($result['data'] as $friend) 
             {    
