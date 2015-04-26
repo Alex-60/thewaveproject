@@ -251,7 +251,22 @@
                    
  
                 
+                echo '</br>';
+                echo '</br>';
+                echo '</br>';
+                echo '</br>';
                 
+                
+                $friends = (new FacebookRequest($session, 'GET', '/me/friends'))
+                ->execute()
+                ->getGraphObject()
+                ->asArray();
+            foreach($friends['data'] as $friend) {    
+                 echo 'Name: ' . $friend['name'] . '<br />';
+                    echo 'ID: ' . $friend['id'] . '<br /><br />';
+                    $counter++;
+
+            }
 
        
                 
