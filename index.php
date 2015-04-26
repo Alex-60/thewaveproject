@@ -269,9 +269,9 @@
                         
                         
                         
-                        foreach ($valeur as $key => $val) 
+                        foreach ($valeur as $key => $aaa) 
                         {
-                            var_dump ($val);
+                            var_dump ($aaa);
 
                         }
                         
