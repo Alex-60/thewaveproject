@@ -241,20 +241,23 @@
                 
                 var_dump($result['data']);
                 
-              var_dump($graphObject);
+              var_dump($result['data']);
                 
                 var_dump ($session);
                 
                 
            echo "</br>";
+                echo "</br>";
+                echo "</br>";
+                echo "</br>";
                 
-               /* foreach ($result['data'] as $key => &value) 
+               foreach ($result['data'] as $key => $value) 
                 {
                     
-                    unset($result['data']); 
-                    echo $value . PHP_EOL; 
                     
-                }*/
+                    echo $value; 
+                    
+                }
                 
                 
        
