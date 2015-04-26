@@ -235,7 +235,9 @@
                     echo "</br>";
                     echo "</br>";
                 
-                var_dump(json_decode($result['data']));
+                $obj = json_decode($result['data']);
+                
+                echo $obj;
                 
                /* foreach ($friends as $key => $value) 
                 {
