@@ -234,7 +234,7 @@
                    
                    $image='https://graph.facebook.com/'.$value->id.'/picture?width=300';
 
-                   
+                   echo "<p><img src='$image' /></p>";
                    
                     foreach ($value as $key => $valeur) 
                     {
