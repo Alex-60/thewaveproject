@@ -219,6 +219,17 @@
       
                 
         echo "récupération du nom et de la photo des utilisateurs en boucle";
+                
+                    echo "</br>";
+                    echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                
+                
                foreach ($result['data'] as $key => $value) 
                 {
                     
