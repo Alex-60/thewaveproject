@@ -262,19 +262,22 @@
                 {
                     
                     
-                    //var_dump( $value); 
-                   
-                   
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                   
-                   
-                foreach ($value as $key => $valeur) 
-                {
-                    var_dump( $valeur);
+
+                    foreach ($value as $key => $valeur) 
+                    {
+                        var_dump( $valeur);
                         
-                }
+                        
+                        
+                        foreach ($valeur as $key => $val) 
+                        {
+                            echo $val;
+
+                        }
+                        
+                        
+
+                    }
                     
                 }
                 
