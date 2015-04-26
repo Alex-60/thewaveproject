@@ -222,8 +222,11 @@
                foreach ($result['data'] as $key => $value) 
                 {
                     
-                    
+                    echo $value->name;
 
+                    echo "</br>";
+                    echo "</br>";
+                   
                     foreach ($value as $key => $valeur) 
                     {
                         
