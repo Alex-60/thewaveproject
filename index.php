@@ -222,12 +222,6 @@
                 
                     echo "</br>";
                     echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
                 
                 
                foreach ($result['data'] as $key => $value) 
@@ -238,14 +232,6 @@
                     echo "</br>";
                    echo $value->id;
 
-                    echo "</br>";
-                    echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
-                   echo "</br>";
-                    echo "</br>";
                    
                    
                     foreach ($value as $key => $valeur) 
