@@ -242,7 +242,7 @@
                 
                
                         // on fait une boucle qui lit les éléments du tableau
-                        foreach ($result['data'] as $cle=>$valeur) {
+                        foreach ($result['data'][0] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 echo '</ul>';
