@@ -267,13 +267,7 @@
                     {
                         var_dump( $valeur);
                         
-                        
-                        
-                        foreach ($valeur as $key => $aaa) 
-                        {
-                            var_dump ($aaa);
-
-                        }
+                        echo $valeur;
                         
                         
 
