@@ -244,7 +244,7 @@
                 
                 var_dump($result['stdClass']);
                 
-                echo $session;
+                var_dump ($session);
                 
                 
            
