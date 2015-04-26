@@ -257,9 +257,15 @@
                     
                     var_dump( $value); 
                    
-                foreach ($value as $key => $value) 
+                   
+                echo "</br>";
+                echo "</br>";
+                echo "</br>";
+                   
+                   
+                foreach ($value as $key => $valeur) 
                 {
-                    var_dump( $value);
+                    var_dump( $valeur);
                         
                 }
                     
