@@ -226,6 +226,13 @@
 
                     echo "</br>";
                     echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                   echo "</br>";
+                    echo "</br>";
+                   
                    
                     foreach ($value as $key => $valeur) 
                     {
