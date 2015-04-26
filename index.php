@@ -245,7 +245,6 @@
                         foreach ($result['data'] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
-                                afficher_tableau($valeur);
                                 echo '</ul>';
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
