@@ -230,34 +230,14 @@
                 
                 
                 echo "<p>---------------------------------------------------------------------</p>"; 
-                
-         
-                
-                
-                
-                
-                
-                
-                
-                var_dump($result['data']);
-                
-                
-                  echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                
-                
-                var_dump($result);
+
+                //var_dump($result['data']);
+
+                //var_dump($result);
              
+      
                 
-               
-                
-                
-           echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                
+        echo "récupération du nom et de la photo des utilisateur en boucle";
                foreach ($result['data'] as $key => $value) 
                 {
                     
