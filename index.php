@@ -241,9 +241,9 @@
                         
             foreach($result['data'] as $friend) 
             {    
-                 echo 'Name: ' . $result['data']['name'] . '<br />';
+                 echo 'Name: ' . $result['data'].name. '<br />';
                     echo 'ID: ' . $result['data']['id'] . '<br /><br />';
-                    $counter++;
+                  
 
             }
                 
