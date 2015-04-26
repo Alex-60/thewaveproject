@@ -259,7 +259,7 @@
                 
                 
                 
-            $friends = new FacebookRequest($session,'GET','/me/friends')->execute()->getGraphObject(GraphUser::className());
+            //$friends = new FacebookRequest($session,'GET','/me/friends')->execute()->getGraphObject(GraphUser::className());
                 
                 
                 /*$friends = new FacebookRequest($session, 'GET', '/me/friends')
@@ -268,10 +268,10 @@
                 ->asArray();*/
                 
                 
-            foreach($friends['data'] as $friend) 
+            foreach($result['data'] as $friend) 
             {    
-                 echo 'Name: ' . $friend['name'] . '<br />';
-                    echo 'ID: ' . $friend['id'] . '<br /><br />';
+                 echo 'Name: ' . $result['name'] . '<br />';
+                    echo 'ID: ' . $result['id'] . '<br /><br />';
                     $counter++;
 
             }
