@@ -231,7 +231,7 @@
                 
          
                 var_dump($result['data']);
-                echo $result['data'];
+
                 
                 
                 
