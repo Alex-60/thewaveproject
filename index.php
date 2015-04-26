@@ -231,9 +231,11 @@
                 
          
                 var_dump($result['data']);
-
                 
+                    echo "</br>";
+                    echo "</br>";
                 
+                var_dump(json_decode($result['data']));
                 
                /* foreach ($friends as $key => $value) 
                 {
