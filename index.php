@@ -232,7 +232,7 @@
                 //var_dump($zak);
                 
                 $result['data'] = array();
-                var_dump($result);
+                var_dump($result[0]);
                 die();
                 
                 //$a[0][0] = "a";
