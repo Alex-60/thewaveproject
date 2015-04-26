@@ -242,7 +242,7 @@
                 
                
                         // on fait une boucle qui lit les éléments du tableau
-                        foreach ($result['data'][] as $cle=>$valeur) {
+                       /* foreach ($result['data'][] as $cle=>$valeur) {
                             if( is_array($valeur) || is_object($valeur) ) {
                                 echo $cle.' : <ul>';
                                 echo '</ul>';
@@ -251,9 +251,14 @@
                             } else {
                                 echo $cle.' = '.$valeur.' <br>';
                             }
-                        }
+                        }*/
                    
  
+                
+                 $album_data = $result['data']->asArray();//this will do all job for you..
+                    foreach($album_data as $row){
+                        var_dump($row);
+                    }
                     
 
        
