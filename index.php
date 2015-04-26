@@ -234,14 +234,18 @@
                 $result = array();
  
                var_dump($response);
-                die();
+            
+                 echo "</br>";
+                echo "</br>";
+                echo "</br>";
+                echo "</br>";
                 
                 //$a[0][0] = "a";
                 //$a[0][1] = "b";
                 //$a[1][0] = "y";
                 //$a[1][1] = "z";
 
-                foreach ($result as $v1) {
+                foreach ($response as $v1) {
                     foreach ($v1 as $v2) {
                         echo "$v2\n";
                     }
