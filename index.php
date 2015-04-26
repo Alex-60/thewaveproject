@@ -255,8 +255,8 @@
                    
  
                 
-                 $album_data = $result['data']->asArray();//this will do all job for you..
-                    foreach($album_data as $row){
+                
+                    foreach($result['data'] as $row){
                         var_dump($row);
                     }
                     
