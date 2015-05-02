@@ -161,14 +161,10 @@
                 //echo $id;
                 
                 //echo "</br>";
-                
-                
-                echo "<p>récupération de la photo</p>";
-                
+   
                 echo "<p><img src='$image' /></p>";
                 
-                echo "</br>";
-                echo "</br>";
+
 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
@@ -199,10 +195,6 @@
                     $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
                     echo "<p><img src='$image' /></p>";*/
 
-        echo "récupération du nom et de la photo des utilisateurs en boucle";
-                
-                    echo "</br>";
-                    echo "</br>";
                 
                 
                foreach ($result['data'] as $key => $value) 
@@ -232,28 +224,7 @@
                     }
                     
                 }
-        
-               
-                        // on fait une boucle qui lit les éléments du tableau
-                       /* foreach ($result['data'][] as $cle=>$valeur) {
-                            if( is_array($valeur) || is_object($valeur) ) {
-                                echo $cle.' : <ul>';
-                                echo '</ul>';
-                                
-                                
-                            } else {
-                                echo $cle.' = '.$valeur.' <br>';
-                            }
-                        }*/
-                   
- 
-                
-                
-                   /* foreach($result['data'] as $row){
-                        var_dump($row);
-                    }*/
-                    
- 
+    
               
 			}
             else
