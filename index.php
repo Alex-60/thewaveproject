@@ -78,15 +78,6 @@
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
    
-<!--<h1>Mon Application Facebook</h1>
-    
-   
-   <div>
-      class="fb-like"
-      data-share="true"
-      data-width="450"
-      data-show-faces="true">
-    </div>-->
 
     <br>
        <?php
@@ -178,10 +169,7 @@
                 
                 echo "</br>";
                 echo "</br>";
-                
-                
-                
-                
+
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
                     
@@ -210,16 +198,7 @@
                     echo $friends->id;
                     $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
                     echo "<p><img src='$image' /></p>";*/
-                
-                
-                echo "<p>--------------------------------------------------------------------</p>"; 
 
-                //var_dump($result['data']);
-
-                //var_dump($result);
-             
-      
-                
         echo "récupération du nom et de la photo des utilisateurs en boucle";
                 
                     echo "</br>";
@@ -232,7 +211,7 @@
                     echo $value->name;
                     echo "</br>";
                     echo "</br>";
-                   echo $value->id;
+                   //echo $value->id;
                    
                    $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
 
@@ -253,11 +232,7 @@
                     }
                     
                 }
-                
-                
-       
-       
-                
+        
                
                         // on fait une boucle qui lit les éléments du tableau
                        /* foreach ($result['data'][] as $cle=>$valeur) {
@@ -278,18 +253,7 @@
                         var_dump($row);
                     }*/
                     
-
-       
-                
-            
-                
-                echo "<p>--------------------------</p>";
-                
-                
-                
-              
-                
-                
+ 
               
 			}
             else
