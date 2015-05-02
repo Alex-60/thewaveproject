@@ -78,7 +78,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
    
-<h1>Mon Application Facebook</h1>
+<!--<h1>Mon Application Facebook</h1>
     
    
    <div>
@@ -86,7 +86,7 @@
       data-share="true"
       data-width="450"
       data-show-faces="true">
-    </div>
+    </div>-->
 
     <br>
        <?php
@@ -150,7 +150,10 @@
                 echo "--------------------------";
                 
                 $name = $user->getName();
+                
+                
                 $id=$user->getId();
+                
                 $image='https://graph.facebook.com/'.$id.'/picture?width=300';
                 
                  echo "</br>";
