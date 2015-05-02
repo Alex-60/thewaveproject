@@ -82,14 +82,6 @@
     <br>
        <?php
 
-            // $loginUrl = $facebook->getLoginUrl(array("scope" => "read_stream,publish_stream,manage_pages"));
-
-			//$loginUrl = $helper->getLoginUrl(['publish_stream','user_photos']);
-			//echo "<a href='".$loginUrl."'>Se connecter</a>";
-	   
-
-//logout
-
 
 
 			if($session)
@@ -98,11 +90,7 @@
 				$request_user = new FacebookRequest( $session,"GET","/me");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
-                
-
-                //var_dump($user);
-                
-				//echo "Bonjour ".$user->getName();                
+                        
                 
                 
                 try {
@@ -153,14 +141,7 @@
                 echo "</br>";
                 echo "</br>";
                 echo "</br>";
-                
-                //echo $name;
-                
-                //echo "</br>";
-                
-                //echo $id;
-                
-                //echo "</br>";
+            
    
                 echo "<p><img src='$image' /></p>";
                 
@@ -169,11 +150,11 @@
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
                     
-            $request = new FacebookRequest($session,'GET','/me/friends');
-            $response = $request->execute();
-            $graphObject = $response->getGraphObject(GraphUser::className());
-                  
-            $result = $graphObject->asArray();
+                $request = new FacebookRequest($session,'GET','/me/friends');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
+
+                $result = $graphObject->asArray();
                 
             
                /* $friends = $result['data'][0];
@@ -237,8 +218,6 @@
 		?>
         
     </div>
-    <div id="classement">Classement</div>
-    <div id="participants">Participants</div>
 </body>
 </html>
 
