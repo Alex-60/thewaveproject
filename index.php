@@ -153,7 +153,7 @@
                 
                 $id=$user->getId();
                 
-                $image='https://graph.facebook.com/'.$id.'/picture?width=50';
+                $image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
                  echo "</br>";
                 
@@ -234,7 +234,7 @@
                     echo "</br>";
                    echo $value->id;
                    
-                   $image='https://graph.facebook.com/'.$value->id.'/picture?width=300';
+                   $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
 
                    echo "<p><img src='$image' /></p>";
                    
