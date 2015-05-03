@@ -117,8 +117,7 @@
                     <?
                     
                     
-                  
-                echo "<p>récupération des utilisateurs de l'appli<p>";
+        echo "<p>teste zak <p>";
                 
                     
                 $request = new FacebookRequest($session,'GET','/me/friends');
@@ -152,22 +151,11 @@
                     }
                     
                 }
-
-			}
-            else
-            {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
-				echo "<a href='".$loginUrl."'>Se connecter</a>";
-                
-                
-			}
        
-            ?>
+                    ?>
       
       
-        </div>
-      
-   
+                </div>
       
       
       <?
