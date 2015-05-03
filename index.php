@@ -150,7 +150,7 @@
                  
                
                 
-               foreach ($result['data'] as $key => $value) 
+               /*foreach ($result['data'] as $key => $value) 
                 {
                    
                     echo "<p>$value->name</p>";
@@ -164,7 +164,7 @@
                         
                     }
                     
-                }
+                }*/
        
                     ?>
       
