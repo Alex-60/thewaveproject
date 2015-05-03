@@ -122,30 +122,33 @@
 
                 $result = $graphObject->asArray();
                 
-                ?>
-                    <div id ="test">
-                        <?
+             
                     
                      foreach ($result['data'] as $key => $value) 
                             {
 
+                            ?>
+                                <div id="test">
+                                    
+                                    <?
                                 echo "<p>$value->name</p>";
 
                                $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
 
                                echo "<p><img src='$image' /></p>";
-
-                                foreach ($value as $key => $valeur) 
-                                {
-
-                                }
+                    
+                                    ?>
+                                    
+                                </div>
+                               
+                                <?
+                           
 
                             }
                         
                         
                     ?>
-                    
-                    </div><?
+               
                 
                foreach ($result['data'] as $key => $value) 
                 {
