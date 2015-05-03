@@ -14,14 +14,9 @@
     use Facebook\FacebookPermissions;
     use Facebook\FacebookPermissionException;
     use Facebook\FacebookRequestException;
-    
-  
+
     const APPID ="767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
-
-
-  
 
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 
@@ -42,11 +37,6 @@
 		$session = $helper->getSessionFromRedirect();
 	}
 
-     //si l'utilsateur veut se déconnecté
-
- 
-
-	
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +46,8 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
     <title>Application Facebook - The Wave</title>
-    
-
 </head>
+    
 <body>
   <div id="presentation">
    <script>
@@ -76,13 +65,11 @@
 		     js.src = "//connect.facebook.net/fr_FR/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-		</script>
+      </script>
    
 
     <br>
        <?php
-
-
 
 			if($session)
 			{
@@ -92,31 +79,9 @@
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
                         
                 
-                
                 try {
                     
-                //$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','publish_stream']);
-
-				// Upload to a user's profile. The photo will be in the
-				// first album in the profile. You can also upload to
-				// a specific album by using /ALBUM_ID as the path
-                    
-				//$response = (new FacebookRequest(
-				  //$session, "POST", '/me/photos', array(
-					//'source' => file_get_contents('./images/Kite_Surf.jpg'),
-                    //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					//'message' => 'User provided message'
-				 // )
-				//))->execute()->getGraphObject();
-
-                    
-                        
-                        
-				// If you're not using PHP 5.5 or later, change the file reference to:
-				// 'source' => '@/path/to/file.name'
-
-				//echo "Posted with id: " . $response->getProperty('id');
+               
 
 				} catch(FacebookRequestException $e) 
                 {
@@ -126,7 +91,6 @@
 
 				}  
  
-                
                 $name = $user->getName();
                 
                 
@@ -144,8 +108,6 @@
             
    
                 echo "<p><img src='$image' /></p>";
-                
-
 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
@@ -157,25 +119,7 @@
                 $result = $graphObject->asArray();
                 
             
-               /* $friends = $result['data'][0];
-        
-                $zak=$result['data'][0];
-                    echo $friends->name;
-                    echo "----";
-                    echo $friends->id;
-                    $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
-                    echo "<p><img src='$image' /></p>";
-                    //var_dump ($friends[0]);
-                
-                
-                
-                $friends = $result['data'][1];
-                    echo $friends->name;
-                    echo "----";
-                    echo $friends->id;
-                    $image='https://graph.facebook.com/'.$friends->id.'/picture?width=300';
-                    echo "<p><img src='$image' /></p>";*/
-
+              
                 
                 
                foreach ($result['data'] as $key => $value) 
