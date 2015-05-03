@@ -72,43 +72,7 @@
       
       <div id="logo">
       
-      
-          
-         <?php
-
-			if($session)
-			{
-				$_SESSION['fb_token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest( $session,"GET","/me");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject(GraphUser::className());
-                        
-                
-                try {
-
-				} catch(FacebookRequestException $e) 
-                {
-
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
-
-				}  
  
-                $name = $user->getName();
-                $id=$user->getId();
-            
-                $image='https://graph.facebook.com/'.$id.'/picture?width=150';
-                
-    
-			}
-            else
-            {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
-				
-                
-			}
-		?>
-          
       
       </div>
       
