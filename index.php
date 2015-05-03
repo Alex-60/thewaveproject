@@ -125,6 +125,11 @@
                 
                foreach ($result['data'] as $key => $value) 
                 {
+                   
+                   ?>
+                    
+                    <div><?php $value->name; ?></div>
+                    <?
                     
                     echo "<p>$value->name</p>";
                    
