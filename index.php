@@ -119,7 +119,6 @@
                 $result = $graphObject->asArray();
                 
             
-              
                 
                 
                foreach ($result['data'] as $key => $value) 
