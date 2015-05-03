@@ -110,16 +110,16 @@
    
                 echo "<div id='logo'><img src='$image'/></div>";
 
-                echo "<p>récupération des utilisateurs de l'appli<p>";
-    
-                    
+                echo "<div>" 
+                
+                    echo "teste zak";
+                
+                                 
                 $request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
                 $result = $graphObject->asArray();
-                
-            
                 
                 
                foreach ($result['data'] as $key => $value) 
@@ -143,8 +143,43 @@
                         echo "</br>";
                         
                         ///echo $valeur;
-                     
+                    }
+                    
+                }
+                
+                "</div>";
+                
+                echo "<p>récupération des utilisateurs de l'appli<p>";
+                
+                    
+                $request = new FacebookRequest($session,'GET','/me/friends');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
 
+                $result = $graphObject->asArray();
+                
+                
+               foreach ($result['data'] as $key => $value) 
+                {
+                    
+                    echo $value->name;
+                    echo "</br>";
+                    echo "</br>";
+                   //echo $value->id;
+                   
+                   $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
+
+                   echo "<p><img src='$image' /></p>";
+                   
+                    foreach ($value as $key => $valeur) 
+                    {
+                        
+                        //var_dump( $valeur);
+                        
+                        echo "</br>";
+                        echo "</br>";
+                        
+                        ///echo $valeur;
                     }
                     
                 }
