@@ -58,6 +58,8 @@ body{
 #test
 {
     border: 1px solid yellow;
+    width: auto;
+    height: auto;
   
     
 }
