@@ -126,11 +126,6 @@
                foreach ($result['data'] as $key => $value) 
                 {
                    
-                   ?>
-                    
-                    <p><? $value->name; ?></p>
-                    <?
-                    
                     echo "<p>$value->name</p>";
                    
                    $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
@@ -140,12 +135,6 @@
                     foreach ($value as $key => $valeur) 
                     {
                         
-                        //var_dump( $valeur);
-                        
-                        echo "</br>";
-                        echo "</br>";
-                        
-                        ///echo $valeur;
                     }
                     
                 }
