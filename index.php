@@ -133,7 +133,7 @@
                                     <?
                                 echo "<p>$value->name</p>";
 
-                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
+                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=100';
 
                                echo "<p><img src='$image' /></p>";
                     
