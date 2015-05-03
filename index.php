@@ -70,14 +70,6 @@
 
     <br>
       
-      <div id="logo">
-      
- 
-      
-      </div>
-      
-      
-      
        <?php
 
 			if($session)
@@ -100,8 +92,14 @@
  
                 $name = $user->getName();
                 $id=$user->getId();
+                
+                echo "<div id='logo'>
+                
+                 $image='https://graph.facebook.com/'.$id.'/picture?width=150'
+                 
+                </<div>";
             
-                $image='https://graph.facebook.com/'.$id.'/picture?width=150';
+               
                 
                  echo "</br>";
                 
