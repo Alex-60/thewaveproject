@@ -70,6 +70,10 @@
 
     <br>
       
+ 
+      
+      
+      
        <?php
 
 			if($session)
@@ -92,8 +96,6 @@
  
                 $name = $user->getName();
                 $id=$user->getId();
-                
-                
             
                 $image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
@@ -106,7 +108,7 @@
                 echo "</br>";
             
    
-                echo "<p id='logo'><img src='$image' /></p>";
+                echo "<p><img src='$image' /></p>";
 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
