@@ -117,7 +117,7 @@
                     <?
                     
                     
-        echo "<p>teste zak <p>";
+                echo "<p>teste zak <p>";
                 
                     
                 $request = new FacebookRequest($session,'GET','/me/friends');
@@ -160,7 +160,7 @@
       
       <?
                 
-                echo "<p>récupération des utilisateurs de l'appli<p>";
+                /*echo "<p>récupération des utilisateurs de l'appli<p>";
                 
                     
                 $request = new FacebookRequest($session,'GET','/me/friends');
@@ -193,7 +193,7 @@
                         ///echo $valeur;
                     }
                     
-                }
+                }*/
 
 			}
             else
