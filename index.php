@@ -110,11 +110,16 @@
    
                 echo "<div id='logo'><img src='$image'/></div>";
 
-                echo "<div>" 
+             
+                ?>
+      
+                <div>
+                    <?
+                    
+                    
+                  echo "<p>teste zak<p>";
                 
-                    echo "teste zak";
-                
-                                 
+                    
                 $request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
@@ -146,8 +151,14 @@
                     }
                     
                 }
-                
-                "</div>";
+       
+                    ?>
+      
+      
+                </div>
+      
+      
+      <?
                 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
                 
