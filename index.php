@@ -108,7 +108,7 @@
                 echo "</br>";
             
    
-                echo "<p><img src='$image' /></p>";
+                echo "<p id="logo"><img src='$image' /></p>";
 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
