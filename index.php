@@ -115,11 +115,7 @@
       
                 <div id="amis">
                 <?
-                    
-                    
-                echo "<p>teste zak <p>";
-                
-                    
+
                 $request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
