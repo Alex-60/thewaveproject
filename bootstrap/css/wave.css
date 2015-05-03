@@ -61,7 +61,8 @@ body{
     width: auto;
     height: auto;
     display: inline-block;
-    text-align: center
+    text-align: center;
+    margin-right: 10px;
   
     
 }
