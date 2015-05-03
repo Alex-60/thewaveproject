@@ -128,7 +128,7 @@
                    
                    ?>
                     
-                    <div><?php $value->name; ?></div>
+                    <p><?php $value->name; ?></p>
                     <?
                     
                     echo "<p>$value->name</p>";
