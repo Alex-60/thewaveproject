@@ -93,9 +93,9 @@
                 $name = $user->getName();
                 $id=$user->getId();
                 
-                echo "<div>.$image='https://graph.facebook.com/'.$id.'/picture?width=150'.<div>";
+                
             
-               
+                $image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
                  echo "</br>";
                 
@@ -106,7 +106,7 @@
                 echo "</br>";
             
    
-                echo "<p><img src='$image' /></p>";
+                echo "<p id='logo'><img src='$image' /></p>";
 
                 echo "<p>récupération des utilisateurs de l'appli<p>";
     
