@@ -124,6 +124,7 @@
                 
                 ?>
                     <div id ="test">
+                        <?
                     
                      foreach ($result['data'] as $key => $value) 
                             {
@@ -142,7 +143,7 @@
                             }
                         
                         
-                    
+                    ?>
                     
                     </div><?
                 
