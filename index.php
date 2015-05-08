@@ -122,7 +122,7 @@
       
                 </div>
       
-                <div id="div2" class="col-md-7">
+                <div id="div2" class="col-md-8">
       
       
                 </div>
