@@ -119,7 +119,7 @@
       
         
       
-                <div id="amis">
+                <div id="amis" class="col-md-8">
                 <?
 
                 $request = new FacebookRequest($session,'GET','/me/friends');
