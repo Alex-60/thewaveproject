@@ -178,7 +178,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','publish_stream','user_friends']);
+				$loginUrl = $helper->getLoginUrl(['publish_actions','user_photos','user_posts','read_stream','user_friends']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
                 
