@@ -128,7 +128,7 @@
                 </div>
         
       
-                <div id="amis" class="col-md-12">
+                <div id="amis" class="col-md-6">
                 <?
 
                 $request = new FacebookRequest($session,'GET','/me/friends');
@@ -185,6 +185,17 @@
       
       
                 </div>
+      
+      
+      
+      
+      
+                <div id="amis2" class="col-md-6">
+      
+                
+                </div>
+        
+                
       
       
                 <?
