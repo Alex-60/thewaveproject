@@ -97,10 +97,11 @@
                 $name = $user->getName();
                 //$id=$user->getId();
                 
-                echo $user->getId();
-                die();
+               
             
-                $image='https://graph.facebook.com/'.$id.'/picture?width=150';
+                //$image='https://graph.facebook.com/'.$id.'/picture?width=150';
+                
+                $image='https://graph.facebook.com/1399732547014087/picture?width=150';
                 
                  echo "</br>";
                 
