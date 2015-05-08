@@ -117,12 +117,12 @@
              
                 ?>
       
-                <div id="div1">
+                <div id="div1" class="col-md-2">
       
       
                 </div>
       
-                <div id="div2">
+                <div id="div2" class="col-md-2">
       
       
                 </div>
