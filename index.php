@@ -95,7 +95,10 @@
 				}  
  
                 $name = $user->getName();
-                $id=$user->getId();
+                //$id=$user->getId();
+                
+                echo $user->getId();
+                die();
             
                 $image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
