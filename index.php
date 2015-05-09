@@ -194,19 +194,19 @@
       
                     <?
                 
-                        $request = new FacebookRequest($session,'GET','/1385753921748799/feed');
+                        $request = new FacebookRequest($session,'GET','/1385753921748799/likes');
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
 
                         $result = $graphObject->asArray();
                 
-                        //var_dump($result);
+                        var_dump($result);
                 
                        //var $a = SELECT user_id FROM like WHERE object_id="1385753921748799";
                 
                         //echo $a;
                 
-                        var_dump ("https://www.facebook.com/browse/?type=page_fans&page_id=1385753921748799 ");
+                       
                 
                     ?>
                 
