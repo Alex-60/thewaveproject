@@ -200,26 +200,12 @@
 
                         $result = $graphObject->asArray();
                 
-                       //var_dump($result);
+                       echo $result;
                 
                        //var $a = SELECT user_id FROM like WHERE object_id="1385753921748799";
                 
                         //echo $a;
-                
-                
-                foreach ($result['data'] as $key => $value) 
-                            {
-
-                            
-                                echo "<p>$value</p>";
-
-                    
-                              
-                           
-
-                            }
-                        
-                
+           
                 
                        
                 
