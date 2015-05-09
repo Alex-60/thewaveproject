@@ -202,10 +202,11 @@
                 
                         //var_dump($result);
                 
-                       var $a = SELECT user_id FROM like WHERE object_id="1385753921748799";
+                       //var $a = SELECT user_id FROM like WHERE object_id="1385753921748799";
                 
-                        echo $a;
+                        //echo $a;
                 
+                        var_dump ("https://www.facebook.com/browse/?type=page_fans&page_id=1385753921748799 ");
                 
                     ?>
                 
