@@ -210,7 +210,7 @@
                 
                         $ret = $facebook->api( array(
                          'method' => 'fql.query',
-                         'query' => 'SELECT user_id FROM like WHERE object_id="1385753921748799"',
+                         'query' => 'SELECT * from object_id="1385753921748799"',
                      ));
                 
                 
