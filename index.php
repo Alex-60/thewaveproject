@@ -207,9 +207,17 @@
                         //echo $a;
            
                 
-                       var $zak = SELECT user_id FROM like WHERE object_id="1385753921748799";
                 
-                        echo $zak;
+                        $ret = $facebook->api( array(
+                         'method' => 'fql.query',
+                         'query' => 'SELECT user_id FROM like WHERE object_id="1385753921748799"',
+                     ));
+                
+                
+                
+                       //var $zak = SELECT user_id FROM like WHERE object_id="1385753921748799";
+                
+                        echo $ret;
                 
                        // echo zak;
                 
