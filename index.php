@@ -194,7 +194,7 @@
       
                     <?
                 
-                        $request = new FacebookRequest($session,'GET','/1385753921748799');
+                        $request = new FacebookRequest($session,'GET','/1385753921748799/likes');
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
 
