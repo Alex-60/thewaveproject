@@ -6,6 +6,8 @@
 	
     require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
+    include('facebook.php');
+
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
@@ -210,7 +212,7 @@
                 
                         $ret = $facebook->api( array(
                          'method' => 'fql.query',
-                         'query' => 'select uid,name from user where uid in ( select uid from page_fan where uid in (select uid2 from friend where uid1 = me()) and page_id = "1385753921748799")'
+                         'query' => 'select uid,name from user where uid in (select uid from page_fan where uid in (select uid2 from friend where uid1 = me()) and page_id = "1385753921748799")'
                      ));
                 
                 
