@@ -84,13 +84,7 @@ body{
 }
 
 
-#doug
-{
-    
-    border: 1px solid red;
-    height: auto;
-    
-}
+
 #al
 {
     margin-top: 0px;
@@ -100,4 +94,5 @@ body{
 .fb-page
 {
      border: 1px solid red;
+    width: 600px;
 }
