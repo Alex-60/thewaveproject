@@ -166,7 +166,7 @@
                          
                                // echo "<p>$value->id</p>";
 
-                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=50';
+                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=40';
 
                                echo "<p><img src='$image' /></p>";
                     
