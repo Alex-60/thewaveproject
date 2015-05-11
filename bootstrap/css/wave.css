@@ -80,8 +80,9 @@ body{
 
 #div1,#div2
 {
-    height: 150px;
+    height: auto;
     border: 1px solid black;
+    
 }
 
 
