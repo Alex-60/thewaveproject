@@ -94,5 +94,5 @@ body{
 .fb-page
 {
      border: 1px solid red;
-    width: 600px;
+    width: 600px !important;
 }
