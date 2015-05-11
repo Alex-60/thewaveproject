@@ -213,10 +213,8 @@
                      foreach ($result['data'] as $key => $value) 
                             {
 
-                            
-                                echo "<p>$value->name</p>";
                          
-                                echo "<p>$value->id</p>";
+                                echo "<p id='al'>$value->id</p>";
 
                           
                             }
