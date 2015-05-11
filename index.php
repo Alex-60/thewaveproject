@@ -145,11 +145,7 @@
     
     <div class="fb-xfbml-parse-ignore">
         
-        <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799">
-        
-       <!-- <a href="https://www.facebook.com/pages/The-Wave/1385753921748799">The Wave</a>-->
-            
-        </blockquote>
+      
     </div>
                     </div>
       
