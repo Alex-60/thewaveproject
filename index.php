@@ -197,9 +197,6 @@
                     
                      <div id="doug">
                     
-                    
-                    
-                        <p>aaaaaaa</p> 
                     <?
                 
                 $request = new FacebookRequest($session,'GET','/me/friends');
