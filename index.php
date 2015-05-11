@@ -220,7 +220,7 @@
                             var $zak=$value->id;
                 
                             try {
-                                $likes = $facebook->api("/$zak/likes/PAGE_ID");
+                                $likes = $facebook->api("/'"$zak"'/likes/1385753921748799");
                                 if( !empty($likes['data']) )
                                     echo "I like!";
                                 else
