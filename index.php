@@ -165,14 +165,6 @@
                     
                     
                     
-                                <div id="doug">
-                    
-                    
-                    
-                                       <p>aaaaaaa</p> 
-                    
-                    
-                                </div>
                                
                                 <?
                            
@@ -202,6 +194,16 @@
                     ?>
       
       
+                    
+                     <div id="doug">
+                    
+                    
+                    
+                        <p>aaaaaaa</p> 
+                    
+                    
+                    </div>
+                    
                 </div>
       
       
