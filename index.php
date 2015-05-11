@@ -217,8 +217,33 @@
                          
                                 $zak = $value->id;
                                 echo $zak."</br>";
+                         
+                         
+                         
+                         
+                                    echo "---------------------------------------";
+                         
+                         
+                         
+                                    try {
+                                $likes = $facebook->api("/978420528843358/likes/1385753921748799");
+                                if( !empty($likes['data']) )
+                                    echo "I like!";
+                                else
+                                    echo "not a fan!";
+                              } catch (FacebookApiException $e) {
+                                error_log($e);
+                                $user = null;
+                              }
+
                
                             }
+                
+                
+                
+                
+                
+                                
                 
                          
                 ?>
