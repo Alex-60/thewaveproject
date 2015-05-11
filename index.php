@@ -143,10 +143,7 @@
                     
 <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="true">
     
-    <div class="fb-xfbml-parse-ignore">
-        
-      
-    </div>
+   
                     </div>
       
       
