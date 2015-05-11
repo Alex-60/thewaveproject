@@ -196,61 +196,17 @@
       
                 <div id="amis2" class="col-md-6">
       
-                    <?
-                
-                        $request = new FacebookRequest($session,'GET','/1385753921748799/likes');
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
+                  
+                    
+                    
+                    
+                    
+                    
+                    
 
-                        $result = $graphObject->asArray();
-                
-                       var_dump($result);
-                
-                       //var $a = SELECT user_id FROM like WHERE object_id="1385753921748799";
-                
-                        //echo $a;
-           
-                
-                
-                       /* $ret = $facebook->api( array(
-                         'method' => 'fql.query',
-                         'query' => 'select uid,name from user where uid in (select uid from page_fan where uid in (select uid2 from friend where uid1 = me()) and page_id = "1385753921748799")'
-                     ));*/
-                
-                
-                
-                       //var $zak = SELECT user_id FROM like WHERE object_id="1385753921748799";
-                
-                        //echo $ret;
-                
-                       // echo zak;
-                
-                
-                
-                            $fql = "SELECT page_id, name from page where id='1385753921748799'";
-
-                            $response = $facebook->api(array(
-                                 'method' => 'fql.query',
-                                 'query' =>$fql,
-                            ));
-
-                            print_r($response);
-                
-                
-                
-                
-                    ?>
-                    
-                    
-                   
-                    
-                    
-                    
-                
                 </div>
         
                 
-      
       
                 <?
                 
