@@ -238,12 +238,7 @@
                               }*/
 
                          
-                            result = $facebook->api(array(
-                                    "method"    => "fql.query",
-                                    "query"     => "SELECT uid FROM page_fan WHERE uid=$zak AND page_id=1385753921748799"
-                                ));
-                                if(!empty($result)) // array is not empty, so the user is a fan!
-                                    echo "$zak is a fan!";
+                          
                
                             }
                 
