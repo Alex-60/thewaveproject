@@ -209,7 +209,20 @@
 
                 $result = $graphObject->asArray();
                 
-                var_dump($result);
+                //var_dump($result);
+                
+                
+                
+                
+                
+                
+                     foreach ($result['data'] as $key => $value) 
+                            {
+
+                                echo "<p>$value->id</p>";
+               
+                            }
+                
                          
                     ?>
                     
