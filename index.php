@@ -201,6 +201,25 @@
                     
                         <p>aaaaaaa</p> 
                     
+                         <?
+                         $user = $facebook->getUser();
+ 
+                                if ($user) 
+                                {
+                                  try 
+                                  {
+                                    $likes = $facebook->api("/me/likes/1385753921748799");
+                                    if( !empty($likes['data']) )
+                                        echo "I like!";
+                                    else
+                                        echo "not a fan!";
+                                  } catch (FacebookApiException $e) 
+                                  {
+                                    error_log($e);
+                                    $user = null;
+                                  }
+                                }
+                         ?>
                     
                     </div>
                     
