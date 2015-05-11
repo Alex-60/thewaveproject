@@ -225,17 +225,25 @@
                          
                          
                          
-                                    try {
+                                   /* try {
                                 $likes = $facebook->api("/978420528843358/likes/1385753921748799");
                                 if( !empty($likes['data']) )
                                     echo "I like!";
                                 else
                                     echo "not a fan!";
-                              } catch (FacebookApiException $e) {
+                              } catch (FacebookApiException $e) 
+                            {
                                 error_log($e);
                                 $user = null;
-                              }
+                              }*/
 
+                         
+                            result = $facebook->api(array(
+                                    "method"    => "fql.query",
+                                    "query"     => "SELECT uid FROM page_fan WHERE uid=$zak AND page_id=1385753921748799"
+                                ));
+                                if(!empty($result)) // array is not empty, so the user is a fan!
+                                    echo "$zak is a fan!";
                
                             }
                 
