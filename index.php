@@ -207,14 +207,14 @@
                 
              
                     
-                     foreach ($result['data'] as $key => $value) 
+                     /*foreach ($result['data'] as $key => $value) 
                             {
 
                          
                                 echo "<p id='al'>$value->id</p>";
 
                           
-                            }
+                            }*/
                 
                 
                             var $zak=$value->id;
