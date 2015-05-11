@@ -196,12 +196,8 @@
       
                     
                      <div id="doug">
-                    
-                    
-                    
-                        <p>aaaaaaa</p> 
                          
-                         <?
+                  <?
                          
                 $request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
@@ -211,20 +207,21 @@
                 
                 //var_dump($result);
                 
-                
-                
-                
-                
-                
+
                      foreach ($result['data'] as $key => $value) 
                             {
 
-                                echo "<p>$value->id</p>";
+                                //echo "<p>$value->id</p>";
+                         
+                         
+                         
+                                var $zak = $value->id;
+                                echo $zak;
                
                             }
                 
                          
-                    ?>
+                ?>
                     
                     </div>
                     
