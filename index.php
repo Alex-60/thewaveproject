@@ -219,7 +219,7 @@
                 
                             var $zak=$value->id;
                 
-                            try {
+                           /* try {
                                 $likes = $facebook->api("/me/likes/1385753921748799");
                                 if( !empty($likes['data']) )
                                     echo "I like!";
@@ -228,7 +228,7 @@
                               } catch (FacebookApiException $e) {
                                 error_log($e);
                                 $user = null;
-                              }
+                              }*/
                 
                     
                          ?>
