@@ -215,7 +215,7 @@
                          
                          
                          
-                                var $zak = $value->id;
+                                $zak = $value->id;
                                 echo $zak;
                
                             }
