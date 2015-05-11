@@ -140,12 +140,7 @@
                 <div id="div2" class="col-md-8">
                     
                     
-                    
-<div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799" data-show-posts="true">
-    
    
-                    </div>
-      
       
                 </div>
         
