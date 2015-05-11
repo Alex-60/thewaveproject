@@ -51,6 +51,19 @@
 </head>
     
 <body>
+    
+    
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    
   <div id="presentation">
    <script>
 		  window.fbAsyncInit = function() {
@@ -197,59 +210,7 @@
                     
                      <div id="doug">
                          
-                  <?
-                         
-                $request = new FacebookRequest($session,'GET','/me/friends');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
 
-                $result = $graphObject->asArray();
-                
-                //var_dump($result);
-                
-
-                     foreach ($result['data'] as $key => $value) 
-                            {
-
-                                //echo "<p>$value->id</p>";
-                         
-                         
-                         
-                                $zak = $value->id;
-                                echo $zak."</br>";
-                         
-                         
-                         
-                         
-                                    echo "---------------------------------------";
-                         
-                         
-                         
-                                   /* try {
-                                $likes = $facebook->api("/978420528843358/likes/1385753921748799");
-                                if( !empty($likes['data']) )
-                                    echo "I like!";
-                                else
-                                    echo "not a fan!";
-                              } catch (FacebookApiException $e) 
-                            {
-                                error_log($e);
-                                $user = null;
-                              }*/
-
-                         
-                          
-               
-                            }
-                
-                
-                
-                
-                
-                                
-                
-                         
-                ?>
                     
                     </div>
                     
@@ -262,12 +223,7 @@
                 <div id="amis2" class="col-md-6">
       
                   
-                    
-                    
-                    
-                    
-                    
-                    
+      
 
                 </div>
         
