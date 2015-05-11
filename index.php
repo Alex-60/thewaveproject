@@ -200,27 +200,28 @@
                     
                     
                         <p>aaaaaaa</p> 
+                    <?
+                
+                $request = new FacebookRequest($session,'GET','/me/friends');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
+
+                $result = $graphObject->asArray();
+                
+             
                     
-                         <?
-                         $user = $facebook->getUser();
- 
-                                if ($user) 
-                                {
-                                  try 
-                                  {
-                                    $likes = $facebook->api("/me/likes/1385753921748799");
-                                    if( !empty($likes['data']) )
-                                        echo "I like!";
-                                    else
-                                        echo "not a fan!";
-                                  } catch (FacebookApiException $e) 
-                                  {
-                                    error_log($e);
-                                    $user = null;
-                                  }
-                                }
+                     foreach ($result['data'] as $key => $value) 
+                            {
+
+                            
+                                echo "<p>$value->name</p>";
+                         
+                                echo "<p>$value->id</p>";
+
+                          
+                            }
+                    
                          ?>
-                    
                     </div>
                     
                 </div>
