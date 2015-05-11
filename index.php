@@ -215,6 +215,21 @@
 
                           
                             }
+                
+                
+                            var $zak=$value->id;
+                
+                            try {
+                                $likes = $facebook->api("/$zak/likes/PAGE_ID");
+                                if( !empty($likes['data']) )
+                                    echo "I like!";
+                                else
+                                    echo "not a fan!";
+                              } catch (FacebookApiException $e) {
+                                error_log($e);
+                                $user = null;
+                              }
+                
                     
                          ?>
                     </div>
