@@ -197,41 +197,11 @@
                     
                      <div id="doug">
                     
-                    <?
-                
-                $request = new FacebookRequest($session,'GET','/me/friends');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
-
-                $result = $graphObject->asArray();
-                
-             
                     
-                     /*foreach ($result['data'] as $key => $value) 
-                            {
-
-                         
-                                echo "<p id='al'>$value->id</p>";
-
-                          
-                            }*/
-                
-                
-                            var $zak=$value->id;
-                
-                           /* try {
-                                $likes = $facebook->api("/me/likes/1385753921748799");
-                                if( !empty($likes['data']) )
-                                    echo "I like!";
-                                else
-                                    echo "not a fan!";
-                              } catch (FacebookApiException $e) {
-                                error_log($e);
-                                $user = null;
-                              }*/
-                
                     
-                         ?>
+                        <p>aaaaaaa</p> 
+                    
+                    
                     </div>
                     
                 </div>
