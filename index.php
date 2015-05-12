@@ -156,7 +156,9 @@
                          
                                // echo "<p>$value->id</p>";
 
-                         echo "<p>$value->picture</p>";
+                         //echo "<p>$value->picture</p>";
+                   
+                   echo "<p><img src='$value->picture' /></p>";
 
                                
                     
