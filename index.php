@@ -191,11 +191,15 @@
                          
                                 echo "<p>$value->name</p>";
                          
+                         
+                                echo "<p>$value->picture</p>";
+                         
+                         
                                // echo "<p>$value->id</p>";
 
-                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=40';
+                               //$image='https://graph.facebook.com/'.$value->id.'/picture?width=40';
 
-                               echo "<p><img src='$image' /></p>";
+                               //echo "<p><img src='$image' /></p>";
                     
                                     ?>
                                     
