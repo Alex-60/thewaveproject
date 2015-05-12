@@ -141,7 +141,7 @@
                     
                     
                     <?
-                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture');
+                $request = new FacebookRequest($session,'GET','/1385753921748799/posts');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
@@ -151,12 +151,11 @@
                 
                 echo "----------------------------</br>";
                 
-                json_encode($result);
+                json_decode($result);
                     ?>
       
                 </div>
         
-      
                 <div id="amis" class="col-md-6">
                 <?
 
