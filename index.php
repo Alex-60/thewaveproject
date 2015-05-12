@@ -152,7 +152,6 @@
 
                      
                          
-                                echo "<p>$value->id</p>";
                          
                                // echo "<p>$value->id</p>";
 
