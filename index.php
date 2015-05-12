@@ -148,6 +148,10 @@
                 $result = $graphObject->asArray();
                 
                 var_dump($result);
+                
+                echo "----------------------------</br>";
+                
+                json_encode($result);
                     ?>
       
                 </div>
