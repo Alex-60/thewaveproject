@@ -141,7 +141,7 @@
                     
                     
                     <?
-                $request = new FacebookRequest($session,'GET','/me/friends');
+                $request = new FacebookRequest($session,'GET','/me/feed');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
