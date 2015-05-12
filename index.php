@@ -148,7 +148,7 @@
                 $result = $graphObject->asArray();
                 
                 var_dump($result);
-                    >
+                    ?>
       
                 </div>
         
