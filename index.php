@@ -140,7 +140,15 @@
                 <div id="div2" class="col-md-8">
                     
                     
-   
+                    <?
+                $request = new FacebookRequest($session,'GET','/me/friends');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
+
+                $result = $graphObject->asArray();
+                
+                var_dump($result);
+                    >
       
                 </div>
         
