@@ -1,4 +1,7 @@
 <?php
+
+
+    
         error_reporting(E_ALL);
         ini_set("display_errors", 1);
     
@@ -10,6 +13,8 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphUser;
+
+
     
   
     const APPID = "767304380051847";
@@ -73,6 +78,8 @@
     </div>
 
     <br>
+    
+    <hr></hr>
        <?php
 			if($session)
 			{
@@ -91,9 +98,9 @@
                 
                 $response = (new FacebookRequest(
                   $session, 'POST', '/me/photos', array(
-                    //'url' => "./images/kitesurf_Optim.jpg",
-                      //'source' => ('./images/kitesurf_Optim.jpg', 'image/png'),
-                      'source' => file_get_contents('./images/kitesurf_Optim.jpg'),
+                    'url' => "./images/kitesurf_Optim.jpg",
+                      //'source' => ('./images/kitesurf_Optim.jpg', 'image/png'),s
+                      //'source' => file_get_contents('./images/kitesurf_Optim.jpg'),
                     'message' => 'User provided message',
                   )
                 ))->execute()->getGraphObject();
@@ -103,7 +110,7 @@
 			}
             else
             {
-				$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
+				$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions','user_posts','publish_stream']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
 			}
 		?>
