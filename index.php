@@ -147,11 +147,25 @@
 
                 $result = $graphObject->asArray();
                 
-                var_dump($result);
+               foreach ($result['data'] as $key => $value) 
+                            {
+
+                     
+                         
+                                echo "<p>$value->id</p>";
+                         
+                               // echo "<p>$value->id</p>";
+
+                               //$image='https://graph.facebook.com/'.$value->id.'/picture?width=40';
+
+                               //echo "<p><img src='$image' /></p>";
+                    
+                             
+                           
+                            }
+                        
                 
-                echo "----------------------------</br>";
-                
-                json_decode($result);
+               
                     ?>
       
                 </div>
