@@ -158,7 +158,11 @@
                     <div id="affiche_pic">
                     
                     <?
-                          echo "<p><img src='$value->picture.type(large)' /></p>";
+                          echo "<p><img src='$value->picture' /></p>";
+                   
+                        $pic = $facebook->api(array('method'=>'fql.query', 'query'=>"SELECT pic_big FROM user WHERE uid=1111"));
+                   
+                   
                         
                         ?>                    
                     </div>
