@@ -141,7 +141,7 @@
                     
                     
                     <?
-                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=full_picture');
+                $request = new FacebookRequest($session,'GET','/1385753921748799/posts');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
@@ -158,8 +158,7 @@
                     <div id="affiche_pic">
                     
                     <?
-                          echo "<p><img src='$value->full_picture' /></p>";
-                   
+                          echo "<p><img src='$value->picture' /></p>";
                    
                    
                         
