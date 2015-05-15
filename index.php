@@ -182,11 +182,6 @@
                                 <div id="test">
                                     
                                     <?
-                         
-                                echo "<p>$value->name</p>";
-                         
-                         
-                               // echo "<p>$value->id</p>";
 
                                $image='https://graph.facebook.com/'.$value->id.'/picture';
 
