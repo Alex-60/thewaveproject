@@ -141,7 +141,7 @@
                     
                     
                     <?
-                $request = new FacebookRequest($session,'GET','/1385753921748799/posts');
+                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
@@ -160,7 +160,6 @@
                     <?
                           echo "<p><img src='$value->picture' /></p>";
                    
-                        $pic = new FacebookRequest(array('method'=>'fql.query', 'query'=>"SELECT pic_big FROM user WHERE uid=1111"));
                    
                    
                         
