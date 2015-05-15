@@ -154,9 +154,16 @@
 
                          //echo "<p>$value->picture</p>";
                    
-                   echo "<p><img src='$value->picture' /></p>";
-
-
+                   ?>
+                    <div id="affiche_pic">
+                    
+                    <?
+                          echo "<p><img src='$value->picture' /></p>";
+                        
+                        ?>                    
+                    </div>
+                   
+  
                            
                             }
 

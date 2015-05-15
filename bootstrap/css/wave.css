@@ -75,7 +75,7 @@ body{
     display: inline-block;
     text-align: center;
     margin-right: 10px;
-    border: 1px solid red;
+
     
 }
 
@@ -99,4 +99,11 @@ body{
   
     width: 600px !important;
     text-align: center;
+}
+
+#affiche_pic
+{
+        border: 1px solid red;
+    
+    
 }
