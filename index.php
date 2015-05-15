@@ -150,23 +150,16 @@
                foreach ($result['data'] as $key => $value) 
                             {
 
-                     
-                         
-                         
-                               // echo "<p>$value->id</p>";
+                        // echo "<p>$value->id</p>";
 
                          //echo "<p>$value->picture</p>";
                    
                    echo "<p><img src='$value->picture' /></p>";
 
-                               
-                    
-                             
+
                            
                             }
-                        
-                
-               
+
                     ?>
       
                 </div>
@@ -193,12 +186,9 @@
                                 echo "<p>$value->name</p>";
                          
                          
-                               
-                         
-                         
                                // echo "<p>$value->id</p>";
 
-                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=40';
+                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
 
                                echo "<p><img src='$image' /></p>";
                     
