@@ -158,7 +158,7 @@
                     <div id="affiche_pic">
                     
                     <?
-                          echo "<p><img width="90" height="53" src='$value->picture'/></p>";
+                          echo "<p><img src='$value->picture.type(large)' /></p>";
                         
                         ?>                    
                     </div>
