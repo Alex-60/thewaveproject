@@ -158,7 +158,7 @@
                     <div id="affiche_pic">
                     
                     <?
-                          echo "<p><img src='$value->picture' /></p>";
+                          echo "<p><img src='$value->full_picture' /></p>";
                    
                    
                    
