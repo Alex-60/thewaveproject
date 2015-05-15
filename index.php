@@ -159,9 +159,7 @@
                     
                     <?
                           echo "<p><img src='$value->picture' /></p>";
-                   
-                   
-                        
+      
                         ?>                    
                     </div>
                    
