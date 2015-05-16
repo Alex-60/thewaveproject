@@ -118,6 +118,14 @@ img.resize{
 
 #border_posts
 {
-   border: 1px solid black;  
+   border: 1px solid black; 
+    width: 300px;
+    height: 400px;
     
+}
+
+#img_post img
+{
+    width: 100%;
+    height: auto;
 }

@@ -175,7 +175,7 @@
                         <div id ="border_posts">
                             <?
                     
-                        echo "<p><img src='$value->full_picture' /></p>";
+                        echo "<p id ="img_post"><img src='$value->full_picture' /></p>";
                     
                             ?>
                         </div>
