@@ -98,6 +98,7 @@ body{
 .fb-page
 {
   
+    text-decoration: none !important;
     width: 450px !important;
     text-align: center;
 }
