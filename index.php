@@ -147,7 +147,10 @@
                 foreach ($result['data'] as $key => $value) 
                             {
 
-                        echo "<p>$value->full_picture</p>";
+                        echo "<p>$value->full_picture</p></br>";
+                    
+                        echo "<p><img src='$value->full_picture' /></p>";
+                    
 
    
                             }
