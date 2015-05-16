@@ -159,9 +159,7 @@
                     
                     <?
                           echo "<p><img src='$value->picture' /></p>";
-                   
-                   
-                        
+
                         ?>                    
                     </div>
                    
@@ -182,9 +180,7 @@
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
                 $result = $graphObject->asArray();
-                
-             
-                    
+
                      foreach ($result['data'] as $key => $value) 
                             {
 
@@ -193,7 +189,7 @@
                                     
                                     <?
 
-                               $image='https://graph.facebook.com/'.$value->id.'/picture';
+                               $image='https://graph.facebook.com/'.$value->id.'/picture?width=600';
 
                                echo "<p><img src='$image' /></p>";
                     
@@ -254,8 +250,7 @@
 
                 </div>
         
-                
-      
+
                 <?
                 
 
