@@ -132,9 +132,31 @@
              
                 ?>
       
+      
                 <div id="div1" class="col-md-4">
       
-      
+                
+                    <?
+                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
+
+                $result = $graphObject->asArray();
+                
+                
+                foreach ($result['data'] as $key => $value) 
+                            {
+
+                        echo "<p>$value->full_picture</p>";
+
+   
+                            }
+                       
+                
+                    ?>
+                    
+                    
+                    
                 </div>
       
                 <div id="div2" class="col-md-8">
