@@ -83,6 +83,7 @@ body{
 {
     height: auto;
     border: 1px solid black;
+    text-align: center;
     
 }
 
@@ -97,7 +98,7 @@ body{
 .fb-page
 {
   
-    width: 300px !important;
+    width: 400px !important;
     text-align: center;
 }
 
