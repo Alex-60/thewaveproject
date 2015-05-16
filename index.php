@@ -136,29 +136,24 @@
                 <div id="div1" class="col-md-4">
       
                 
-                    <?
-                /*
-                
-                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
+ <div id="amis2" class="col-md-6">
+      
+                  
+<div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799" data-width="500" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+    
+    <div class="fb-xfbml-parse-ignore">
+         
+         <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799">
+         
+         <a href="https://www.facebook.com/pages/The-Wave/1385753921748799">The Wave</a>
+         
+         </blockquote>
+    </div>
+               
+</div>
 
-                $result = $graphObject->asArray();
-                
-                
-                foreach ($result['data'] as $key => $value) 
-                            {
-
-                        echo "<p>$value->full_picture</p></br>";
-                    
-                        echo "<p><img src='$value->full_picture' /></p>";
-                    
-
-   
-                            }
-                       
-                */
-                    ?>
+                </div>
+        
                     
                     
                     
@@ -283,28 +278,7 @@
                 </div>
       
       
-      
-      
-      
-                <div id="amis2" class="col-md-6">
-      
-                  
-<div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799" data-width="500" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
-    
-    <div class="fb-xfbml-parse-ignore">
-         
-         <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799">
-         
-         <a href="https://www.facebook.com/pages/The-Wave/1385753921748799">The Wave</a>
-         
-         </blockquote>
-    </div>
-               
-</div>
 
-                </div>
-        
-                
       
                 <?
                 
