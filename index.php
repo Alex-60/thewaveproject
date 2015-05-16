@@ -171,7 +171,15 @@
                 foreach ($result['data'] as $key => $value) 
                     {
 
+                    ?>
+                        <div id ="border_posts">
+                            <?
+                    
                         echo "<p><img src='$value->full_picture' /></p>";
+                    
+                            ?>
+                        </div>
+                    <?
  
                     }
                        

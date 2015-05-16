@@ -115,3 +115,9 @@ img.resize{
    width:200px;
    height:40px;
 }
+
+#border_posts
+{
+   border: 1px solid black;  
+    
+}
