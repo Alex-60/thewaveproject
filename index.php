@@ -163,9 +163,36 @@
                 </div>
       
                 <div id="div2" class="col-md-8">
+                 
                     
                     
                     <?
+                
+                
+                
+                  $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                $response = $request->execute();
+                $graphObject = $response->getGraphObject(GraphUser::className());
+
+                $result = $graphObject->asArray();
+                
+                
+                foreach ($result['data'] as $key => $value) 
+                            {
+
+                        echo "<p>$value->full_picture</p></br>";
+                    
+                        echo "<p><img src='$value->full_picture' /></p>";
+                    
+
+   
+                            }
+                       
+                
+                
+                
+                
+                /*
                 $request = new FacebookRequest($session,'GET','/1385753921748799/posts');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
@@ -175,10 +202,6 @@
                foreach ($result['data'] as $key => $value) 
                             {
 
-                        // echo "<p>$value->id</p>";
-
-                         //echo "<p>$value->picture</p>";
-                   
                    ?>
                     <div id="affiche_pic">
                     
@@ -194,7 +217,7 @@
                            
                 
                             }
-
+                    */
                     ?>
       
                 </div>
