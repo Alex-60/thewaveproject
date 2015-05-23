@@ -145,3 +145,8 @@ img.resize{
     text-align: center !important;
     align-content: center;
 }
+
+#test
+{
+     border: 1px solid yellow;
+}
