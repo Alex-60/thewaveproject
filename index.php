@@ -174,7 +174,7 @@
                     ?>
                     
                     
-                    <div id ="test" class="col-md-6">
+                    <div id ="test" class="col-lg-6">
                     
                     
                    aa
