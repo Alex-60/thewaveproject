@@ -177,7 +177,8 @@
                     <div id ="test2" class="col-md-6">
                     
                     
-               aaa
+           
+                        <p id ="test2-p"> zkaria</p>
                     
                     
                     </div>
