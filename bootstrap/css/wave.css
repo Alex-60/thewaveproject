@@ -142,5 +142,5 @@ img.resize{
 #border_posts
 {
     border: 1px solid green;
-    text-align: center;
+    text-align: center !important;
 }
