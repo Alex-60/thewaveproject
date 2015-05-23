@@ -175,7 +175,7 @@
                         <div id ="border_posts" class="col-md-6">
                             <?
                     
-                        echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
+                        echo "<div id='img_posts' style='aligne:center;'><img src='$value->full_picture' /></div>";
                     
                             ?>
                         </div>
