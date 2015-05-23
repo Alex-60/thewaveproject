@@ -179,7 +179,7 @@
                     
            
                         <p id ="test2-p"> zakaria</p>
-                        <p id ="test2-p"> <img/></p>
+                        <p id ="test2-p"> <img src="" /></p>
                     
                     </div>
                     
