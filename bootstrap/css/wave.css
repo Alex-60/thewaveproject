@@ -120,7 +120,7 @@ img.resize{
 
 #img_posts 
 {
-    border: 1px solid black;
+    border: 1px solid red;
     
     height:200px;
     width:200px;
@@ -141,6 +141,6 @@ img.resize{
 
 #border_posts
 {
-    border: 1px solid black;
+    border: 1px solid green;
     text-align: center;
 }
