@@ -174,10 +174,10 @@
                     ?>
                     
                     
-                    <div id ="test" class="col-lg-6">
+                    <div id ="test2" class="col-md-6">
                     
                     
-                   aa
+               aaa
                     
                     
                     </div>
