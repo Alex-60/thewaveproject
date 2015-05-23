@@ -126,6 +126,7 @@ img.resize{
     width:200px;
     text-align: center;
     
+    
 }
 
 
@@ -143,4 +144,5 @@ img.resize{
 {
     border: 1px solid green;
     text-align: center !important;
+    align-content: center;
 }
