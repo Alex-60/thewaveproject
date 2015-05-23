@@ -177,14 +177,9 @@
                     <div id ="test2" class="col-md-6">
                     
                     
-           
-                        <p id ="test2-p"> zakaria</p>
                         
                         <p id ="test2-p"> 
                             
-                            
-                            
-                            <img src='<? $value->full_picture ?>' />
                         
                             <?
                               echo "<img src='$value->full_picture'/>";

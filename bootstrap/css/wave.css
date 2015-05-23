@@ -154,4 +154,7 @@ img.resize{
 #test2-p
 {
     border: 1px solid green;
+    
+    height:200px;
+    width:200px;
 }
