@@ -172,7 +172,7 @@
                     {
 
                     ?>
-                        <div id ="border_posts" class="col-md-6">
+                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
               
    
                             <?
