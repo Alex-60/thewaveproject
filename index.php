@@ -179,7 +179,7 @@
                     
            
                         <p id ="test2-p"> zakaria</p>
-                        <p id ="test2-p"> <img src="<?php $value->full_picture?>" /></p>
+                        <p id ="test2-p"> <img src='<?php $value->full_picture?>' /></p>
                     
                     </div>
                     
