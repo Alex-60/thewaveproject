@@ -143,25 +143,20 @@
                 <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
                     
                     <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
+                    
+                    
+                    
                 
                 </blockquote>
                 
                 
-                <p>zakaria</p>
+                
             </div>
-                    
+                    <p>zakaria</p>
         </div>
                     
                     
-                    <div class="col-md-4" id="fb-page2">
-                    
-                    
-                    aaaaa
-                    
-                    
-                    
-                    </div>
-                    
+
                     
                     
                 </div>
