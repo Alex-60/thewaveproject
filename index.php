@@ -172,7 +172,7 @@
                     {
 
                     ?>
-                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
+                        <p id ="border_posts" class="col-md-6" style="text-aligne:center;">
               
    
                             <?
@@ -180,7 +180,7 @@
                         echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
                     
                             ?>
-                        </div>
+                        </p>
                     <?
  
                     }
