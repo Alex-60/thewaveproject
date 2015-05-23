@@ -174,24 +174,18 @@
                     ?>
                     
                     
-                    <div id ="test2" class="col-md-6">
-                    
-                    
-                        
-                        <p id ="test2-p"> 
-                            
-                        
-                            <?
-                              echo "<img src='$value->full_picture'/>";
- 
-                            ?>
-                        </p>
-                    
-                    </div>
-                    
+             
                     
                      
+                       <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
+              
+   
+                            <?
                     
+                        echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
+                    
+                            ?>
+                        </div>
                     
                   <!-- <div>hnaaaaaaaaaaaaaaa</div>-->
                     
