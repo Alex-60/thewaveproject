@@ -174,12 +174,12 @@
 	
     
 	<!--Stylesheets-->
-	<link href="./css/jquery.filer.css" type="text/css" rel="stylesheet" />
+	<link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
 	
 
 	<!--jQuery-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.filer.min.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
         $('#input1').filer();
