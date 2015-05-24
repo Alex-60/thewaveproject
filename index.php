@@ -158,19 +158,12 @@
                    
         </div>
                   
-             <p>
+             <div class="col-md-12" id="div1-child2">
                  
                  aaa
                  
                  
-                 <div class="col-md-4">
-                    
-                a1111
-                    
-                    
-                </div>
-                 
-             </p>
+             </div>
                     
 
                     
