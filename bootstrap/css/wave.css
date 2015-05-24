@@ -144,4 +144,7 @@ img.resize{
     align-content: center;
 }
 
-
+#div1 p
+{
+     border: 1px solid black;
+}
