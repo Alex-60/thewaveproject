@@ -54,7 +54,7 @@
     
     
 	<!--jQuery-->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
     
     	<script type="text/javascript">
