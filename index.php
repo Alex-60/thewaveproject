@@ -252,21 +252,7 @@
                  
                
                 
-               /*foreach ($result['data'] as $key => $value) 
-                {
-                   
-                    echo "<p>$value->name</p>";
-                   
-                   $image='https://graph.facebook.com/'.$value->id.'/picture?width=70';
-
-                   echo "<p><img src='$image' /></p>";
-                   
-                    foreach ($value as $key => $valeur) 
-                    {
-                        
-                    }
-                    
-                }*/
+     
        
                     ?>
       
@@ -279,12 +265,7 @@
       
       
       
-                <div id="amis2" class="col-md-6">
-      
-                  
-
-
-                </div>
+           
         
                 
       
