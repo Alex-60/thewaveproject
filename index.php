@@ -282,27 +282,6 @@
                  
                  aaa
                  
-                 
-                 
-                 
-                 
-                 <html>
-<head>
-	
-    
-	<!--Stylesheets-->
-    
-
-
-    
-	<!--[if IE]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-
     
     <div>
         <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -316,8 +295,6 @@
         </form>
     </div>
 
-   </body>
-</html>
 
                  
              </div>
