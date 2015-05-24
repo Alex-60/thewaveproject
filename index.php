@@ -217,10 +217,13 @@
       
                 </div>
         
-                <div id="amis" class="col-md-6">
+      
+      <!------------------------------------ pour recuperer les amis -------------------->
+      
+              <!--  <div id="amis" class="col-md-6">
                 <?
 
-                $request = new FacebookRequest($session,'GET','/me/friends');
+                /*$request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
@@ -247,19 +250,11 @@
                                 <?
                            
                             }
-                        
-                        
-                 
-               
-                
-     
-       
+
+       */
                     ?>
-      
-      
-               
                     
-                </div>
+                </div>-->
       
       
       
