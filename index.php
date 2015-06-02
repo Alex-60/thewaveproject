@@ -221,12 +221,7 @@
                 
            //post picture
                     
-                    function zak()
-                        {
-                           echo 'foo';
-                        } 
-
-                
+             
                 
                   /*  $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
@@ -299,14 +294,22 @@
                  
                  <?
                   function runMyFunction() {
-    echo 'I just ran a php function';
-  }
+                      
+                    $response = (new FacebookRequest(
+				  $session, "POST", '/me/photos', array(
+					'source' => file_get_contents('./images/Kite_Surf.jpg'),
+                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
+                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+					'message' => 'User provided message'
+				  )
+				))->execute()->getGraphObject();
+                      }
 
-  if (isset($_GET['hello'])) {
-    runMyFunction();
-  }
+                      if (isset($_GET['hello'])) {
+                        runMyFunction();
+                      }
                 ?>
-              <a href='index.php?hello=true'>Run PHP Function</a>
+              <a href='index.php?hello=true'>zak function run</a>
                  
                  
              </div>
