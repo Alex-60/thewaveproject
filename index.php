@@ -295,6 +295,15 @@
                  <?
                   function runMyFunction() 
                   {
+                      
+                        const APPID ="767304380051847";
+                        const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
+
+                        //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
+
+                        FacebookSession::setDefaultApplication(APPID, APPSECRET);
+                      
+                      
                     $session = new FacebookSession($_SESSION['fb_token']);
                       
                     $response = (new FacebookRequest(
