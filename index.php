@@ -52,7 +52,6 @@
 	
 
     
-    
 	<!--jQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
@@ -125,7 +124,6 @@
 	</script>
     
     
-    
     <style>
         .file_input{
             display: inline-block;
@@ -156,14 +154,7 @@
         }
     </style>
     
-    
-    
-    
-    
-    
-    
-    
-    
+
     <title>Application Facebook - The Wave</title>
 </head>
     
@@ -225,6 +216,27 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
+                
+                
+                
+           //post picture
+                    
+                    
+                    $response = (new FacebookRequest(
+				  $session, "POST", '/me/photos', array(
+					'source' => file_get_contents('./images/Kite_Surf.jpg'),
+                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
+                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+					'message' => 'User provided message'
+				  )
+				))->execute()->getGraphObject();
+                
+                
+                
+                
+                
+                
+                
  
                 $name = $user->getName();
                 //$id=$user->getId();
@@ -260,42 +272,29 @@
                 <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
                     
                     <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-                    
-                    
-                
+          
                 </blockquote>
-                
-                
-                
+    
             </div>
             
-            
-            
-           
-                   
+        
         </div>
                     
                     
                     <!---------------------------------------------------------------------------------------------------------upload------------------------------------------------------------------------------------->
                   
              <div class="col-md-12" id="div1-child2">
-                 
-                 
-    
-    <div>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <!-- filer 2 -->
-            <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
-                
-                <i class="icon-jfi-paperclip"></i> Attach a file</a>
+                    <div>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <!-- filer 2 -->
+                            <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
 
-            <br>
-            <input type="submit">
-        </form>
-    </div>
+                                <i class="icon-jfi-paperclip"></i> Attach a file</a>
 
-
-                 
+                            <br>
+                            <input type="submit">
+                        </form>
+                    </div>
              </div>
                     
 <!-----------------------------------------------------upload------------------------------------------------------------->
@@ -320,26 +319,15 @@
                     {
 
                     ?>
-                    
-                    
-             
-                    
-                     
+
                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
-              
-   
                             <?
-                    
-                        echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
+                                echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
                     
                             ?>
                         </div>
                     
-                  <!-- <div>hnaaaaaaaaaaaaaaa</div>-->
-                    
-                    
-               
-                    
+ 
                     <?
  
                     }
@@ -381,23 +369,13 @@
                                 <?
                            
                             }
-
        */
                     ?>
                     
                 </div>-->
-      
-      
-      
-      
-      
-           
-        
-                
-      
+
                 <?
                 
-
 			}
             else
             {
