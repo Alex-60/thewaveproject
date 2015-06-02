@@ -136,6 +136,7 @@ img.resize{
 
     text-align: center !important;
     align-content: center;
+    border: 1px solid silver;
 }
 
 #div1-child2
