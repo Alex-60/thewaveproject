@@ -225,9 +225,7 @@
                         {
                            echo 'foo';
                         } 
-                
-                ?><input  type="button"  value="Appeler fonction PHP" onclick="zak();">
-      <?
+
                 
                 
                     $response = (new FacebookRequest(
@@ -298,6 +296,10 @@
                             <input type="submit">
                         </form>
                     </div>
+                 
+                 <input  type="button"  value="Appeler fonction PHP" onclick="zak();">
+                 
+                 
              </div>
                     
 <!-----------------------------------------------------upload------------------------------------------------------------->
