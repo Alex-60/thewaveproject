@@ -220,22 +220,18 @@
                 
                 
            //post picture
-                    
-                    function zak()
-                        {
-                           echo 'foo';
-                        } 
+           
 
                 
                 
-                    $response = (new FacebookRequest(
+                    /*$response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     'source' => '@'.realpath('./images/Kite_Surf.jpg'),
                       'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
 				  )
-				))->execute()->getGraphObject();
+				))->execute()->getGraphObject();*/
                 
 
  
@@ -297,7 +293,14 @@
                         </form>
                     </div>
                  
-                 <input  type="button"  value="Appeler fonction PHP" onclick="zak();">
+                 <input  type="button"  value="Appeler fonction PHP" onclick="<? $response = (new FacebookRequest(
+				  $session, "POST", '/me/photos', array(
+					'source' => file_get_contents('./images/Kite_Surf.jpg'),
+                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
+                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+					'message' => 'User provided message'
+				  )
+				))->execute()->getGraphObject();?>">
                  
                  
              </div>
