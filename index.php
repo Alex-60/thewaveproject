@@ -280,7 +280,6 @@
                   
              <div class="col-md-12" id="div1-child2">
                  
-                 aaa
                  
     
     <div>
@@ -299,20 +298,18 @@
                  
              </div>
                     
-<!--------------------------------------------------upload------------------------------------------------------------->
+<!-----------------------------------------------------upload------------------------------------------------------------->
                     
                     
                 </div>
       
                 <div id="div2" class="col-md-8">
                  
-                    
-                    
                     <?
                 
                 
                 
-                  $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
