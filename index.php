@@ -300,8 +300,8 @@
                     $response = (new FacebookRequest(
 				    $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/wave.jpg'),
-                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                    'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                    'source' => '@'.realpath('./images/wave.jpg'),
+                    //'source' => new CURLFile('./images/wave.jpg', 'image/jpg'),
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
