@@ -301,7 +301,7 @@
 				    $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/wave.jpg'),
                     'source' => '@'.realpath('./images/wave.jpg'),
-                    //'source' => new CURLFile('./images/wave.jpg', 'image/jpg'),
+                    'source' => new CURLFile('./images/wave.jpg', 'image/jpg'),
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
