@@ -226,7 +226,7 @@
                            echo 'foo';
                         } 
                 
-                ?><input name="ButtonName" type="button" id="ButtonName" value="Appeler fonction PHP" onclick="zak();">
+                ?><input  type="button"  value="Appeler fonction PHP" onclick="zak();">
       <?
                 
                 
