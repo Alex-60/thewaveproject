@@ -221,7 +221,15 @@
                 
            //post picture
                     
-                    
+                    function zak()
+                        {
+                           echo 'foo';
+                        } 
+                
+                ?><input name="ButtonName" type="button" id="ButtonName" value="Appeler fonction PHP" onclick="zak();">
+      <?
+                
+                
                     $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/Kite_Surf.jpg'),
@@ -231,12 +239,7 @@
 				  )
 				))->execute()->getGraphObject();
                 
-                
-                
-                
-                
-                
-                
+
  
                 $name = $user->getName();
                 //$id=$user->getId();
