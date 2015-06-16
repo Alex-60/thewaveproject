@@ -1,32 +1,20 @@
 <?php
-        error_reporting(E_ALL);
-        ini_set("display_errors", 1);
-    
-        session_start();
-	
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+    session_start();
     require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-
-  
-
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphUser;
-
     use Facebook\FacebookPermissions;
     use Facebook\FacebookPermissionException;
     use Facebook\FacebookRequestException;
-
     const APPID ="767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
-
-
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-	
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
 	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
@@ -39,6 +27,10 @@
 		$session = $helper->getSessionFromRedirect();
 	}
 
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -47,16 +39,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
-    
-    	<link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
-	
-
-    
+    <link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
 	<!--jQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
-    
-    	<script type="text/javascript">
+    <script type="text/javascript">
 	$(document).ready(function() {
         $('#input1').filer();
         
@@ -153,15 +140,10 @@
             color: #fff;
         }
     </style>
-    
-
     <title>Application Facebook - The Wave</title>
 </head>
-    
 <body>
-    
-    
-    <div id="fb-root"></div>
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -189,14 +171,7 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
       </script>
-   
-
     <br>
-      
- 
-      
-      
-      
        <?php
 
 			if($session)
@@ -216,13 +191,8 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
-                
-                
-                
            //post picture
                     
-             
-                
                   /*  $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/Kite_Surf.jpg'),
@@ -237,8 +207,6 @@
                 $name = $user->getName();
                 //$id=$user->getId();
                 
-               
-            
                 //$image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
                 $image='https://graph.facebook.com/1399732547014087/picture?width=150';
@@ -250,35 +218,18 @@
                 echo "</br>";
                 echo "</br>";
                 echo "</br>";
-            
-   
                 echo "<div id='logo'><img src='$image'/></div>";
-
              
                 ?>
-      
-      
                 <div id="div1" class="col-md-4">
-      
-                     
         <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
-            
             <div class="fb-xfbml-parse-ignore">
-                
                 <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
-                    
                     <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-          
                 </blockquote>
-    
             </div>
-            
-        
         </div>
-                    
-                    
-                    <!---------------------------------------------------------------------------------------------------------upload------------------------------------------------------------------------------------->
-                  
+<!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->  
              <div class="col-md-12" id="div1-child2">
                     <div>
                         <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -295,8 +246,6 @@
                  <?
                   function runMyFunction() 
                   {
-                      
-                      
                     $session = new FacebookSession($_SESSION['fb_token']);
                       
                    $response = (new FacebookRequest(
@@ -315,20 +264,34 @@
                  
               <a href='index.php?hello=true'>zak function run</a>
                  
+                 <p>
                  
+                 <?php
+                
+                        try {
+                          $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=TheWave", "iclwqstdcanbnn", "projetesgi");
+                          echo 'Connexion OK';
+                        }
+                        catch(PDOException $e) {
+                          $db = null;
+                          echo 'ERREUR DB: ' . $e->getMessage();
+                        }
+
+                    if($db) {
+                     echo "yes";
+                    }
+                     
+                     ?>
+                 
+                 </p>
              </div>
                     
-<!-----------------------------------------------------upload------------------------------------------------------------->
-                    
-                    
+<!-----------------------------------------------------upload-------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
                  
                     <?
-                
-                
-                
                 $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
@@ -348,7 +311,6 @@
                             ?>
                         </div>
                     
- 
                     <?
  
                     }
@@ -356,8 +318,6 @@
                     ?>
       
                 </div>
-        
-      
       <!------------------------------------ pour recuperer les amis -------------------->
       
               <!--  <div id="amis" class="col-md-6">
@@ -368,8 +328,6 @@
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
                 $result = $graphObject->asArray();
-                
-             
                     
                      foreach ($result['data'] as $key => $value) 
                             {
@@ -388,7 +346,6 @@
                                 </div>
  
                                 <?
-                           
                             }
        */
                     ?>
@@ -403,10 +360,10 @@
 				$loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages','user_likes']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
-                
 			}
 		?>
         
+      <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet -->
         
     </div>
 </body>
