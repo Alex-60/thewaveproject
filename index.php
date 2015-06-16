@@ -268,14 +268,14 @@
                  
                  <?php
                 
-                        try {
-                          $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=TheWave", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
-                          echo 'Connexion OK';
-                        }
-                        catch(PDOException $e) {
-                          $db = null;
-                          echo 'ERREUR DB: ' . $e->getMessage();
-                        }
+                try {
+                  $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
+                  echo 'Connexion OK';
+                }
+                catch(PDOException $e) {
+                  $db = null;
+                  echo 'ERREUR DB: ' . $e->getMessage();
+                }
 
                     if($db) {
                      echo "yes";
