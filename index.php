@@ -26,11 +26,6 @@
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
     <link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<!--jQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
@@ -143,16 +140,51 @@
     <title>Application Facebook - The Wave</title>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    
-    
+
+<!-- //////////////////         CODE INTEGRATION FINALE          //////////////////-->
+<section>
+
+    <article class="presentation">
+        <p class="txt1">Grand Jeu Concours</p>
+        <p class="txt1_1">Du 1er juin au 31 juillet 2015</p>
+        <p class="txt2">Participer et tentez de gagner votre équipement de kyte surf avec</p>
+        <img class="logohome" src="img/logo.png" />
+    </article>
+
+    <article class="slogan">
+        <p>JETEZ-VOUS À L'EAU</p>
+        <button class="voter">VOTER</button>
+        <button class="participer">PARTICIPER</button>
+    </article>
+
+    <p>Classement actuel</p>
+    <article class="classement">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </article>
+
+    <footer>
+        <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
+    </footer>
+
+</section>
+
+
+
+<!-- //////////////////         CODE ZAK          //////////////////-->
+<section>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     
   <div id="presentation">
    <script>
@@ -220,30 +252,29 @@
                 echo "</br>";
                 echo "<div id='logo'><img src='$image'/></div>";
              
-                ?>
-                <div id="div1" class="col-md-4">
-        <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
-            <div class="fb-xfbml-parse-ignore">
-                <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
-                    <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-                </blockquote>
-            </div>
+        ?>
+<div id="div1" class="col-md-4">
+    <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
+        <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
+                <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
+            </blockquote>
         </div>
-<!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->  
-             <div class="col-md-12" id="div1-child2">
-                    <div>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            <!-- filer 2 -->
-                            <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
-
-                                <i class="icon-jfi-paperclip"></i> Attach a file</a>
-
-                            <br>
-                            <input type="submit">
-                        </form>
-                    </div>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
+    <div class="col-md-12" id="div1-child2">
+        <div>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <!-- filer 2 -->
+                <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
+                    <i class="icon-jfi-paperclip"></i> Attach a file
+                </a>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
                  
-                 <?
+                 <?php
                   function runMyFunction() 
                   {
                     $session = new FacebookSession($_SESSION['fb_token']);
@@ -262,10 +293,8 @@
                       }
                 ?>
                  
-              <a href='index.php?hello=true'>zak function run</a>
-                 
-                 <p>
-                 
+                <a href='index.php?hello=true'>zak function run</a>
+                <p>
                  <?php
                 
                 try {
@@ -291,7 +320,7 @@
       
                 <div id="div2" class="col-md-8">
                  
-                    <?
+                    <?php
                 $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
@@ -305,13 +334,13 @@
                     ?>
 
                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
-                            <?
+                            <?php
                                 echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
                     
                             ?>
                         </div>
                     
-                    <?
+                    <?php
  
                     }
                        
@@ -321,7 +350,7 @@
       <!------------------------------------ pour recuperer les amis -------------------->
       
               <!--  <div id="amis" class="col-md-6">
-                <?
+                <?php
 
                 /*$request = new FacebookRequest($session,'GET','/me/friends');
                 $response = $request->execute();
@@ -335,7 +364,7 @@
                             ?>
                                 <div id="test">
                                     
-                                    <?
+                                    <?php
 
                                $image='https://graph.facebook.com/'.$value->id.'/picture';
 
@@ -345,14 +374,14 @@
                                     
                                 </div>
  
-                                <?
+                                <?php
                             }
        */
                     ?>
                     
                 </div>-->
 
-                <?
+                <?php
                 
 			}
             else
@@ -366,6 +395,7 @@
       <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet -->
         
     </div>
+</section>
 </body>
 </html>
 
