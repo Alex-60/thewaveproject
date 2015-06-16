@@ -269,7 +269,7 @@
                  <?php
                 
                         try {
-                          $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=TheWave", "iclwqstdcanbnn", "");
+                          $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=TheWave", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
                           echo 'Connexion OK';
                         }
                         catch(PDOException $e) {
