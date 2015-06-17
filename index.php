@@ -266,12 +266,12 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-<form enctype="multipart/form-data" action="upload.php" method="post"> 
-<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
-Ajouter une photo: 
-<input name="photo" type="file"> 
-<input type="submit" value="Valider la photo"> 
-</form> 
+<!--<form enctype="multipart/form-data" action="upload.php" method="post"> 
+        <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+        Ajouter une photo: 
+        <input name="photo" type="file"> 
+        <input type="submit" value="Valider la photo"> 
+</form> -->
         
 
                  
@@ -283,7 +283,7 @@ Ajouter une photo:
                     $name =   $_POST['name'];
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/"."$name".""),
+					'source' => file_get_contents("./images/."$_FILES['photo']['name']"."),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
                       //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
