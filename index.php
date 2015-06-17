@@ -275,7 +275,7 @@
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
               
-                <?php echo $_POST["name"]; ?> 
+                <?php echo $_FILES['userfile']['name']; ?> 
                 
                 <input type="submit" value="Upload Image" name="submit">
                   
