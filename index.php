@@ -266,14 +266,20 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-    <form enctype="multipart/form-data" action="upload.php" method="post"> 
+    <form enctype="multipart/form-data" action="" method="post"> 
+        
+       <? $filename=$_FILES['photo']['name'];
+        echo "Le nom du fichier contenant la photo est: ";
+        echo $filename;
+                ?>
+        
 <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
 Ajouter une photo: 
 <input name="photo" type="file"> 
 <input type="submit" value="Valider la photo"> 
 </form> 
         
-
+die();
                  
                  <?php
                 
