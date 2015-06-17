@@ -107,7 +107,7 @@
         
 	});
 	</script>-->
-    <style>
+   <!-- <style>
         .file_input{
             display: inline-block;
             padding: 10px 16px;
@@ -135,7 +135,7 @@
             background: #008BFF;
             color: #fff;
         }
-    </style>
+    </style>-->
 
     <script type="text/javascript" src="js/script.js"></script>
 
@@ -266,14 +266,7 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         <div>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <!-- filer 2 -->
-                <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
-                    <i class="icon-jfi-paperclip"></i> Attach a file
-                </a>
-                <br>
-                <input type="submit">
-            </form>
+       
             
             <div style="border:1px solid black;">
             
