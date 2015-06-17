@@ -266,7 +266,7 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-        <!--<div>
+        <div>
             <div style="border:1px solid black;">
             <form action="#" method="post" enctype="multipart/form-data">
                 Select image to upload:
@@ -274,7 +274,7 @@
                 <input type="submit" value="Upload Image" name="submit">
             </form>
             </div> 
-        </div>-->
+        </div>
         
 
                  
