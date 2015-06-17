@@ -144,7 +144,7 @@
 <body>
 
 <!-- //////////////////         CODE INTEGRATION FINALE          //////////////////-->
-<section>
+<!--<section>
 
     <article class="presentation">
         <p class="txt1">Grand Jeu Concours</p>
@@ -172,7 +172,7 @@
         <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
     </footer>
 
-</section>
+</section>-->
 
 
 
