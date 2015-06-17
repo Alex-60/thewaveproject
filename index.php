@@ -314,7 +314,7 @@
                     }
 
                      
-                <?php $dbh = new PDO('pgsql:host=localhost;dbname=[dfhf24ft89btrp]');?>
+                //<?php $dbh = new PDO('pgsql:host=localhost;dbname=[dfhf24ft89btrp]');?>
                  
                  </p>
                  
