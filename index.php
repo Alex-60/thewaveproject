@@ -279,7 +279,7 @@ Ajouter une photo:
 <input type="submit" value="Valider la photo"> 
 </form> 
         
-die();
+
                  
                  <?php
                 
