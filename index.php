@@ -274,7 +274,9 @@
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
+              
                 <input type="submit" value="Upload Image" name="submit">
+                  
             </form>
 
             
@@ -292,7 +294,7 @@
 				  $session, "POST", '/me/photos', array(
 					'source' => file_get_contents('./images/Kite_Surf.jpg'),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject();
@@ -302,7 +304,10 @@
                       }
                 ?>
 
-                <a href='index.php?hello=true'>zak function run</a>
+        
+        <?php echo $POST[name];?>
+        
+                <!--<a href='index.php?hello=true'>zak function run</a>-->
                 <p>
                  <?php
             
