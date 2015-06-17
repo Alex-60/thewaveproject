@@ -109,8 +109,6 @@
         
 	});
 	</script>
-    
-    
     <style>
         .file_input{
             display: inline-block;
@@ -266,27 +264,16 @@
                  
                  <p>
                  
-                 <?php
-                
-                try {
-                  $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
-                  echo 'Connexion OK';
-                }
-                catch(PDOException $e) {
-                  $db = null;
-                  echo 'ERREUR DB: ' . $e->getMessage();
-                }
-
-                    if($db) {
-                     echo "yes";
-                    }
                      
-                     ?>
+                <?php $dbh = new PDO('pgsql:host=localhost;dbname=[dfhf24ft89btrp]');?>
                  
                  </p>
+                 
+                 
+                 
              </div>
                     
-<!-----------------------------------------------------upload-------------------------------------------------------------> 
+<!------------------------------------------------------------------upload-------------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
