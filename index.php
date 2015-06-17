@@ -309,8 +309,15 @@
                     echo "-----------------";
                     
                     
-                    $result = pg_query($dbconn3, "SELECT * FROM villes");
-                  echo $result;
+                $result = pg_query($dbconn3, "SELECT * FROM villes");
+                
+                    while ($row = pg_fetch_row($result)) 
+                    {
+                      echo "ville: $row[0]  
+                      echo "<br />\n";
+                    }
+                    
+                    
                    
                 }
                 catch (Exception $e)
