@@ -268,48 +268,63 @@
         
 
         
-        <form method="post" enctype="multipart/form-data" action="upload.php">
-        <p>
-            <input type="file" name="fichier" size="30">
-            <input type="submit" name="upload" value="Uploader">
-        </p>
-        </form>
+      <?php 
 
-        
-        <?php
+// filename: upload.form.php 
 
-if( isset($_POST['upload']) ) // si formulaire soumis
-{
-    $content_dir = 'upload/'; // dossier où sera déplacé le fichier
+// first let's set some variables 
 
-    $tmp_file = $_FILES['fichier']['tmp_name'];
+// make a note of the current working directory relative to root. 
+$directory_self = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']); 
 
-    if( !is_uploaded_file($tmp_file) )
-    {
-        exit("Le fichier est introuvable");
-    }
+// make a note of the location of the upload handler script 
+$uploadHandler = 'http://' . $_SERVER['HTTP_HOST'] . $directory_self . 'upload.processor.php'; 
 
-    // on vérifie maintenant l'extension
-    $type_file = $_FILES['fichier']['type'];
+// set a max file size for the html upload form 
+$max_file_size = 30000; // size in bytes 
 
-    if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') )
-    {
-        exit("Le fichier n'est pas une image");
-    }
-
-    // on copie le fichier dans le dossier de destination
-    $name_file = $_FILES['fichier']['name'];
-
-    if( !move_uploaded_file($tmp_file, $content_dir . $name_file) )
-    {
-        exit("Impossible de copier le fichier dans $content_dir");
-    }
-
-    echo "Le fichier a bien été uploadé";
-}
-
+// now echo the html page 
 ?>
-        
+
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"> 
+     
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+         
+        <title>Upload form</title> 
+     
+    </head> 
+     
+    <body> 
+     
+    <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post"> 
+     
+        <h1> 
+            Upload form 
+        </h1> 
+         
+        <p> 
+            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>"> 
+        </p> 
+         
+        <p> 
+            <label for="file">File to upload:</label> 
+            <input id="file" type="file" name="file"> 
+        </p> 
+                 
+        <p> 
+            <label for="submit">Press to...</label> 
+            <input id="submit" type="submit" name="submit" value="Upload me!"> 
+        </p> 
+     
+    </form> 
+     
+     
+    </body> 
+
+</html> 
+    
         
         
                  
