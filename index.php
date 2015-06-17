@@ -309,12 +309,13 @@
                   //echo 'ERREUR DB: ' . $e->getMessage();
                 }
 
-                    if($db) {
+                    //if($db) 
+                    {
                      //echo "yes";
                     }
 
                      
-                //<?php $dbh = new PDO('pgsql:host=localhost;dbname=[dfhf24ft89btrp]');?>
+                <?php $dbh = new PDO('pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=[dfhf24ft89btrp]');?>
                  
                  </p>
                  
