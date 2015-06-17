@@ -266,16 +266,12 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-<!--<form enctype="multipart/form-data" action="upload.php" method="post"> 
+<form enctype="multipart/form-data" action="upload.php" method="post"> 
         <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
         Ajouter une photo: 
         <input name="photo" type="file"> 
-        <input type="submit" value="Valider la photo"> 
-</form> -->
-        
-
-                 
-                 <?php
+    
+           <?php
                 
                   function runMyFunction() 
                   {
@@ -295,10 +291,19 @@
                       }
                 ?>
 
+                <a href='index.php?hello=true'>zak function run</a>
+    
+    
+    
+        <input type="submit" value="Valider la photo"> 
+    
+    
+</form> 
         
+
+                 
+          
         
-        
-                <!--<a href='index.php?hello=true'>zak function run</a>-->
                 <p>
                  <?php
             
