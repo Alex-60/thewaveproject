@@ -299,38 +299,14 @@
                 <a href='index.php?hello=true'>zak function run</a>
                 <p>
                  <?php
-                
-                try {
-<<<<<<< HEAD
-                 // $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ");
-                    $dsn = "pgsql:"
-                        . "host=ec2-54-83-25-238.compute-1.amazonaws.com;"
-                        . "dbname=dfhf24ft89btrp;"
-                        . "user=iclwqstdcanbnn;"
-                        . "port=5432;"
-                        . "sslmode=require;"
-                        . "password= VdN3cktdfKZZzPnasW4IxrghX6";
+            
 
-                    $db = new PDO($dsn);
-                  echo 'Connexion OK';
-=======
-                  //$db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
-                 // echo 'Connexion OK';
->>>>>>> cfc3fa65d9c2df096f60a848bf06cbf8bccb7010
-                }
-                catch(PDOException $e) {
-                  //$db = null;
-                  //echo 'ERREUR DB: ' . $e->getMessage();
-                }
-
-                    //if($db) 
-                    {
-                     //echo "yes";
-                    }
+                 $db = pg_connect("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6") or die("connection faild");
+       
+               
 
                      
-                <?php $dbh = new PDO('pgsql:host=localhost;dbname=dfhf24ft89btrp');?>
-                 
+               
                  </p>
                  
                  
