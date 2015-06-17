@@ -40,7 +40,105 @@
 	<!--jQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+        $('#input1').filer();
+        
+        $('.file_input').filer({
+            showThumbs: true,
+            templates: {
+                box: '<ul class="jFiler-item-list"></ul>',
+                item: '<li class="jFiler-item">\
+                            <div class="jFiler-item-container">\
+                                <div class="jFiler-item-inner">\
+                                    <div class="jFiler-item-thumb">\
+                                        <div class="jFiler-item-status"></div>\
+                                        <div class="jFiler-item-info">\
+                                            <span class="jFiler-item-title"><b title="{{fi-name}}">{{fi-name | limitTo: 25}}</b></span>\
+                                        </div>\
+                                        {{fi-image}}\
+                                    </div>\
+                                    <div class="jFiler-item-assets jFiler-row">\
+                                        <ul class="list-inline pull-left">\
+                                            <li><span class="jFiler-item-others">{{fi-icon}} {{fi-size2}}</span></li>\
+                                        </ul>\
+                                        <ul class="list-inline pull-right">\
+                                            <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>\
+                                        </ul>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </li>',
+                itemAppend: '<li class="jFiler-item">\
+                            <div class="jFiler-item-container">\
+                                <div class="jFiler-item-inner">\
+                                    <div class="jFiler-item-thumb">\
+                                        <div class="jFiler-item-status"></div>\
+                                        <div class="jFiler-item-info">\
+                                            <span class="jFiler-item-title"><b title="{{fi-name}}">{{fi-name | limitTo: 25}}</b></span>\
+                                        </div>\
+                                        {{fi-image}}\
+                                    </div>\
+                                    <div class="jFiler-item-assets jFiler-row">\
+                                        <ul class="list-inline pull-left">\
+                                            <span class="jFiler-item-others">{{fi-icon}} {{fi-size2}}</span>\
+                                        </ul>\
+                                        <ul class="list-inline pull-right">\
+                                            <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>\
+                                        </ul>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </li>',
+                progressBar: '<div class="bar"></div>',
+                itemAppendToEnd: true,
+                removeConfirmation: true,
+                _selectors: {
+                    list: '.jFiler-item-list',
+                    item: '.jFiler-item',
+                    progressBar: '.bar',
+                    remove: '.jFiler-item-trash-action',
+                }
+            },
+            addMore: true,
+       
+        });
+        
+	});
+	</script>
+    <style>
+        .file_input{
+            display: inline-block;
+            padding: 10px 16px;
+            outline: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+            font-family: sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 3px;
+            color: #008BFF;
+            border: 1px solid #008BFF;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.05);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        .file_input:hover,
+        .file_input:active {
+            background: #008BFF;
+            color: #fff;
+        }
+    </style>
+
     <script type="text/javascript" src="js/script.js"></script>
+
     <title>Application Facebook - The Wave</title>
 </head>
 <body>
@@ -197,11 +295,13 @@
                       }
                 ?>
                  
+
                 <a href='index.php?hello=true'>zak function run</a>
                 <p>
                  <?php
                 
                 try {
+<<<<<<< HEAD
                  // $db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ");
                     $dsn = "pgsql:"
                         . "host=ec2-54-83-25-238.compute-1.amazonaws.com;"
@@ -213,22 +313,31 @@
 
                     $db = new PDO($dsn);
                   echo 'Connexion OK';
+=======
+                  //$db = new PDO("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com;dbname=dfhf24ft89btrp ", "iclwqstdcanbnn", "VdN3cktdfKZZzPnasW4IxrghX6 ");
+                 // echo 'Connexion OK';
+>>>>>>> cfc3fa65d9c2df096f60a848bf06cbf8bccb7010
                 }
                 catch(PDOException $e) {
-                  $db = null;
-                  echo 'ERREUR DB: ' . $e->getMessage();
+                  //$db = null;
+                  //echo 'ERREUR DB: ' . $e->getMessage();
                 }
 
-                    if($db) {
-                     echo "yes";
+                    //if($db) 
+                    {
+                     //echo "yes";
                     }
+
                      
-                     ?>
+                <?php $dbh = new PDO('pgsql:host=localhost;dbname=dfhf24ft89btrp');?>
                  
                  </p>
+                 
+                 
+                 
              </div>
                     
-<!-----------------------------------------------------upload-------------------------------------------------------------> 
+<!------------------------------------------------------------------upload-------------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
