@@ -266,14 +266,52 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-<form enctype="multipart/form-data" action="upload.php" method="post"> 
-        <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
-        Ajouter une photo: 
-        <input name="photo" type="file"> 
-        <input type="submit" value="Valider la photo"> 
-</form> 
-        
 
+        
+        <form method="post" enctype="multipart/form-data" action="upload.php">
+        <p>
+            <input type="file" name="fichier" size="30">
+            <input type="submit" name="upload" value="Uploader">
+        </p>
+        </form>
+
+        
+        <?php
+
+if( isset($_POST['upload']) ) // si formulaire soumis
+{
+    $content_dir = 'upload/'; // dossier où sera déplacé le fichier
+
+    $tmp_file = $_FILES['fichier']['tmp_name'];
+
+    if( !is_uploaded_file($tmp_file) )
+    {
+        exit("Le fichier est introuvable");
+    }
+
+    // on vérifie maintenant l'extension
+    $type_file = $_FILES['fichier']['type'];
+
+    if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') )
+    {
+        exit("Le fichier n'est pas une image");
+    }
+
+    // on copie le fichier dans le dossier de destination
+    $name_file = $_FILES['fichier']['name'];
+
+    if( !move_uploaded_file($tmp_file, $content_dir . $name_file) )
+    {
+        exit("Impossible de copier le fichier dans $content_dir");
+    }
+
+    echo "Le fichier a bien été uploadé";
+}
+
+?>
+        
+        
+        
                  
                  <?php
                 
