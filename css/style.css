@@ -1,0 +1,125 @@
+/******************   ZAK   ******************/
+.file_input{
+    display: inline-block;
+    padding: 10px 16px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #008BFF;
+    border: 1px solid #008BFF;
+    vertical-align: middle;
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.05);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.file_input:hover,
+.file_input:active {
+    background: #008BFF;
+    color: #fff;
+}
+
+/******************   INTEGRATION   ******************/
+/*code couleur bleu facebook : rgb(59,89,152);*/
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 563px;
+    background: url(../img/back-home.jpg);
+    background-size: 820px;
+    background-repeat: no-repeat;
+}
+.presentation{
+    width: 40%;
+    height: 140px;
+    position: relative;
+    left: 60%;
+    color: white;
+}
+.txt1{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.txt1_1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+.txt2{
+    text-align: left;
+    width: 50%;
+    float: left;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.logohome{
+    float: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.slogan{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(59,89,152);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+ button{
+    border: none;
+    width: 20%;
+    background: rgb(59,89,152);
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+     
+}
+.classement{
+    width: 96%;
+    height: 180px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    margin-top: 6%;
+    margin-left: 2%;
+    margin-right: 2%;
+    bottom: 2%;
+}
+.classement img{
+    width: 140px;
+    height: 140px;
+    float: left;
+    background: rgba(0,0,0,0.6);
+    margin-left: 1.8%;
+    margin-top: 2%;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    
+    
+}
