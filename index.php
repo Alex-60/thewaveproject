@@ -271,49 +271,13 @@
             <div style="border:1px solid black;">
             
             
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
               
-                
-                     <?php
-                
-                  function runMyFunction() 
-                  {
-                    $session = new FacebookSession($_SESSION['fb_token']);
-                    $name =   $_POST['name'];
-                   $response = (new FacebookRequest(
-				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/"."$name".""),
-                    //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					'message' => 'User provided message'
-				  )
-				))->execute()->getGraphObject();
-                      }
-                      if (isset($_GET['hello'])) {
-                        runMyFunction();
-                      }
-                ?>
-                
-                
-                <input type="submit" value="Upload Image" name="submit">
+                <!--<input type="submit" value="Upload Image" name="submit">-->
                   
-            </form>
-
-            
-            </div>
-            
-        </div>
-                 
-            
-
-        
-        
-        
-                <!--<a href='index.php?hello=true'>zak function run</a>-->
-                <p>
-                 <?php
+                <?php
             
 
                 // $db = pg_connect("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6") or die("connection faild");
@@ -344,6 +308,25 @@
                
                      ?>
                
+                
+                
+                <a href='index.php?hello=true'>zak function run</a>
+                
+            </form>
+
+            
+            </div>
+            
+        </div>
+                 
+            
+
+        
+        
+        
+                <!--<a href='index.php?hello=true'>zak function run</a>-->
+                <p>
+                 
                  </p>
                  
                  
