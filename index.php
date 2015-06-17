@@ -289,7 +289,7 @@
                   function runMyFunction() 
                   {
                     $session = new FacebookSession($_SESSION['fb_token']);
-                    $name =   $_POST['name']
+                    $name =   $_POST['name'];
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					'source' => file_get_contents("./images/"."$name".""),
