@@ -313,7 +313,7 @@
                 
                     while ($row = pg_fetch_row($result)) 
                     {
-                      echo "ville: $row[0]  
+                      echo "ville: $row[0]";
                       echo "<br />\n";
                     }
                     
