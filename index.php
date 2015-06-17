@@ -266,39 +266,12 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-<form action="upload.php" method="post" enctype="multipart/form-data">
-<p>
-Envoi d'image :<br />
-<input type="file" name="monfichier" /><br />
-<input type="submit" value="Envoyer le fichier" />
-</p>
-</form>
-<?php
-// Teste de l'envoie du fichier
- 
-if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
-{
- 
-        // Verification du poids du fichier
-        if ($_FILES['monfichier']['size'] <= 1000000)
-        {
-        $nom = $_FILES['monfichier'];
-        $infosfichier = pathinfo($_FILES['monfichier']['name']);
-        $extension_upload = $infosfichier['extension'];
-        $extension_autorisees = array('jpg', 'jpeg', 'gif', 'png');
-        if (in_array($extension_upload, $extension_autorisees))
-        {
-           move_uploaded_file($_FILES['monfichier']['tmp_name'], 'uploads/' . basename($_FILES['monfichier']['name']));
-           echo 'Le fichier a bien été envoyé '.$nom.'';
-           echo $_FILES['monfichier']['name'];
-                   
-            
-        }
-         
-    }
-     
-}
-?>
+<form enctype="multipart/form-data" action="upload.php" method="post"> 
+<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+Ajouter une photo: 
+<input name="photo" type="file"> 
+<input type="submit" value="Valider la photo"> 
+</form> 
         
 
                  
