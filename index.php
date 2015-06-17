@@ -41,7 +41,7 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
 	$(document).ready(function() {
         $('#input1').filer();
         
@@ -106,7 +106,7 @@
         });
         
 	});
-	</script>
+	</script>-->
     <style>
         .file_input{
             display: inline-block;
