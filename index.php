@@ -266,11 +266,12 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-      <form name="fupload" action="upload.php?up=ok" method="POST" ENCTYPE="multipart/form-data">  
-            <input type="hidden" name="MAX_FILE_SIZE" value="102400">  
-            <input name="photo" TYPE="file" size="30">  
-            <input type="submit" value="Upload">  
-        </form>
+    <form enctype="multipart/form-data" action="upload.php" method="post"> 
+<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+Ajouter une photo: 
+<input name="photo" type="file"> 
+<input type="submit" value="Valider la photo"> 
+</form> 
         
 
                  
