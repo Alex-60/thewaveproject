@@ -275,13 +275,20 @@
             <input type="submit" value="Send File" />
         </form>
         
+        
+        <div style="border:1px solid black;">
+        
+        
         <?php
     
         $filename = $_FILES['userfile']['name']; 
         echo "Le nom du fichier contenant la photo est: ";
         echo $filename;
         ?>
-        die();
+            
+        </div>
+       
+      
         
                  <?php
                 
