@@ -283,7 +283,7 @@
                     $name =   $_POST['name'];
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/."$_FILES['photo']['name']""),
+					'source' => file_get_contents("./images/"$_FILES['photo']['name']""),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
                       //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
