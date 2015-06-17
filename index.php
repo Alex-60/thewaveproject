@@ -265,27 +265,26 @@
     </div>
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
-        <div>
-       
-            
+        
+        <!--<div>
             <div style="border:1px solid black;">
-            
-            
             <form action="#" method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
-              
-                <?php echo $_FILES['photo']['tmp_name']; ?> 
-                
                 <input type="submit" value="Upload Image" name="submit">
-                  
-                
             </form>
-
-            
-            </div>
-            
-        </div>
+            </div> 
+        </div>-->
+        
+        
+        <form enctype="multipart/form-data" action="upload.php" method="post"> 
+            <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+            Ajouter une photo: 
+            <input name="photo" type="file"> 
+            <input type="submit" value="Valider la photo"> 
+        </form> 
+        
+        
                  
                  <?php
                 
