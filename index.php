@@ -270,8 +270,12 @@
         <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
         Ajouter une photo: 
         <input name="photo" type="file"> 
-    
-           <?php
+        <input type="submit" value="Valider la photo"> 
+</form> 
+        
+
+                 
+                 <?php
                 
                   function runMyFunction() 
                   {
@@ -279,7 +283,7 @@
                     $name =   $_POST['name'];
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/."$_FILES['photo']['name']"."),
+					'source' => file_get_contents("./images/."$_FILES['photo']['name']""),
                     //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
                       //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					'message' => 'User provided message'
@@ -292,17 +296,7 @@
                 ?>
 
                 <a href='index.php?hello=true'>zak function run</a>
-    
-    
-    
-        <input type="submit" value="Valider la photo"> 
-    
-    
-</form> 
         
-
-                 
-          
         
                 <p>
                  <?php
