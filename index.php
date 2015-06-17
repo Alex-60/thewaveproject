@@ -305,7 +305,7 @@
                 ?>
 
         
-        <?php echo $POST[name];?>
+        
         
                 <!--<a href='index.php?hello=true'>zak function run</a>-->
                 <p>
