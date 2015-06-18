@@ -278,13 +278,13 @@
         </form>
         
         
-            <div style="border:1px solid black;">
+            <!--<div style="border:1px solid black;">
               <?php
-                $filename = $_FILES['userfile']['name']; 
+                /*$filename = $_FILES['userfile']['name']; 
                 echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;
+                echo $filename;*/
                 ?>
-            </div>
+            </div>-->
        
         <?php
       
@@ -294,7 +294,9 @@
 
                 if (isset($_POST['send'])) {
                     // btnDelete 
-                    echo "test";
+                    $filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename;*/
                 } 
             }
                  ?>
