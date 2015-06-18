@@ -274,7 +274,6 @@
             Send this file: <input name="userfile" type="file" />`
             
             <input type="submit" value="Send File" name="send"/>
-            
         </form>
         
         
@@ -285,7 +284,6 @@
                 echo $filename;*/
                 ?>
             </div>-->
-       
         <?php
       
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -296,7 +294,7 @@
                     // btnDelete 
                     $filename = $_FILES['userfile']['name']; 
                 echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;*/
+                echo $filename;
                 } 
             }
                  ?>
