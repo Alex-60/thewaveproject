@@ -267,13 +267,11 @@
     <div class="col-md-12" id="div1-child2">
         
 
-        <form enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" action="#" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />
-            
-       
             <input type="submit" value="Send File" />
         </form>
         
@@ -284,9 +282,24 @@
                 echo "Le nom du fichier contenant la photo est: ";
                 echo $filename;
                 ?>
-
             </div>
        
+        <?php
+               
+                   $filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename;
+           ?>     
+        <form enctype="multipart/form-data" action="#" method="POST">
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <!-- Name of input element determines name in $_FILES array -->
+            Send this file: <input name="userfile" type="file" />
+            <input type="submit" value="Send File" />
+        </form>
+             <?   
+                
+        ?>
       
         
                  <?php
