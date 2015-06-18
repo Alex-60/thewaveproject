@@ -271,35 +271,94 @@
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
-           <input name="userfile" type="file" />`
+            Send this file: <input name="userfile" type="file" />`
             
             <input type="submit" name="send" value="Send File" />
         </form>
         
         
+            <!--<div style="border:1px solid black;">
+              <?php
+                /*$filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename;*/
+                ?>
+            </div>-->
         <?php
       
-        
+            /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+                //something posted
+
+                if (isset($_POST['send'])) {
+                    // btnDelete 
+                    $filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename;
+                } 
+            }*/
+                
+                
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
+
                 
                 if (isset($_POST['send'])) 
                 {
+                    
                 $filename = $_FILES['userfile']['name']; 
+                //echo "Le nom du fichier contenant la photo est: ";
+                //echo $filename."</br>";
+                    
                 $link = "./images/$filename";
+                    
                   $session = new FacebookSession($_SESSION['fb_token']);
+            
                    $response = (new FacebookRequest(
 				  $session, "POST", '/1385753921748799/photos', array(
+					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
+                      
+                    //'source' => '@'.realpath("./images/$filename"),
+                    //'source' => new CURLFile("./images/$filename", 'image/jpg'),
+                      
+                    
                     'source' => '@'.realpath($link),
                     'source' => new CURLFile($link, 'image/jpg'),
+                      
+                      
+				//'message' => 'User provided message'
 				  )
 				))->execute()->getGraphObject(); 
             }
             
             }
                  ?>
+        
+                 <?php
+                
+                 /* function runMyFunction() 
+                  {
+                    $session = new FacebookSession($_SESSION['fb_token']);
+                    $name =   $_POST['name'];
+                   $response = (new FacebookRequest(
+				  $session, "POST", '/me/photos', array(
+					'source' => file_get_contents("./images/Kite_Surf.jpg"),
+                    //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
+                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+					'message' => 'User provided message'
+				  )
+				))->execute()->getGraphObject();
+                      }
+                      if (isset($_GET['hello'])) {
+                        runMyFunction();
+                      }
+                      */
+                ?>
 
+                <a href='index.php?hello=true'>zak function run</a>
+        
+        
                 <p>
                  <?php
             
@@ -309,7 +368,7 @@
                 try
                 {
                     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                    echo "-----------------"."</br>";
+                    echo "-----------------";
                     
                     
                 $result = pg_query($dbconn3, "SELECT * FROM villes");
