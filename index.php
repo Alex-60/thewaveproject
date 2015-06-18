@@ -312,34 +312,21 @@
                 //echo $filename."</br>";
                     
                 $link = "./images/$filename";
-                    
                   $session = new FacebookSession($_SESSION['fb_token']);
-            
                    $response = (new FacebookRequest(
 				  $session, "POST", '/1385753921748799/photos', array(
-					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
-                      
-                    //'source' => '@'.realpath("./images/$filename"),
-                    //'source' => new CURLFile("./images/$filename", 'image/jpg'),
-                      
-                    
                     'source' => '@'.realpath($link),
                     'source' => new CURLFile($link, 'image/jpg'),
-                      
-                      
-				//'message' => 'User provided message'
 				  )
-				))->execute()->getGraphObject();
-                 
+				))->execute()->getGraphObject(); 
             }
             
             }
-            
                  ?>
         
                  <?php
                 
-                  function runMyFunction() 
+                 /* function runMyFunction() 
                   {
                     $session = new FacebookSession($_SESSION['fb_token']);
                     $name =   $_POST['name'];
@@ -355,6 +342,7 @@
                       if (isset($_GET['hello'])) {
                         runMyFunction();
                       }
+                      */
                 ?>
 
                 <a href='index.php?hello=true'>zak function run</a>
