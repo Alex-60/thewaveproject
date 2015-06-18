@@ -273,23 +273,19 @@
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />
             
-             <?php
-        $filename = $_FILES['userfile']['name']; 
-        echo "Le nom du fichier contenant la photo est: ";
-        echo $filename;
-        ?>
-            
-            
+       
             <input type="submit" value="Send File" />
         </form>
         
         
-        <div style="border:1px solid black;">
-        
-        
-       
-            
-        </div>
+            <div style="border:1px solid black;">
+              <?php
+                $filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename;
+                ?>
+
+            </div>
        
       
         
