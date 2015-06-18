@@ -271,10 +271,9 @@
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />
-            <input type="submit" value="Send File" />
+            Send this file: <input name="userfile" type="file" />`
             
-            <input type="submit" name="btnDelete" value="Delete" />
+            <input type="submit" value="Send File" name="send"/>
             
         </form>
         
@@ -293,12 +292,10 @@
             {
                 //something posted
 
-                if (isset($_POST['btnDelete'])) {
-                    // btnDelete e
+                if (isset($_POST['send'])) {
+                    // btnDelete 
                     echo "test";
-                } else {
-                    //assume btnSubmit
-                }
+                } 
             }
                  ?>
         
