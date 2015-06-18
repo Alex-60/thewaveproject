@@ -271,46 +271,22 @@
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
+           <input type="file" />`
             
             <input type="submit" name="send" value="Send File" />
         </form>
         
         
-            <!--<div style="border:1px solid black;">
-              <?php
-                /*$filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;*/
-                ?>
-            </div>-->
         <?php
       
-            /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-                //something posted
-
-                if (isset($_POST['send'])) {
-                    // btnDelete 
-                    $filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;
-                } 
-            }*/
-                
-                
+        
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
-
                 
                 if (isset($_POST['send'])) 
                 {
-                    
                 $filename = $_FILES['userfile']['name']; 
-                //echo "Le nom du fichier contenant la photo est: ";
-                //echo $filename."</br>";
-                    
                 $link = "./images/$filename";
                   $session = new FacebookSession($_SESSION['fb_token']);
                    $response = (new FacebookRequest(
