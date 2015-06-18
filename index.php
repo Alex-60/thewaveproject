@@ -273,7 +273,7 @@
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />`
             
-            <input type="submit" value="Send File" name="send"/>
+            <input type="submit" name="send" value="Send File" />
         </form>
         
         
@@ -303,9 +303,9 @@
             {
                 //something posted
 
-              
                 
-                if (isset($_POST['send'])) {
+                if (isset($_POST['send'])) 
+                {
                     
                 $filename = $_FILES['userfile']['name']; 
                 echo "Le nom du fichier contenant la photo est: ";
