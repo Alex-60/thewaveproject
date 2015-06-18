@@ -303,9 +303,17 @@
             {
                 //something posted
 
-                if (isset($_POST['send'])) {
+              
                 
-                  $session = new FacebookSession($_SESSION['fb_token']);
+                if (isset($_POST['send'])) {
+                    
+                $filename = $_FILES['userfile']['name']; 
+                echo "Le nom du fichier contenant la photo est: ";
+                echo $filename."</br>";
+                    
+                    
+                
+                  /*$session = new FacebookSession($_SESSION['fb_token']);
             
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
@@ -314,11 +322,9 @@
                     'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
 					//'message' => 'User provided message'
 				  )
-				))->execute()->getGraphObject();
+				))->execute()->getGraphObject();*/
                     
-                $filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;
+                
                  
             }
             
