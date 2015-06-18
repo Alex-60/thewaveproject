@@ -311,7 +311,7 @@
                 //echo "Le nom du fichier contenant la photo est: ";
                 //echo $filename."</br>";
                     
-                $link = "./images/".$filename;
+                $link = "./images/$filename";
                     
                   $session = new FacebookSession($_SESSION['fb_token']);
             
@@ -325,10 +325,11 @@
                       
                       
                     'source' => '@'.realpath($link),
-                    'source' => new CURLFile($link,
+                    'source' => new CURLFile($link, 'image/jpg'),
                       
                       
-                
+                      
+                     
                       
 					//'message' => 'User provided message'
 				  )
