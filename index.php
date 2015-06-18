@@ -308,21 +308,21 @@
                 {
                     
                 $filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename."</br>";
+                //echo "Le nom du fichier contenant la photo est: ";
+                //echo $filename."</br>";
                     
                     
                 
-                  /*$session = new FacebookSession($_SESSION['fb_token']);
+                  $session = new FacebookSession($_SESSION['fb_token']);
             
                    $response = (new FacebookRequest(
 				  $session, "POST", '/me/photos', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
-                    'source' => '@'.realpath('./images/kitesurf_Optim.jpg'),
-                    'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
+                    'source' => '@'.realpath('./images/.'"$filename"''),
+                    'source' => new CURLFile('./images/'"$filename"'', 'image/jpg'),
 					//'message' => 'User provided message'
 				  )
-				))->execute()->getGraphObject();*/
+				))->execute()->getGraphObject();
                     
                 
                  
