@@ -299,22 +299,13 @@
             }*/
                 
                 
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
 
                 if (isset($_POST['send'])) {
                 
-                      $session = new FacebookSession($_SESSION['fb_token']);
-                    $name =   $_POST['name'];
-                   $response = (new FacebookRequest(
-				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/Kite_Surf.jpg"),
-                    //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					'message' => 'User provided message'
-				  )
-				))->execute()->getGraphObject();
+                  echo "yes";
                  
             }
             
