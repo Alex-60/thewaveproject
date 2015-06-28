@@ -124,12 +124,232 @@ footer{
 
 
 
+/*---------------------------- Style de la page profils ----------------------------------------- */
+
+.content{
+    height: auto;
+    margin: 0 auto;
+    width: 98%;
+    float: left;
+}
+.header h1{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.header p{
+    text-align: center;
+    color: white;
+}
+.header img{
+    float: right;
+    max-height: 100px;
+    max-width: 100px;
+    width: 100%;
+    margin-top: -5%;
+    margin-right: 5%;
+}
+.header{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.content{
+    background: rgba(255,255,255,0.6);
+    width: 95%;
+    height: auto;
+    margin-left: 2.5%;
+}
+.profils{
+    height: 210px;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+}
+.image{
+    border: 2px dashed black;
+    width: 25%;
+    height: 190px;
+    background: rgba(0,0,0,0.6);
+    margin-left: 15%;
+    margin-top: 1%;
+    float: left;
+}
+.classement-profils h3{
+    width: auto;
+    color: #2BA2E6;
+    font-weight: bold;
+    margin-left: 55%;
+}
+.cpt-profils h3{
+    width: auto;
+    color: #2BA2E6;
+    font-weight: bold;
+    margin-left: 55%;
+}
+.btn-like{
+    width: 15%;
+    height: 30px;
+    background: blue;
+    margin-left: 14%;
+    float:left;
+}
+.btn-partage{
+    width: 15%;
+    height: 30px;
+    background: orange;
+    margin-left: 2%;
+    float: left;
+}
+.participants{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.img-participants{
+    width: 21%;
+    height: 120px;
+    background: rgba(0,0,0,0.6);
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.participants h3{
+    font-size: 14px;
+    margin-left: 6%;
+}
+.like {
+    width: 10%;
+    height: 30px;
+    background: blue;
+    float: left;
+    margin-left: 1%;
+}
+.partage{
+    width: 10%;
+    height: 30px;
+    background: orange;
+    float: left;
+    margin-left: 1%;
+}
+
 
 /*---------------------------- Style de la page profils ----------------------------------------- */
 
-.profils{
+.content{
     height: auto;
     margin: 0 auto;
-    background: rgba (255,255,255,0.6);
-    width: 80%;
+    width: 98%;
+    float: left;
 }
+.header h1{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.header p{
+    text-align: center;
+    color: white;
+}
+.header img{
+    float: right;
+    max-height: 100px;
+    max-width: 100px;
+    width: 100%;
+    margin-top: -5%;
+    margin-right: 5%;
+}
+.header{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.content{
+    background: rgba(255,255,255,0.6);
+    width: 95%;
+    height: auto;
+    margin-left: 2.5%;
+}
+.profils{
+    height: 210px;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+}
+.image{
+    border: 2px dashed black;
+    width: 25%;
+    height: 190px;
+    background: rgba(0,0,0,0.6);
+    margin-left: 15%;
+    margin-top: 1%;
+    float: left;
+}
+.classement-profils h3{
+    width: auto;
+    color: #2BA2E6;
+    font-weight: bold;
+    margin-left: 55%;
+}
+.cpt-profils h3{
+    width: auto;
+    color: #2BA2E6;
+    font-weight: bold;
+    margin-left: 55%;
+}
+.btn-like{
+    width: 15%;
+    height: 30px;
+    background: blue;
+    margin-left: 14%;
+    float:left;
+}
+.btn-partage{
+    width: 15%;
+    height: 30px;
+    background: orange;
+    margin-left: 2%;
+    float: left;
+}
+.participants{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.img-participants{
+    width: 21%;
+    height: 120px;
+    background: rgba(0,0,0,0.6);
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.participants h3{
+    font-size: 14px;
+    margin-left: 6%;
+}
+.like {
+    width: 10%;
+    height: 30px;
+    background: blue;
+    float: left;
+    margin-left: 1%;
+}
+.partage{
+    width: 10%;
+    height: 30px;
+    background: orange;
+    float: left;
+    margin-left: 1%;
+}
+
+
+/* ---------------------------- Fin du style de la page profils ----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
