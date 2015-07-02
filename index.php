@@ -41,101 +41,8 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
 
-    <!--<script type="text/javascript">
-	$(document).ready(function() {
-        $('#input1').filer();
-        
-        $('.file_input').filer({
-            showThumbs: true,
-            templates: {
-                box: '<ul class="jFiler-item-list"></ul>',
-                item: '<li class="jFiler-item">\
-                            <div class="jFiler-item-container">\
-                                <div class="jFiler-item-inner">\
-                                    <div class="jFiler-item-thumb">\
-                                        <div class="jFiler-item-status"></div>\
-                                        <div class="jFiler-item-info">\
-                                            <span class="jFiler-item-title"><b title="{{fi-name}}">{{fi-name | limitTo: 25}}</b></span>\
-                                        </div>\
-                                        {{fi-image}}\
-                                    </div>\
-                                    <div class="jFiler-item-assets jFiler-row">\
-                                        <ul class="list-inline pull-left">\
-                                            <li><span class="jFiler-item-others">{{fi-icon}} {{fi-size2}}</span></li>\
-                                        </ul>\
-                                        <ul class="list-inline pull-right">\
-                                            <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>\
-                                        </ul>\
-                                    </div>\
-                                </div>\
-                            </div>\
-                        </li>',
-                itemAppend: '<li class="jFiler-item">\
-                            <div class="jFiler-item-container">\
-                                <div class="jFiler-item-inner">\
-                                    <div class="jFiler-item-thumb">\
-                                        <div class="jFiler-item-status"></div>\
-                                        <div class="jFiler-item-info">\
-                                            <span class="jFiler-item-title"><b title="{{fi-name}}">{{fi-name | limitTo: 25}}</b></span>\
-                                        </div>\
-                                        {{fi-image}}\
-                                    </div>\
-                                    <div class="jFiler-item-assets jFiler-row">\
-                                        <ul class="list-inline pull-left">\
-                                            <span class="jFiler-item-others">{{fi-icon}} {{fi-size2}}</span>\
-                                        </ul>\
-                                        <ul class="list-inline pull-right">\
-                                            <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>\
-                                        </ul>\
-                                    </div>\
-                                </div>\
-                            </div>\
-                        </li>',
-                progressBar: '<div class="bar"></div>',
-                itemAppendToEnd: true,
-                removeConfirmation: true,
-                _selectors: {
-                    list: '.jFiler-item-list',
-                    item: '.jFiler-item',
-                    progressBar: '.bar',
-                    remove: '.jFiler-item-trash-action',
-                }
-            },
-            addMore: true,
-       
-        });
-        
-	});
-	</script>-->
-   <!-- <style>
-        .file_input{
-            display: inline-block;
-            padding: 10px 16px;
-            outline: none;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            white-space: nowrap;
-            font-family: sans-serif;
-            font-size: 11px;
-            font-weight: bold;
-            border-radius: 3px;
-            color: #008BFF;
-            border: 1px solid #008BFF;
-            vertical-align: middle;
-            background-color: #fff;
-            margin-bottom: 10px;
-            box-shadow: 0px 1px 5px rgba(0,0,0,0.05);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.2s;
-            transition: all 0.2s;
-        }
-        .file_input:hover,
-        .file_input:active {
-            background: #008BFF;
-            color: #fff;
-        }
-    </style>-->
+   
+
 
     <script type="text/javascript" src="js/script.js"></script>
 
@@ -144,48 +51,23 @@
 <body>
 
 <!-- //////////////////         CODE INTEGRATION FINALE          //////////////////-->
-<!--<section>
 
-    <article class="presentation">
-        <p class="txt1">Grand Jeu Concours</p>
-        <p class="txt1_1">Du 1er juin au 31 juillet 2015</p>
-        <p class="txt2">Participer et tentez de gagner votre équipement de kyte surf avec</p>
-        <img class="logohome" src="img/logo.png" />
-    </article>
-
-    <article class="slogan">
-        <p>JETEZ-VOUS À L'EAU</p>
-        <button class="voter">VOTER</button>
-        <button class="participer">PARTICIPER</button>
-    </article>
-
-    <p>Classement actuel</p>
-    <article class="classement">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-    </article>
-
-    <footer>
-        <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
-    </footer>
-
-</section>-->
 
 
 
 <!-- //////////////////         CODE ZAK          //////////////////-->
 <section>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    
+    <script>(function(d, s, id)
+        {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
+                fjs.parentNode.insertBefore(js, fjs);
+        }
+             (document, 'script', 'facebook-jssdk'));
     </script>
     
   <div id="presentation">
@@ -315,7 +197,7 @@
                     
                   $session = new FacebookSession($_SESSION['fb_token']);
             
-                   $response = (new FacebookRequest(
+                  $response = (new FacebookRequest(
 				  $session, "POST", '/1385753921748799/photos', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
                       
@@ -470,6 +352,39 @@
             {
 				$loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 				echo "<a href='".$loginUrl."'>Se connecter</a>";
+                
+               ?> 
+                <section>
+
+    <article class="presentation">
+        <p class="txt1">Grand Jeu Concours</p>
+        <p class="txt1_1">Du 1er juin au 31 juillet 2015</p>
+        <p class="txt2">Participer et tentez de gagner votre équipement de kyte surf avec</p>
+        <img class="logohome" src="img/logo.png" />
+    </article>
+
+    <article class="slogan">
+        <p>JETEZ-VOUS À L'EAU</p>
+        <button class="voter">VOTER</button>
+        <button class="participer">PARTICIPER</button>
+    </article>
+
+    <p>Classement actuel</p>
+    <article class="classement">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </article>
+
+    <footer>
+        <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
+    </footer>
+
+</section>
+                
+              <?  
                 
 			}
 		?>
