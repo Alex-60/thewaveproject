@@ -366,7 +366,7 @@
     <article class="slogan">
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
-        <button class="participer"><a href='"<?php $loginUrl ?>"'>PARTICIPER</a></button>
+        <a class="participer" href='"<?php .$loginUrl. ; ?>"'>PARTICIPER</a>
     </article>
 
     <p>Classement actuel</p>
