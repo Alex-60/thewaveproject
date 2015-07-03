@@ -274,6 +274,32 @@
         
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
+        <hr>
+        
+         <?php
+                try
+                {
+                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                    echo "-----------------";
+                    
+                    
+                $result = pg_query($dbconn3, "SELECT * FROM villes");
+                
+                    while ($row = pg_fetch_row($result)) 
+                    {
+                      echo "ville: $row[0]";
+                      echo "<br />\n";
+                    }
+
+                }
+                catch (Exception $e)
+                {
+                var_dump($e->getMessage());
+                }
+
+                     ?>
+        
+        
     </article>
 
     <p>Classement actuel</p>
