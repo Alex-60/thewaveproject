@@ -281,6 +281,13 @@
         <hr>
            
        <button><?php echo "<a href='".$loginUrl."'>Se connecter</a>";?></button>
+        
+        <hr>
+        
+        <a href="url" style="text-decoration:none">
+           <input type="button" value="click me!"/>
+        </a>
+        
     </article>
 
     <p>Classement actuel</p>
