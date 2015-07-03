@@ -361,12 +361,6 @@
        
                 
         <form action="<?php echo $loginUrl; ?>">
-            <? php
-
-$facebook = new Facebook(array(
-  'appId'  => '767304380051847',
-  'secret' => '7f0e4cac931818f7f7dc86d722dd5e0e',
-)); ?>
         <button type="submit" class="participer"> Participer</button>
         </form>
             
