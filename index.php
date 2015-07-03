@@ -358,9 +358,19 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
         
+       
+                
         <form action="<?php echo $loginUrl; ?>">
+            
+           <? require 'facebook-php-sdk/src/facebook.php';
+
+$facebook = new Facebook(array(
+  'appId'  => '767304380051847',
+  'secret' => '7f0e4cac931818f7f7dc86d722dd5e0e',
+)); ?>
         <button type="submit" class="participer"> Participer</button>
         </form>
+            
     </article>
 
     <p>Classement actuel</p>
