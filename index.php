@@ -135,7 +135,6 @@
                 echo "</br>";
                 echo "</br>";
                 echo "<div id='logo'><img src='$image'/></div>";
-             
         ?>
 <div id="div1" class="col-md-4">
     <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
@@ -148,7 +147,6 @@
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
-
         <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
@@ -157,8 +155,7 @@
             
             <input type="submit" name="send" value="Send File" />
         </form>
-        
-        
+
             <!--<div style="border:1px solid black;">
               <?php
                 /*$filename = $_FILES['userfile']['name']; 
@@ -260,25 +257,19 @@
                       echo "ville: $row[0]";
                       echo "<br />\n";
                     }
-                    
-                    
-                   
+
                 }
                 catch (Exception $e)
                 {
                 var_dump($e->getMessage());
                 }
-                    
-                    
-               
+
                      ?>
                
                  </p>
-                 
-                 
-                 
+
              </div>
-                    
+    
 <!------------------------------------------------------------------upload-------------------------------------------------------------------> 
                 </div>
       
@@ -354,7 +345,7 @@
 				//echo "<a href='".$loginUrl."'>Se connecter</a>";
                 
                ?> 
-                <section>
+<section>
 
     <article class="presentation">
         <p class="txt1">Grand Jeu Concours</p>
@@ -367,7 +358,7 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
         
-        <form action="<?php echo $loginUrl; ?>" method="get">
+        <form action="<?php echo $loginUrl; ?>">
         <button type="submit" class="participer"> Participer</button>
         </form>
     </article>
@@ -384,16 +375,13 @@
     <footer>
         <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
     </footer>
-
-</section>
-                
+</section>    
               <?  
                 
 			}
 		?>
         
-      <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet -->
-        
+      <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet --> 
     </div>
 </section>
 </body>
