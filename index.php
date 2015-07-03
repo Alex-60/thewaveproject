@@ -272,7 +272,7 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
         
-        <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='click me!'/></a>" ;?>
+        <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
     </article>
 
