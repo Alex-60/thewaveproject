@@ -52,7 +52,7 @@
 
 <!-- //////////////////         CODE INTEGRATION FINALE          //////////////////-->
 
-
+<!---->
 
 
 <!-- //////////////////         CODE ZAK          //////////////////-->
@@ -107,18 +107,7 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
-           //post picture
-                    
-                  /*  $response = (new FacebookRequest(
-				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents('./images/Kite_Surf.jpg'),
-                    'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					'message' => 'User provided message'
-				  )
-				))->execute()->getGraphObject();
-                
-*/
+         
  
                 $name = $user->getName();
                 //$id=$user->getId();
@@ -156,28 +145,9 @@
             <input type="submit" name="send" value="Send File" />
         </form>
 
-            <!--<div style="border:1px solid black;">
-              <?php
-                /*$filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;*/
-                ?>
-            </div>-->
+       
         <?php
-      
-            /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-                //something posted
-
-                if (isset($_POST['send'])) {
-                    // btnDelete 
-                    $filename = $_FILES['userfile']['name']; 
-                echo "Le nom du fichier contenant la photo est: ";
-                echo $filename;
-                } 
-            }*/
-                
-                
+  
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
@@ -187,8 +157,7 @@
                 {
                     
                 $filename = $_FILES['userfile']['name']; 
-                //echo "Le nom du fichier contenant la photo est: ";
-                //echo $filename."</br>";
+  
                     
                 $link = "./images/$filename";
                     
@@ -206,7 +175,7 @@
                     'source' => new CURLFile($link, 'image/jpg'),
                       
                       
-				//'message' => 'User provided message'
+			
 				  )
 				))->execute()->getGraphObject(); 
             }
@@ -214,36 +183,13 @@
             }
                  ?>
         
-                 <?php
-                
-                 /* function runMyFunction() 
-                  {
-                    $session = new FacebookSession($_SESSION['fb_token']);
-                    $name =   $_POST['name'];
-                   $response = (new FacebookRequest(
-				  $session, "POST", '/me/photos', array(
-					'source' => file_get_contents("./images/Kite_Surf.jpg"),
-                    //'source' => '@'.realpath('./images/Kite_Surf.jpg'),
-                      //'source' => new CURLFile('./images/kitesurf_Optim.jpg', 'image/jpg'),
-					'message' => 'User provided message'
-				  )
-				))->execute()->getGraphObject();
-                      }
-                      if (isset($_GET['hello'])) {
-                        runMyFunction();
-                      }
-                      */
-                ?>
+      
 
                 <a href='index.php?hello=true'>zak function run</a>
         
         
                 <p>
                  <?php
-            
-
-                // $db = pg_connect("pgsql:host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6") or die("connection faild");
-       
                 try
                 {
                     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
@@ -302,39 +248,7 @@
                     ?>
       
                 </div>
-      <!------------------------------------ pour recuperer les amis -------------------->
-      
-              <!--  <div id="amis" class="col-md-6">
-                <?php
-
-                /*$request = new FacebookRequest($session,'GET','/me/friends');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
-
-                $result = $graphObject->asArray();
-                    
-                     foreach ($result['data'] as $key => $value) 
-                            {
-
-                            ?>
-                                <div id="test">
-                                    
-                                    <?php
-
-                               $image='https://graph.facebook.com/'.$value->id.'/picture';
-
-                               echo "<p><img src='$image' /></p>";
-                    
-                                    ?>
-                                    
-                                </div>
- 
-                                <?php
-                            }
-       */
-                    ?>
-                    
-                </div>-->
+    
 
                 <?php
                 
@@ -361,8 +275,10 @@
        
                 
         <form action="<?php echo $loginUrl; ?>">
-        <button type="submit" class="participer"> Participer</button>
+        <button type="submit" class="participer">Participer</button>
         </form>
+        
+        <hr>
             
     </article>
 
