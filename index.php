@@ -361,8 +361,7 @@
        
                 
         <form action="<?php echo $loginUrl; ?>">
-            
-           <? require 'facebook-php-sdk/src/facebook.php';
+            <? php
 
 $facebook = new Facebook(array(
   'appId'  => '767304380051847',
