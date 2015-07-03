@@ -278,7 +278,8 @@
         <button type="submit" class="participer">Participer</button>
         </form>
         
-        <hr>
+        <?php echo "<a href='".$loginUrl."'>Se connecter</a>"  ?>
+ 
             
     </article>
 
