@@ -367,7 +367,7 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
         <a class="participer" href=""> <? echo "<a href='".$loginUrl."'>Se connecter</a>";?></button>
-        <? echo "<a href='".$loginUrl."'>Se connecter</a>";?>
+      
     </article>
 
     <p>Classement actuel</p>
