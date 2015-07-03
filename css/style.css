@@ -97,6 +97,18 @@ section{
     font-size: 18px;
      
 }
+
+.button-participer
+{
+     border: none;
+    width: 20%;
+    background: rgb(59,89,152);
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    
+}
 .classement{
     width: 96%;
     height: 180px;
