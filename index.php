@@ -280,7 +280,7 @@
         
         <hr>
            
-       <?php echo "<a href='".$loginUrl."'>Se connecter</a>";?>
+       <button><?php echo "<a href='".$loginUrl."'>Se connecter</a>";?></button>
     </article>
 
     <p>Classement actuel</p>
