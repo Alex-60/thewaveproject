@@ -279,7 +279,8 @@
         </form>
         
         <hr>
-            
+           
+       <?php echo "<a href='".$loginUrl."'>Se connecter</a>";?>
     </article>
 
     <p>Classement actuel</p>
