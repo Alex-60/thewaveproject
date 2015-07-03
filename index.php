@@ -272,18 +272,6 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <button class="voter">VOTER</button>
         
-       
-                
-        <form action="<?php echo $loginUrl; ?>">
-        <button type="submit" class="participer">Participer</button>
-        </form>
-        
-        <hr>
-           
-       <button><?php echo "<a href='".$loginUrl."'>Se connecter</a>";?></button>
-        
-        <hr>
-        
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='click me!'/></a>" ;?>
         
     </article>
