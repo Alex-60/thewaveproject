@@ -284,9 +284,7 @@
         
         <hr>
         
-        <a href="url" style="text-decoration:none">
-           <input type="button" value="click me!"/>
-        </a>
+        <?php echo "<a href='url' style='text-decoration:none'><input type='button' value='click me!'/></a>" ;?>
         
     </article>
 
