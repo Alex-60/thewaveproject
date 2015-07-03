@@ -278,8 +278,8 @@
         <button type="submit" class="participer">Participer</button>
         </form>
         
-        <?php echo "<a href='".$loginUrl."'>Se connecter</a>"  ?>
- 
+        
+        <?php echo "<form action = '".$loginUrl."'><button type='submit' class='participer'>Participer</button></form>" ;?>
             
     </article>
 
