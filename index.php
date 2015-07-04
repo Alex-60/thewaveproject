@@ -238,7 +238,7 @@
                     }
                 
                 
-                                    $request = new FacebookRequest($session,'GET','/1385753921748799/1401627880161403/photos');
+                                    $request = new FacebookRequest($session,'GET','/1385753921748799/1401627880161403');
                                     $response = $request->execute();
                                     $graphObject = $response->getGraphObject(GraphUser::className());
 
