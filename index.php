@@ -168,12 +168,7 @@
 			
 				  )
 				))->execute()->getGraphObject(); 
-
-                    
-                    
-                    
-                    
-                    
+  
                     
                     
             }
@@ -197,6 +192,7 @@
                       echo "ville: $row[0]";
                       echo "<br />\n";
                     }
+                    
 
                 }
                 catch (Exception $e)
