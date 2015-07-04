@@ -324,6 +324,8 @@
                     }
         
         ?>
+        
+        <p>test</p>
     </article>
 
     <footer>
