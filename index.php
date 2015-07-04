@@ -199,7 +199,7 @@
                     echo "-----------------";
                     
                     
-                $result = pg_query($dbconn3, "SELECT * FROM villes");
+                $result = pg_query($dbconn3, "SELECT * FROM photo");
                 
                     while ($row = pg_fetch_row($result)) 
                     {
@@ -216,9 +216,6 @@
                       echo "photo: $row2[0]";
                       echo "<br />\n";
                     }
-
-                    
-                    
 
                 }
                 catch (Exception $e)
