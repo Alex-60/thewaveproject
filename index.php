@@ -238,18 +238,19 @@
                     }
                 
                 
-                                    /*$request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
+                                    $request = new FacebookRequest($session,'GET','/1385753921748799/1401627880161403/photos');
                                     $response = $request->execute();
                                     $graphObject = $response->getGraphObject(GraphUser::className());
 
-                                    $result = $graphObject->asArray();*/
+                                    $result = $graphObject->asArray();
                 
-                                    
+                                    var_dump($result);
+                die();
                                   
              
                 
 
-                        $albums = $facebook->api('/1385753921748799/albums?fields=id'); 
+                       /* $albums = $facebook->api('/1385753921748799/albums?fields=id'); 
                 
                           $pictures = array();
                 
@@ -268,7 +269,7 @@
                                 
                             }
                           }
-                          exit($output);
+                          exit($output);*/
    
                     ?>
       
