@@ -107,8 +107,7 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
-         
- 
+
                 $name = $user->getName();
                 //$id=$user->getId();
                 
@@ -169,6 +168,14 @@
 			
 				  )
 				))->execute()->getGraphObject(); 
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
             }
             
             }
@@ -213,7 +220,7 @@
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
                 $result = $graphObject->asArray();
-                
+
                 foreach ($result['data'] as $key => $value) 
                     {
 
@@ -228,7 +235,15 @@
                     <?php
  
                     }
-                       
+                
+                
+                
+                
+                
+                
+                 $albumjson = $facebook->api('/1385753921748799?fields=photos');
+                var_dump($albumjson);
+                
                     ?>
       
                 </div>
@@ -261,10 +276,8 @@
          <?php
                 try
                 {
-                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                   
-                    
-                    
+                $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+
                 $result = pg_query($dbconn3, "SELECT * FROM villes");
                 
                     while ($row = pg_fetch_row($result)) 
@@ -272,7 +285,6 @@
                       echo "ville: $row[0]";
                      
                     }
-
                 }
                 catch (Exception $e)
                 {
@@ -280,8 +292,7 @@
                 }
 
                      ?>
-        
-        
+
     </article>
 
     <p>Classement actuel</p>
@@ -301,7 +312,6 @@
                 
 			}
 		?>
-        
       <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet --> 
     </div>
 </section>
