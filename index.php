@@ -304,7 +304,11 @@
                 
                     while ($row2 = pg_fetch_row($result2)) 
                     {
-                      echo "photo: $row2[0]";
+                     // echo "photo: $row2[0]";
+                        
+                         echo "<div id='logo'><img src='$row2[0]'/></div>";
+                        
+                        
                       echo "<br />\n";
                     }
 
