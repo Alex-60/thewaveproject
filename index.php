@@ -216,7 +216,7 @@
 
              </div>
     
-<!------------------------------------------------------------------upload-------------------------------------------------------------------> 
+<!------------------------------------------------------------------affiche pictures-------------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
@@ -229,13 +229,23 @@
                 $result = $graphObject->asArray();
                 
               
-              
-                
-                
-                  foreach ($result['data'] as $key => $value) 
+             $request = new FacebookRequest(
+              $session,
+              'GET',
+              '1385753921748799/{album-id}'
+            );
+            $response = $request->execute();
+            $graphObject = $response->getGraphObject();
+                $result2=$graphObject->asArray();
+                 
+                foreach ($result2['data'] as $key => $value) 
                     {
-                      echo $value->full_picture;
-                  }
+                        var_dump($value);
+                    }
+                
+                
+                    die();
+          
                 
             
           
