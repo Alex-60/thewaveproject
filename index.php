@@ -156,7 +156,7 @@
                   $session = new FacebookSession($_SESSION['fb_token']);
             
                   $response = (new FacebookRequest(
-				  $session, "POST", '/1385753921748799/albums', array(
+				  $session, "POST", '/1385753921748799/photos', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
                       
                     //'source' => '@'.realpath("./images/$filename"),
@@ -215,6 +215,7 @@
                 <div id="div2" class="col-md-8">
                  
                     <?php
+                
                 $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
@@ -237,13 +238,35 @@
                     }
                 
                 
-                
-                          $request = new FacebookRequest($session,'GET','/1385753921748799?fields=photos');
-                            $response = $request->execute();
-                            $graphObject = $response->getGraphObject(GraphUser::className());
+                                    $request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
+                                    $response = $request->execute();
+                                    $graphObject = $response->getGraphObject(GraphUser::className());
 
-                            $result = $graphObject->asArray();
-                            var_dump($result);
+                                    $result = $graphObject->asArray();
+                
+                                    
+                                    var_dump($result);
+                die();
+                
+
+                        $albums = $facebook->api('/me/albums?fields=id'); 
+                
+                          $pictures = array();
+                
+                          foreach ($albums['data'] as $album) 
+                          {
+                            $pics = $facebook->api('/'.$album['id'].'/photos?fields=source,picture');
+                            $pictures[$album['id']] = $pics['data'];
+                          }
+
+                          //display the pictures url
+                          foreach ($pictures as $album) {
+                            //Inside each album
+                            foreach ($album as $image) {
+                              $output .= $image['source'] . '<br />';
+                            }
+                          }
+                          exit($output);
                 
                 
              
