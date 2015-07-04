@@ -244,22 +244,17 @@
 
                                     $result = $graphObject->asArray();
                 
-                                       foreach ($result['data'] as $key => $value) 
-                                        {
-                                             echo $value->id;
-                                           
-                                        }
-                die();
+                                  
              
                 
 
-                       /* $albums = $facebook->api('/1385753921748799/albums?fields=id'); 
+                        $albums = new FacebookRequest('/1385753921748799/albums?fields=id'); 
                 
                           $pictures = array();
                 
                           foreach ($albums['data'] as $album) 
                           {
-                            $pics = $facebook->api('/'.$album['id'].'/photos?fields=source,picture');
+                            $pics = new FacebookRequest('/'.$album['id'].'/photos?fields=source,picture');
                             $pictures[$album['id']] = $pics['data'];
                           }
 
@@ -272,7 +267,7 @@
                                 
                             }
                           }
-                          exit($output);*/
+                          exit($output);
    
                     ?>
       
