@@ -206,6 +206,19 @@
                       echo "ville: $row[0]";
                       echo "<br />\n";
                     }
+                    
+                    
+                         
+                $result2 = pg_query($dbconn3, "SELECT * FROM photo");
+                
+                    while ($row2 = pg_fetch_row($result2)) 
+                    {
+                      echo "photo: $row2[0]";
+                      echo "<br />\n";
+                    }
+
+                    
+                    
 
                 }
                 catch (Exception $e)
@@ -220,28 +233,7 @@
         
                 <p>
 
-                    <?php
-                try
-                {
-                   
-                    
-                $result2 = pg_query($dbconn3, "SELECT * FROM photo");
-                
-                    while ($row2 = pg_fetch_row($result2)) 
-                    {
-                      echo "photo: $row2[0]";
-                      echo "<br />\n";
-                    }
-
-                }
-                catch (Exception $e)
-                {
-                var_dump($e->getMessage());
-                }
-
-                     ?>
-                    
-
+      
 
 
                 </p>
