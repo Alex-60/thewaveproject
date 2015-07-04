@@ -229,9 +229,15 @@
                 $result = $graphObject->asArray();
                 
               
-                var_dump($result);
-                die();
+              
                 
+                
+                  foreach ($result['data'] as $key => $value) 
+                    {
+                      echo $value->full_picture;
+                  }
+                
+                die();
           
                 foreach ($result['data'] as $key => $value) 
                     {
