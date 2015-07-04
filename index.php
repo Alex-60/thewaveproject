@@ -238,18 +238,18 @@
                     }
                 
                 
-                                    $request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
+                                    /*$request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
                                     $response = $request->execute();
                                     $graphObject = $response->getGraphObject(GraphUser::className());
 
-                                    $result = $graphObject->asArray();
+                                    $result = $graphObject->asArray();*/
                 
                                     
-                                    var_dump($result);
-                die();
+                                  
+             
                 
 
-                        $albums = $facebook->api('/me/albums?fields=id'); 
+                        $albums = $facebook->api('/1385753921748799/albums?fields=id'); 
                 
                           $pictures = array();
                 
@@ -260,17 +260,16 @@
                           }
 
                           //display the pictures url
-                          foreach ($pictures as $album) {
+                          foreach ($pictures as $album) 
+                          {
                             //Inside each album
                             foreach ($album as $image) {
                               $output .= $image['source'] . '<br />';
+                                
                             }
                           }
                           exit($output);
-                
-                
-             
-                
+   
                     ?>
       
                 </div>
