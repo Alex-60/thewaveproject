@@ -298,8 +298,6 @@
                     }
 
                     
-                    
-                    
                 }
                 catch (Exception $e)
                 {
@@ -324,7 +322,6 @@
                         
                          echo "<img src='$row2[0]'/>";
                     }
-        
         
         ?>
     </article>
