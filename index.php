@@ -276,6 +276,7 @@
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
         <hr>
+        <hr>
         
          <?php
                 try
