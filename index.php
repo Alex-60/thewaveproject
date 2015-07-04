@@ -126,13 +126,7 @@
                 echo "<div id='logo'><img src='$image'/></div>";
         ?>
 <div id="div1" class="col-md-4">
-    <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
-        <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
-                <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-            </blockquote>
-        </div>
-    </div>
+
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
@@ -145,7 +139,6 @@
             <input type="submit" name="send" value="Send File" />
         </form>
 
-       
         <?php
   
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -173,8 +166,6 @@
                     
                     'source' => '@'.realpath($link),
                     'source' => new CURLFile($link, 'image/jpg'),
-                      
-                      
 			
 				  )
 				))->execute()->getGraphObject(); 
@@ -182,12 +173,8 @@
             
             }
                  ?>
-        
-      
-
                 <a href='index.php?hello=true'>zak function run</a>
-        
-        
+
                 <p>
                  <?php
                 try
@@ -215,7 +202,6 @@
                  </p>
 
              </div>
-    
 <!------------------------------------------------------------------affiche pictures-------------------------------------------------------------------> 
                 </div>
       
@@ -228,32 +214,10 @@
 
                 $result = $graphObject->asArray();
                 
-              
-             $request = new FacebookRequest(
-              $session,
-              'GET',
-              '1385753921748799/{album-id}'
-            );
-            $response = $request->execute();
-            $graphObject = $response->getGraphObject();
-                $result2=$graphObject->asArray();
-                 
-                foreach ($result2['data'] as $key => $value) 
-                    {
-                        var_dump($value);
-                    }
-                
-                
-                    die();
-          
-                
-            
-          
                 foreach ($result['data'] as $key => $value) 
                     {
 
                     ?>
-
                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                             <?php
                                 echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
@@ -268,8 +232,6 @@
                     ?>
       
                 </div>
-    
-
                 <?php
                 
 			}
