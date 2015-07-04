@@ -228,16 +228,16 @@
 
                 $result = $graphObject->asArray();
                 
-              $value=0;
+              
               
                 
                 
-                  foreach ($result['data'] as $key => $value) 
+                  /*foreach ($result['data'] as $key => $value) 
                     {
                       echo $value->full_picture;
-                  }
+                  }*/
                 
-                die();
+            
           
                 foreach ($result['data'] as $key => $value) 
                     {
