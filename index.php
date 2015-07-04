@@ -125,25 +125,7 @@
                 echo "</br>";
                 echo "<div id='logo'><img src='$image'/></div>";
                 
-                
-              ?>
-      
-      
-      
-            <div>
-      
-            aaaaaa
-                
-      
-            </div>
-      
-      
-      <?
-                
-                
-                
-                
-                
+       
                 
         ?>
 <div id="div1" class="col-md-4">
@@ -234,6 +216,37 @@
                      ?>
                
                  </p>
+        
+        
+                <p>
+
+                    <?php
+                try
+                {
+                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                    echo "-----------------";
+                    
+                    
+                $result = pg_query($dbconn3, "SELECT * FROM photo");
+                
+                    while ($row = pg_fetch_row($result)) 
+                    {
+                      echo "photo: $row[0]";
+                      echo "<br />\n";
+                    }
+
+                }
+                catch (Exception $e)
+                {
+                var_dump($e->getMessage());
+                }
+
+                     ?>
+                    
+
+
+
+                </p>
 
              </div>
     
