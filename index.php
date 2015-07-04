@@ -238,11 +238,15 @@
                 
                 
                 
+                          $request = new FacebookRequest($session,'GET','/1385753921748799?fields=photos');
+                            $response = $request->execute();
+                            $graphObject = $response->getGraphObject(GraphUser::className());
+
+                            $result = $graphObject->asArray();
+                            var_dump($result);
                 
                 
-                
-                 $albumjson = $facebook->api('/1385753921748799?fields=photos');
-                var_dump($albumjson);
+             
                 
                     ?>
       
