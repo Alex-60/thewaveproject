@@ -238,15 +238,18 @@
                     }
                 
                 
-                                    $request = new FacebookRequest($session,'GET','/1385753921748799/1401627880161403');
+                                    $request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
                                     $response = $request->execute();
                                     $graphObject = $response->getGraphObject(GraphUser::className());
 
                                     $result = $graphObject->asArray();
                 
-                                    var_dump($result);
+                                       foreach ($result['data'] as $key => $value) 
+                                        {
+                                             echo $value->id;
+                                           
+                                        }
                 die();
-                                  
              
                 
 
