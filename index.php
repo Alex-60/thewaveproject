@@ -156,7 +156,7 @@
                   $session = new FacebookSession($_SESSION['fb_token']);
             
                   $response = (new FacebookRequest(
-				  $session, "POST", '/1401627880161403/photos', array(
+				  $session, "POST", '/1402845110039680/photos', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
                       
                     //'source' => '@'.realpath("./images/$filename"),
