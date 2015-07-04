@@ -228,7 +228,7 @@
 
                 $result = $graphObject->asArray();
                 
-              
+              $value=0;
               
                 
                 
