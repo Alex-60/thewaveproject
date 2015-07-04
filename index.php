@@ -300,21 +300,6 @@
                     
                     
                     
-                    $result2 = pg_query($dbconn3, "SELECT * FROM photo");
-                
-                    while ($row2 = pg_fetch_row($result2)) 
-                    {
-                     // echo "photo: $row2[0]";
-                        
-                         echo "<img src='$row2[0]'/>";
-                        
-                        
-                      echo "<br />\n";
-                    }
-
-                    
-                    
-                    
                 }
                 catch (Exception $e)
                 {
@@ -328,11 +313,20 @@
 
     <p>Classement actuel</p>
     <article class="classement">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+       
+        <?php
+        
+         $result2 = pg_query($dbconn3, "SELECT * FROM photo");
+                
+                    while ($row2 = pg_fetch_row($result2)) 
+                    {
+                     // echo "photo: $row2[0]";
+                        
+                         echo "<img src='$row2[0]'/>";
+                    }
+        
+        
+        ?>
     </article>
 
     <footer>
