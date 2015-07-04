@@ -247,12 +247,6 @@
                                   
              
                 
-
-                        $albums = new FacebookRequest(,$session,'GET','/1385753921748799/albums?fields=id')->$request->execute()->getGraphObject(GraphUser::className())->asArray();
-                
-                        var_dump($albums);
-                        die();
-                
                           $pictures = array();
                 
                           foreach ($albums['data'] as $album) 
