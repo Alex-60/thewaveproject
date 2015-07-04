@@ -156,7 +156,7 @@
                   $session = new FacebookSession($_SESSION['fb_token']);
             
                   $response = (new FacebookRequest(
-				  $session, "POST", '/1385753921748799/albums?fields=id', array(
+				  $session, "POST", '/1385753921748799//albums?fields=id=1401627880161403', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
                       
                     //'source' => '@'.realpath("./images/$filename"),
@@ -168,7 +168,12 @@
 			
 				  )
 				))->execute()->getGraphObject(); 
-  
+
+                    
+                    
+                    
+                    
+                    
                     
                     
             }
@@ -192,7 +197,6 @@
                       echo "ville: $row[0]";
                       echo "<br />\n";
                     }
-                    
 
                 }
                 catch (Exception $e)
