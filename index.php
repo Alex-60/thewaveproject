@@ -107,7 +107,8 @@
 				echo " with message: " . $e->getMessage();
 
 				}  
-
+         
+ 
                 $name = $user->getName();
                 //$id=$user->getId();
                 
@@ -125,7 +126,13 @@
                 echo "<div id='logo'><img src='$image'/></div>";
         ?>
 <div id="div1" class="col-md-4">
-
+    <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
+        <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
+                <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
+            </blockquote>
+        </div>
+    </div>
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
@@ -138,6 +145,7 @@
             <input type="submit" name="send" value="Send File" />
         </form>
 
+       
         <?php
   
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -156,7 +164,7 @@
                   $session = new FacebookSession($_SESSION['fb_token']);
             
                   $response = (new FacebookRequest(
-				  $session, "POST", '/1402845110039680/photos', array(
+				  $session, "POST", '/1385753921748799/photos', array(
 					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
                       
                     //'source' => '@'.realpath("./images/$filename"),
@@ -165,17 +173,21 @@
                     
                     'source' => '@'.realpath($link),
                     'source' => new CURLFile($link, 'image/jpg'),
+                      
+                      
 			
 				  )
 				))->execute()->getGraphObject(); 
-
-                    
             }
             
             }
                  ?>
-                <a href='index.php?hello=true'>zak function run</a>
+        
+      
 
+                <a href='index.php?hello=true'>zak function run</a>
+        
+        
                 <p>
                  <?php
                 try
@@ -203,23 +215,25 @@
                  </p>
 
              </div>
-<!------------------------------------------------------------------affiche pictures-------------------------------------------------------------------> 
+    
+<!------------------------------------------------------------------upload-------------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
                  
                     <?php
-                
                 $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 $response = $request->execute();
                 $graphObject = $response->getGraphObject(GraphUser::className());
 
                 $result = $graphObject->asArray();
-
+                
+                
                 foreach ($result['data'] as $key => $value) 
                     {
 
                     ?>
+
                        <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                             <?php
                                 echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
@@ -230,39 +244,12 @@
                     <?php
  
                     }
-                
-                
-                                    $request = new FacebookRequest($session,'GET','/1385753921748799/albums?fields=id');
-                                    $response = $request->execute();
-                                    $graphObject = $response->getGraphObject(GraphUser::className());
-
-                                    $result = $graphObject->asArray();
-                
-                                  
-             
-                
-                          $pictures = array();
-                
-                          foreach ($albums['data'] as $album) 
-                          {
-                            $pics = new FacebookRequest('/'.$album['id'].'/photos?fields=source,picture');
-                            $pictures[$album['id']] = $pics['data'];
-                          }
-
-                          //display the pictures url
-                          foreach ($pictures as $album) 
-                          {
-                            //Inside each album
-                            foreach ($album as $image) {
-                              $output .= $image['source'] . '<br />';
-                                
-                            }
-                          }
-                          exit($output);
-   
+                       
                     ?>
       
                 </div>
+    
+
                 <?php
                 
 			}
@@ -287,13 +274,15 @@
         
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
-<hr>
+        <hr>
         
          <?php
                 try
                 {
-                $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-
+                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                   
+                    
+                    
                 $result = pg_query($dbconn3, "SELECT * FROM villes");
                 
                     while ($row = pg_fetch_row($result)) 
@@ -301,6 +290,7 @@
                       echo "ville: $row[0]";
                      
                     }
+
                 }
                 catch (Exception $e)
                 {
@@ -308,7 +298,8 @@
                 }
 
                      ?>
-
+        
+        
     </article>
 
     <p>Classement actuel</p>
@@ -328,6 +319,7 @@
                 
 			}
 		?>
+        
       <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet --> 
     </div>
 </section>
