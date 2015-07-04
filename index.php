@@ -229,6 +229,9 @@
                 $result = $graphObject->asArray();
                 
               
+                var_dump($result);
+                die();
+                
           
                 foreach ($result['data'] as $key => $value) 
                     {
@@ -275,8 +278,7 @@
         
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
-        <hr>
-        <hr>
+
         
          <?php
                 try
