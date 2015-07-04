@@ -227,9 +227,9 @@
                     
                 $result2 = pg_query($dbconn3, "SELECT * FROM photo");
                 
-                    while ($row = pg_fetch_row($result2)) 
+                    while ($row2 = pg_fetch_row($result2)) 
                     {
-                      echo "photo: $row[0]";
+                      echo "photo: $row2[0]";
                       echo "<br />\n";
                     }
 
