@@ -60,7 +60,7 @@
         <section class="classement">
             <p>TOP 5</p>
             <article class="participants">
-               <!--<div class="positionClassement">1</div>-->
+               <div class="positionClassement">1</div>
                 <div class="img-participants">
                     
                     <?php
