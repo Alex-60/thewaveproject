@@ -52,13 +52,17 @@
             {
          
 ?>
+
+    <footer>
+            <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
+    </footer>
 </section>    
               <?  
                 
 			}else
                 
             {
-          
+                echo "no";
                 ?>
     
                 <body>
@@ -133,7 +137,8 @@
     </div>
 </body>
 <?
-  
+                
+                
                 
             }
 		?>
