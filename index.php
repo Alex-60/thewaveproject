@@ -170,6 +170,15 @@
                           )
                         ))->execute()->getGraphObject(); 
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
+                    
+                    
+                       //$picvalue = $value->picture;
+                        
+                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                            
+                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('result3')");
+                    
+                    
                 }
             
             }
@@ -194,14 +203,6 @@
                                     <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                                         <?php
                                             echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
-                                            
-                            
-                       $picvalue = $value->picture;
-                        
-                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('result3')");
-                
 
                                         ?>
                                     </div>
