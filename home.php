@@ -68,14 +68,14 @@
                         while ($row2 = pg_fetch_row($result2)) 
                             {
                                 
-                                echo "<article class="participants">";
-                                echo "<div class="positionClassement">1</div>";
-                                echo "<div class="img-participants">";
+                                echo "<article class='participants'>";
+                                echo "<div class='positionClassement'>1</div>";
+                                echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
                                 echo "</div>"; 
                                 echo "<h3>500 J'aime</h3>";
-                                echo "<div class="like"></div>";
-                                echo "<div class="partage"></div>";
+                                echo "<div class='like'></div>";
+                                echo "<div class='partage'></div>";
                                 echo "</article>";
                             }
             ?>
