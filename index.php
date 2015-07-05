@@ -150,7 +150,6 @@
 
        
         <?php
-  
             if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
@@ -158,113 +157,52 @@
                 
                 if (isset($_POST['send'])) 
                 {
+                        $filename = $_FILES['userfile']['name']; 
                     
-                $filename = $_FILES['userfile']['name']; 
-  
                     
-                $link = "./images/$filename";
-                    
-                  $session = new FacebookSession($_SESSION['fb_token']);
-            
-                  $response = (new FacebookRequest(
-				  $session, "POST", '/1385753921748799/photos', array(
-					//'source' => file_get_contents("./images/Kite_Surf.jpg"),
-                      
-                    //'source' => '@'.realpath("./images/$filename"),
-                    //'source' => new CURLFile("./images/$filename", 'image/jpg'),
-                      
-                    
-                    'source' => '@'.realpath($link),
-                    'source' => new CURLFile($link, 'image/jpg'),
-                      
-                      
-			
-				  )
-				))->execute()->getGraphObject(); 
-            }
+                        $link = "./images/$filename";
+                          $session = new FacebookSession($_SESSION['fb_token']);
+                          $response = (new FacebookRequest(
+                          $session, "POST", '/me/photos', array(
+                            'source' => '@'.realpath($link),
+                            'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                        ))->execute()->getGraphObject(); 
+                     //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
+                }
             
             }
                  ?>
-        
-      
-
-                <a href='index.php?hello=true'>zak function run</a>
-        
-        
-                <p>
-                 <?php
-                try
-                {
-                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                    echo "-----------------";
-                    
-                    
-                $result = pg_query($dbconn3, "SELECT * FROM villes");
-                
-                    while ($row = pg_fetch_row($result)) 
-                    {
-                      echo "ville: $row[0]";
-                      echo "<br />\n";
-                    }
-                    
-                    
-                         
-             
-                }
-                catch (Exception $e)
-                {
-                var_dump($e->getMessage());
-                }
-
-                     ?>
-
-                </p>
-
-             </div>
-    
-<!------------------------------------------------------------------upload-------------------------------------------------------------------> 
+        </div>
+<!-------------------------------------------------------------------------------------affiche picture-----------------------------------------------------------------------------------> 
                 </div>
       
                 <div id="div2" class="col-md-8">
-                 
-                    <?php
-                $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
-                $response = $request->execute();
-                $graphObject = $response->getGraphObject(GraphUser::className());
-
-                $result = $graphObject->asArray();
+                        <?php
+                        $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
                 
-                
-                foreach ($result['data'] as $key => $value) 
-                    {
-
-                    ?>
-
-                       <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
-                            <?php
-                                echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
-                    
-                            ?>
-                        </div>
-                    
-                    <?php
- 
-                    }
-                       
-                    ?>
-      
+                        foreach ($result['data'] as $key => $value) 
+                            {
+                                ?>
+                                    <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
+                                        <?php
+                                            echo "<div id='img_posts'><img src='$value->full_picture' /></div>";
+                                        ?>
+                                    </div>
+                                <?php
+                            }
+                        ?>
                 </div>
-    
-
                 <?php
-                
-			}
-            else
-            {
-				$loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-				//echo "<a href='".$loginUrl."'>Se connecter</a>";
-                
-               ?> 
+                    }
+                    else
+                    {
+                        $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+                       ?> 
+      <!------------------------------------------------------------------- if the user isn't connected--------------------------------------------------->
 <section>
 
     <article class="presentation">
@@ -281,32 +219,24 @@
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
         <hr>
-        
          <?php
                 try
                 {
                     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                   
-                    
-                    
-                $result = pg_query($dbconn3, "SELECT * FROM villes");
+                    $result = pg_query($dbconn3, "SELECT * FROM villes");
                 
                     while ($row = pg_fetch_row($result)) 
                     {
                       echo "ville: $row[0]";
                      
                     }
-
                     
                 }
                 catch (Exception $e)
                 {
                 var_dump($e->getMessage());
                 }
-
-                     ?>
-        
-        
+        ?>
     </article>
 
     <p>Classement actuel</p>
@@ -318,24 +248,20 @@
                 
                     while ($row2 = pg_fetch_row($result2)) 
                     {
-                  
+                   
                          echo "<img src='$row2[0]'/>";
                     }
-        
         ?>
-        
     </article>
 
     <footer>
-        <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
+            <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
     </footer>
 </section>    
               <?  
                 
 			}
 		?>
-        
-      <!--this fnctiun udrs dirzs zqqazq aaharua ub ibezkkdzhshdzsj dz^ dashjdsg dsìts shi us as ------howaw to upmoad an nice pictires fris internet --> 
     </div>
 </section>
 </body>
