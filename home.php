@@ -37,6 +37,19 @@
     <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    
+     <script>(function(d, s, id)
+        {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
+                fjs.parentNode.insertBefore(js, fjs);
+        }
+             (document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    
 </head>
 
     <?php
@@ -61,6 +74,8 @@
     
     
 <body>
+    
+    
     <div class="page-home">
 
         <header class="header">
