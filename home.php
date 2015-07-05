@@ -50,10 +50,17 @@
 				$user = $request_user_executed- >getGraphObject(GraphUser::className());
             
             
-            }else{
+            }
+
+            else{
+                echo "no";
+                die();
                 
-                ?>
-                <body>
+            }
+?>
+    
+    
+<body>
     <div class="page-home">
 
         <header class="header">
@@ -124,12 +131,4 @@
 
     </div>
 </body>
-             <?   
-            }
-                
-                
-?>
-    
-    
-
 </html>
