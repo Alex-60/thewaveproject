@@ -188,8 +188,7 @@
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                 
-                        var_dump($result);
-                        die();
+                  
                 
                         foreach ($result['data'] as $key => $value) 
                             {
