@@ -59,25 +59,26 @@
 
         <section class="classement">
             <p>TOP 5</p>
-            <article class="participants">
-               <div class="positionClassement">1</div>
+            <?php 
+            
                 
-                <div class="img-participants">
-                    <?php
                         $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "SELECT * FROM photo LIMIT 4");
                     
                         while ($row2 = pg_fetch_row($result2)) 
                             {
-                                echo "<img src='$row2[0]'/>";
+                                
+                                echo "<article class="participants">";
+                                echo "<div class="positionClassement">1</div>";
+                                echo "<div class="img-participants">";
+                                echo "<img src='$row2[0]'/>"; 
+                                echo "</div>"; 
+                                echo "<h3>500 J'aime</h3>";
+                                echo "<div class="like"></div>";
+                                echo "<div class="partage"></div>";
+                                echo "</article>";
                             }
-                    ?>
-                </div> 
-                
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
+            ?>
         </section>
 
         <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
