@@ -180,7 +180,10 @@
       
                 <div id="div2" class="col-md-8">
                         <?php
-                        $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                        //$request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
+                
+                        $request = new FacebookRequest($session,'GET','/1457732501214091/posts?fields=picture,full_picture');
+                
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
