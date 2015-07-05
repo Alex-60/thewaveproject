@@ -198,7 +198,7 @@
                             
                        $picvalue = $value->picture;
                             
-                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES (" $result3");");
+                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('"result3"');");
                 
 
                                         ?>
