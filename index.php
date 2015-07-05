@@ -170,23 +170,20 @@
                           )
                         ))->execute()->getGraphObject(); 
                     
-                        $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
-                    
                  
-                        /* $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                     
-                         foreach ($result['data'] as $key => $value) 
+                        var_dump($result);
+                    die();
+                    
+                         /* foreach ($result['data'] as $key => $value) 
                             {
-                               
-                             
-                             $login = $value->picture;
-  
-                             
-                            
+
+                            $login = $value->picture;
                             $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
                             if(pg_num_rows($query) == 1)
                             {
@@ -238,7 +235,7 @@
                                 ?>
                                     <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                                         <?php
-                                            echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
+                                            //echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
 
                                         ?>
                                     </div>
