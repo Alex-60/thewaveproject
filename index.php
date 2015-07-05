@@ -170,7 +170,7 @@
                           )
                         ))->execute()->getGraphObject(); 
                     
-                    var_dump($session);
+                    var_dump($response);
                     die();
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
                     
