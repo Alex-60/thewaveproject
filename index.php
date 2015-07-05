@@ -164,26 +164,27 @@
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
                          // $session, "POST", '/me/photos', array(
-                                $session, "POST", '/1457732501214091/photos', array(
+                                $session, "POST", '/1457732501214091/photos?fields=picture', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
                         ))->execute()->getGraphObject(); 
                     
                  
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos');
+                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                     
-                        var_dump($result);
-                    die();
-                    
-                         /* foreach ($result['data'] as $key => $value) 
+                        /* foreach ($result['data'] as $key => $value) 
                             {
-
-                            $login = $value->picture;
+                               
+                             
+                             $login = $value->picture;
+  
+                             
+                            
                             $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
                             if(pg_num_rows($query) == 1)
                             {
@@ -199,7 +200,7 @@
                              
 
                                 
-                            }*/
+                            }
                     
                     
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
@@ -232,10 +233,10 @@
                 
                         foreach ($result['data'] as $key => $value) 
                             {
-                                ?><p></p>
+                                ?>
                                     <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                                         <?php
-                                            //echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
+                                            echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
 
                                         ?>
                                     </div>
