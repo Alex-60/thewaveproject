@@ -60,11 +60,8 @@
         <section class="classement">
             <p>TOP 5</p>
             <article class="participants">
-                <!--<div class="positionClassement">1</div>-->
-                <div class="img-participants">
-                    
-                    
-                     <?php
+                
+                 <?php
                     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
         
                     $result2 = pg_query($dbconn3, "SELECT * FROM photo LIMIT 4");
@@ -76,8 +73,14 @@
                     }
                      ?>
 
+                
+                <!--<div class="positionClassement">1</div>-->
+                <!--<div class="img-participants">
                     
-                </div>
+                    
+                    
+                    
+                </div>-->
                 <h3>500 J'aime</h3>
                 <div class="like"></div>
                 <div class="partage"></div>
