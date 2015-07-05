@@ -231,7 +231,7 @@
                 <div id="div2" class="col-md-8">
                         <?php
                 
-                        $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture?width=150');
+                        $request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture');
                 
                         //$request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
                 
