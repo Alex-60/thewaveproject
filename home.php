@@ -38,33 +38,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     
 </head>
-<body>
-
-
 <section>
-    
-  <div id="presentation">
 
-    <br>
-       <?php
-
-			if($session)
-            {
-         
-?>
-
-    <footer>
-            <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
-    </footer>
-</section>    
-              <?  
-                
-			}else
-                
-            {
-                echo "no";
-                ?>
-    
                 <body>
     <div class="page-home">
 
@@ -136,13 +111,6 @@
 
     </div>
 </body>
-<?
-                
-                
-                
-            }
-		?>
-    </div>
 </section>
 </body>
 </html>
