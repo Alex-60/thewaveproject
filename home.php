@@ -59,7 +59,7 @@
 
         <section class="classement">
             <p>TOP 5</p>
-            <?php 
+            <!--<?php 
             
                 
                         $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
@@ -78,7 +78,7 @@
                                 echo "<div class="partage"></div>";
                                 echo "</article>";
                             }
-            ?>
+            ?>-->
         </section>
 
         <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
