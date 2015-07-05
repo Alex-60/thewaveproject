@@ -286,9 +286,9 @@
         
         <?php echo "<a href='".$loginUrl."'>" ?>;
         
-       <?php die();?>
+     
         
-        <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
+       
         
         <hr>
          <?php
