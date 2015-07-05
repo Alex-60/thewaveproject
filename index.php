@@ -180,7 +180,7 @@
                          foreach ($result['data'] as $key => $value) 
                             {
                                
-                                   echo $value->picture ;
+                                   //echo $value->picture ;
                              
                              $login = $value->picture;
                              
@@ -196,11 +196,18 @@
                              $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                              
                             $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
-                            if(pg_num_rows($query) == 1){
+                            if(pg_num_rows($query) == 1)
+                            {
                                // Pseudo déjà utilisé
                                echo 'Ce pseudo est déjà utilisé';
-                            }else{
+                            }else
+                            {
                                  echo 'no';
+                                echo "--------------------";
+                                $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('T_601')");
+                                echo "--------------------";
+                                
+                               
                                // Pseudo libre
                                //mysql_query("INSERT INTO utilisateurs (login) VALUE ('$login')");
                             }
