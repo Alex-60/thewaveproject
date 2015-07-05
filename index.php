@@ -284,7 +284,7 @@
         <for></for>
         <button class="voter">VOTER</button>
         
-        <?php echo "<a href='".$loginUrl."'>" ?>;
+        <?php echo "<a href='".$loginUrl."' value='participer'>" ?>;
         
      
         
