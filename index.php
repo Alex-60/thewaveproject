@@ -169,6 +169,9 @@
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
                         ))->execute()->getGraphObject(); 
+                    
+                    var_dump($session);
+                    die()
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
                     
                     
