@@ -227,6 +227,9 @@
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                 
+                echo $result->picture();
+                die();
+                
                         foreach ($result['data'] as $key => $value) 
                             {
                                 ?>
