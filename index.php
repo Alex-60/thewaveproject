@@ -194,11 +194,16 @@
                                     <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                                         <?php
                                             echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
+                                            
                             
-                           
+                       $picvalue = $value->picture;
+                            
+                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES (" $result3");");
+                
+
                                         ?>
                                     </div>
-                                    <?php echo $value->picture;?>
+                                   
                                 <?php
                             }
                         ?>
