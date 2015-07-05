@@ -264,7 +264,7 @@
                 </div>
                 <?php
                     }
- $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+ 
                     else
                     {
                         $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
@@ -283,6 +283,10 @@
         <p>JETEZ-VOUS À L'EAU</p>
         <for></for>
         <button class="voter">VOTER</button>
+        
+        <?php echo "<a href='".$loginUrl."'>" ?>;
+        
+       <?php die();?>
         
         <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
