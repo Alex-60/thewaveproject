@@ -170,8 +170,10 @@
                           )
                         ))->execute()->getGraphObject(); 
                     
+                        $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
+                    
                  
-                         $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                        /* $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
@@ -184,7 +186,7 @@
                              $login = $value->picture;
   
                              
-                            /* 
+                            
                             $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
                             if(pg_num_rows($query) == 1)
                             {
@@ -196,11 +198,11 @@
                                 $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
                
                             }
-                             */
+                             
                              
 
                                 
-                            }
+                            }*/
                     
                     
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
