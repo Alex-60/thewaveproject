@@ -164,7 +164,7 @@
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
                          // $session, "POST", '/me/photos', array(
-                                $session, "GET", '/1457732501214091', array(
+                                $session, "GET", '/1457732501214091/photos', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
