@@ -58,7 +58,7 @@
 			}else
                 
             {
-                echo "no";
+          
                 ?>
     
                 <body>
