@@ -204,7 +204,7 @@
                             {
                                  echo 'no';
                                 echo "--------------------";
-                                $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('za')");
+                                $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
                                 echo "--------------------";
                                 
                                
