@@ -243,7 +243,7 @@
                                             //$result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$picvalue')");
                                         
                                             //echo "yes";
-                                            echo "<p>$value->picture</p>";
+                                            echo "<p>$value->picture</p></br></br></br></br></br></br></br></br></br></br></br>";
                                             
                                             
                             
