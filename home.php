@@ -52,10 +52,6 @@
             {
          
 ?>
-
-    <footer>
-            <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
-    </footer>
 </section>    
               <?  
                 
@@ -63,6 +59,82 @@
                 
             {
                 echo "no";
+                ?>
+    
+                <body>
+    <div class="page-home">
+
+        <header class="header">
+            <h1>GRAND JEU CONCOURS</h1>
+            <p>du 1er Juin au 31 Juillet 2015</p>
+            <p class="txt2">Participer et tentez de gagner<br/> votre équipement de kyte surf avec</p>
+            <img class="logohome" src="img/logo.png" />
+        </header>
+
+        <article class="slogan">
+            <p>JETEZ-VOUS À L'EAU</p>
+            <a href="voter.html" class="btnVoter">VOTER</a>
+            <a href="participer.html" class="btnParticiper">PARTICIPER</a>
+        </article>
+
+
+        <section class="classement">
+            <p>TOP 5</p>
+            <article class="participants">
+                <div class="positionClassement">1</div>
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+                <h3>500 J'aime</h3>
+                <div class="like"></div>
+                <div class="partage"></div>
+            </article>
+            <article class="participants">
+               <div class="positionClassement">2</div>
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+                <h3>500 J'aime</h3>
+                <div class="like"></div>
+                <div class="partage"></div>
+            </article>
+            <article class="participants">
+               <div class="positionClassement">3</div>
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+                <h3>500 J'aime</h3>
+                <div class="like"></div>
+                <div class="partage"></div>
+            </article>
+            <article class="participants">
+               <div class="positionClassement">4</div>
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+                <h3>500 J'aime</h3>
+                <div class="like"></div>
+                <div class="partage"></div>
+            </article>
+            <article class="participants">
+               <div class="positionClassement">5</div>
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+                <h3>500 J'aime</h3>
+                <div class="like"></div>
+                <div class="partage"></div>
+            </article>
+        </section>
+
+        <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
+        </footer>
+
+    </div>
+</body>
+<?
+  
+                
             }
 		?>
     </div>
