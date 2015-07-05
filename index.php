@@ -181,6 +181,20 @@
                             {
                                
                                    echo $value->picture ;
+                             
+                             $login = $value->picture;
+                             
+                            $query = mysql_query("SELECT image FROM photo where image = '$login'");
+                            if(mysql_num_rows($query) == 1){
+                               // Pseudo déjà utilisé
+                               echo 'Ce pseudo est déjà utilisé';
+                            }else{
+                                 echo 'no';
+                               // Pseudo libre
+                               //mysql_query("INSERT INTO utilisateurs (login) VALUE ('$login')");
+                            }
+                             
+                             
 
                                 
                             }
