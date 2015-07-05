@@ -70,7 +70,7 @@
              (document, 'script', 'facebook-jssdk'));
     </script>
     
-  <div id="presentation">
+  <div id="">
    <script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
