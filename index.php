@@ -280,9 +280,11 @@
 
     <article class="slogan">
         <p>JETEZ-VOUS À L'EAU</p>
+       
         <button class="voter">VOTER</button>
         
-        <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
+         <button class="participer"> <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?></button>
+
         
         <hr>
          <?php
