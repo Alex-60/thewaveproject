@@ -49,19 +49,7 @@
        <?php
 
 			if($session)
-			{
-				
-                        
-                
-                try {
-
-				} catch(FacebookRequestException $e) 
-                {
-
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
-
-				}  
+            {
          
 ?>
 
