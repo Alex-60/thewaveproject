@@ -129,13 +129,7 @@
                 
         ?>
 <div id="div1" class="col-md-4">
-    <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
-        <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
-                <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-            </blockquote>
-        </div>
-    </div>
+  
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
@@ -283,8 +277,9 @@
        
         <button class="voter">VOTER</button>
         
-         <button class="participer"> <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?></button>
-
+         
+        
+        <?php echo "<a href='".$loginUrl."' style='text-decoration:none'><input type='button' class='button-participer' value='PARTICIPER'/></a>" ;?>
         
         <hr>
          <?php
