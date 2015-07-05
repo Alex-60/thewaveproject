@@ -286,7 +286,7 @@
         
 
         
-        <?php echo "<a href= '".$loginUrl."'>Participer</a>";?>
+        <?php echo "<a href= '".$loginUrl."' class='voter'>Participer</a>";?>
         
      
         
