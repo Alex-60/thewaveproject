@@ -31,22 +31,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
-    <link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
+    <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<!--jQuery-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
-
-   
-
-
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <title>Application Facebook - The Wave</title>
+    
 </head>
 <body>
 
