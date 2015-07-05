@@ -28,15 +28,33 @@
 	}
 ?>
 
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <title>Grand jeu concours THE WAVE</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/wave.css">
+    <link href="./bootstrap/css/jquery.filer.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<!--jQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/jquery.filer.min.js"></script>
+
+   
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Application Facebook - The Wave</title>
+</head>
+<body>
+
+
+<section>
+    <div id="fb-root"></div>
     
-     <script>(function(d, s, id)
+    <script>(function(d, s, id)
         {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
@@ -47,101 +65,60 @@
              (document, 'script', 'facebook-jssdk'));
     </script>
     
-    
-</head>
-
-    <?php
+  <div id="presentation">
+   <script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '<?php echo APPID; ?>',
+		      xfbml      : true,
+		      version    : 'v2.3'
+		    });
+		  };
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/fr_FR/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+      </script>
+    <br>
+       <?php
 
 			if($session)
 			{
-            
-            	$_SESSION['fb_token'] = (string) $session->getAccessToken();
+				$_SESSION['fb_token'] = (string) $session->getAccessToken();
 				$request_user = new FacebookRequest( $session,"GET","/me");
 				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed- >getGraphObject(GraphUser::className());
-            
-            
-            }
-
-            else{
-                echo "no";
-                die();
+				$user = $request_user_executed->getGraphObject(GraphUser::className());
+                        
                 
-            }
+                try {
+
+				} catch(FacebookRequestException $e) 
+                {
+
+				echo "Exception occured, code: " . $e->getCode();
+				echo " with message: " . $e->getMessage();
+
+				}  
+         
 ?>
-    
-    
-<body>
-    
-    
-    <div class="page-home">
 
-        <header class="header">
-            <h1>GRAND JEU CONCOURS</h1>
-            <p>du 1er Juin au 31 Juillet 2015</p>
-            <p class="txt2">Participer et tentez de gagner<br/> votre équipement de kyte surf avec</p>
-            <img class="logohome" src="img/logo.png" />
-        </header>
-
-        <article class="slogan">
-            <p>JETEZ-VOUS À L'EAU</p>
-            <a href="voter.html" class="btnVoter">VOTER</a>
-            <a href="participer.html" class="btnParticiper">PARTICIPER</a>
-        </article>
-
-
-        <section class="classement">
-            <p>TOP 5</p>
-            <article class="participants">
-                <div class="positionClassement">1</div>
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-               <div class="positionClassement">2</div>
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-               <div class="positionClassement">3</div>
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-               <div class="positionClassement">4</div>
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-               <div class="positionClassement">5</div>
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-        </section>
-
-        <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
-        </footer>
-
+    <footer>
+            <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
+    </footer>
+</section>    
+              <?  
+                
+			}else
+                
+            {
+                echo "no";
+            }
+		?>
     </div>
+</section>
 </body>
 </html>
+
