@@ -164,43 +164,42 @@
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
                          // $session, "POST", '/me/photos', array(
-                                $session, "POST", '/1457732501214091/photos?fields=picture', array(
+                                $session, "POST", '/1457732501214091/photos', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
                         ))->execute()->getGraphObject(); 
                     
                  
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                         $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                     
-                        /* foreach ($result['data'] as $key => $value) 
+                    
+                         /*foreach ($result['data'] as $key => $value) 
                             {
-                               
-                             
-                             $login = $value->picture;
+            
   
                              
                             
-                            $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
-                            if(pg_num_rows($query) == 1)
-                            {
-                               // Pseudo déjà utilisé
-                               echo 'Ce pseudo est déjà utilisé';
-                            }else
-                            {
-                           
-                                $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
-               
-                            }
+                                        $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
+                                        if(pg_num_rows($query) == 1)
+                                        {
+                                           // Pseudo déjà utilisé
+                                           echo 'Ce pseudo est déjà utilisé';
+                                        }else
+                                        {
+
+                                            $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
+
+                                        }
                              
                              
 
                                 
-                            }
+                            }*/
                     
                     
                      //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
