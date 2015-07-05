@@ -184,8 +184,19 @@
                              
                              $login = $value->picture;
                              
-                            $query = mysql_query("SELECT image FROM photo where image = '$login'");
-                            if(mysql_num_rows($query) == 1){
+                             
+                              /*$result2 = pg_query($dbconn3, "SELECT * FROM photo");
+                
+                                while ($row2 = pg_fetch_row($result2)) 
+                                {
+
+                                     echo "<img src='$row2[0]'/>";
+                                }*/
+                             
+                             $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                             
+                            $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
+                            if(pg_num_rows($query) == 1){
                                // Pseudo déjà utilisé
                                echo 'Ce pseudo est déjà utilisé';
                             }else{
