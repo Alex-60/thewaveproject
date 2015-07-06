@@ -67,10 +67,28 @@
         <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
             
         <form id="test" action="participer.html">
-            <input type="hidden" name="<?php $loginUrl ;?>" value="<?php $loginUrl ;?>"/>
+    
+            <?php echo "<input type='hidden'  value='".$loginUrl."'/>"; ?>
+        
+          <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
+        
         </form>
             
         <a href='#' onclick='document.getElementById("test").submit()'>Ton lien</a>
+            
+            
+            
+            <form id="test" action="le_lien_vers_ta_page">
+                <input type="hidden" name="a_recup" value="tu_mets_ta_variable_ici"/>
+            </form>
+            <a href='#' onclick='document.getElementById("test").submit()'>Ton lien</a>
+
+            
+            
+            
+            
+            
+            
             
             
             
