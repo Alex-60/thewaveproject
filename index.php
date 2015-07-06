@@ -64,7 +64,9 @@
 
            
             
-            <a href="participer.html" target="_blank"><a href="voter.html" target="_blank">Ton lien</a></a>
+            <a href="participer.html" target="_blank">
+                <? php echo "<a href='".$loginUrl."' target='_blank'>Ton lien</a>" ;?>
+            </a>
             
 
         </article>
