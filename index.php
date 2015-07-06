@@ -64,7 +64,7 @@
             
              <?php $loginUrl2 = $helper->getLoginUrl(
         array(
-        'scope' => 'public_profile',
+        'scope' => 'user_friends',
         'redirect_uri' => 'www.thewave.herokuapp.com/participer.php'));?>
             
        
