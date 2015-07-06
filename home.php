@@ -190,10 +190,14 @@
                     
                     
 <<<<<<< HEAD
+<<<<<<< HEAD
                         while ($row2 = pg_fetch_row($result2))
 =======
                          /*foreach ($result['data'] as $key => $value) 
 >>>>>>> origin/master
+=======
+                         /*foreach ($result['data'] as $key => $value) 
+>>>>>>> 23db13f0897f3fb71a383edfa58564be18ded8e1
                             {
 
                                         $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
@@ -212,12 +216,15 @@
 
                                 
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 echo "<article class='participants'>";
                                 echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
                                 echo "</div>"; 
                                 echo "</article>";
 =======
+=======
+>>>>>>> 23db13f0897f3fb71a383edfa58564be18ded8e1
                             }*/
                     
                     
@@ -288,7 +295,10 @@
                                     </div>
                                    
                                 <?php
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 23db13f0897f3fb71a383edfa58564be18ded8e1
                             }
                         ?>
                 </div>
