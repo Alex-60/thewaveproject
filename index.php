@@ -62,16 +62,29 @@
         <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
             
-             <?php $loginUrl2 = $helper->getLoginUrl(
-        array(
-        'scope' => '',
-        'redirect_uri' => 'https://www.thewave.herokuapp.com/participer.php'));?>
+             <?php 
+
+       /* $loginUrl2 = $helper->getLoginUrl(
+        array('scope' => 'user_friends','redirect_uri' => 'www.thewave.herokuapp.com/participer.php'));*/
+            
+            ?>
             
        
             <?php //echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
         
-            <a href="<?php echo $loginUrl; ?>">alex</a>
+           <!-- <a href="<?php echo $loginUrl2; ?>">alex</a>-->
+           <?php 
+            $params = array(
+  'scope' => 'public_profile, user_friends',
+  'redirect_uri' => 'https://www.thewave.herokuapp.com/participer.php'
+);
 
+$loginUrl2 = $facebook->getLoginUrl($params);
+
+
+            
+            ?>
+<a href="<?php echo $loginUrl2; ?>">alex</a>
             
 
         </article>
