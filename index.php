@@ -71,7 +71,7 @@
             
              <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
-            <form action="participer.php?<?php $loginUrl ?>" method="post">
+            <form action="<?php $loginUrl ;?>" method="post">
                 <!--Nom  :  <input type="text" name="username" /><br />
                 Email: <input type="text" name="email" /><br />-->
                   
