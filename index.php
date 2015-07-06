@@ -71,13 +71,12 @@
             
              <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
-            <form action="<?php $loginUrl ;?>" method="post">
+          
                 <!--Nom  :  <input type="text" name="username" /><br />
                 Email: <input type="text" name="email" /><br />-->
                   
                     <a href="<?php $loginUrl ;?>" class="btnParticiper" name="participer">PARTICIPER</a>
 
-            </form>
             
 
         </article>
