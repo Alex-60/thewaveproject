@@ -64,11 +64,7 @@
                   <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
                 
                 <input type="submit" name="submit" value="Envoie!" />
-               <? 
-                 if($_POST['voter'])
-            {
-               echo "yes"; 
-            }?>
+             
 
                 
             </form>
@@ -79,12 +75,7 @@
                   
                     <a href="participer.html" class="btnParticiper" name="participer">PARTICIPER</a>
                         
-                
-                       <? 
-                 if($_POST['participer'])
-            {
-               echo "yes"; 
-            }?>
+       
                 
 
                 <p></p>
