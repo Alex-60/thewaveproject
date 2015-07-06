@@ -71,7 +71,7 @@
                 Email: <input type="text" name="email" /><br />-->
                   
                     <a href="participer.html" class="btnParticiper" name="participer">PARTICIPER</a>
-                <p></p>
+                
                   
                 <input type="submit" name="submit" value="Envoie!" />
             </form>
