@@ -64,6 +64,13 @@
                   <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
                 
                 <input type="submit" name="submit" value="Envoie!" />
+               <? 
+                 if($_POST['voter'])
+            {
+               echo "yes"; 
+            }?>
+
+                
             </form>
             
             <form action="participer.php" method="post">
@@ -71,7 +78,14 @@
                 Email: <input type="text" name="email" /><br />-->
                   
                     <a href="participer.html" class="btnParticiper" name="participer">PARTICIPER</a>
-
+                        
+                
+                       <? 
+                 if($_POST['participer'])
+            {
+               echo "yes"; 
+            }?>
+                
 
                 <p></p>
 
@@ -80,30 +94,7 @@
                 <input type="submit" name="submit" value="Envoie!" />
             </form>
             
-            
-            
-            
-            
-            <?php
 
-
-         
-
-            if($_POST['voter'])
-            {
-               echo "yes"; 
-            }
-
-            if($_POST['participier'])
-            {
-                echo "yes";  
-            }
-
-
-            ?>
-
-            
-            
         </article>
 
 
