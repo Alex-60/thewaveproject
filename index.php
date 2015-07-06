@@ -57,25 +57,15 @@
             <a href="participer.html" class="btnParticiper">PARTICIPER</a>
             
             
-            <form action="voter.php" method="post">
-                <!--Nom  :  <input type="text" name="username" /><br />
-                Email: <input type="text" name="email" /><br />-->
-                
-                  <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
-                
-                <input type="submit" name="submit" value="Envoie!" />
-             
-
-                
-            </form>
-            
-             <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
-            
           
-                <!--Nom  :  <input type="text" name="username" /><br />
-                Email: <input type="text" name="email" /><br />-->
+                
+        <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
+
+            <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
+            
+
                   
-                    <a href="<?php $loginUrl ;?>" class="btnParticiper" name="participer">PARTICIPER</a>
+            <?php echo "<a href= '".$loginUrl."' style='color:black' class='btnVoter'>Participer</a>";?>
 
             
 
