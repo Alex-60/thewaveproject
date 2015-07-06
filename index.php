@@ -62,12 +62,11 @@
             
         <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
 
-           
-            
-
+            <form>
                   
             <?php echo "<a href= '".$loginUrl."' style='color:black' class='btnVoter'>Participer</a>";?>
-
+            
+            </form>
             
 
         </article>
