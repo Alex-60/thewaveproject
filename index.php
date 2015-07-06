@@ -82,13 +82,7 @@
 
 $cancelUrl = 'https://thewave.herokuapp.com';
 
-if(isset($_REQUEST['error']))
-     {
-         if(isset($_REQUEST['error_reason']) && $_REQUEST['error_reason']=='user_denied')
-         {
-        echo "<script>top.location.href='{$cancelUrl}'</script>";
-         }
-     }
+$user = $facebook->getUser();
 
 
 
