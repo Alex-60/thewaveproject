@@ -89,7 +89,7 @@
                 
             }
 
-            if($_POST['particpier'])
+            if($_POST['participier'])
             {
                 
             }
