@@ -76,7 +76,7 @@
            <?php 
             $params = array(
   'scope' => 'user_friends',
-  'redirect_uri' => 'www.https://thewave.herokuapp.com/'
+  'redirect_uri' => 'https://thewave.herokuapp.com/'
 );
 
 $loginUrl2 = $helper->getLoginUrl($params);
