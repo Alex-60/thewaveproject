@@ -58,10 +58,11 @@
             
             
           
-                
+        <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
+            
         <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
 
-            <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
+           
             
 
                   
