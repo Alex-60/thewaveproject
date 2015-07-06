@@ -91,12 +91,12 @@
 
             if($_POST['voter'])
             {
-                
+               echo "yes"; 
             }
 
             if($_POST['participier'])
             {
-                
+                echo "yes";  
             }
 
 
