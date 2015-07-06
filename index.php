@@ -72,17 +72,11 @@
             
             ?>
         <?php    
-            
-$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.html');
-//$scope = array('');
-$loginUrl = $helper->getLoginUrl();
-
 
 if (isset($_GET['error_reason']) && $_GET['error_reason'] == 'user_denied') 
 {
     // dont redirect to login page
-    
-    
+
 }
 else
 {
@@ -91,6 +85,8 @@ else
      
 }
 
+$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.html');
+$loginUrl = $helper->getLoginUrl();
 
 
          ?>   
