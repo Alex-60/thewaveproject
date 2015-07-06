@@ -40,9 +40,6 @@
     <script src="js/dnd.js"></script>
 </head>
 <body>
-    
-
-    
     <div class="page-jeParticipe">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>

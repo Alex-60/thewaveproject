@@ -66,7 +66,7 @@
         <?php    
 
 
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.html');
             $loginUrl = $helper->getLoginUrl();
 
        if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
