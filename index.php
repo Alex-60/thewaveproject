@@ -74,9 +74,7 @@
         
            <!-- <a href="<?php echo $loginUrl2; ?>">alex</a>-->
            <?php 
-            $params = array(
-    "redirect_uri" => "https://thewave.herokuapp.com/"
-);
+            $params = array("scope" => "public_profile,email","redirect_uri" => "https://thewave.herokuapp.com/");
 
 $loginUrl2 = $helper->getLoginUrl($params);
 
