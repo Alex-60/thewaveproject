@@ -71,6 +71,13 @@
         array('scope' => 'user_friends','redirect_uri' => 'www.thewave.herokuapp.com/participer.php'));*/
             
             ?>
+        <?php    
+            
+$helper = new FacebookRedirectLoginHelper('https://www.thewave.herokuapp.com/');
+$scope = array('publish_actions');
+$loginUrl = $helper->getLoginUrl($scope);
+
+         ?>   
             
 
 <a href="<?php echo $loginUrl; ?>">alex</a>
