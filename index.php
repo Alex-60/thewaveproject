@@ -82,16 +82,16 @@
 
 //$cancelUrl = 'https://thewave.herokuapp.com';
 
-if (isset($_GET['error_reason']) && $_GET['error_reason'] == 'user_denied') {
+if (isset($_GET['error']) && $_GET['error'] == 'access_denied') {
     // dont redirect to login page
     
-     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
-            $loginUrl = $helper2->getLoginUrl();
-}
+    echo "yes";
 }
 else
 {
-   
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
+            $loginUrl = $helper2->getLoginUrl();
+}
 
 
 ?>
