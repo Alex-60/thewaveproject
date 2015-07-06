@@ -59,7 +59,10 @@
             </div>
             
           
-        <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
+        <?php $loginUrl = $helper->getLoginUrl(
+        
+        ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages'],["redirect_uri" == "https://thewave.herokuapp.com/"]
+    );?>
             
             
              <?php 
@@ -69,19 +72,8 @@
             
             ?>
             
-       
-            <?php //echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
-        
-           <!-- <a href="<?php echo $loginUrl2; ?>">alex</a>-->
-           <?php 
-            $params = array("scope" => "public_profile,email","redirect_uri" => "https://thewave.herokuapp.com/");
 
-$loginUrl2 = $helper->getLoginUrl($params);
-
-
-            
-            ?>
-<a href="<?php echo $loginUrl2; ?>">alex</a>
+<a href="<?php echo $loginUrl; ?>">alex</a>
             
 
         </article>
