@@ -76,24 +76,21 @@
 
 
          ?>   
-            
-
                 <a href="<?php echo $loginUrl; ?>">alex</a>
-            
-            
-            
+
  <?php           
 
-$redirect_uri =  "https://thewave.herokuapp.com/";
+$cancelUrl = 'https://thewave.herokuapp.com';
 
-if(isset($_REQUEST['signed_request']))
-{
-   // User has already authorised your app
-}
-else
-{
-   header('Location:'.$redirect_uri);
-}
+if(isset($_REQUEST['error']))
+     {
+         if(isset($_REQUEST['error_reason']) && $_REQUEST['error_reason']=='user_denied')
+         {
+        echo "<script>top.location.href='{$cancelUrl}'</script>";
+         }
+     }
+
+
 
 ?>
             
