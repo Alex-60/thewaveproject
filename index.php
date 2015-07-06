@@ -76,6 +76,7 @@
            <?php 
             $params = array(
   'scope' => 'user_friends',
+    'redirect_uri' => 'https://www.myapp.com/post_login_page'
 );
 
 $loginUrl2 = $helper->getLoginUrl($params);
