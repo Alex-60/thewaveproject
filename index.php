@@ -62,11 +62,7 @@
             
         <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
 
-            <form action="participer.html">
-                  
-            <?php echo "<a href= '".$loginUrl."' style='color:black' class='btnVoter' type='submit'>Participer</a>";?>
-            
-            </form>
+           
             
             <a href="participer.html" target="_blank"><a href="voter.html" target="_blank">Ton lien</a></a>
             
