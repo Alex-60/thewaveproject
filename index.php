@@ -78,7 +78,7 @@ $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.h
 $loginUrl = $helper->getLoginUrl();
 
 
-f (isset($_GET['error_reason']) && $_GET['error_reason'] == 'user_denied') {
+if (isset($_GET['error_reason']) && $_GET['error_reason'] == 'user_denied') {
     // dont redirect to login page
 }
 else
