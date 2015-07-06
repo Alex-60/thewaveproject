@@ -79,7 +79,7 @@
   'redirect_uri' => 'https://www.thewave.herokuapp.com/participer.php'
 );
 
-$loginUrl2 = $facebook->getLoginUrl($params);
+$loginUrl2 = $helper->getLoginUrl($params);
 
 
             
