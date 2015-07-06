@@ -54,8 +54,9 @@
             <p>JETEZ-VOUS À L'EAU</p>
             <a href="voter.html" class="btnVoter">VOTER</a>
           
+           <div class="btn-jeux">
             <a href="participer.html" class="btnParticiper">PARTICIPER</a>
-            
+            </div>
             
           
         <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
@@ -63,8 +64,8 @@
             
              <?php $loginUrl2 = $helper->getLoginUrl(
         array(
-        scope => 'publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages',
-        redirect_uri => 'https://www.thewave.herokuapp.com/participer.php'));?>
+        'scope' => 'publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages',
+        'redirect_uri' => 'https://thewave.herokuapp.com/participer.php'));?>
             
        
             <?php echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
@@ -86,13 +87,9 @@
                             {
                                 
                                 echo "<article class='participants'>";
-                                echo "<div class='positionClassement'>1</div>";
                                 echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
                                 echo "</div>"; 
-                                echo "<h3>500 J'aime</h3>";
-                                echo "<div class='like'></div>";
-                                echo "<div class='partage'></div>";
                                 echo "</article>";
                             }
             ?>
