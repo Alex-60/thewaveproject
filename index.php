@@ -63,11 +63,11 @@
             
              <?php $loginUrl2 = $helper->getLoginUrl(
         array(
-        scope=>'publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages',
-        redirect_uri=>'https://thewave.herokuapp.com/participer.html'));?>
+        scope => 'publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages',
+        redirect_uri => 'https://thewave.herokuapp.com/participer.html'));?>
             
        
-<?php echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
+            <?php echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
         
 
 
