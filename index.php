@@ -66,7 +66,7 @@
            
         <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
             
-        <form id="test" action="participer.php">
+        <form id="test" action="participer.html">
             <input type="hidden" name="<?php $loginUrl ;?>" value="<?php $loginUrl ;?>"/>
         </form>
             
