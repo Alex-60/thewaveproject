@@ -80,16 +80,15 @@
 
  <?php           
 
-$cancelUrl = 'https://thewave.herokuapp.com';
+//$cancelUrl = 'https://thewave.herokuapp.com';
 
-if (!$session) {
- 
-       $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
-            $loginUrl = $helper->getLoginUrl();
-      
-  } else {
-    $loginUrl = $facebook->getLoginUrl();
-  
+if (isset($_GET['error_reason']) && $_GET['error_reason'] == 'user_denied') {
+    // dont redirect to login page
+}
+else
+{
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
+            $loginUrl = $helper2->getLoginUrl();
 }
 
 
