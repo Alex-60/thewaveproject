@@ -75,7 +75,6 @@
            <!-- <a href="<?php echo $loginUrl2; ?>">alex</a>-->
            <?php 
             $params = array(
-  "scope" => "user_friends",
     "redirect_uri" => "https://thewave.herokuapp.com/"
 );
 
