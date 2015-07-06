@@ -74,21 +74,16 @@
             $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.html');
             $loginUrl = $helper->getLoginUrl();
 
+            if(isset($_GET['error']))
+             {
+                 echo "yes";
+             }
+
+
 
          ?>   
                 <a href="<?php echo $loginUrl; ?>">alex</a>
-
- <?php           
-
-if(isset($_GET['error']))
-     {
-         echo "yes";
-     }
-
-
-
-?>
-            
+      
             
             
             
