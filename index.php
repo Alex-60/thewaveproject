@@ -67,7 +67,7 @@
         <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
             
         <form id="test" action="participer.php">
-            <input type="hidden" name="a_recup" value="<?php $loginUrl ;?>"/>
+            <input type="hidden" name="<?php $loginUrl ;?>" value="<?php $loginUrl ;?>"/>
         </form>
             
         <a href='#' onclick='document.getElementById("test").submit()'>Ton lien</a>
