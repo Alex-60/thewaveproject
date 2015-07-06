@@ -19,9 +19,8 @@
            <article class="my-photo">
                <div class="bloc-photo-upload">
                    <div id="cadre" dropzone="copy">
-				<p>DEPOSEZ VOS PHOTOS ICI</p>
-                   <h2>+</h2><br>
-                   <h3>Ajouter votre photo</h3>
+				        <p>DEPOSEZ VOS PHOTOS ICI</p>
+                        <h2>+</h2><br>
                    </div>
                </div>
            </article>
