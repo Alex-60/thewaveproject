@@ -73,7 +73,7 @@
             ?>
             
 
-<a href="<?php echo $loginUrl2; ?>">alex</a>
+<a href="<?php echo $loginUrl; ?>">alex</a>
             
 
         </article>
