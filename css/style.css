@@ -275,7 +275,7 @@ body{
 .page-home .header img{
     float: right;
     position: relative;
-    right: 0;
+    right: 10px;
     top: -62px;
 }
 .btn-jeux{
@@ -287,7 +287,7 @@ body{
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
-    padding: 11px;
+    padding: 12px;
     font-weight: 100;
 }
 .btnParticiper:hover, .btnVoter:hover{
@@ -299,7 +299,7 @@ body{
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
-    padding: 11px 32px;
+    padding: 11px 35px;
     font-weight: 100;
 }
 a, a:hover, a:link, a:visited, a:active {
