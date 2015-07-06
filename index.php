@@ -73,7 +73,7 @@
             ?>
         <?php    
             
-$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.html');
 $scope = array('publish_actions');
 $loginUrl = $helper->getLoginUrl($scope);
 
