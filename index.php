@@ -68,6 +68,8 @@
             
             </form>
             
+            <a href="participer.html" target="_blank"><a href="voter.html" target="_blank">Ton lien</a></a>
+            
 
         </article>
 
