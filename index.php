@@ -80,13 +80,10 @@
 
  <?php           
 
-
-if (isset($_GET['error']) == 'access_denied') 
-{
-    // dont redirect to login page
-    
-    echo "yes";
-}
+if(isset($_GET['error']))
+     {
+         echo "yes";
+     }
 
 
 
