@@ -34,7 +34,7 @@
     max-width: 820px;
     margin-left: auto;
     margin-right: auto;
-    min-height: 563px;
+    min-height: 548px;
     background: url(../img/back-home.jpg);
     background-size: 820px;
     background-repeat: no-repeat;
@@ -264,16 +264,18 @@ body{
     margin: 0 0 25px 0;
 }
 .header img{
+    float: right;
     max-width: 200px;
-    position: absolute;
-    right: 245px;
-    top: 20px;
+    position: relative;
+    right: 15px;
+    top: -65px;
     width: 100%;
 }
 .page-home .header img{
-    position: absolute;
-    right: 245px;
-    top: 75px;
+    float: right;
+    position: relative;
+    right: 0;
+    top: -62px;
 }
 .btnParticiper{
     background: #3B5998;
@@ -311,11 +313,11 @@ a, a:hover, a:link, a:visited, a:active {
     width: 120px;
     height: 170px;
     float: left;
-    margin: 1.85% 1.7%;
+    margin: 1.5% 1.85%;
 }
 .img-participants{
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     background: rgba(0,0,0,0.6);
 }
 .participants h3{
