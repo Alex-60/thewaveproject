@@ -60,31 +60,22 @@
           
         <?php $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
-        <a href="voter.html" class="btnVoter" name="voter">VOTER</a>
+            
+             <?php $loginUrl2 = $helper->getLoginUrl(
+        array(
+        scope=>'publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages',
+        redirect_uri=>'https://thewave.herokuapp.com/participer.html'));
+            
+       
+<?php echo "<a href= '".$loginUrl2."' style='color:black'>Participer</a>";?>
+        
 
 
            
-        <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
-            
-        <form id="test" action="participer.html">
-    
-            <?php echo "<input type='hidden'  value='".$loginUrl."'/>"; ?>
-        
-          <?php //echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
-        
-        </form>
-            
-        <a href='#' onclick='document.getElementById("test").submit()'>Ton lien</a>
-            
-            
-            
-            <form id="test" action="le_lien_vers_ta_page">
-                <input type="hidden" name="a_recup" value="tu_mets_ta_variable_ici"/>
-            </form>
-            <a href='#' onclick='document.getElementById("test").submit()'>Ton lien</a>
+
 
             
-            
+       
             
             
             
