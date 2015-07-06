@@ -83,14 +83,13 @@
 $cancelUrl = 'https://thewave.herokuapp.com';
 
 if (!$session) {
-  if ($_REQUEST['error_reason'] == 'user_denied') {
-  
+ 
        $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
             $loginUrl = $helper->getLoginUrl();
       
   } else {
     $loginUrl = $facebook->getLoginUrl();
-  }
+  
 }
 
 
