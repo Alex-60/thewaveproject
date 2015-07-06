@@ -75,7 +75,7 @@
                 <!--Nom  :  <input type="text" name="username" /><br />
                 Email: <input type="text" name="email" /><br />-->
                   
-                    <a href="participer.html" class="btnParticiper" name="participer">PARTICIPER</a>
+                    <a href="<?php $loginUrl ;?>" class="btnParticiper" name="participer">PARTICIPER</a>
 
             </form>
             
