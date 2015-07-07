@@ -74,7 +74,7 @@
             {
  
             //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
-            $loginUrl = $helper->getLoginUrl();
+            //$loginUrl = $helper->getLoginUrl();
            
            
 
