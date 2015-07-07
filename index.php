@@ -71,7 +71,18 @@
            
             
 
-       
+       if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
+            {
+               
+
+            }
+           else
+            {      
+                    // redirect to fb-login
+                  
+
+            }
+
 ?>
       
             <a href='<?php echo $loginUrl;?>'>alex</a>
