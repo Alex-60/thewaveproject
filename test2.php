@@ -3,7 +3,22 @@
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
             {
          
-                echo "no";
+                //echo "no";
+       
+       if( isset($_SESSION) && isset($_SESSION['fb_token']) )
+	{
+		$session = new FacebookSession($_SESSION['fb_token']);
+	}
+	//Sinon j'affiche le lien de connection
+	else
+	{
+		$session = $helper->getSessionFromRedirect();
+	}
+       
+       
+                
+       
+       
             }
            else
             {       
