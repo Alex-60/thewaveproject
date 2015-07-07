@@ -67,32 +67,23 @@
 
 
 
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-            $loginUrl = $helper->getLoginUrl();
+           
             
 
        if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
             {
                  //echo "no";
            
-             function Redirect($url, $permanent = false)
-                {
-                    if (headers_sent() === false)
-                    {
-                        header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
-                    }
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+            $loginUrl = $helper->getLoginUrl();
 
-                    exit();
-                }
-
-                Redirect('http://www.google.com/', false);
             }
-       else
-        {
-                // redirect to fb-login
-               echo "yes";
-            
-        }
+           else
+            {
+                    // redirect to fb-login
+                   echo "yes";
+
+            }
 
 ?>
       
