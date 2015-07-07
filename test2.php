@@ -6,11 +6,11 @@
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
             {
          
-                echo "no";
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
+    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
        
        ?>
 
-<a href="https://thewave.herokuapp.com/">Revenir au site</a>
 
 <?php
             }
