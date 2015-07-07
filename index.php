@@ -63,12 +63,7 @@
             
          
       
-       <?php    
-
-
-/*
-           
-            
+       <?php        
 
        if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
             {
@@ -81,46 +76,11 @@
            else
             {       echo "no there is an error";
                     // redirect to fb-login
-                  
-
             }
-            
-     
-*/
 
-require_once dirname(__FILE__) . '/facebook/facebook.php';
-
-$facebook = new Facebook(array(
-    'appId' => $fb_config['767304380051847'],  // Your Facebook app id
-    'secret' => $fb_config['7f0e4cac931818f7f7dc86d722dd5e0e'], // Your Facebook app secret
-    'cookie' => true
-));
-
-$fb_user_id = $facebook->getUser();
-if ($fb_user_id) {
-    try {
-        $fb_user_profile = $facebook->api($fb_user_id);
-        var_dump($fb_user_profile);
-    } catch (FacebookApiException $e) 
-    {
-        error_log($e);
-    }
-} else {
-    $params = array(
-        'scope' => 'email, read_stream, user_interests, user_likes, user_location, user_status',
-        'redirect_uri' => 'http://myurl/facebook_connect', // Replace with your app url
-    );
-    $facebook_login_url = $facebook->getLoginUrl($params);
-    echo '<script>top.location="' . $facebook_login_url . '";</script>';
-    exit();
-}
 
 ?>
-      
             <a href='<?php echo $loginUrl;?>'>alex</a>
-            
-            
-            
 
         </article>
 
