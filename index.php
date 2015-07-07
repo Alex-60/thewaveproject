@@ -88,6 +88,8 @@
      
 */
 
+require_once dirname(__FILE__) . '/facebook/facebook.php';
+
 $facebook = new Facebook(array(
     'appId' => $fb_config['767304380051847'],  // Your Facebook app id
     'secret' => $fb_config['7f0e4cac931818f7f7dc86d722dd5e0e'], // Your Facebook app secret
