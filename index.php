@@ -14,7 +14,7 @@
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
     //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
 	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
@@ -67,7 +67,7 @@
       
        <?php 
 
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+            //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
             $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
       /* if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
