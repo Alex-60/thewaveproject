@@ -4,17 +4,17 @@
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
-            {
+    {
          
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
-    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $loginUrl = $helper->getLoginUrl();
        
        ?>
 
 
 <?php
-            }
-           else
+    }
+    else
             {    ?>   
                
                <!DOCTYPE html>
