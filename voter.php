@@ -59,14 +59,14 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
          while ($row2 = pg_fetch_row($result2)) 
                             {
                              
-            echo "<article class='participants'>"
-              echo  "<div class='img-participants'>"
-                    echo "<img src="" alt="">"
-               echo" </div>"
-                echo "<h3>500 J'aime</h3>"
-                echo "<div class='like'></div>"
-                echo "<div class='partage'></div>"
-            echo "</article>"
+            echo "<article class='participants'>";
+              echo  "<div class='img-participants'>";
+                echo "<img src="" alt="">";
+               echo" </div>";
+                echo "<h3>500 J'aime</h3>";
+                echo "<div class='like'></div>";
+                echo "<div class='partage'></div>";
+            echo "</article>";
             
            }
         ?>
