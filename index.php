@@ -72,12 +72,12 @@
 
        if (isset($_GET['error']) && $_GET['error_code'] == 'access_denied')
        {
-                $helper2;
+                echo $helper2;
         }
         else
         {
                 // redirect to fb-login
-             $helper;
+             echo $helper;
             
         }
 
