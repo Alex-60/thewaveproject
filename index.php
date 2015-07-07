@@ -70,7 +70,7 @@
             $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/test2.php');
             $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
-      /* if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
+       if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
             {
  
             //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
@@ -80,7 +80,7 @@
            else
             {       echo "no there is an error";
                     // redirect to fb-login
-            }*/
+            }
 
 ?>
             <a href='<?php echo $loginUrl;?>'>alex</a>
