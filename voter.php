@@ -56,8 +56,10 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             
             <?php
         
+        $result2 = pg_query($dbconn3, "SELECT * FROM photo");
+        
          while ($row2 = pg_fetch_row($result2)) 
-                            {
+            {
                              
             echo "<article class='participants'>";
               echo  "<div class='img-participants'>";
