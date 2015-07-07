@@ -71,7 +71,7 @@
            
             
 
-       if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
+       if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
             {
                
 
