@@ -52,10 +52,10 @@
 
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
-            <a href="voter.html" class="btnVoter">VOTER</a>
+            <a href='<?php echo $loginUrl;?>' class="btnVoter">VOTER</a>
           
            <div class="btn-jeux">
-            <a href="participer.html" class="btnParticiper">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2;?>' class="btnParticiper">PARTICIPER</a>
             </div>
             
           
