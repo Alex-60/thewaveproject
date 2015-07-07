@@ -79,7 +79,7 @@
 
             }
            else
-            {       echo "no there is an error";
+            {      
                     // redirect to fb-login
                   
 
