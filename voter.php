@@ -24,30 +24,6 @@
 </head>
 <body>
 
-
- <?php    
-
-
-
-           // $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-            //$loginUrl = $helper->getLoginUrl();
-            
-
-       /*if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
-            {
-                 echo "no";
-            }
-       else
-        {
-                // redirect to fb-login
-               echo "yes";
-            
-        }*/
-
-
-
-         ?>
-
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
@@ -65,80 +41,7 @@
                 <div class="like"></div>
                 <div class="partage"></div>
             </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
             
-            
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
         </section>
     </div>
 </body>
