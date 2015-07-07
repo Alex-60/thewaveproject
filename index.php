@@ -75,8 +75,17 @@
             {
                  //echo "no";
            
-                $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
-                $loginUrl = $helper2->getLoginUrl();
+             function Redirect($url, $permanent = false)
+                {
+                    if (headers_sent() === false)
+                    {
+                        header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+                    }
+
+                    exit();
+                }
+
+                Redirect('http://www.google.com/', false);
             }
        else
         {
