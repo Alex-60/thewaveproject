@@ -72,14 +72,14 @@
             $loginUrl = $helper->getLoginUrl();
             $loginUrl2 = $helper2->getLoginUrl();
 
-       if (isset($_GET['error']) && $_GET['error_code'] == 'access_denied')
-       {
-                 $helper2;
-        }
-        else
+       if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
+            {
+                 header('Location: https://thewave.herokuapp.com/voter.php');
+            }
+       else
         {
                 // redirect to fb-login
-              $helper;
+               header('Location: https://thewave.herokuapp.com/index.php');
             
         }
 
