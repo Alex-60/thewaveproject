@@ -6,13 +6,10 @@
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
          
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
-    $loginUrl = $helper->getLoginUrl();
+    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
+    //$loginUrl = $helper->getLoginUrl();
        
-       ?>
-
-
-<?php
+       header('Location: http://www.commentcamarche.net/forum/');    
     }
     else
             {    ?>   
