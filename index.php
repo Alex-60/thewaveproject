@@ -66,8 +66,7 @@
        <?php    
 
 
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php/');
-            $loginUrl = $helper->getLoginUrl();
+
            
             
 
@@ -75,12 +74,12 @@
             {
                  //echo "no";
            
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php/');
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
             $loginUrl = $helper->getLoginUrl();
 
             }
            else
-            {      
+            {       echo "no there is an error";
                     // redirect to fb-login
                   
 
