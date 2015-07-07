@@ -67,7 +67,7 @@
       
        <?php 
 
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.html');
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/test2.php');
             $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
       /* if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
