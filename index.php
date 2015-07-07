@@ -74,8 +74,8 @@
             {
                  //echo "no";
            
-            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-            $loginUrl = $helper->getLoginUrl();
+            //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+            //$loginUrl = $helper->getLoginUrl();
 
             }
            else
