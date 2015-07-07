@@ -73,9 +73,9 @@
        if (isset($_GET['error']) && $_GET['error'] == 'access_denie')
             {
  
-            //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-            //$loginUrl = $helper->getLoginUrl();
-           $helper;
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+            $loginUrl = $helper->getLoginUrl();
+           
            
 
             }
