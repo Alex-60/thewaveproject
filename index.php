@@ -75,13 +75,14 @@
  
             //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
             //$loginUrl = $helper->getLoginUrl();
-           
            echo "no";
-           die();
+          $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
+        $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    
 
             }
            else
-            {       echo "no there is an error";
+            {       echo " there no error";
                     // redirect to fb-login
             }
 
