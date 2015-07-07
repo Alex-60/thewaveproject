@@ -32,6 +32,25 @@
             <a class="btnParticiper" href="participer.html">PARTICIPER</a>
             <h2>Voter pour la meilleure photo</h2>
         </header>
+        
+        
+                 <?php 
+                
+                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "SELECT * FROM photo ORDER BY date DESC LIMIT 5");
+                    
+                        while ($row2 = pg_fetch_row($result2)) 
+                            {
+                                
+                                echo "<article class='participants'>";
+                                echo "<div class='img-participants'>";
+                                echo "<img src='$row2[0]'/>"; 
+                                echo "</div>"; 
+                                echo "</article>";
+                            }
+            ?>
+        
+        
         <section class="content">
             <article class="participants">
                 <div class="img-participants">
