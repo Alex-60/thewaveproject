@@ -81,7 +81,7 @@
            else
             {
                     // redirect to fb-login
-                   echo "yes";
+                  
 
             }
 
