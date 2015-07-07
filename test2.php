@@ -9,7 +9,7 @@
     //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
     //$loginUrl = $helper->getLoginUrl();
        
-       header('Location: http://www.commentcamarche.net/forum/');    
+       header('Location: https://thewave.herokuapp.com/');    
     }
     else
             {    ?>   
