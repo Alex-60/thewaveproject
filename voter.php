@@ -40,6 +40,33 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+
+ <?php    
+
+
+
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+            $loginUrl = $helper->getLoginUrl();
+            
+
+       if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
+            {
+                 echo "no";
+            }
+       else
+        {
+                // redirect to fb-login
+               echo "yes";
+            
+        }
+
+
+
+         ?>  
+
+
+
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
