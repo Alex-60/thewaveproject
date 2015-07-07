@@ -1,6 +1,6 @@
 <?php
 
-include("index.php");
+
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
@@ -36,7 +36,7 @@ include("index.php");
         
                  <?php 
                 
-                       
+                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "SELECT * FROM photo");
                     
                         while ($row2 = pg_fetch_row($result2)) 
