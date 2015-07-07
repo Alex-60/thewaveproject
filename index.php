@@ -75,7 +75,7 @@
 
        if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
             {
-                 header('Location: https://thewave.herokuapp.com/voter.php');
+                 header('Location: https://thewave.herokuapp.com/index.php');
             }
        else
         {
