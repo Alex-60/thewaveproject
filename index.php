@@ -59,7 +59,7 @@
             </div>
             
           
-        <?php $loginUrl = $helper->getLoginUrl( ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
+        <?php //$loginUrl = $helper->getLoginUrl( ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
          
                
@@ -67,15 +67,17 @@
       
        <?php 
 
-          
-
-    
 
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
     $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/PARTICIPER.php');
+    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+
+
 ?>
             <a href='<?php echo $loginUrl;?>'>VOTER</a>
+            <a href='<?php echo $loginUrl2;?>'>PARTICIPER</a>
 
         </article>
 
