@@ -1,6 +1,6 @@
 <?php
 
-require ('index.php');
+include("index.php");
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
