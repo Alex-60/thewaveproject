@@ -85,13 +85,15 @@
                 
                 echo "<img src='$row2[0]'/>"; 
                             
-                echo $row2[0];
+      
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
-                <!--<p></p>-->
+          
                 <!--<div class="like"></div>
                 <div class="partage"></div>-->
+                
+                <div class="fb-like" data-href="<?php $row2[0] ;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
             </article>
                             <?
