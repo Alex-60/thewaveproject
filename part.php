@@ -275,7 +275,7 @@
         <p class="txt1">Grand Jeu Concours</p>
         <p class="txt1_1">Du 1er juin au 31 juillet 2015</p>
         <p class="txt2">Participer et tentez de gagner votre équipement de kyte surf avec</p>
-        <img class="logohome" src="img/logo.png" />
+       
     </article>
 
     <article class="slogan">
