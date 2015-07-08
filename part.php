@@ -30,4 +30,6 @@
 	}
 
 echo "yes";
+
+echo $session;
 ?>
