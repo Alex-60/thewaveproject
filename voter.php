@@ -42,15 +42,10 @@
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
-            <a class="btnParticiper" href='<?php echo $loginUrl;?>'>PARTICIPER</a>
+            <a class="btnParticiper" href="part.php">PARTICIPER</a>
             
        
-            <?php
             
-        
-        $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/part.php');
-    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-            ?>
             
             <h2>Voter pour la meilleure photo</h2>
         </header>
