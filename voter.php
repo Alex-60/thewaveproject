@@ -92,10 +92,10 @@
                 <!--<div class="like"></div>
                 <div class="partage"></div>-->
                 
-                <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
             </article>
-                            <?
+                <?
     }
 ?>
         </section>
