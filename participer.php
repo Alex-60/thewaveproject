@@ -29,11 +29,6 @@
 
 
 
-if($session)
-			{
-			echo "yes";
-    die();
-}
 ?>
 
 
@@ -115,16 +110,18 @@ if($session)
             
             }*/
         
+if($session)
+			{
+				
+
         
-        $request = new FacebookRequest($session,'GET','/me');
+              $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
-        
-                        var_dump($result);
-                        die();
-        
+                
+        }
         
                  ?>
             
