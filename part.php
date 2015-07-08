@@ -1,7 +1,7 @@
 <?php
     error_reporting(E_ALL);
-    ini_set("display_errors", 1);
-    session_start();
+
+
     require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
@@ -49,22 +49,33 @@
       
        <?php
 
+            
+$facebook = new Facebook(array(
+  'appId'  => '767304380051847',
+  'secret' => '7f0e4cac931818f7f7dc86d722dd5e0e',
+));
 
-            $_SESSION['fb_token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest( $session,"GET","/me");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject(GraphUser::className());
-                        
-                
-                try {
+// Get User ID
+$user = $facebook->getUser();
 
-				} catch(FacebookRequestException $e) 
-                {
 
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
+if ($user) {
+  try {
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me');
+ } catch (FacebookApiException $e) {
+     error_log($e);
+    $user = null;
+  }
+}
 
-				}  
+if ($user) {
+  $logoutUrl = $facebook->getLogoutUrl();
+} else {
+  $loginUrl = $facebook->getLoginUrl();
+}
+
+
 
 
 
