@@ -44,6 +44,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                 echo "<article class='participants'>";
                                 echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
+                                echo $row2[0];
                                 echo "</div>"; 
                                 echo "</article>";
                             }
