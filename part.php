@@ -4,33 +4,27 @@
     session_start();
 
 
+    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
-	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
-	{
-		$session = new FacebookSession($_SESSION['fb_token']);
-	}
-	//Sinon j'affiche le lien de connection
-	else
-	{
-		$session = $helper->getSessionFromRedirect();
-	}
+   use Facebook\FacebookSession;
 
-session_start();
+FacebookSession::setDefaultApplication('app-id', 'app-secret');
 
-if($session) 
-{
-  try 
-  {
-    $user_profile = (new FacebookRequest(
-      $session, 'GET', '/me'
-    ))->execute()->getGraphObject(GraphUser::className());
-    echo "Name: " . $user_profile->getName();
-  } catch(FacebookRequestException $e) 
-  {
-    echo "Exception occured, code: " . $e->getCode();
-    echo " with message: " . $e->getMessage();
-  }   
+// If you already have a valid access token:
+$session = new FacebookSession('access-token');
+
+// If you're making app-level requests:
+$session = FacebookSession::newAppSession();
+
+// To validate the session:
+try {
+  $session->validate();
+} catch (FacebookRequestException $ex) {
+  // Session not valid, Graph API returned an exception with the reason.
+  echo $ex->getMessage();
+} catch (\Exception $ex) {
+  // Graph API returned info, but it may mismatch the current app or have expired.
+  echo $ex->getMessage();
 }
-
 
 ?>
