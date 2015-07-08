@@ -90,7 +90,7 @@ if($session)
 				
                 echo "yes";
         
-              $request = new FacebookRequest($session,'GET','/me');
+                $request = new FacebookRequest($session,'GET','/me');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
@@ -98,12 +98,10 @@ if($session)
     
                         var_dump($result);
                 
-        }
+            }
         
                  ?>
-            
-            
-            
+
                         <!--------------------------------------------------------------------------------------------->
             
             <article class="participants">
