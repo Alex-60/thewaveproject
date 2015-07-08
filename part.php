@@ -267,14 +267,14 @@
                 
                     while ($row = pg_fetch_row($result)) 
                     {
-                      echo "ville: $row[0]";
+                      ///echo "ville: $row[0]";
                      
                     }
                     
                 }
                 catch (Exception $e)
                 {
-                var_dump($e->getMessage());
+                //var_dump($e->getMessage());
                 }
         ?>
     </article>
@@ -290,7 +290,7 @@
                     while ($row2 = pg_fetch_row($result2)) 
                     {
                    
-                         echo "<img src='$row2[0]'/>";
+                         //echo "<img src='$row2[0]'/>";
                     }
         ?>
     </article>
