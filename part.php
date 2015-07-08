@@ -32,4 +32,6 @@
 echo "yes";
 
 echo $session;
+
+echo "no";
 ?>
