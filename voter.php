@@ -31,7 +31,7 @@
             <img src="img/logo.png" alt="logo">
             <a class="btnParticiper" href="participer.html">PARTICIPER</a>
             
-            <a class="btnParticiper" href="participer.html">PART</a>
+       
             
             
             <h2>Voter pour la meilleure photo</h2>
