@@ -21,6 +21,17 @@
     <title>Voter</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=350490031815871";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+    
 </head>
 <body>
 
@@ -73,11 +84,15 @@
                 <?php
                 
                 echo "<img src='$row2[0]'/>"; 
+                            
+                echo $row2[0];
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
+                
+                
+                <!--<div class="like"></div>
+                <div class="partage"></div>-->
 
             </article>
                             <?
