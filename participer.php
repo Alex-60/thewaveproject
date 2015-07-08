@@ -120,6 +120,9 @@ if($session)
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
+    
+                        var_dump($result);
+    die();
                 
         }
         
