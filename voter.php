@@ -71,8 +71,8 @@
                 
                 <div class="img-participants">
                 <?php
-                echo "test";
-                            echo "<img src='$row2[0]'/>"; 
+                
+                echo "<img src='$row2[0]'/>"; 
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
