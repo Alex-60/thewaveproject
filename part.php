@@ -66,7 +66,7 @@
 
 			if($session)
 			{
-		
+		echo "yessssss";
          
  
                 $name = $user->getName();
