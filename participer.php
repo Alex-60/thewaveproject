@@ -31,22 +31,8 @@
 
 if($session)
 			{
-				$_SESSION['fb_token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest( $session,"GET","/me");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject(GraphUser::className());
-                        
-                
-                try {
-
-				} catch(FacebookRequestException $e) 
-                {
-
-				echo "Exception occured, code: " . $e->getCode();
-				echo " with message: " . $e->getMessage();
-
-				}  
-
+			echo "yes";
+    die();
 }
 ?>
 
