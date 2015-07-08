@@ -324,7 +324,7 @@ a, a:hover, a:link, a:visited, a:active {
     width: 120px;
     height: 120px;
     background: rgba(0,0,0,0.6);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .img-participants img{
     max-height: 120px;
