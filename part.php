@@ -50,12 +50,7 @@
 </head>
 <body>
 
-<!-- //////////////////         CODE INTEGRATION FINALE          //////////////////-->
 
-<!---->
-
-
-<!-- //////////////////         CODE ZAK          //////////////////-->
 <section>
     <div id="fb-root"></div>
     
@@ -127,26 +122,12 @@
                 
                 $image='https://graph.facebook.com/1399732547014087/picture?width=150';
                 
-                 echo "</br>";
-                
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "<div id='logo'><img src='$image'/></div>";
+             
                 
        
                 
         ?>
-<div id="div1" class="col-md-4">
-    <div class="fb-page" data-href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
-        <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">
-                <a href="https://www.facebook.com/pages/The-Wave/1385753921748799?ref=profile">The Wave</a>
-            </blockquote>
-        </div>
-    </div>
+
     <!---------------------------------------------------------------------------------------------------------upload---------------------------------------------------------------------------------->
     <div class="col-md-12" id="div1-child2">
         
