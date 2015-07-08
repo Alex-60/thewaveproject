@@ -35,6 +35,7 @@
 </head>
 <body>
 
+    <?php echo "yes";?>
 
 <section>
 
