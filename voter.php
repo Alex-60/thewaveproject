@@ -70,7 +70,9 @@
        
                 
                 <div class="img-participants">
-                <img src="" alt="">
+                <?php
+                echo "<img src="" alt="">";
+                ?>
                 </div>
                 <h3>500 J'aime</h3>
                 <div class="like"></div>
