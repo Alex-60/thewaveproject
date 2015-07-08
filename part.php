@@ -62,8 +62,11 @@
     
   <div id="presentation">
 
+      
        <?php
 
+            var_dump($session);
+die();
 			$me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className);
             echo $me->getName();
 		?>
