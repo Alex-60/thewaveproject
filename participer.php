@@ -37,9 +37,6 @@
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
-         
-    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/index.php');
-    //$loginUrl = $helper->getLoginUrl();
        
        header('Location: https://thewave.herokuapp.com/');    
     }
@@ -69,8 +66,6 @@
                <div class="bloc-photo-upload">
                    <div id="cadre" dropzone="copy">
 				        <p>DEPOSEZ VOS PHOTOS ICI</p>
-                       
-                       
                         <h2>+</h2><br>
                    </div>
                </div>
@@ -86,29 +81,9 @@
             Send this file: <input name="userfile" type="file" />`
             <input type="submit" name="send" value="Send File" />
         </form>
-            
-            
-            
-                 
+   
         <?php
-           /* if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-                //something posted
-                
-                if (isset($_POST['send'])) 
-                {
-                        $filename = $_FILES['userfile']['name']; 
-                        $link = "./images/$filename";
-                          $session = new FacebookSession($_SESSION['fb_token']);
-                          $response = (new FacebookRequest(
-                            $session, "POST", '/1457732501214091/photos', array(
-                            'source' => '@'.realpath($link),
-                            'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject();
-                }
-            
-            }*/
+      
         
 if($session)
 			{
@@ -122,7 +97,6 @@ if($session)
                         $result = $graphObject->asArray();
     
                         var_dump($result);
-    die();
                 
         }
         
