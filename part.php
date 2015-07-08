@@ -66,9 +66,6 @@
 
 			if($session)
 			{
-		echo "yessssss";
-         
- 
                 $name = $user->getName();
                 //$id=$user->getId();
                 
@@ -178,7 +175,10 @@
                 </div>
       
                 <div id="div2" class="col-md-8">
+                    
+                    
                         <?php
+                
                         //$request = new FacebookRequest($session,'GET','/1385753921748799/posts?fields=picture,full_picture');
                 
                         $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
@@ -194,7 +194,7 @@
                                 ?>
                                     <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
                                         <?php
-                                            echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
+                                            //echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
                             
                                             //$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
@@ -203,7 +203,7 @@
                                             //$result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$picvalue')");
                                         
                                             //echo "yes";
-                                            echo "<p>$value->picture</p>";
+                                            //echo "<p>$value->picture</p>";
                                             
                                             $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
@@ -213,12 +213,11 @@
                             
                                             $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$picvalue')");
                             
-                                            echo "<p>yes</p>";
+                                            //echo "<p>yes</p>";
                             
                                             ?>
                                         
-                                                <div class="fb-like" data-href="https://scontent.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/s130x130/11012110_1458080871179254_8388735200119380577_n.jpg?oh=d3cfc6640164cc059d501f72abdb64fa&amp;oe=561632DF" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                                        
+                                               
                                         
                                             <?php
 
