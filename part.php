@@ -62,36 +62,10 @@
     
   <div id="presentation">
 
-         <script>
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '<?php echo APPID; ?>',
-		      xfbml      : true,
-		      version    : 'v2.3'
-		    });
-		  };
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/fr_FR/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-      </script>
-      
        <?php
 
-			if($session)
-			{
-                
-                echo "yess";
- 
-                    else
-                    {
-                        $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-             
-               
-			     }
+			$me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className);
+            echo $me->getName();
 		?>
     </div>
 </section>
