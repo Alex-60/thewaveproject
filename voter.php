@@ -12,9 +12,23 @@
        header('Location: https://thewave.herokuapp.com/');    
     }
     else
+        
+        use Facebook\FacebookSession;
+        
+
+            try {
+              $session->validate();
+            } catch (FacebookRequestException $ex) {
+              // Session not valid, Graph API returned an exception with the reason.
+              echo $ex->getMessage();
+            } catch (\Exception $ex) {
+
+    
+        
+        
             {    ?>   
                
-               <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +56,7 @@
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
-            <a class="btnParticiper" href="part.php">PARTICIPER</a>
+            <a class="btnParticiper" href="participer.html">PARTICIPER</a>
             
        
             
