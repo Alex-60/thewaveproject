@@ -42,6 +42,8 @@ $request = new FacebookRequest($session, 'GET', '/me');
 $response = $request->execute();
 $graphObject = $response->getGraphObject();
 
+echo $graphObject;
+
 
 ?>
 
