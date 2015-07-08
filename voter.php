@@ -12,19 +12,7 @@
        header('Location: https://thewave.herokuapp.com/');    
     }
     else
-        
-        use Facebook\FacebookSession;
-        
-
-            try {
-              $session->validate();
-            } catch (FacebookRequestException $ex) {
-              // Session not valid, Graph API returned an exception with the reason.
-              echo $ex->getMessage();
-            } catch (\Exception $ex) {
-
-    
-        
+        session_start();
         
             {    ?>   
                
