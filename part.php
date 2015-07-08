@@ -283,7 +283,31 @@
         <for></for>
         <button class="voter">VOTER</button>
         
+        <?php
+        
+        $_SESSION['fb_token'] = (string) $session->getAccessToken();
+				$request_user = new FacebookRequest( $session,"GET","/me");
+				$request_user_executed = $request_user->execute();
+				$user = $request_user_executed->getGraphObject(GraphUser::className());
+                        
+                
+                try {
 
+				} catch(FacebookRequestException $e) 
+                {
+
+				echo "Exception occured, code: " . $e->getCode();
+				echo " with message: " . $e->getMessage();
+
+				}  
+         
+ 
+                $name = $user->getName();
+                        
+                        echo $name;
+        
+        
+        ?>
         
         <?php echo "<a href= '".$loginUrl."' style='color:black'>Participer</a>";?>
         
