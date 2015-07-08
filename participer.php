@@ -37,6 +37,8 @@
                <div class="bloc-photo-upload">
                    <div id="cadre" dropzone="copy">
 				        <p>DEPOSEZ VOS PHOTOS ICI</p>
+                       
+                       
                         <h2>+</h2><br>
                    </div>
                </div>
@@ -57,7 +59,7 @@
             
                  
         <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+           /* if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
                 
@@ -71,14 +73,24 @@
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
-                        ))->execute()->getGraphObject(); 
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                        ))->execute()->getGraphObject();
+                }
+            
+            }*/
+        
+        
+        
+        
+        $request = new FacebookRequest($session,'GET','/me');
+                
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
-                }
-            
-            }
+        
+                        var_dump($result);
+                        die();
+        
+        
                  ?>
             
             
