@@ -38,26 +38,10 @@
 <section>
 
     
-    <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
     
     
-    
-    <script>(function(d, s, id)
-        {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=767304380051847";
-                fjs.parentNode.insertBefore(js, fjs);
-        }
-             (document, 'script', 'facebook-jssdk'));
-    </script>
+
     
     
   <div id="presentation">
@@ -65,9 +49,28 @@
       
        <?php
 
-            var_dump($session);
-die();
-			$me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className);
+
+            $_SESSION['fb_token'] = (string) $session->getAccessToken();
+				$request_user = new FacebookRequest( $session,"GET","/me");
+				$request_user_executed = $request_user->execute();
+				$user = $request_user_executed->getGraphObject(GraphUser::className());
+                        
+                
+                try {
+
+				} catch(FacebookRequestException $e) 
+                {
+
+				echo "Exception occured, code: " . $e->getCode();
+				echo " with message: " . $e->getMessage();
+
+				}  
+
+
+
+
+
+	       $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className);
             echo $me->getName();
 		?>
     </div>
