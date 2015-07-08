@@ -30,6 +30,10 @@
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
             <a class="btnParticiper" href="participer.html">PARTICIPER</a>
+            
+            <a class="btnParticiper" href="participer.html">PART</a>
+            
+            
             <h2>Voter pour la meilleure photo</h2>
         </header>
         
@@ -44,7 +48,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                 echo "<article class='participants'>";
                                 echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
-                                echo $row2[0];
+                               
                                 echo "</div>"; 
                                 echo "</article>";
                             }
