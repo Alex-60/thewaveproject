@@ -113,9 +113,9 @@
 if($session)
 			{
 				
-
+                echo "yes";
         
-              $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+              $request = new FacebookRequest($session,'GET','/me');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
