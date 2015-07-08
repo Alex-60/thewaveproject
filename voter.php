@@ -89,8 +89,7 @@
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
-                
-                
+                <!--<p></p>-->
                 <!--<div class="like"></div>
                 <div class="partage"></div>-->
 
