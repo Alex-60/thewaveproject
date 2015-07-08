@@ -40,7 +40,7 @@
         
             <?php 
                 
-$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+/*$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "SELECT * FROM photo");
                     
                         while ($row2 = pg_fetch_row($result2)) 
@@ -48,10 +48,10 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                 echo "<article class='participants'>";
                                 echo "<div class='img-participants'>";
                                 echo "<img src='$row2[0]'/>"; 
-                                echo "<p style='color:black'>test</p>";
+                               
                                 echo "</div>"; 
                                 echo "</article>";
-                            }
+                            }*/
             ?>
 
         <section class="content">
