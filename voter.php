@@ -71,7 +71,7 @@
                 
                 <div class="img-participants">
                 <?php
-                echo "<img src="" alt="">";
+                echo "<img src="" />";
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
