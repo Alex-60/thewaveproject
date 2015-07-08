@@ -67,19 +67,12 @@
 			if($session)
 			{
                 $name = $user->getName();
-                //$id=$user->getId();
+                $id=$user->getId();
                 
                 //$image='https://graph.facebook.com/'.$id.'/picture?width=150';
                 
                 $image='https://graph.facebook.com/1399732547014087/picture?width=150';
-                
-                 echo "</br>";
-                
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
+               
                 echo "<div id='logo'><img src='$image'/></div>";
                 
        
@@ -135,37 +128,7 @@
                         $result = $graphObject->asArray();
                     
                     
-                         /*foreach ($result['data'] as $key => $value) 
-                            {
-
-                                        $query = pg_query($dbconn3, "SELECT image FROM photo where image = '$login'");
-                                        if(pg_num_rows($query) == 1)
-                                        {
-                                           // Pseudo déjà utilisé
-                                           echo 'Ce pseudo est déjà utilisé';
-                                        }else
-                                        {
-
-                                            $query = pg_query($dbconn3, " INSERT INTO photo (image) VALUES ('$login')");
-
-                                        }
-                             
-                             
-
-                                
-                            }*/
-                    
-                    
-                     //$image='https://graph.facebook.com/1399732547014087/picture?width=150'; 
-                    
-                    
-                       //$picvalue = $value->picture;
-                        
-                        //$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                        //$result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('result3')");
-                    
-                    
+                       
                 }
             
             }
@@ -192,37 +155,7 @@
                         foreach ($result['data'] as $key => $value) 
                             {
                                 ?>
-                                    <div id ="border_posts" class="col-md-6" style="text-aligne:center;">
-                                        <?php
-                                            //echo "<div id='img_posts'><img src='$value->picture' /></div></br></br></br></br></br>";
-                            
-                                            //$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                                            //$picvalue=$value->picture;
-                            
-                                            //$result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$picvalue')");
-                                        
-                                            //echo "yes";
-                                            //echo "<p>$value->picture</p>";
-                                            
-                                            $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                                            //$picvalue=$value->picture;
-
-                                            //if $picvalue existe dans la base de données on l'ajoute pas 
-                            
-                                            $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$picvalue')");
-                            
-                                            //echo "<p>yes</p>";
-                            
-                                            ?>
-                                        
-                                               
-                                        
-                                            <?php
-
-                                        ?>
-                                    </div>
+                                    
                                    
                                 <?php
                             }
@@ -259,41 +192,12 @@
        
         
         <hr>
-         <?php
-                try
-                {
-                    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                    $result = pg_query($dbconn3, "SELECT * FROM villes");
-                
-                    while ($row = pg_fetch_row($result)) 
-                    {
-                      ///echo "ville: $row[0]";
-                     
-                    }
-                    
-                }
-                catch (Exception $e)
-                {
-                //var_dump($e->getMessage());
-                }
-        ?>
+  
     </article>
 
     <p></p>
     <p>Classement actuel</p>
-    <article class="classement">
-       
-        <?php
-        
-         $result2 = pg_query($dbconn3, "SELECT * FROM photo");
-                
-                    while ($row2 = pg_fetch_row($result2)) 
-                    {
-                   
-                         //echo "<img src='$row2[0]'/>";
-                    }
-        ?>
-    </article>
+
 
     <footer>
             <p>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire</p>
