@@ -15,22 +15,22 @@
   
         
         
-    session_start();
+    //session_start();
 
-    use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
+    //use Facebook\FacebookSession;
+	//use Facebook\FacebookRedirectLoginHelper;
+    //require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
       
 
-    $APPID ="767304380051847";
-    $APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
+    //$APPID ="767304380051847";
+    //$APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
     
-    FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
+    //FacebookSession::setDefaultApplication(APPID, APPSECRET);
+    //$helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
    
 
-    //echo $helper2->getLoginUrl();
+    echo $helper->getLoginUrl();
 
    {    ?>   
                
