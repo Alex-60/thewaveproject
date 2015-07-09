@@ -51,6 +51,17 @@
     
 </head>
 <body>
+    
+    
+    <?php
+    
+    if($session)
+    {
+        echo "yessssss";
+    }
+    
+    
+    ?>
 
      <a href='<?php echo $loginUrl;?>' class="btnVoter">test</a>
     
