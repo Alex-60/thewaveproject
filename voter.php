@@ -15,7 +15,7 @@
   
         
         
-  
+    session_start();
 
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
@@ -27,7 +27,7 @@
     $APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
     
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
    
 
     //echo $helper2->getLoginUrl();
