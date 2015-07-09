@@ -40,8 +40,8 @@
 </head>
 <section>
 
-                <body>
-    <div class="page-home">
+<body>
+<div class="page-home">
         
 <?php 
 
@@ -49,13 +49,17 @@
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
     $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
+    
+
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
     $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
+    $session = $helper->getSessionFromRedirect();
+
+    echo $session;
+di();
 
 ?>
-        
-
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
