@@ -43,10 +43,19 @@
 
         
         $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-        
-        var_dump($loginUrl);
+
+echo $session;
 die();
-            {    ?>   
+
+           /*$request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();*/
+                
+        
+        
+   {    ?>   
                
 <!DOCTYPE html>
 <html lang="fr">
