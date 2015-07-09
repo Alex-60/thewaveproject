@@ -10,10 +10,19 @@
     }
     else
         
+    use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
-        
-        
-        
+      session_start();
+
+    $APPID ="767304380051847";
+    $APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
+    
+    FacebookSession::setDefaultApplication(APPID, APPSECRET);
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $session = $helper->getSessionFromRedirect();
+ 
    {    ?>   
                
 <!DOCTYPE html>
@@ -37,6 +46,7 @@
 </head>
 <body>
 
+     <a href='<?php echo $loginUrl;?>' class="btnVoter">test</a>
     
 
     <div class="page-jeVote">
