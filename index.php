@@ -56,8 +56,8 @@
 
     $session = $helper->getSessionFromRedirect();
 
-    echo $session;
-die();
+    echo $loginUrl;
+
 
 ?>
         <header class="header">
