@@ -1,25 +1,6 @@
 <?php
 
 
-session_start();
-
-  use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-
-      
-
-    $APPID ="767304380051847";
-    $APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-    
-    FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/part.php');
-    $session = $helper->getSessionFromRedirect();
-    echo $session;
-
-die();
-    
-
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
          
@@ -29,8 +10,6 @@ die();
        header('Location: https://thewave.herokuapp.com/');    
     }
     else
-        
-  
  
    {    ?>   
                
@@ -71,23 +50,6 @@ die();
             
             <h2>Voter pour la meilleure photo</h2>
         </header>
-        
-        
-            <?php 
-                
-/*$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "SELECT * FROM photo");
-                    
-                        while ($row2 = pg_fetch_row($result2)) 
-                            {
-                                echo "<article class='participants'>";
-                                echo "<div class='img-participants'>";
-                                echo "<img src='$row2[0]'/>"; 
-                               
-                                echo "</div>"; 
-                                echo "</article>";
-                            }*/
-            ?>
 
         <section class="content">
             
@@ -101,9 +63,6 @@ die();
                 ?>
          
             <article class="participants">
-                
-       
-                
                 <div class="img-participants">
                 <?php
                 
@@ -112,10 +71,6 @@ die();
                 ?>
                 </div>
                 <h3>500 J'aime</h3>
-          
-                <!--<div class="like"></div>
-                <div class="partage"></div>-->
-                
                 <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
             </article>
