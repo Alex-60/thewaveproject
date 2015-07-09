@@ -12,7 +12,10 @@
        header('Location: https://thewave.herokuapp.com/');    
     }
     else
-        session_start();
+        
+        include_once "index.php";
+
+        
         
             {    ?>   
                
