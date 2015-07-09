@@ -15,7 +15,7 @@
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
     $session = $helper->getSessionFromRedirect();
 
-
+    echo $session;
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
@@ -51,14 +51,6 @@
     
 </head>
 <body>
-    
-    
-    <?php
-    
-    if($session)
-    {
-        echo "yessssss";
-    }
     
     
     ?>
