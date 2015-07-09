@@ -42,7 +42,6 @@
 </head>
 <section>
 
-     <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa</a>
     
     
 <body>
@@ -52,15 +51,12 @@
 
 
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper->getLoginUrl();
-    $session = $helper->getSessionFromRedirect();
-    var_dump($session);
-
+    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
     
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    $loginUrl2 = $helper2->getLoginUrl();
+    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
 
 
