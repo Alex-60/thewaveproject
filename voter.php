@@ -56,7 +56,7 @@
 <body>
 
 
-     <a href='<?php $helper2->getLoginUrl();?>' class="btnVoter">testaaa</a>
+     <a href='<?php echo $helper2->getLoginUrl();?>' class="btnVoter">testaaa</a>
     
 
     <div class="page-jeVote">
