@@ -57,7 +57,7 @@
     $session = $helper->getSessionFromRedirect();
 
     echo $session;
-di();
+die();
 
 ?>
         <header class="header">
