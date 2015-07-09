@@ -1,9 +1,9 @@
 <?php
 
    
-if($loginUrl){
+echo $_SESSION['fb_token'];
    echo "yes" ;
-}
+
 
 
 ?>
