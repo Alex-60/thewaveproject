@@ -53,6 +53,8 @@ session_start();
 <section>
 
      <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
+    <?php die(); ?>
+    
     
     <?php// var_dump($session) ; ?>
     
