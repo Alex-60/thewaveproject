@@ -1,5 +1,5 @@
   <?php session_start();
-var_dump($_SESSION['fb_token']);
+var_dump($_SESSION);
 
 
 ?>
