@@ -16,7 +16,8 @@ require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com' );
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
+echo "yes";
 try 
 {
   $session = $helper->getSessionFromRedirect();
