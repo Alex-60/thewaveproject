@@ -31,6 +31,8 @@
     {
         $_SESSION['fb_token']=$session->getToken();
         
+        var_dump $_SESSION['fb_token'];
+        
     }else
     {
         echo "yeeees";
