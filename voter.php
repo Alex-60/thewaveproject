@@ -1,7 +1,8 @@
 <?php
 
-use Facebook\FacebookSession;
-use Facebook\FacebookRedirectLoginHelper;
+$pseudo = $_SESSION['pseudo'];
+
+echo $pseudo;
 
 
 
@@ -17,6 +18,7 @@ use Facebook\FacebookRedirectLoginHelper;
     else
         
    
+        
 
     
     echo $helper;

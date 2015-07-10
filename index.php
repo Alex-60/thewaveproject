@@ -64,7 +64,13 @@
 
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+
+    $_SESSION['pseudo']= $helper2->getLoginUrl(); 
+
+
     $loginUrl = $helper2->getLoginUrl();
+
+
 
 
 
