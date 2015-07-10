@@ -20,6 +20,9 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 try 
 {
   $session = $helper->getSessionFromRedirect();
+    
+    var_dump($session);
+    die();
 } catch( FacebookRequestException $ex ) 
 {
     
