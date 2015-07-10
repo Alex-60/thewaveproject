@@ -12,16 +12,12 @@
     use Facebook\FacebookRequestException;
     const APPID ="767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
-
+    //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-
-
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
-	/*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
+	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
 	}
@@ -31,19 +27,7 @@
 		$session = $helper->getSessionFromRedirect();
 	}
     
-    if($session)
-    {
-        $_SESSION['fb_token']= $session->getToken();
-        
-        
-    }else
-    {
-        echo "yeeees";
-    }*/
-
-    $session = $helper->getSessionFromRedirect();
-
-var_dump($session);
+    echo $session;
 
 
 ?>

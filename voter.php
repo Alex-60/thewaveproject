@@ -9,10 +9,7 @@
     }
     else
 
-    
-     $session = $helper->getSessionFromRedirect();
-
-var_dump($session);
+ 
  
    {    ?>   
                
