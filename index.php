@@ -4,7 +4,7 @@
     
     require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
 
-session_start();
+    session_start();
 
 
     use Facebook\FacebookSession;
@@ -20,12 +20,8 @@ session_start();
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
-
+   
      $session = $helper->getSessionFromRedirect();
-
-    
-    var_dump($session) ;
-
     
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
@@ -57,9 +53,9 @@ session_start();
      <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa </a>
 
     
-    <?php var_dump($session) ; ?>
     
-    <?php die();?>
+    
+ 
     
 <body>
 <div class="page-home">
@@ -67,20 +63,17 @@ session_start();
 <?php 
 
 
-   // $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    //$loginUrl = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $loginUrl = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
 
 
-
-
-    //$helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    //$loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
 
 
 ?>
-
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
@@ -99,9 +92,6 @@ session_start();
           
         <?php //$loginUrl = $helper->getLoginUrl( ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
-
-
-     
 
         </article>
 

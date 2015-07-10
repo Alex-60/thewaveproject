@@ -10,11 +10,17 @@
     }
     else
         
- $pseudo=$_SESSION['pseudo']; 
+    use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
 
-echo $pseudo;
+    const APPID ="767304380051847";
+    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
-        
+    FacebookSession::setDefaultApplication(APPID, APPSECRET);
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+
+    
+    echo $helper;
  
    {    ?>   
                
