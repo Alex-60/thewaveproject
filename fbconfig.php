@@ -51,6 +51,8 @@ if ( isset( $session ) )
 	    $_SESSION['EMAIL'] =  $femail;
   //checkuser($fuid,$ffname,$femail);
   //header("Location: index.php");
+    
+    header("Location: voter.php");
 } else 
 {
   $loginUrl = $helper->getLoginUrl();
