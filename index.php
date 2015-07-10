@@ -54,7 +54,7 @@ session_start();
 
      <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
     
-    <?php echo "la session est".$session ; ?>
+    <?php var_dump($session) ; ?>
     
     <?php die();?>
     
