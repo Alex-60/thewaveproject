@@ -35,7 +35,8 @@
     
     
     <li class="nav-header">Facebook fullname</li>
-    <li><?php echo $_SESSION['FULLNAME']; ?></li>
+    
+    <li><?php echo "le nom est ".$_SESSION['FULLNAME']; ?></li>
     
     
      <?php endif ?>
