@@ -26,6 +26,7 @@
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
+
     
 ?>
 
