@@ -66,27 +66,15 @@ session_start();
 
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
     $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-    $session3 = $helper->getSessionFromRedirect();
-    var_dump($session3);
-    
+
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
     $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-     $session4 = $helper2->getSessionFromRedirect();
-    var_dump($session4);
 
 
 
 ?>
-    
-    <?php var_dump($session3) ; ?>
-    
-    <?php var_dump($session3) ; ?>
-    
-    <?php die();?>
-    
-    
-    
+
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
