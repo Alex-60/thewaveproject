@@ -39,21 +39,6 @@ var_dump($helper->getSessionFromRedirect());
     //echo $helper->getLoginUrl();
 
 
-try {
-  $session = $helper->getSessionFromRedirect();
-   var_dump($session);
-} catch(FacebookRequestException $ex) {
-} catch(\Exception $ex) {
-}
-if ($session) {
-  var_dump($session);
-}
-else
-{
-  $loginUrl = $helper->getLoginUrl();
-  header("location:".$loginUrl);
-  exit;
-}
 
 ?>
 
@@ -69,7 +54,7 @@ else
 </head>
 <section>
 
-     <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
+     <a href='<?php //echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
     
     <?php echo $session ; ?>
     
