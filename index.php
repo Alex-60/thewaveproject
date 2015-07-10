@@ -35,6 +35,11 @@ if($session)
     $profile=$request->execute()->getGraphObject('Facebook\GraphUser');
     
     var_dump($profile);
+}else
+    
+{
+   echo "pas de session"; 
+    
 }
 
 ?>
