@@ -17,7 +17,7 @@
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
-	/*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
+	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
 	}
@@ -25,7 +25,18 @@
 	else
 	{
 		$session = $helper->getSessionFromRedirect();
-	}*/
+	}
+
+if($session)
+{
+    
+    $_SESSION['fb_token']=$session->getToken();
+    $request= new FacebookRequest($session,'GET','/me');
+    $profile=$request->execute()->getGraphObject('Facebook\GraphUser');
+    
+    var_dump($profile);
+}
+
 ?>
 
 <!DOCTYPE html>
