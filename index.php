@@ -1,5 +1,5 @@
 <?php
-  require_once('fonction.php');
+  require_once('./fonction.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,6 @@
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
     $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-
 
 
 
