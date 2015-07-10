@@ -27,7 +27,7 @@
 		$session = $helper->getSessionFromRedirect();
 	}
 
-    echo $helper->getLoginUrl();
+    //echo $helper->getLoginUrl();
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 </head>
 <section>
 
-   
+     <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa</a>
     
     
 <body>

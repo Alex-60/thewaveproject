@@ -11,20 +11,8 @@
     else
         
   
- 
-    // To validate the session:
-       /* try {
-          $session->validate();
-        } catch (FacebookRequestException $ex) 
-        {
-          // Session not valid, Graph API returned an exception with the reason.
-          echo $ex->getMessage();
-        } catch (\Exception $ex) 
-        {
-          // Graph API returned info, but it may mismatch the current app or have expired.
-          echo $ex->getMessage();
-        }*/
 
+        
  
    {    ?>   
                
@@ -48,7 +36,6 @@
     
 </head>
 <body>
-
 
 
     
