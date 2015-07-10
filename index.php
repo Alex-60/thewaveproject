@@ -14,7 +14,10 @@
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+    $helper = new   FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+
+$session = $helper->getSessionFromRedirect();
+var_dump($session);
 
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
