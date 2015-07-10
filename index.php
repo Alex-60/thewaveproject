@@ -29,7 +29,12 @@
     
    var_dump ($_SESSION);
 
-
+FacebookRequest($_SESSION,'GET','/1457732501214091/photos?fields=picture');
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+                            var_dump ($result);
+                    
 ?>
 
 <!DOCTYPE html>
