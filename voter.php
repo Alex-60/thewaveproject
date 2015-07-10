@@ -22,12 +22,16 @@
 	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
+        
+        echo "1";
 	}
 	//Sinon j'affiche le lien de connection
 	else
 	{
 		$session = $helper->getSessionFromRedirect();
+        echo "2";
 	}
+
 
 if($session)
 {
@@ -37,10 +41,12 @@ if($session)
     $profile=$request->execute()->getGraphObject('Facebook\GraphUser');
     
     var_dump($profile);
+    echo "3";
 }else
     
 {
    echo "pas de session"; 
+    echo "4";
     
 }
 
