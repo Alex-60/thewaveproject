@@ -27,7 +27,7 @@
 		$session = $helper->getSessionFromRedirect();
 	}
     
-   print_r ($session);
+   print_r ($_SESSION);
 
 
 ?>
