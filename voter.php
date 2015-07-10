@@ -8,9 +8,6 @@
        header('Location: https://thewave.herokuapp.com/');    
     }
     else
-        
-   
-        //echo $_SESSION['fb_token'];
 
     
     //echo $helper;
