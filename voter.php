@@ -1,37 +1,6 @@
 <?php
 
 
-
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-
-    session_start();
-
-
-    //use Facebook\FacebookSession;
-	//use Facebook\FacebookRedirectLoginHelper;
-
-    //const APPID ="767304380051847";
-    //const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
-    //FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-
-   
-     $session = $helper->getSessionFromRedirect();
-
-
-
-//$mavariable = $_SESSION['pseudo'];
-
-//echo "zak";
-
-//echo $mavariable; 
-
-
-
-   
-
-
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
          

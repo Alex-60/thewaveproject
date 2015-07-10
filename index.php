@@ -49,13 +49,7 @@
     
 </head>
 <section>
-
-     <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa </a>
-
     
-    
-    
- 
     
 <body>
 <div class="page-home">
@@ -64,15 +58,6 @@
 
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-
-    //$_SESSION['pseudo']= $helper2->getLoginUrl(); 
-
-    //$test = $_SESSION['pseudo'] ;
-
-    //echo $test;
-
-    //die();
-
     $loginUrl = $helper2->getLoginUrl();
 
     
