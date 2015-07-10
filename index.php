@@ -26,6 +26,17 @@
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
+    
+    if($session)
+    {
+        $_SESSION['fb_token']=$session->getToken();
+        
+    }else
+    {
+        echo "yeeees";
+    }
+
+
 ?>
 
 <!DOCTYPE html>
