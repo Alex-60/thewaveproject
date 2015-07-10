@@ -1,30 +1,23 @@
 <?php
-    //error_reporting(E_ALL);
-    //ini_set("display_errors", 1);
-    
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
     session_start();
-
-
+    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
     use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
-	//use Facebook\FacebookRequest;
-	//use Facebook\GraphUser;
-    //use Facebook\FacebookPermissions;
-    //use Facebook\FacebookPermissionException;
-    //use Facebook\FacebookRequestException;
+	use Facebook\FacebookRequest;
+	use Facebook\GraphUser;
+    use Facebook\FacebookPermissions;
+    use Facebook\FacebookPermissionException;
+    use Facebook\FacebookRequestException;
     const APPID ="767304380051847";
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
+    //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-
-   
-     $session = $helper->getSessionFromRedirect();
-    
-	
-    /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
+	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
+	// alors je veux créer mon utilisateur à partir de cette session
+	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
 	}
@@ -32,41 +25,33 @@
 	else
 	{
 		$session = $helper->getSessionFromRedirect();
-	}*/
-
-    //echo $helper->getLoginUrl();
-
+	}
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
     <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    
 </head>
 <section>
-    
-    
+
 <body>
 <div class="page-home">
         
 <?php 
 
 
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper2->getLoginUrl();
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
     
-
-    
-
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    $loginUrl2 = $helper2->getLoginUrl();
+    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+
 
 
 
@@ -89,6 +74,22 @@
           
         <?php //$loginUrl = $helper->getLoginUrl( ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
             
+
+
+<?php 
+/*
+
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+
+*/
+
+?>
+           <!-- <a href='<?php// echo $loginUrl;?>'>VOTER</a>
+            <a href='<?php //echo $loginUrl2;?>'>PARTICIPER</a>-->
 
         </article>
 
