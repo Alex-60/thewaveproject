@@ -41,12 +41,9 @@
         echo "yeeees";
     }
 
+    $session = $helper->getSessionFromRedirect();
 
- if($_SESSION)
-    {
-        echo "no";
-
-    }
+var_dump($session);
 
 
 ?>
