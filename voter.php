@@ -30,6 +30,16 @@
 </head>
 <body>
 
+    
+     <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+    
+    
+    <li class="nav-header">Facebook fullname</li>
+    <li><?php echo $_SESSION['FULLNAME']; ?></li>
+    
+    
+     <?php endif ?>
+    
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
