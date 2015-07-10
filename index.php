@@ -38,7 +38,30 @@ var_dump($helper->getSessionFromRedirect());
 
     //echo $helper->getLoginUrl();
 
-
+try
+	{
+		$session = $helper->getSessionFromRedirect();
+    
+    echo $session;
+	}
+	catch(FacebookRequestException $ex)
+	{
+		print('<p>FacebookRequestException: '.$ex->getErrorType().'</p>');
+	}
+	catch(Exception $ex)
+	{
+		print('<p>Exception: '.$ex->getMessage().'</p>');
+	}
+ 
+	if ($session)
+	{
+		print('<p>Logged</p>');
+	}
+	else
+	{
+	  header('Location:'.$helper->getLoginUrl());
+	  exit;
+	}
 
 ?>
 
