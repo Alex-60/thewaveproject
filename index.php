@@ -44,7 +44,9 @@
 <h1>Login with Facebook</h1>
            Not Connected
 <div>
-      <a href="fbconfig.php">Login with Facebook</a></div>
+      <a href="fbconfig.php" style="color:black;">Login with Facebook</a>
+    
+</div>
 	 <div> <a href=""  title="Login with facebook">View Post</a>
 	  </div>
       </div>
