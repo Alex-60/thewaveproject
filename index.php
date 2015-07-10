@@ -47,12 +47,12 @@
 
 
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $loginUrl = $helper->getLoginUrl();
 
     
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $loginUrl2 = $helper2->getLoginUrl();
 
     
 
