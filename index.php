@@ -1,46 +1,6 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set("display_errors", 1);
-    session_start();
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-    use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\FacebookRequest;
-	use Facebook\GraphUser;
-    use Facebook\FacebookPermissions;
-    use Facebook\FacebookPermissionException;
-    use Facebook\FacebookRequestException;
-    const APPID ="767304380051847";
-    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-    //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
-    FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
-	// alors je veux créer mon utilisateur à partir de cette session
-	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
-	{
-		$session = new FacebookSession($_SESSION['fb_token']);
-	}
-	//Sinon j'affiche le lien de connection
-	else
-	{
-		$session = $helper->getSessionFromRedirect();
-	}
 
-if($session)
-{
-    
-    $_SESSION['fb_token']=$session->getToken();
-    $request= new FacebookRequest($session,'GET','/me');
-    $profile=$request->execute()->getGraphObject('Facebook\GraphUser');
-    
-    var_dump($profile);
-}else
-    
-{
-   echo "pas de session"; 
-    
-}
+   session_start(); 
 
 ?>
 
@@ -56,85 +16,42 @@ if($session)
 </head>
 <section>
 
-<body>
-<div class="page-home">
-        
-<?php 
-
-
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper->getLoginUrl();
-
+  <body>
+  <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+<div class="container">
+        <div class="hero-unit">
+              <h1>Hello <?php echo $_SESSION['USERNAME']; ?></h1>
+              <p>Welcome to "facebook login" tutorial</p>
+        </div>
+        <div class="span4">
+            <ul class="nav nav-list">
+                <li class="nav-header">Image</li>
+                <li><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"></li>
+                <li class="nav-header">Facebook ID</li>
+                <li><?php echo  $_SESSION['FBID']; ?></li>
+                <li class="nav-header">Facebook fullname</li>
+                <li><?php echo $_SESSION['FULLNAME']; ?></li>
+                <li class="nav-header">Facebook Email</li>
+                <li><?php echo $_SESSION['EMAIL']; ?></li>
+                <div><a href="logout.php">Logout</a></div>
+            </ul>
+        </div>
+</div>
+    <?php else: ?>  
+      
+      <!-- Before login --> 
+<div class="container">
+<h1>Login with Facebook</h1>
+           Not Connected
+<div>
+      <a href="fbconfig.php">Login with Facebook</a></div>
+	 <div> <a href=""  title="Login with facebook">View Post</a>
+	  </div>
+      </div>
+    <?php endif ?>
+  </body>
     
-
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    $loginUrl2 = $helper2->getLoginUrl();
-
     
-
-?>
-        <header class="header">
-            <h1>GRAND JEU CONCOURS</h1>
-            <p>du 1er Juin au 31 Juillet 2015</p>
-            <p class="txt2">Participer et tentez de gagner<br/> votre équipement de kyte surf avec</p>
-            <img class="logohome" src="img/logo.png" />
-        </header>
-
-        <article class="slogan">
-            <p>JETEZ-VOUS À L'EAU</p>
-            <a href='<?php echo $loginUrl;?>' class="btnVoter">VOTER</a>
-          
-           <div class="btn-jeux">
-            <a href='<?php echo $loginUrl2;?>' class="btnParticiper">PARTICIPER</a>
-            </div>
-            
-          
-        <?php //$loginUrl = $helper->getLoginUrl( ['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);?>
-            
-
-
-<?php 
-/*
-
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-    $loginUrl2 = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
-
-*/
-
-?>
-           <!-- <a href='<?php// echo $loginUrl;?>'>VOTER</a>
-            <a href='<?php //echo $loginUrl2;?>'>PARTICIPER</a>-->
-
-        </article>
-
-
-        <section class="classement">
-            <p>TOP 5</p>
-            <?php 
-                
-                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "SELECT * FROM photo ORDER BY date DESC LIMIT 5");
-                    
-                        while ($row2 = pg_fetch_row($result2)) 
-                            {
-                                
-                                echo "<article class='participants'>";
-                                echo "<div class='img-participants'>";
-                                echo "<img src='$row2[0]'/>"; 
-                                echo "</div>"; 
-                                echo "</article>";
-                            }
-            ?>
-        </section>
-
-        <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
-        </footer>
-
-    </div>
-</body>
 </section>
 </body>
 </html>
