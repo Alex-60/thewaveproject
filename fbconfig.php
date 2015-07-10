@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 // added in v4.0.0
 //require_once 'autoload.php';
 /*require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
