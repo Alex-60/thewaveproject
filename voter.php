@@ -10,7 +10,9 @@
     else
 
     
-    //echo $helper;
+     $session = $helper->getSessionFromRedirect();
+
+var_dump($session);
  
    {    ?>   
                
