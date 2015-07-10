@@ -1,21 +1,14 @@
 <?php
-
-   session_start(); 
-
+session_start(); 
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-
-    <meta charset="UTF-8">
-    <title>Grand jeu concours THE WAVE</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>Login with Facebook</title>
+<link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
+ </head>
     
-</head>
-<section>
-
+    
   <body>
   <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
 <div class="container">
@@ -44,17 +37,11 @@
 <h1>Login with Facebook</h1>
            Not Connected
 <div>
-      <a href="fbconfig.php" style="color:black;">Login with Facebook</a>
-    
-</div>
-	 <div> <a href=""  title="Login with facebook">View Post</a>
+      <a href="fbconfig.php">Login with Facebook</a></div>
+	 <div> <a href="http://www.krizna.com/general/login-with-facebook-using-php/"  title="Login with facebook">View Post</a>
 	  </div>
       </div>
     <?php endif ?>
   </body>
     
-    
-</section>
-</body>
 </html>
-
