@@ -27,7 +27,7 @@
 		$session = $helper->getSessionFromRedirect();
 	}
 
-    echo $session;
+    echo $helper->getLoginUrl();
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +42,7 @@
 </head>
 <section>
 
+   
     
     
 <body>

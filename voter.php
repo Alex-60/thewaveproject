@@ -11,8 +11,7 @@
     else
         
   
-      $session = new FacebookSession('fb_token');  
-        var_dump($session);
+ 
     // To validate the session:
        /* try {
           $session->validate();
