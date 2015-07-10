@@ -67,6 +67,9 @@
 
     $_SESSION['pseudo']= $helper2->getLoginUrl(); 
 
+echo $_SESSION['pseudo'];
+die();
+
 
     $loginUrl = $helper2->getLoginUrl();
 
