@@ -1,11 +1,11 @@
 <?php
 
- use Facebook\FacebookSession;
+use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 
 
 
-
+   
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
