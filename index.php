@@ -26,7 +26,7 @@ session_start();
     
     var_dump($session) ;
 
-    die();
+    
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
@@ -57,11 +57,9 @@ session_start();
      <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa </a>
 
     
-    
-    
     <?php var_dump($session) ; ?>
     
-    
+    <?php die();?>
     
 <body>
 <div class="page-home">
