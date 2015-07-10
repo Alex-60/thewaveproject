@@ -18,11 +18,11 @@ session_start();
     const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new   FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
-$session = $helper->getSessionFromRedirect();
+    $session = $helper->getSessionFromRedirect();
 
-var_dump($helper->getSessionFromRedirect());
+    var_dump($session);
 
 
 	
@@ -38,31 +38,6 @@ var_dump($helper->getSessionFromRedirect());
 
     //echo $helper->getLoginUrl();
 
-try
-	{
-		$session = $helper->getSessionFromRedirect();
-    
-    echo $session;
-	}
-	catch(FacebookRequestException $ex)
-	{
-		print('<p>FacebookRequestException: '.$ex->getErrorType().'</p>');
-	}
-	catch(Exception $ex)
-	{
-		print('<p>Exception: '.$ex->getMessage().'</p>');
-	}
- 
-	if ($session)
-	{
-		print('<p>Logged</p>');
-	}
-	else
-	{
-	  header('Location:'.$helper->getLoginUrl());
-	  exit;
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -77,9 +52,9 @@ try
 </head>
 <section>
 
-     <a href='<?php //echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
+     <a href='<?php echo $helper->getLoginUrl();?>' class="btnVoter">testaaa  </a>
     
-    <?php echo $session ; ?>
+    <?php echo "la session est".$session ; ?>
     
     
 <body>
