@@ -12,8 +12,9 @@
         
   
       $session = new FacebookSession('fb_token');  
+        var_dump($session);
     // To validate the session:
-        try {
+       /* try {
           $session->validate();
         } catch (FacebookRequestException $ex) 
         {
@@ -23,7 +24,7 @@
         {
           // Graph API returned info, but it may mismatch the current app or have expired.
           echo $ex->getMessage();
-        }
+        }*/
 
  
    {    ?>   
