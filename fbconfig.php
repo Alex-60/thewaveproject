@@ -3,18 +3,15 @@ session_start();
 // added in v4.0.0
 //require_once 'autoload.php';
 require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
+    use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+	use Facebook\FacebookRequest;
+	use Facebook\GraphUser;
+    use Facebook\FacebookPermissions;
+    use Facebook\FacebookPermissionException;
+    use Facebook\FacebookRequestException;
 
-use Facebook\FacebookSession;
-use Facebook\FacebookRedirectLoginHelper;
-use Facebook\FacebookRequest;
-use Facebook\FacebookResponse;
-use Facebook\FacebookSDKException;
-use Facebook\FacebookRequestException;
-use Facebook\FacebookAuthorizationException;
-use Facebook\GraphObject;
-use Facebook\Entities\AccessToken;
-use Facebook\HttpClients\FacebookCurlHttpClient;
-use Facebook\HttpClients\FacebookHttpable;
+
 
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
@@ -39,9 +36,6 @@ if ( isset( $session ) )
   // get response
   $graphObject = $response->getGraphObject();
     
-    echo $graphObject;
-    
-    die();
         
         
         $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
