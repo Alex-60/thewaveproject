@@ -21,7 +21,7 @@
 
 	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
 	// alors je veux créer mon utilisateur à partir de cette session
-	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
+	/*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
 		$session = new FacebookSession($_SESSION['fb_token']);
 	}
@@ -39,7 +39,7 @@
     }else
     {
         echo "yeeees";
-    }
+    }*/
 
     $session = $helper->getSessionFromRedirect();
 
