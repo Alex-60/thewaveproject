@@ -38,6 +38,23 @@ var_dump($helper->getSessionFromRedirect());
 
     //echo $helper->getLoginUrl();
 
+
+try {
+  $session = $helper->getSessionFromRedirect();
+   var_dump($session);
+} catch(FacebookRequestException $ex) {
+} catch(\Exception $ex) {
+}
+if ($session) {
+  var_dump($session);
+}
+else
+{
+  $loginUrl = $helper->getLoginUrl();
+  header("location:".$loginUrl);
+  exit;
+}
+
 ?>
 
 <!DOCTYPE html>
