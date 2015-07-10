@@ -10,10 +10,10 @@
     else
         
    
-        echo $_SESSION['fb_token'];
+        //echo $_SESSION['fb_token'];
 
     
-    echo $helper;
+    //echo $helper;
  
    {    ?>   
                
