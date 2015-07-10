@@ -22,6 +22,8 @@ session_start();
 
 $session = $helper->getSessionFromRedirect();
 
+var_dump($helper->getSessionFromRedirect());
+
 
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
