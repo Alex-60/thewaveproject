@@ -20,9 +20,21 @@ session_start();
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
-    $session = $helper->getSessionFromRedirect();
 
-    var_dump($session);
+try
+	{
+		$session = $helper->getSessionFromRedirect();
+	}
+	catch(FacebookRequestException $ex)
+	{
+		print('<p>FacebookRequestException: '.$ex->getErrorType().'</p>');
+	}
+
+
+
+    //$session = $helper->getSessionFromRedirect();
+
+    //var_dump($session);
 
 
 	
