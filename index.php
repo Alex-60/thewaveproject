@@ -17,7 +17,7 @@
     $helper = new   FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
 $session = $helper->getSessionFromRedirect();
-echo $session;
+var_dump ($session);
 
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
