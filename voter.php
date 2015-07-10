@@ -1,8 +1,10 @@
 <?php
 
-$pseudo = $_SESSION['pseudo'];
+$mavariable = $_SESSION['pseudo'];
 
-echo $pseudo;
+echo "zak";
+
+echo $mavariable; 
 
 
 
