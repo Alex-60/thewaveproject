@@ -22,14 +22,18 @@ try
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) 
 {
+    echo "1";
   // When Facebook returns an error
 } catch( Exception $ex ) 
 {
   // When validation fails or other local issues
+    echo "2";
 }
 // see if we have a session
 if ( isset( $session ) ) 
 {
+    
+    echo "yes index";
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
