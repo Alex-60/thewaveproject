@@ -20,11 +20,11 @@ session_start();
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
-    $session = $helper->getSessionFromRedirect();
 
-    var_dump($session);
+     $session = $helper->getSessionFromRedirect();
 
-    
+    $_SESSION['pseudo']=$session; 
+
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
@@ -67,12 +67,15 @@ session_start();
 <?php 
 
 
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $loginUrl = $helper2->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
 
-     $session = $helper->getSessionFromRedirect();
+    $session2 = $helper2->getSessionFromRedirect();
 
-    $_SESSION['pseudo']=$session; 
+    $_SESSION['pseudo']=$session2; 
+
+    //var_dump($session2);
+
 
 
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
