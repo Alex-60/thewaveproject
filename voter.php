@@ -1,5 +1,15 @@
 <?php
 
+ use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+
+    const APPID ="767304380051847";
+    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
+
+    FacebookSession::setDefaultApplication(APPID, APPSECRET);
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+
+
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
@@ -10,14 +20,7 @@
     }
     else
         
-    use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-
-    const APPID ="767304380051847";
-    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-
-    FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
+   
 
     
     echo $helper;
