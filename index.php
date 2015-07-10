@@ -20,23 +20,11 @@ session_start();
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
+    $session = $helper->getSessionFromRedirect();
 
-try
-	{
-		$session = $helper->getSessionFromRedirect();
-	}
-	catch(FacebookRequestException $ex)
-	{
-		print('<p>FacebookRequestException: '.$ex->getErrorType().'</p>');
-	}
+    var_dump($session);
 
-
-
-    //$session = $helper->getSessionFromRedirect();
-
-    //var_dump($session);
-
-
+    
 	
     /*if( isset($_SESSION) && isset($_SESSION['fb_token']) )
 	{
@@ -68,6 +56,7 @@ try
     
     <?php echo "la session est".$session ; ?>
     
+    <?php die();?>
     
 <body>
 <div class="page-home">
