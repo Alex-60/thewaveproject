@@ -10,7 +10,9 @@
     }
     else
         
-  
+  $pseudo=$_SESSION['pseudo']; 
+
+echo $pseudo;
 
         
  
