@@ -21,8 +21,6 @@ use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 
 
-echo "yes";
-    die();
 
 
 // init app with app id and secret

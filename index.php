@@ -14,11 +14,6 @@ require_once 'fbconfig.php';
 <section>
 <body>
     
-    <?php echo $_SESSION['FBID'];
-    
-    
-    die();
-    
     ?>   
     
       <?php if (!isset($_SESSION['FBID'])): ?>   
