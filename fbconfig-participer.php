@@ -54,10 +54,10 @@ if ( isset( $session ) )
         $_SESSION['fatigué'] =  $zak;
     
   //checkuser($fuid,$ffname,$femail);
-  //header("Location: voter.php");
+  header("Location: participer.php");
 } else 
 {
   $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+ //header("Location: ".$loginUrl);
 }
 ?>
