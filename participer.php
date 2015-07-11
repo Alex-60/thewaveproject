@@ -43,7 +43,7 @@ require_once 'fbconfig-participer.php';
 if($session)
 			{
 				
-                echo "yes";
+                echo $session;
         
                 $request = new FacebookRequest($session,'GET','/me');
                 
