@@ -34,11 +34,6 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 try 
 {
   $session = $helper->getSessionFromRedirect();
-    
-    echo "yes";
-    var_dump($session);
-
-
 
     
     
@@ -52,12 +47,7 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
-    
-     echo "no";
-    var_dump($session);
-    
-    
-    die();
+
     
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
@@ -80,7 +70,7 @@ if ( isset( $session ) )
   //header("Location: index.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+  //$loginUrl = $helper->getLoginUrl();
+ header("Location: index.php");
 }
 ?>
