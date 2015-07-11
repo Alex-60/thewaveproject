@@ -50,6 +50,13 @@ require_once 'fbconfig-voter.php';
 <li class="nav-header">Facebook fullname</li>
 <li><?php echo $_SESSION['FULLNAME']; ?></li>
 <div><a href="logout.php">Logout</a></div>
+     
+<li class="nav-header">situation</li>
+<li><?php echo  $_SESSION['fatigué']; ?></li>
+     
+     
+     
+     
 </ul></div></div>
     <?php else: ?>   
 <div class="container">

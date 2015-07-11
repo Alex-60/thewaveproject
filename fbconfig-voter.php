@@ -42,6 +42,8 @@ if ( isset( $session ) )
   $graphObject = $response->getGraphObject();
   $fbid = $graphObject->getProperty('id');
     
+    $zak="nuit blanche";
+    
     // To Get Facebook ID
  	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
 	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
@@ -49,6 +51,8 @@ if ( isset( $session ) )
 	    $_SESSION['FBID'] = $fbid;  
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
+        $_SESSION['fatigué'] =  $zak;
+    
   //checkuser($fuid,$ffname,$femail);
   //header("Location: voter.php");
 } else 
