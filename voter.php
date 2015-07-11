@@ -41,6 +41,14 @@
     
      <?php endif ?>
     
+     <?php else: ?> 
+    
+    <h1>no session </h1>
+
+    <?php endif ?>
+    
+    
+    
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
