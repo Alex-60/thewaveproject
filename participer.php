@@ -55,6 +55,9 @@ require_once 'fbconfig-participer.php';
                 {
                         $filename = $_FILES['userfile']['name']; 
                     
+                    echo $filename;
+                    
+                    die();
                     
                         $link = "./images/$filename";
                           $session = new FacebookSession($_SESSION['fb_token']);
@@ -66,13 +69,7 @@ require_once 'fbconfig-participer.php';
                           )
                         ))->execute()->getGraphObject(); 
                     
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
-                        $result = $graphObject->asArray();
-                    
-                    
-                    
+
                 }
             
             }
