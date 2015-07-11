@@ -70,7 +70,7 @@ if ( isset( $session ) )
   //header("Location: index.php");
 } else 
 {
-  //$loginUrl = $helper->getLoginUrl();
- header("Location: index.php");
+  $loginUrl = $helper->getLoginUrl();
+ header("Location: ".$loginUrl);
 }
 ?>
