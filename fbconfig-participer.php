@@ -59,10 +59,13 @@ if ( isset( $session ) )
                         $request = new FacebookRequest($session,'GET','/me');
                 
                         $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $graphObject = $response->getGraphObject();
                         $result = $graphObject->asArray();
-    
-                       $_SESSION['me'] = $result
+                        $fbid2 = $graphObject->getProperty('id');
+                        
+                        var_dump($fbid2);
+    die();
+                       
     
     
   //checkuser($fuid,$ffname,$femail);
