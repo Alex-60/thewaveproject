@@ -64,8 +64,7 @@ if ( isset( $session ) )
                         $fbid2 = $graphObject->getProperty('first_name');
                         
                         
-    die();
-                       
+        
     
     
   //checkuser($fuid,$ffname,$femail);
