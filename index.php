@@ -13,6 +13,14 @@ require_once 'fbconfig.php';
 </head>
 <section>
 <body>
+    
+    <?php echo $_SESSION['FBID'];
+    
+    
+    die();
+    
+    ?>   
+    
       <?php if (!isset($_SESSION['FBID'])): ?>   
 <div class="page-home">
         <header class="header">
