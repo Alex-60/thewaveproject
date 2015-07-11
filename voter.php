@@ -1,5 +1,7 @@
 <?php
 
+require_once 'fbconfig.php';
+
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
@@ -29,26 +31,33 @@
     
 </head>
 <body>
+    
+    
+    
+    <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+<div class="container">
+<div class="hero-unit">
+  <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
+  <p>Welcome to "facebook login" tutorial</p>
+  </div>
+        <div class="span4">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Image</li>
+                    <li><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"></li>
+                    <li class="nav-header">Facebook ID</li>
+                    <li><?php echo  $_SESSION['FBID']; ?></li>
+                    <li class="nav-header">Facebook fullname</li>
+                    <li><?php echo $_SESSION['FULLNAME']; ?></li>
 
-    
-     <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
-    
-    
-    <li class="nav-header">Facebook fullname</li>
-    
-    <li><?php echo "le nom est ".$_SESSION['FULLNAME']; ?></li>
-    
-    
-     <?php endif ?>
-    
-     <?php else: ?> 
-    
-    <h1>no session </h1>
-
+                </ul>
+            </div>
+    </div>
+   
     <?php endif ?>
     
     
     
+
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
