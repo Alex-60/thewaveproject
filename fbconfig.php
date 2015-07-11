@@ -31,11 +31,6 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
 
 
-echo $_SESSION();
-
-die();
-
-
 try 
 {
   $session = $helper->getSessionFromRedirect();
