@@ -28,24 +28,64 @@ require_once 'fbconfig-participer.php';
 </head>
 <body>
     
+   
     
+    <!-------------------------------------------------------------------------------------------------------------------------------------------->
+    
+    
+    <div class="col-md-12" id="div1-child2">
+        
         <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />`
+            
             <input type="submit" name="send" value="Send File" />
         </form>
-   
-        <?php
-      
-        
 
-        
-                         echo $fbid2;
+       
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+                //something posted
+
                 
-        
+                if (isset($_POST['send'])) 
+                {
+                        $filename = $_FILES['userfile']['name']; 
+                    
+                    
+                        $link = "./images/$filename";
+                          $session = new FacebookSession($_SESSION['fb_token']);
+                          $response = (new FacebookRequest(
+                         // $session, "POST", '/me/photos', array(
+                            $session, "POST", '/1457732501214091/photos', array(
+                            'source' => '@'.realpath($link),
+                            'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                        ))->execute()->getGraphObject(); 
+                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+                    
+                    
+                    
+                }
+            
+            }
                  ?>
+        </div>
+    
+    
+    <!-------------------------------------------------------------------------------------------------------------------------------------------->
+    
+    
+    
+    
+    
+   
     
     
  <!-- <div class="container">
