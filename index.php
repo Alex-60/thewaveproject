@@ -13,6 +13,7 @@ require_once 'fbconfig.php';
 </head>
 <section>
 <body>
+      <?php if ($_SESSION['FBID']): ?>   
 <div class="page-home">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
@@ -47,6 +48,13 @@ require_once 'fbconfig.php';
         <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
         </footer>
     </div>
+    
+     <?php else: ?>
+    
+    <?php echo "no session";?>
+    
+    <?php endif ?>
+    
 </body>
 </section>
  <!--   
