@@ -9,8 +9,10 @@ require_once 'fbconfig.php';
     <title>Login with Facebook</title>
 <link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
  </head>
-  <body>
-  <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+    
+ <!--   
+<body>
+  <?php if ($_SESSION['FBID']): ?>      
 <div class="container">
 <div class="hero-unit">
   <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
@@ -28,7 +30,7 @@ require_once 'fbconfig.php';
 <li><?php echo $_SESSION['FULLNAME']; ?></li>
 <div><a href="logout.php">Logout</a></div>
 </ul></div></div>
-    <?php else: ?>     <!-- Before login --> 
+    <?php else: ?>   
 <div class="container">
 <h1>Login with Facebook</h1>
            Not Connected
@@ -36,5 +38,9 @@ require_once 'fbconfig.php';
       <a href="fbconfig.php">Login with Facebook</a></div>
 </div>
     <?php endif ?>
-  </body>
+</body>-->
+    
+    <h1>contenu</h1>
+    
+    
 </html>
