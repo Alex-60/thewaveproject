@@ -29,12 +29,38 @@ require_once 'fbconfig-participer.php';
 <body>
     
     
+        <form enctype="multipart/form-data" action="" method="POST">
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <!-- Name of input element determines name in $_FILES array -->
+            Send this file: <input name="userfile" type="file" />`
+            <input type="submit" name="send" value="Send File" />
+        </form>
+   
+        <?php/*
+      
+        
+if($session)
+			{
+				
+                echo "yes";
+        
+                $request = new FacebookRequest($session,'GET','/me');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+    
+                        var_dump($result);
+                
+            }
+        */
+                 ?>
     
     
+ <!-- <div class="container">
     
-<div class="container">
-    
- <!-- <div class="hero-unit">
+<div class="hero-unit">
   <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
   <p>Welcome to "facebook login" tutorial</p>
   </div>
@@ -52,9 +78,9 @@ require_once 'fbconfig-participer.php';
 <li class="nav-header">situation</li>
 <li><?php echo  $_SESSION['fatigué']; ?></li>
 </ul>
-</div>-->
+</div>
     
-    </div>
+    </div>-->
     
     
     <div class="page-jeParticipe">
