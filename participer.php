@@ -33,12 +33,13 @@ require_once 'fbconfig-participer.php';
     
     
 <div class="container">
-<div class="hero-unit">
+    
+ <!-- <div class="hero-unit">
   <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
   <p>Welcome to "facebook login" tutorial</p>
   </div>
     
- <!--   
+  
 <div class="span4">
  <ul class="nav nav-list">
 <li class="nav-header">Image</li>
