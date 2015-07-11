@@ -52,7 +52,7 @@ if ( isset( $session ) )
   //checkuser($fuid,$ffname,$femail);
   //header("Location: index.php");
     
-    header("Location: voter.php");
+    header("Location: index.php");
 } else 
 {
   $loginUrl = $helper->getLoginUrl();

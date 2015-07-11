@@ -34,7 +34,7 @@ require_once 'fbconfig.php';
            Not Connected
 <div>
       <a href="fbconfig.php">Login with Facebook</a></div>
-      </div>
+</div>
     <?php endif ?>
   </body>
 </html>
