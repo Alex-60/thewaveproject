@@ -40,20 +40,10 @@ require_once 'fbconfig-participer.php';
         <?php
       
         
-if($session)
-			{
-				
-                echo $session;
+
         
-                $request = new FacebookRequest($session,'GET','/me');
+                       echo  $_SESSION['me'];
                 
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
-                        $result = $graphObject->asArray();
-    
-                        var_dump($result);
-                
-            }
         
                  ?>
     

@@ -53,6 +53,19 @@ if ( isset( $session ) )
 	    $_SESSION['EMAIL'] =  $femail;
         $_SESSION['fatigué'] =  $zak;
     
+    
+    -------get me--------
+        
+        
+         $request = new FacebookRequest($session,'GET','/me');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+    
+                       $_SESSION['me'] = $result
+    
+    
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
 } else 
