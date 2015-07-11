@@ -1,5 +1,7 @@
 <?php
 
+require_once 'fbconfig-voter.php';
+
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
        header('Location: https://thewave.herokuapp.com/');    
