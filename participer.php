@@ -1,6 +1,6 @@
 <?php
 
-require_once 'fbconfig-voter.php';
+require_once 'fbconfig-participer.php';
 
 ?>
 
