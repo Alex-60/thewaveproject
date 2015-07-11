@@ -38,7 +38,7 @@ try
     echo "yes";
     var_dump($session);
 
-die();
+
 
     
     
@@ -52,6 +52,13 @@ die();
 // see if we have a session
 if ( isset( $session ) ) 
 {
+    
+     echo "no";
+    var_dump($session);
+    
+    
+    die();
+    
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
