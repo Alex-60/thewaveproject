@@ -54,7 +54,7 @@ if ( isset( $session ) )
         $_SESSION['fatigué'] =  $zak;
     
   //checkuser($fuid,$ffname,$femail);
-  //header("Location: participer.php");
+  header("Location: participer.php");
 } else 
 {
   $loginUrl = $helper->getLoginUrl();
