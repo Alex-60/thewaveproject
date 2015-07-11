@@ -14,9 +14,8 @@ require_once 'fbconfig.php';
 <section>
 <body>
     
-    ?>   
-    
-      <?php if (!isset($_SESSION['FBID'])): ?>   
+
+      <?php if (isset($_SESSION['FBID'])): ?>   
 <div class="page-home">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
