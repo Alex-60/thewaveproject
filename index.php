@@ -13,7 +13,7 @@ require_once 'fbconfig.php';
 </head>
 <section>
 <body>
-      <?php if ($_SESSION['FBID']): ?>   
+      <?php if (!isset($_SESSION['FBID'])): ?>   
 <div class="page-home">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
@@ -51,7 +51,7 @@ require_once 'fbconfig.php';
     
      <?php else: ?>
     
-    <?php echo "no session";?>
+    <?php echo "there is a session";?>
     
     <?php endif ?>
     
