@@ -63,7 +63,7 @@ if ( isset( $session ) )
                         $result = $graphObject->asArray();
                         $fbid2 = $graphObject->getProperty('id');
                         
-                        var_dump($fbid2);
+                        var_dump($result);
     die();
                        
     
