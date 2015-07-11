@@ -50,10 +50,10 @@ if ( isset( $session ) )
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
   //checkuser($fuid,$ffname,$femail);
-  header("Location: voter.php");
+  //header("Location: voter.php");
 } else 
 {
   $loginUrl = $helper->getLoginUrl();
- //header("Location: ".$loginUrl);
+ header("Location: ".$loginUrl);
 }
 ?>

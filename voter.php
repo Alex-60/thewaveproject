@@ -33,7 +33,7 @@ require_once 'fbconfig-voter.php';
     
     
     
-     <?php if ($_SESSION['FBID']): ?>      
+<?php if ($_SESSION['FBID']): ?>      
 <div class="container">
 <div class="hero-unit">
   <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
