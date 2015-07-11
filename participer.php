@@ -1,33 +1,6 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set("display_errors", 1);
-    session_start();
-    require_once 'facebook-php-sdk-v4-4.0-dev/autoload.php';
-    use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\FacebookRequest;
-	use Facebook\GraphUser;
-    use Facebook\FacebookPermissions;
-    use Facebook\FacebookPermissionException;
-    use Facebook\FacebookRequestException;
-    const APPID ="767304380051847";
-    const APPSECRET ="7f0e4cac931818f7f7dc86d722dd5e0e";
-    //$fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
-    FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/');
-	//SI les variables de sessions existent et que $_SESSION['fb_token'] existe
-	// alors je veux créer mon utilisateur à partir de cette session
-	if( isset($_SESSION) && isset($_SESSION['fb_token']) )
-	{
-		$session = new FacebookSession($_SESSION['fb_token']);
-	}
-	//Sinon j'affiche le lien de connection
-	else
-	{
-		$session = $helper->getSessionFromRedirect();
-	}
 
-
+require_once 'fbconfig-voter.php';
 
 ?>
 
@@ -70,40 +43,6 @@
                    </div>
                </div>
            </article>
-            
-            <!------------------------------------------------------------------------------------------------>
-            
-            
-        <form enctype="multipart/form-data" action="" method="POST">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
-            <input type="submit" name="send" value="Send File" />
-        </form>
-   
-        <?php
-      
-        
-if($session)
-			{
-				
-                echo "yes";
-        
-                $request = new FacebookRequest($session,'GET','/me');
-                
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
-                        $result = $graphObject->asArray();
-    
-                        var_dump($result);
-                
-            }
-        
-                 ?>
-
-                        <!--------------------------------------------------------------------------------------------->
-            
             <article class="participants">
                 <div class="img-participants">
                     <img src="" alt="">
