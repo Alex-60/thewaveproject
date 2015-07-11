@@ -37,7 +37,7 @@ require_once 'fbconfig-participer.php';
             <input type="submit" name="send" value="Send File" />
         </form>
    
-        <?php/*
+        <?php
       
         
 if($session)
@@ -54,7 +54,7 @@ if($session)
                         var_dump($result);
                 
             }
-        */
+        
                  ?>
     
     
