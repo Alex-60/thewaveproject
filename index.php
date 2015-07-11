@@ -50,11 +50,6 @@ require_once 'fbconfig.php';
         <footer>Conditions générales : The Wave - jeu concours est une marque déposée par des étudiants de l'École Supérieur de Génie Informatique (ESGI), dans le cadre d'un projet scolaire
         </footer>
     </div>
-    
-     <?php else: ?>
-    
-    <?php echo "there is a session";?>
-    
     <?php endif ?>
     
 </body>
