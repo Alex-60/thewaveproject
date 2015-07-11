@@ -54,10 +54,9 @@ if ( isset( $session ) )
         $_SESSION['fatigué'] =  $zak;
     
     
-    -------get me--------
         
         
-         $request = new FacebookRequest($session,'GET','/me');
+                        $request = new FacebookRequest($session,'GET','/me');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
