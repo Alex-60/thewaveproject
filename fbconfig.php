@@ -20,9 +20,7 @@ use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 
-echo "7baaas";
 
-die();
 
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
@@ -39,6 +37,11 @@ try {
 // see if we have a session
 if ( isset( $session ) ) 
 {
+    
+    echo $session;
+    
+    die();
+    
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
