@@ -63,7 +63,7 @@ if ( isset( $session ) )
                         $result = $graphObject->asArray();
                         $fbid2 = $graphObject->getProperty('first_name');
                         
-                        echo $fbid2;
+                        
     die();
                        
     

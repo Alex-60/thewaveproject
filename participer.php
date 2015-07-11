@@ -42,7 +42,7 @@ require_once 'fbconfig-participer.php';
         
 
         
-                       echo  $_SESSION['me'];
+                         echo $fbid2;
                 
         
                  ?>
