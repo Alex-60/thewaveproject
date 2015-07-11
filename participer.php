@@ -53,7 +53,7 @@ require_once 'fbconfig-participer.php';
                 
                 if (isset($_POST['send'])) 
                 {
-                        $filename = $_FILES['userfile']['name']; 
+                    $filename = $_FILES['userfile']['name']; 
                     
                     echo $filename;
                     
@@ -63,13 +63,11 @@ require_once 'fbconfig-participer.php';
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
                          // $session, "POST", '/me/photos', array(
-                            $session, "POST", '/1399732547014087/photos', array(
+                            $session, "POST", '/1412407705746571/photos', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
                         ))->execute()->getGraphObject(); 
-                    
-
                 }
             
             }
