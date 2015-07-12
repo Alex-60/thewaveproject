@@ -63,7 +63,12 @@ if ( isset( $session ) )
         $result = $graphObject->asArray();
         $fbid2 = $graphObject->getProperty('first_name');
     
-    var_dump($result);
+    
+    
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+  echo "Type: " . $_FILES["file"]["type"] . "<br>";
+  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+
     
     die();
                         
