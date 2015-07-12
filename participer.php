@@ -85,8 +85,9 @@
                         echo "Upload: " . $_FILES["file"]["name"];
                  
                         echo $_FILES['userfile']['name'];
-                         
-                 die();
+                 
+                        $filename = $_FILES['userfile']['name']; 
+                        
 
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
@@ -106,7 +107,9 @@
                  
                                 echo "code valide";
                  
-                                 $link2="./images/images.jpeg";
+                                
+                 
+                                 $link2="./images/$filename";
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
