@@ -39,7 +39,7 @@ require_once 'fbconfig-participer.php';
 
 <html>
  <body>
-  <form action="upload.php" method="post"
+  <form action="fbconfig-upload.php" method="post"
     enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>

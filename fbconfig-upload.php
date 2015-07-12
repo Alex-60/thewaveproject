@@ -6,6 +6,7 @@ session_start();
 require_once 'autoload.php';
 
 
+
 //require_once 'index.php';
   
 use Facebook\FacebookSession;
@@ -23,7 +24,7 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try {
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) {
@@ -35,69 +36,8 @@ try {
 // see if we have a session
 if ( isset( $session ) ) 
 {
-  // graph api request for user data
-  $request = new FacebookRequest( $session, 'GET', '/me' );
-  $response = $request->execute();
-  // get response
-  $graphObject = $response->getGraphObject();
-  $fbid = $graphObject->getProperty('id');
-    
-    $zak="this is a variable";
-    
-    // To Get Facebook ID
- 	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
-	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
-	/* ---- Session Variables -----*/
-	    $_SESSION['FBID'] = $fbid;  
-        $_SESSION['FULLNAME'] = $fbfullname;
-	    $_SESSION['EMAIL'] =  $femail;
-        $_SESSION['fatigué'] =  $zak;
-    
-    
-        
-                        $request = new FacebookRequest($session,'GET','/me');
-                
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject();
-                        $result = $graphObject->asArray();
-    
-                        var_dump($result);
-    
-    
-    echo "-----------------------------------------------</br>";
-        
-    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-  echo "Type: " . $_FILES["file"]["type"] . "<br>";
-  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-
-    
-    
-        
-        $tes= $_FILES["file"]["name"] ;
-     
-    
-    echo $tes;
-    
-    die();
   
-                    $link = "./images/$tes";
-                    $session = new FacebookSession();
-                    $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                    ))->execute()->getGraphObject(); 
-     
-                    echo "faite";
     
-    
-    
-    
-    die();
-                        
-    
-    
-    
-                        
-        
     
     
   //checkuser($fuid,$ffname,$femail);
