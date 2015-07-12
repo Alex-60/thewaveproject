@@ -29,6 +29,18 @@ session_start();
 
 
 
+ if (isset($_POST['submit'])) 
+     {
+        
+        echo "yes";
+  
+        
+        echo "test";
+
+ }
+
+
+
           echo "Upload: " . $_FILES["file"]["name"] . "<br>";
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
@@ -98,24 +110,7 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 
 
 
-    if (isset($_POST['submit'])) 
-     {
-        
-        echo "yes";
-        
-        
-                
-        
-        echo "test";
-        
-        
-  
-        
-        
-      
-        
-
- }
+   
 
 
 
