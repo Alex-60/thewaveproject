@@ -25,9 +25,11 @@
                     
                  
                     
-                    $filename = $_FILES['userfile']['name']; 
+                    //$filename = $_FILES['userfile']['name']; 
      
-     echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+     $tes= $_FILES["file"]["name"] ;
+     
+     echo $tes;
      
      die();
                     $link = "./images/$filename";
