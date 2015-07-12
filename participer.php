@@ -64,6 +64,11 @@ require_once 'fbconfig-participer.php';
                 //something posted
                 if (isset($_POST['send'])) 
                 {
+                    
+                    echo "entrée valide";
+                    
+                    die();
+                    
                         $filename = $_FILES['userfile']['name']; 
                         $link = "./images/$filename";
                           $session = new FacebookSession($_SESSION['fb_token']);
