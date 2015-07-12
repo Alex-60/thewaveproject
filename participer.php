@@ -42,48 +42,16 @@ require_once 'fbconfig-participer.php';
    <?php 
              
              
-             if($session)
+            if($session)
 			{
                 
-               ?>  
-            <div class="col-md-12" id="div1-child2">
-        
-        <form enctype="multipart/form-data" action="" method="POST">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
-            
-            <input type="submit" name="send" value="Send File" />
-        </form>
-
-       
-        <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-                //something posted
-                if (isset($_POST['send'])) 
-                {
-                    
-                    echo "entrée valide";
-                    
-                    die();
-                    
-                        $filename = $_FILES['userfile']['name']; 
-                        $link = "./images/$filename";
-                          $session = new FacebookSession($_SESSION['fb_token']);
-                          $response = (new FacebookRequest(
-                            $session, "POST", '/1399732547014087/photos', array(
-                            'source' => '@'.realpath($link),
-                            'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject(); 
-                }
-            }
-                 ?>
-        </div>
-                 
-               <?  
+        $request = new FacebookRequest($session,'GET','/me');
+                
+        $response = $request->execute();
+        $graphObject = $response->getGraphObject();
+        $result = $graphObject->asArray();
+        $fbid2 = $graphObject->getProperty('first_name');
+        var_dump($result);
                  
              }
              else {
@@ -92,16 +60,16 @@ require_once 'fbconfig-participer.php';
     ?>
     
     
-<html>
+<!--<html>
  <body>
-  <form action="upload.php" method="post"
+  <form action="" method="post"
     enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
      <input type="submit" name="submit" value="Submit">
   </form>
  </body>
-</html> 
+</html> -->
     
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
 
