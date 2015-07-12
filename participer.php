@@ -125,7 +125,11 @@
                         } else 
                         {
                           $loginUrl = $helper->getLoginUrl();
-                          header("Location: participer.php");
+                         header("Location: ".$loginUrl);
+                             
+                             
+                             
+                             echo "yes";
                         } 
 
                     die();
