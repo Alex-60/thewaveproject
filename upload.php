@@ -20,7 +20,7 @@
   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
- if (isset($_POST['send'])) 
+ if (isset($_POST['submit'])) 
                 {
                     
                     echo "yes";
