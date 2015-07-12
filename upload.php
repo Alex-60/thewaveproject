@@ -67,11 +67,11 @@ try
        echo "4";
     
 }
-// see if we have a session
-if ( isset( $session ) ) 
-{
+
+
     
-    echo "5";
+        echo "5";
+
         $request = new FacebookRequest($session,'GET','/me');
                 
         $response = $request->execute();
@@ -80,7 +80,6 @@ if ( isset( $session ) )
         var_dump($result);
         die();
 
-} 
 
     
 
