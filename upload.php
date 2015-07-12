@@ -13,7 +13,7 @@
 
 
     
-    //echo "la photo : ".$_POST['userfile'];
+    echo "la photo : ".$_POST['datafile'];
 
 
 
