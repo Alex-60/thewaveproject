@@ -44,14 +44,50 @@ require_once 'fbconfig-participer.php';
              
              if($session)
 			{
-                 echo "there is a session";
+                
+               ?>  
+            <div class="col-md-12" id="div1-child2">
+        
+        <form enctype="multipart/form-data" action="" method="POST">
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <!-- Name of input element determines name in $_FILES array -->
+            Send this file: <input name="userfile" type="file" />`
+            
+            <input type="submit" name="send" value="Send File" />
+        </form>
+
+       
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+                //something posted
+                if (isset($_POST['send'])) 
+                {
+                        $filename = $_FILES['userfile']['name']; 
+                        $link = "./images/$filename";
+                          $session = new FacebookSession($_SESSION['fb_token']);
+                          $response = (new FacebookRequest(
+                            $session, "POST", '/me/photos', array(
+                            'source' => '@'.realpath($link),
+                            'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                        ))->execute()->getGraphObject(); 
+                }
+            }
+                 ?>
+        </div>
+                 
+               <?  
+                 
              }
-             else {echo "nooo";
+             else {
+                    echo "nooo";
                   }
     ?>
     
     
-<html>
+<!--<html>
  <body>
   <form action="" method="post"
     enctype="multipart/form-data">
@@ -60,7 +96,7 @@ require_once 'fbconfig-participer.php';
      <input type="submit" name="submit" value="Submit">
   </form>
  </body>
-</html> 
+</html> -->
     
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
 
