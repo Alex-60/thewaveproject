@@ -17,8 +17,8 @@
   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
-<?php
 
+/*
 session_start();
 // added in v4.0.0
 
@@ -68,9 +68,9 @@ if ( isset( $session ) )
   $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
 }
-?>
+
     
 
-
+*/
 
 ?>
