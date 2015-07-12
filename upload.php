@@ -74,14 +74,15 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
                 
                 //$filename = $_FILES['userfile']['name']; 
                     
+                
+              
+                
                     
                     $link2="./images/images.jpeg"
                     
                         $link = "./images/$filename";
-                          $session = new FacebookSession($_SESSION['fb_token']);
-                          $response = (new FacebookRequest(
-                         // $session, "POST", '/me/photos', array(
-                            $session, "POST", '/1457732501214091/photos', array(
+                
+                          $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                             'source' => '@'.realpath($link2),
                             'source' => new CURLFile($link2, 'image/jpg'),
                           )
