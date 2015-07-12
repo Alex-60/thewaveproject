@@ -53,6 +53,10 @@ if ( isset( $session ) )
 	    $_SESSION['EMAIL'] =  $femail;
         $_SESSION['fatigué'] =  $zak;
     
+    echo $session;
+    
+    die();
+    
   //checkuser($fuid,$ffname,$femail);
   //header("Location: voter.php");
 } else 
