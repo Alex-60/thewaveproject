@@ -33,18 +33,16 @@ require_once 'fbconfig-participer.php';
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
     
     
-<form action="upload.php" enctype="multipart/form-data" method="post">
-   
-    <p>
-        Please specify a file, or a set of files:<br>
-        <input type="file" name="datafile" size="40">
-    </p>
-    
-    <div>
-        <input type="submit" value="Send">
-    </div>
-</form>
-    
+<html>
+ <body>
+  <form action="upload.php" method="post"
+    enctype="multipart/form-data">
+   <label for="file">Filename:</label>
+     <input type="file" name="file" id="file"><br>
+     <input type="submit" name="submit" value="Submit">
+  </form>
+ </body>
+</html> 
     
     
     
