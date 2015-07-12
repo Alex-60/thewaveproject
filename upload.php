@@ -18,7 +18,7 @@
 
 
 
-/*
+
 session_start();
 // added in v4.0.0
 
@@ -61,16 +61,10 @@ if ( isset( $session ) )
         var_dump($result);
         die();
 
-  //checkuser($fuid,$ffname,$femail);
-  //header("Location: participer.php");
-} else 
-{
-  $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
-}
+} 
 
     
 
-*/
+
 
 ?>
