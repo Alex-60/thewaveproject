@@ -23,9 +23,7 @@
  if (isset($_POST['submit'])) 
                 {
                     
-                    echo "yes";
-                    
-                    die();
+                 
                     
                     $filename = $_FILES['userfile']['name']; 
                     $link = "./images/$filename";
