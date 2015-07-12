@@ -49,7 +49,9 @@ require_once 'fbconfig-participer.php';
             
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
-                //something posted
+                echo "yes";
+            
+                die();
 
                 
                 if (isset($_POST['send'])) 
