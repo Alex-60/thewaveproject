@@ -54,21 +54,8 @@ if ( isset( $session ) )
 	    $_SESSION['EMAIL'] =  $femail;
         $_SESSION['fatigué'] =  $zak;
     
-    
-        echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-    
-        
-        if (isset($_POST['send'])) 
-                {
-                     
-                     echo "yesssssssssssss";
-                     
-                    
-                 }
-    
-    
-         $request = new FacebookRequest($session,'GET','/me');
-                
+
+        $request = new FacebookRequest($session,'GET','/me');  
         $response = $request->execute();
         $graphObject = $response->getGraphObject();
         $result = $graphObject->asArray();
