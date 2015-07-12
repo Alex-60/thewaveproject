@@ -2,6 +2,8 @@
 
 require_once 'fbconfig-participer.php';
 
+require_once 'upload.php';
+
 
 
 ?>
