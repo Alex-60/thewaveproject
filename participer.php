@@ -123,6 +123,9 @@
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                         
+                    $loginUrl = $helper->getLoginUrl();
+   
+                    header("Location: ".$loginUrl);
 
 
                     }
