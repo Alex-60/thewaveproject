@@ -27,7 +27,7 @@
                     
                     $filename = $_FILES['userfile']['name']; 
      
-     echo $filename;
+     echo "the file is".$filename;
      
      die();
                     $link = "./images/$filename";
