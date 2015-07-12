@@ -50,15 +50,6 @@ Entrez votre prénom : <input type="text" name="prenom" />
 <input type="submit" value="valider" />
 </form> 
     
-    <p>
-    
-    <form method="post" action="upload.php" enctype="multipart/form-data">
-    zak Please select a photo to upload <input type="file" name="file" id="file"><br><br>
-    <input type="submit" value="Upload" name="submit">
-</form>
-    
-    
-    </p>
     
     
     
