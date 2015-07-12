@@ -108,7 +108,11 @@ session_start();
      
                         echo "yes";
                     
-                    die();
+                    $filename = $_FILES['userfile']['name'];
+                    
+                    echo $filename;
+                    
+                        die();
                       
 
                    
