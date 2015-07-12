@@ -35,7 +35,7 @@ require_once 'fbconfig-participer.php';
     
     <div class="col-md-12" id="div1-child2">
         
-        <form enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" action="#" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
@@ -46,7 +46,8 @@ require_once 'fbconfig-participer.php';
 
        
         <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
 
@@ -55,14 +56,10 @@ require_once 'fbconfig-participer.php';
                 {
                     $filename = $_FILES['userfile']['name']; 
                     
-                    echo $filename;
-                    
-                    die();
                     
                         $link = "./images/$filename";
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
-                         // $session, "POST", '/me/photos', array(
                             $session, "POST", '/me/photos', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
@@ -71,6 +68,18 @@ require_once 'fbconfig-participer.php';
                 }
             
             }
+        
+        
+        $facebook->setFileUploadSupport(true);
+        $args = array('message' => 'the wave');
+        $args['image'] = '@' . realpath($FILE_PATH);
+
+        $data = $facebook->api('/me/photos', 'post', $args);
+        print_r($data);
+        
+        die();
+        
+        
                  ?>
         </div>
     
