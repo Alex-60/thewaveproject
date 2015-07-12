@@ -56,7 +56,10 @@ require_once 'fbconfig-participer.php';
          if (isset($_POST['submit'])) 
                 
          {
+             session_start();
               $_SESSION['photoname'] = $_FILES["file"]["name"];
+             
+             
              
          }
     
