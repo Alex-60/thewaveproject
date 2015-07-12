@@ -42,17 +42,11 @@ session_start();
                 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 
             // login helper with redirect_uri
-                $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
-                        try 
-                        {
-                          $session = $helper->getSessionFromRedirect();
-                        } catch( FacebookRequestException $ex ) 
-                        {
-                          // When Facebook returns an error
-                        } catch( Exception $ex ) 
-                        {
-                          // When validation fails or other local issues
-                        }
+
+                //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
+                  
+                    
+                      
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
