@@ -59,7 +59,9 @@ session_start();
                             
                     
                             
-                            echo "yes" . $_FILES["file"]["name"];
+                            global $teste; 
+                            
+                          echo $teste;
                             
                             die();
                             
