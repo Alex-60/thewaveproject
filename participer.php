@@ -116,42 +116,19 @@ session_start();
                     echo "--------------";
                         
                     
-                        FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
-                        // login helper with redirect_uri
-                            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-                        try {
-                          $session = $helper->getSessionFromRedirect();
-                        } catch( FacebookRequestException $ex ) 
-
-                        {
-                          // When Facebook returns an error
-                        } catch( Exception $ex ) 
-                        {
-                          // When validation fails or other local issues
-                        }
+                       
                          if ( isset( $session ) ) 
-                        {
-                            
-                          echo "valide";
-           
-                            die();
-                            
-                                $link2="./images/images.jpeg";
-                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                        'source' => '@'.realpath($link2),
-                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                      )
-                                    ))->execute()->getGraphObject(); 
-                            echo "faite";
-
-                            die();
+                        {   
+                          
+                             
+                            echo "session existe"; 
+                             
                         } 
 
                     die();
 
                 }
-
-}
+            }
         
 
     ?>
