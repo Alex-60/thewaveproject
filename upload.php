@@ -14,9 +14,7 @@
     
 
 
-  echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-  echo "Type: " . $_FILES["file"]["type"] . "<br>";
-  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+ 
 
 
 
@@ -47,7 +45,8 @@ use Facebook\HttpClients\FacebookHttpable;
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
-try {
+try 
+{
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) 
 {
@@ -67,7 +66,15 @@ if ( isset( $session ) )
     
     $result = $graphObject->asArray();
     
- var_dump($result);
+    var_dump($result);
+    
+    
+    
+    
+     echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+  echo "Type: " . $_FILES["file"]["type"] . "<br>";
+  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    
     
     die();
     
