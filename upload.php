@@ -46,7 +46,7 @@ session_start();
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
-            echo $_SESSION['photoname']; 
+            echo $_SESSION['photo']; 
 
 die();
 
