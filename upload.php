@@ -1,6 +1,5 @@
 <?php
 
-require_once 'fbconfig-upload.php';
 
 
        // $filename=$_FILES['photo']['name'];

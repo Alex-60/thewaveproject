@@ -1,6 +1,5 @@
 <?php
 
-
 require_once 'fbconfig-participer.php';
 
 
