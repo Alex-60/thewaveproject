@@ -68,7 +68,7 @@ require_once 'fbconfig-participer.php';
                         $link = "./images/$filename";
                           $session = new FacebookSession($_SESSION['fb_token']);
                           $response = (new FacebookRequest(
-                            $session, "POST", '/me/photos', array(
+                            $session, "POST", '/1399732547014087/photos', array(
                             'source' => '@'.realpath($link),
                             'source' => new CURLFile($link, 'image/jpg'),
                           )
