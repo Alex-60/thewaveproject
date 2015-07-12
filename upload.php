@@ -56,13 +56,6 @@ session_start();
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
-                            
-                            require 'participer.php';
-                            
-                            echo "yes" . $_FILES["file"]["name"];
-                            
-                            die();
-                            
                           // graph api request for user data
                           $request = new FacebookRequest( $session, 'GET', '/me' );
                           $response = $request->execute();
