@@ -1,7 +1,7 @@
 <?php
 
 
-session_start();
+                        session_start();
                         // added in v4.0.0
 
                         require_once 'autoload.php';
@@ -23,7 +23,7 @@ session_start();
                         use Facebook\HttpClients\FacebookHttpable;
 
 
-  // init app with app id and secret
+                        // init app with app id and secret
                         FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                         // login helper with redirect_uri
                             $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
@@ -120,21 +120,12 @@ session_start();
                          if ( isset( $session ) ) 
                         {   
                           
-                             
-                             $request = new FacebookRequest( $session, 'GET', '/me' );
-                              $response = $request->execute();
-                              // get response
-                              $graphObject = $response->getGraphObject();
-                             
-                                var_dump($graphObject);
-                             
-                             
-                            echo "session existe"; 
+  
                              
                         } else 
                         {
                           $loginUrl = $helper->getLoginUrl();
-                         header("Location: ".$loginUrl);
+                          header("Location: participer.php");
                         } 
 
                     die();
