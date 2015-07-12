@@ -57,17 +57,7 @@ if ( isset( $session ) )
     
         
         
-         $request = new FacebookRequest($session,'GET','/me');
-                
-        $response = $request->execute();
-        $graphObject = $response->getGraphObject();
-        $result = $graphObject->asArray();
-        $fbid2 = $graphObject->getProperty('first_name');
-    
-    
-    
-
-                 if (isset($_POST['send'])) 
+        if (isset($_POST['send'])) 
                 {
                      
                      echo "yes";
@@ -75,6 +65,20 @@ if ( isset( $session ) )
                      die();
                  }
     
+    
+         $request = new FacebookRequest($session,'GET','/me');
+                
+        $response = $request->execute();
+        $graphObject = $response->getGraphObject();
+        $result = $graphObject->asArray();
+        $fbid2 = $graphObject->getProperty('first_name');
+    
+    var_dump($result);
+    
+    die();
+    
+
+             
     
     
 
