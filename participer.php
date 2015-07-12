@@ -123,6 +123,10 @@ session_start();
                              
                             echo "session existe"; 
                              
+                        } else 
+                        {
+                          $loginUrl = $helper->getLoginUrl();
+                         header("Location: ".$loginUrl);
                         } 
 
                     die();
