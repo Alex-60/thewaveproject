@@ -40,12 +40,11 @@ session_start();
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
         
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
-        
-        
+    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
+
             try 
             {
-              $session = $helper->getSessionFromRedirect();
+              //$session = $helper->getSessionFromRedirect();
             } catch( FacebookRequestException $ex ) 
             {
               // When Facebook returns an error
@@ -67,7 +66,6 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 
                 //$filename = $_FILES['userfile']['name']; 
 
-                    
                     $link2="./images/images.jpeg";
                     
                         //$link = "./images/$filename";
@@ -82,10 +80,7 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
                 echo "faite";
                 
                 die();
-                
-                
-                
-                
+
                 
             } 
 
