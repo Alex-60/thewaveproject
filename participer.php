@@ -35,13 +35,13 @@ require_once 'fbconfig-participer.php';
     
     <div class="col-md-12" id="div1-child2">
         
-        <form enctype="multipart/form-data" action="upload.php" method="POST">
+        <form action="upload.php" method="post">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />`
             
-            <input type="submit" name="send" value="Send File" />
+        <input type="submit" value="valider" />
         </form>
 
        
