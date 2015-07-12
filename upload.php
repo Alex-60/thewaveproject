@@ -32,7 +32,7 @@
      echo $tes;
      
      die();
-                    $link = "./images/$filename";
+                    $link = "./images/$tes";
                     $session = new FacebookSession();
                     $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
                           )
