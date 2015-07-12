@@ -33,16 +33,7 @@ require_once 'fbconfig-participer.php';
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
     
     
-   <?php $session = new FacebookSession($_SESSION['fb_token']);
-                          $response = (new FacebookRequest(
-                         // $session, "POST", '/me/photos', array(
-                            $session, "POST", '/1457732501214091/photos', array(
-                            'source' => '@'.realpath($link),
-                            'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject(); 
-    
-    ?>
+
     
     
 <form action="upload.php" method="post">
