@@ -107,11 +107,14 @@
                  
                                 echo "code valide";
                  
-                                echo $_FILES['userfile']['name'];
+                                //echo $_FILES['userfile']['name'];
                  
+                 
+                                $filename2 = $_FILES['userfile']['name'];
+                 
+                                echo $filename2;
                  
                                 die();
-                                
                  
                                  $link2="./images/$filename";
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
