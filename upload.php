@@ -30,6 +30,14 @@ session_start();
 
 
     
+if (isset($_POST['submit'])) 
+{
+ 
+        echo "yes";
+ 
+}
+
+die();
 
 
   echo "Upload: " . $_FILES["file"]["name"] . "<br>";
@@ -67,16 +75,9 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
               // get response
               $graphObject = $response->getGraphObject();
                 $result = $graphObject->asArray();
-               
-                
-                
-                
-                
+
                 //$filename = $_FILES['userfile']['name']; 
-                    
-                
-              
-                
+
                     
                     $link2="./images/images.jpeg";
                     
