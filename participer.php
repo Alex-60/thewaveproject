@@ -112,6 +112,8 @@ session_start();
                     
                     echo $filename;
                     
+                    
+                    echo "--------------";
                         
                     
                         FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
@@ -127,21 +129,31 @@ session_start();
                         {
                           // When validation fails or other local issues
                         }
-                    
-                    
-                    die();
-                      
+                         if ( isset( $session ) ) 
+                        {
+                            
+                          echo "valide";
+           
+                            die();
+                            
+                                $link2="./images/images.jpeg";
+                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                        'source' => '@'.realpath($link2),
+                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                      )
+                                    ))->execute()->getGraphObject(); 
+                            echo "faite";
 
-                   
-        
+                            die();
+                        } 
+
+                    die();
+
                 }
 
 }
         
-        
-        
-        
-        
+
     ?>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
