@@ -34,23 +34,7 @@ session_start();
            echo "Type: " . $_FILES["file"]["type"] . "<br>";
            echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-           echo " " . $_FILES["file"]["name"];
 
-die();
-
-$_SESSION['prenom'] = $_FILES["file"]["name"];
-
-
-if(isset(SESSION["prenom"]))
-{
-   echo "yes";
-}
-else
-{
-    echo "no";
-}
-
-die();
 
 
             // init app with app id and secret
@@ -71,10 +55,6 @@ die();
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
-                            
-                    
-                            
-                      
                             
                             die();
                             
