@@ -5,6 +5,8 @@ session_start();
 
 require_once 'autoload.php';
 
+require_once 'participer.php';
+
 
 //require_once 'index.php';
   
@@ -66,8 +68,8 @@ if ( isset( $session ) )
     
     
     echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-  echo "Type: " . $_FILES["file"]["type"] . "<br>";
-  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
     
 
