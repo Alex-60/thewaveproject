@@ -43,12 +43,6 @@ require_once 'fbconfig-participer.php';
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
       
-       <?php
-             
-    $teste = $_FILES["file"]["name"];
-
-    ?>
-      
      <input type="submit" name="submit" value="Submit">
   </form>
  </body>

@@ -3,7 +3,7 @@
 //require_once 'fbconfig-participer.php';
 
 
-session_start();
+
                 // added in v4.0.0
 
                 require_once 'autoload.php';
@@ -34,8 +34,7 @@ session_start();
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-
-            $_SESSION['photo'] = $_FILES["file"]["name"];
+            session_start();
              
 
             // init app with app id and secret
@@ -61,7 +60,7 @@ session_start();
                             
                             global $teste; 
                             
-                          echo $teste;
+                      
                             
                             die();
                             
