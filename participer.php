@@ -39,8 +39,9 @@ require_once 'fbconfig-participer.php';
         Please specify a file, or a set of files:<br>
         <input type="file" name="datafile" size="40">
     </p>
+    
     <div>
-    <input type="submit" value="Send">
+        <input type="submit" value="Send">
     </div>
 </form>
     
