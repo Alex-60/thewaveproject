@@ -57,25 +57,14 @@ require_once 'fbconfig-participer.php';
           if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
         
-         if (isset($_POST['send'])) 
-                {
-                       // $filename = $_FILES['userfile']['name']; 
-                    
-                    
-                        $link = "./images/images.jpeg";
-                 
-                          $response = (new FacebookRequest(
-                         
-                            $_SESSION['fatigué'], "POST", '/1457732501214091/photos', array(
-                            'source' => '@'.realpath($link),
-                            'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject(); 
-             
-             echo "yes";
-             
-             
-         }
+             if (isset($_POST['send'])) 
+                    {
+
+
+                        echo "yes";
+
+
+                    }
     }
         
         
