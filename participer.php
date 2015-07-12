@@ -32,7 +32,7 @@ require_once 'fbconfig-participer.php';
 
     
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<html>
+<!--<html>
  <body>
   <form action="upload.php" method="post"enctype="multipart/form-data">
    <label for="file">Filename:</label>
@@ -40,9 +40,29 @@ require_once 'fbconfig-participer.php';
      <input type="submit" name="submit" value="Submit">
   </form>
  </body>
-</html> 
+</html> -->
 
-    <?php $_SESSION['prenom'] = 'utilisateur test';?>
+      <form enctype="multipart/form-data" action="" method="POST">
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <!-- Name of input element determines name in $_FILES array -->
+            Send this file: <input name="userfile" type="file" />`
+            
+            <input type="submit" name="send" value="Send File" />
+        </form>
+    
+    
+    <?php 
+        
+        $filename = $_FILES['userfile']['name']; 
+                    
+                    
+        
+        $_SESSION['prenom'] = $filename;
+    
+    
+    
+    ?>
     
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 

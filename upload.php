@@ -35,9 +35,8 @@ session_start();
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
-echo $_FILES["file"]["type"];
 
-            $_SESSION['prenom'] = 'utilisateur test';
+           
 
 
             // init app with app id and secret
