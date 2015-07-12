@@ -78,9 +78,9 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
               
                 
                     
-                    $link2="./images/images.jpeg"
+                    $link2="./images/images.jpeg";
                     
-                        $link = "./images/$filename";
+                        //$link = "./images/$filename";
                 
                           $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                             'source' => '@'.realpath($link2),
