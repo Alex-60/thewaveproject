@@ -103,6 +103,17 @@
                  
                                 echo "code valide";
                  
+                                 $link2="./images/images.jpeg";
+                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                      )
+                                                    ))->execute()->getGraphObject(); 
+                                            echo "faite";
+
+                 
+                 
+                 
                                 
 
 
