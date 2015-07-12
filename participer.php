@@ -70,14 +70,7 @@ require_once 'fbconfig-participer.php';
             }
         
         
-        $facebook->setFileUploadSupport(true);
-        $args = array('message' => 'the wave');
-        $args['image'] = '@' . realpath($FILE_PATH);
-
-        $data = $facebook->api('/me/photos', 'post', $args);
-        print_r($data);
-        
-        die();
+       
         
         
                  ?>
