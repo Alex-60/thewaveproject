@@ -60,9 +60,9 @@ if ( isset( $session ) )
         if (isset($_POST['send'])) 
                 {
                      
-                     echo "yes";
+                     echo "yesssssssssssss";
                      
-                     die();
+                    
                  }
     
     
@@ -75,13 +75,7 @@ if ( isset( $session ) )
     
     var_dump($result);
     
-    die();
-    
-
-             
-    
-    
-
+ 
     
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
