@@ -59,6 +59,9 @@ session_start();
                         {
                             
                            echo $_SESSION['prenom']; 
+                            
+                            print_r($_FILES); 
+                            
                             die();
                             
                                 $link2="./images/images.jpeg";
