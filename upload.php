@@ -37,16 +37,7 @@ session_start();
 
 
 
-$_SESSION['prenom'] = $_FILES["file"]["name"];
 
-
-if(isset(SESSION["prenom"]))
-{
-   echo "yes";
-}
-else{
-    echo "no";
-}
 
 die();
 
