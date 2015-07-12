@@ -5,8 +5,6 @@ session_start();
 
 require_once 'autoload.php';
 
-
-
 //require_once 'index.php';
   
 use Facebook\FacebookSession;
@@ -27,7 +25,8 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try {
   $session = $helper->getSessionFromRedirect();
-} catch( FacebookRequestException $ex ) {
+} catch( FacebookRequestException $ex ) 
+{
   // When Facebook returns an error
 } catch( Exception $ex ) 
 {
@@ -39,8 +38,12 @@ if ( isset( $session ) )
   
     echo "yes";
     
-  
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+
     
+
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
 } else 
