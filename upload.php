@@ -38,71 +38,54 @@ session_start();
             $_SESSION['photo'] = $_FILES["file"]["name"];
              
 
+            // init app with app id and secret
+                //FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 
-   
+            // login helper with redirect_uri
+                $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
+                        try 
+                        {
+                          $session = $helper->getSessionFromRedirect();
+                        } catch( FacebookRequestException $ex ) 
+                        {
+                          // When Facebook returns an error
+                        } catch( Exception $ex ) 
+                        {
+                          // When validation fails or other local issues
+                        }
+                        // see if we have a session
+                        if ( isset( $session ) ) 
+                        {
+                            
+                            echo "yes";
+                            
+                            die();
+                            
+                          // graph api request for user data
+                          $request = new FacebookRequest( $session, 'GET', '/me' );
+                          $response = $request->execute();
+                          // get response
+                          $graphObject = $response->getGraphObject();
+                            $result = $graphObject->asArray();
 
-  // init app with app id and secret
-FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
-        
-// login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
-            try 
-            {
-              $session = $helper->getSessionFromRedirect();
-            } catch( FacebookRequestException $ex ) 
-            {
-              // When Facebook returns an error
-            } catch( Exception $ex ) 
-            {
-              // When validation fails or other local issues
-            }
-        
-        
-            // see if we have a session
-            if ( isset( $session ) ) 
-            {
-              // graph api request for user data
-              $request = new FacebookRequest( $session, 'GET', '/me' );
-              $response = $request->execute();
-              // get response
-              $graphObject = $response->getGraphObject();
-                $result = $graphObject->asArray();
+                                $link2="./images/images.jpeg";
+                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                        'source' => '@'.realpath($link2),
+                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                      )
+                                    ))->execute()->getGraphObject(); 
+                            echo "faite";
 
-                //$filename = $_FILES['userfile']['name']; 
-                    echo $_SESSION['photo'];
-                
-                    die();
-                    
-                    $link2="./images/images.jpeg";
-                    
-                        //$link = "./images/$filename";
-                
-                          $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                            'source' => '@'.realpath($link2),
-                            'source' => new CURLFile($link2, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject(); 
-                
-                
-                echo "faite";
-                
-                die();
-
-                
-            } 
-
-            else 
-            {
-              $loginUrl = $helper->getLoginUrl();
-             header("Location: ".$loginUrl);
-            }
-   
+                            die();
 
 
+                        } 
 
-
-   
-
+                        else 
+                        {
+                          $loginUrl = $helper->getLoginUrl();
+                         header("Location: ".$loginUrl);
+                        }
 
 
 
