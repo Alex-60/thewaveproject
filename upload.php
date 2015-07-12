@@ -34,7 +34,9 @@ session_start();
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-die();
+            $_SESSION['prenom'] = 'utilisateur test';
+
+
             // init app with app id and secret
                 FacebookSession::setDefaultApplication('767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 
@@ -53,6 +55,10 @@ die();
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
+                            
+                           echo $_SESSION['prenom']; 
+                            die();
+                            
                                 $link2="./images/images.jpeg";
                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                         'source' => '@'.realpath($link2),
