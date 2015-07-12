@@ -34,7 +34,28 @@
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-            session_start();
+
+session_start();
+
+$_SESSION['prenom'] = $_FILES["file"]["name"];
+
+
+if(isset(SESSION["prenom"]))
+{
+   echo "yes";
+}
+els{
+    echo "no";
+}
+
+die();
+
+
+
+
+
+
+
              
 
             // init app with app id and secret
@@ -57,8 +78,6 @@
                         {
                             
                     
-                            
-                            global $teste; 
                             
                       
                             
