@@ -20,7 +20,7 @@
 
 
 
-    if (isset($_POST['send'])) 
+    if (isset($_POST['submit'])) 
                 {
         
         echo "yes";
