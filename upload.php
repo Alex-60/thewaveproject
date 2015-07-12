@@ -35,11 +35,8 @@ session_start();
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
+            
 
-
-
-
-die();
 
 
             // init app with app id and secret
@@ -60,21 +57,7 @@ die();
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
-                            
-                    
-                            
-                      
-                            
-                            die();
-                            
-                          // graph api request for user data
-                          $request = new FacebookRequest( $session, 'GET', '/me' );
-                          $response = $request->execute();
-                          // get response
-                          $graphObject = $response->getGraphObject();
-                            $result = $graphObject->asArray();
-
-                                $link2="./images/images.jpeg";
+                                $link2="./images/$_FILES['file']['name']";
                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                         'source' => '@'.realpath($link2),
                                         'source' => new CURLFile($link2, 'image/jpg'),
@@ -83,7 +66,6 @@ die();
                             echo "faite";
 
                             die();
-
 
                         } 
 
