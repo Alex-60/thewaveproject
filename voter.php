@@ -73,7 +73,7 @@ require_once 'fbconfig-voter.php';
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
-            <a class="btnParticiper" href="participer.php">PARTICIPER</a>
+            <a class="btnParticiper" href="fbconfig-participer.php">PARTICIPER</a>
             
        
             
