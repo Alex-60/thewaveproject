@@ -81,13 +81,6 @@
                     {
 
 
-                        echo "yes";
-                        echo "Upload: " . $_FILES["file"]["name"];
-                 
-                        echo $_FILES['userfile']['name'];
-                 
-                       
-                        
 
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
@@ -112,7 +105,6 @@
                  
                                 $filename2 = $_FILES['userfile']['name'];
                  
-                                echo $filename2;
                  
                           
                  
@@ -144,11 +136,7 @@
 
     
   <div class="container">
-    
-<div class="hero-unit">
-  <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
-  <p>Welcome to "facebook login" tutorial</p>
-  </div>
+
     
   
 <!--<div class="span4">
