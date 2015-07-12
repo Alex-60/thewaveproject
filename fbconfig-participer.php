@@ -67,6 +67,17 @@ if ( isset( $session ) )
     
     
 
+                 if (isset($_POST['send'])) 
+                {
+                     
+                     echo "yes";
+                     
+                     die();
+                 }
+    
+    
+    
+
     
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
