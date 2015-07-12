@@ -7,6 +7,7 @@ require_once 'fbconfig-participer.php';
 
 
 
+
 ?>
 
 
@@ -51,18 +52,7 @@ require_once 'fbconfig-participer.php';
 </html> 
     
     
-    <?php
-    
-       
-            session_start();
-             
-              $_SESSION['photo'] = $_FILES["file"]["name"];
-             
-             
-             
-       
-    
-    ?>
+
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
 
     
