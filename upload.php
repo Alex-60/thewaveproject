@@ -1,6 +1,6 @@
 <?php
 
-require_once 'fbconfig-participer.php';
+require_once 'fbconfig-upload.php';
 
 
        // $filename=$_FILES['photo']['name'];
@@ -45,11 +45,7 @@ require_once 'fbconfig-participer.php';
 
 */
 
- $request = new FacebookRequest($session,'GET','/me');
-                
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject();
-                        $result = $graphObject->asArray();
+
                         
 var_dump($result);
 
