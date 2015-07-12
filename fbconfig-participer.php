@@ -70,7 +70,7 @@ if ( isset( $session ) )
   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
     
-    die();
+
                         
     
     
