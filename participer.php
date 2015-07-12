@@ -1,3 +1,10 @@
+<?php
+
+require_once 'fbconfig-participer.php';
+
+
+
+?>
 
 
 
@@ -25,72 +32,16 @@
 
     
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--<html>
+<html>
  <body>
-  <form action="" method="post"enctype="multipart/form-data">
+  <form action="upload.php" method="post"enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
      <input type="submit" name="submit" value="Submit">
   </form>
  </body>
-</html> -->
-    
-         <form enctype="multipart/form-data" action="" method="POST">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
-            
-            <input type="submit" name="send" value="Send File" />
-        </form>   
-    
-    
-    
-    
-    
-    
-     <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-                //something posted
+</html> 
 
-                
-                if (isset($_POST['send'])) 
-                {
-                        /*$filename = $_FILES['userfile']['name']; 
-                        $link = "./images/$filename";
-                          $session = new FacebookSession($_SESSION['fb_token']);
-                          $response = (new FacebookRequest(
-                         // $session, "POST", '/me/photos', array(
-                            $session, "POST", '/1457732501214091/photos', array(
-                            'source' => '@'.realpath($link),
-                            'source' => new CURLFile($link, 'image/jpg'),
-                          )
-                        ))->execute()->getGraphObject(); 
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
-                        $result = $graphObject->asArray();*/
-                    
-                    echo "yes";
-                    
-                   
-
-                }
-            
-            }
-                 ?>
-    
-    
-    <?php
-
-require_once 'fbconfig-participer.php';
-
-
-
-?>
-
-    
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
     

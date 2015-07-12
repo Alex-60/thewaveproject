@@ -34,6 +34,7 @@ session_start();
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
+die();
             // init app with app id and secret
                 FacebookSession::setDefaultApplication('767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 
