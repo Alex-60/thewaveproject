@@ -29,11 +29,14 @@ session_start();
 
 
 
-    
+  echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+  echo "Type: " . $_FILES["file"]["type"] . "<br>";
+  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-        echo "yes";
-    
-     // init app with app id and secret
+
+
+
+  // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
         
 // login helper with redirect_uri
@@ -91,24 +94,23 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
               $loginUrl = $helper->getLoginUrl();
              header("Location: ".$loginUrl);
             }
- 
-
-die();
-
-
-  echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-  echo "Type: " . $_FILES["file"]["type"] . "<br>";
-  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-
-
-
-
- 
    
 
 
 
 
+    if (isset($_POST['submit'])) 
+     {
+        
+        echo "yes";
+        
+        
+                
+        
+        echo "test";
+        
+        
+  
         
         
       
