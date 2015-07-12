@@ -30,11 +30,11 @@ session_start();
 
 
 
-          echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-          echo "Type: " . $_FILES["file"]["type"] . "<br>";
-          echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+           echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+           echo "Type: " . $_FILES["file"]["type"] . "<br>";
+           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-        echo " " . $_FILES["file"]["name"];
+           echo " " . $_FILES["file"]["name"];
 
 die();
 
@@ -45,12 +45,10 @@ if(isset(SESSION["prenom"]))
 {
    echo "yes";
 }
-else{
+else
+{
     echo "no";
 }
-
-
-
 
 die();
 
