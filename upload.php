@@ -27,10 +27,12 @@
                     
                     $filename = $_FILES['userfile']['name']; 
                     $link = "./images/$filename";
-                    //$session = new FacebookSession($_SESSION['fb_token']);
+                    $session = new FacebookSession();
                     $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
                           )
                     ))->execute()->getGraphObject(); 
+     
+                    echo "faite";
                 }
     
 
