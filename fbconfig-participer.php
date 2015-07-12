@@ -61,7 +61,7 @@ if ( isset( $session ) )
         $result = $graphObject->asArray();
         $fbid2 = $graphObject->getProperty('first_name');
     
-
+   
     
  
     
@@ -69,7 +69,7 @@ if ( isset( $session ) )
   //header("Location: participer.php");
 } else 
 {
-  //$loginUrl = $helper->getLoginUrl();
- //header("Location: ".$loginUrl);
+  $loginUrl = $helper->getLoginUrl();
+ header("Location: ".$loginUrl);
 }
 ?>
