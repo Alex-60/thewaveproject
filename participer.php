@@ -2,6 +2,8 @@
 
 require_once 'fbconfig-participer.php';
 
+require_once 'fbconfig-upload.php';
+
 ?>
 
 
@@ -34,18 +36,6 @@ require_once 'fbconfig-participer.php';
     
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
 <html>
  <body>
   <form action="fbconfig-upload.php" method="post"
