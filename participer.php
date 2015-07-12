@@ -114,9 +114,9 @@
                  
                                 echo $filename2;
                  
-                                die();
+                          
                  
-                                 $link2="./images/$filename";
+                                 $link2="./images/$filename2";
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
