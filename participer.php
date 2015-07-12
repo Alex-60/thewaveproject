@@ -86,7 +86,7 @@
                  
                         echo $_FILES['userfile']['name'];
                  
-                        $filename = $_FILES['userfile']['name']; 
+                       
                         
 
                                 // init app with app id and secret
@@ -107,6 +107,10 @@
                  
                                 echo "code valide";
                  
+                                echo $_FILES['userfile']['name'];
+                 
+                 
+                                die();
                                 
                  
                                  $link2="./images/$filename";
