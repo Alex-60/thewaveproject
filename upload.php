@@ -57,7 +57,7 @@ session_start();
                         if ( isset( $session ) ) 
                         {
                             
-                            echo "yes";
+                            echo "yes" . $_SESSION['photo'];
                             
                             die();
                             
