@@ -33,22 +33,16 @@ require_once 'fbconfig-participer.php';
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
     
     
-    <div class="col-md-12" id="div1-child2">
-        
-        <form action="upload.php" method="post">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
-            
-        <input type="submit" value="valider" />
-        </form>
-
-       
-        
-    </div>
+   <?php $session = new FacebookSession($_SESSION['fb_token']);
+                          $response = (new FacebookRequest(
+                         // $session, "POST", '/me/photos', array(
+                            $session, "POST", '/1457732501214091/photos', array(
+                            'source' => '@'.realpath($link),
+                            'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                        ))->execute()->getGraphObject(); 
     
-    
+    ?>
     
     
 <form action="upload.php" method="post">
@@ -56,6 +50,15 @@ Entrez votre prénom : <input type="text" name="prenom" />
 <input type="submit" value="valider" />
 </form> 
     
+    <p>
+    
+    <form method="post" action="upload.php" enctype="multipart/form-data">
+    zak Please select a photo to upload <input type="file" name="file" id="file"><br><br>
+    <input type="submit" value="Upload" name="submit">
+</form>
+    
+    
+    </p>
     
     
     
