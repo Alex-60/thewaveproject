@@ -2,7 +2,7 @@
 
 //require_once 'fbconfig-participer.php';
 
-
+session_start();
 
                 // added in v4.0.0
 
@@ -35,7 +35,7 @@
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
-session_start();
+
 
 $_SESSION['prenom'] = $_FILES["file"]["name"];
 
