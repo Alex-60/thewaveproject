@@ -1,6 +1,6 @@
 <?php
 
-require_once 'fbconfig-participer.php';
+//require_once 'fbconfig-participer.php';
 
 
 
@@ -42,7 +42,7 @@ require_once 'fbconfig-participer.php';
  </body>
 </html> -->
 
-      <form enctype="multipart/form-data" action="upload.php" method="POST">
+      <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             <!-- Name of input element determines name in $_FILES array -->
@@ -54,11 +54,33 @@ require_once 'fbconfig-participer.php';
     
     <?php 
         
-        $filename = $_FILES['userfile']['name']; 
-                    
-         $zak = $filename ;          
         
-        $_SESSION['prenom'] = $zak;
+        
+          if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+                //something posted
+
+                
+                if (isset($_POST['send'])) 
+                {
+                     $filename = $_FILES['userfile']['name']; 
+        
+                    echo $filename;
+                    
+                    die();
+                    
+                }
+          }
+        
+        $filename = $_FILES['userfile']['name']; 
+        
+        echo $filename;
+                    
+         //$zak = $filename ;          
+        
+        //$_SESSION['prenom'] = $zak;
+        
+        die();
     
     
     
