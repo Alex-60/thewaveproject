@@ -57,7 +57,9 @@ session_start();
                         if ( isset( $session ) ) 
                         {
                             
-                            echo "yes" . $_SESSION['photo'];
+                            require 'participer.php';
+                            
+                            echo "yes" . $_FILES["file"]["name"];
                             
                             die();
                             
