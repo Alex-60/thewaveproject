@@ -62,6 +62,9 @@ if ( isset( $session ) )
         $fbid2 = $graphObject->getProperty('first_name');
     
    
+        echo $session;
+    
+    die();
     
  
     
