@@ -55,7 +55,8 @@ if ( isset( $session ) )
         $_SESSION['fatigué'] =  $zak;
     
     
-        
+        echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    
         
         if (isset($_POST['send'])) 
                 {
