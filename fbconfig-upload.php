@@ -63,6 +63,28 @@ if ( isset( $session ) )
     
     var_dump($result);
     
+    
+    echo "-----------------------------------------------</br>"
+        
+        
+        $tes= $_FILES["file"]["name"] ;
+     
+    
+    echo $tes;
+    
+    die();
+  
+                    $link = "./images/$tes";
+                    $session = new FacebookSession();
+                    $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                    ))->execute()->getGraphObject(); 
+     
+                    echo "faite";
+    
+    
+    
+    
     die();
                         
     
