@@ -68,8 +68,7 @@ try
     
 }
 // see if we have a session
-if ( isset( $session ) ) 
-{
+
     
     echo "5";
         $request = new FacebookRequest($session,'GET','/me');
@@ -80,7 +79,7 @@ if ( isset( $session ) )
         var_dump($result);
         die();
 
-} 
+
 
     
 
