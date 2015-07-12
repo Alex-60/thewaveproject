@@ -71,7 +71,6 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 
                 var_dump($result);
 
-                die();
               //checkuser($fuid,$ffname,$femail);
               //header("Location: participer.php");
             } 
@@ -90,18 +89,9 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
      {
         
         echo "yes";
-        
-        
-                
-        
+
         echo "test";
-        
-        
-  
-        
-        
-      
-        
+     
 
  }
 
