@@ -121,6 +121,14 @@ session_start();
                         {   
                           
                              
+                             $request = new FacebookRequest( $session, 'GET', '/me' );
+                              $response = $request->execute();
+                              // get response
+                              $graphObject = $response->getGraphObject();
+                             
+                                var_dump($graphObject);
+                             
+                             
                             echo "session existe"; 
                              
                         } else 
