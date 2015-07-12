@@ -1,6 +1,6 @@
 <?php
 
-//require_once 'fbconfig-participer.php';
+require_once 'fbconfig-participer.php';
 
 
        // $filename=$_FILES['photo']['name'];
@@ -20,6 +20,8 @@
   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
+
+/*
  if (isset($_POST['submit'])) 
                 {
                     
@@ -27,11 +29,9 @@
                     
                     //$filename = $_FILES['userfile']['name']; 
      
-     $tes= $_FILES["file"]["name"] ;
+                    $tes= $_FILES["file"]["name"] ;
      
-     echo $tes;
-     
-     die();
+  
                     $link = "./images/$tes";
                     $session = new FacebookSession();
                     $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
@@ -40,6 +40,20 @@
      
                     echo "faite";
                 }
+
+
+
+*/
+
+ $request = new FacebookRequest($session,'GET','/me');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject();
+                        $result = $graphObject->asArray();
+                        
+var_dump($result);
+
+die();
     
 
 
