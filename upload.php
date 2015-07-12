@@ -37,8 +37,6 @@ session_start();
 
             
 
-
-
             // init app with app id and secret
                 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 
@@ -57,7 +55,7 @@ session_start();
                         // see if we have a session
                         if ( isset( $session ) ) 
                         {
-                                $link2="./images/$_FILES['file']['name']";
+                                $link2="./images/images.jpeg";
                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                         'source' => '@'.realpath($link2),
                                         'source' => new CURLFile($link2, 'image/jpg'),
