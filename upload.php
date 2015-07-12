@@ -44,19 +44,12 @@ if(isset(SESSION["prenom"]))
 {
    echo "yes";
 }
-els{
+else{
     echo "no";
 }
 
 die();
 
-
-
-
-
-
-
-             
 
             // init app with app id and secret
                 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
