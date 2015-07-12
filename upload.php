@@ -34,7 +34,7 @@ session_start();
           echo "Type: " . $_FILES["file"]["type"] . "<br>";
           echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
-       echo $_FILES["file"]["name"];
+       echo " " . $_FILES["file"]["name"] ;
 
 die();
 
