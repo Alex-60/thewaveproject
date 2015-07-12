@@ -83,6 +83,8 @@
 
                         echo "yes";
                         echo "Upload: " . $_FILES["file"]["name"];
+                 
+                        echo $_FILES['userfile']['name'];
                          
                  die();
 
