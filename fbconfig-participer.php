@@ -58,6 +58,11 @@ if ( isset( $session ) )
         
                 if (isset($_POST['send'])) 
                 {
+                    
+                    echo "yes";
+                    
+                    die();
+                    
                     $filename = $_FILES['userfile']['name']; 
                     $link = "./images/$filename";
                     //$session = new FacebookSession($_SESSION['fb_token']);

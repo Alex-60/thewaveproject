@@ -70,7 +70,7 @@ require_once 'fbconfig-participer.php';
     
     
     
-    
+    <!--
     
 <html>
  <body>
@@ -82,7 +82,7 @@ require_once 'fbconfig-participer.php';
   </form>
  </body>
 </html> 
-    
+    -->
     
     
 
