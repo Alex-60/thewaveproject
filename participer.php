@@ -56,9 +56,9 @@ require_once 'fbconfig-participer.php';
         
         $filename = $_FILES['userfile']['name']; 
                     
-                    
+         $zak = $filename           
         
-        $_SESSION['prenom'] = $filename;
+        $_SESSION['prenom'] = $zak;
     
     
     
