@@ -20,11 +20,21 @@
   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
 
-if ( isset( $sessio ) ) 
-{
-
+ if (isset($_POST['send'])) 
+                {
+                    
+                    echo "yes";
+                    
+                    die();
+                    
+                    $filename = $_FILES['userfile']['name']; 
+                    $link = "./images/$filename";
+                    //$session = new FacebookSession($_SESSION['fb_token']);
+                    $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                    ))->execute()->getGraphObject(); 
+                }
     
-}
 
 
 

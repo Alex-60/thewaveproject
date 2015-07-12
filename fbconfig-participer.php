@@ -53,7 +53,15 @@ if ( isset( $session ) )
 	    $_SESSION['EMAIL'] =  $femail;
         $_SESSION['fatigué'] =  $zak;
     
-
+    
+        
+        
+               
+    
+    
+                        
+        
+    
     
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
