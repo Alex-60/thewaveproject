@@ -36,6 +36,8 @@ session_start();
 
             echo $_SESSION['photoname']; 
 
+die();
+
    
 
   // init app with app id and secret
