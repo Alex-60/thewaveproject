@@ -2,7 +2,7 @@
 
 //require_once 'fbconfig-participer.php';
 
-require_once 'participer.php';
+include("participer.php");
 
 session_start();
                 // added in v4.0.0
