@@ -44,15 +44,23 @@ require_once 'fbconfig-participer.php';
              
             if($session)
 			{
+ 
+            $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+            try {
+              $session = $helper->getSessionFromRedirect();
+            } catch( FacebookRequestException $ex ) {
+              // When Facebook returns an error
+            } catch( Exception $ex ) 
+            {
+              // When validation fails or other local issues
+            }
                 
-        $request = new FacebookRequest($session,'GET','/me');
-                
-        $response = $request->execute();
-        $graphObject = $response->getGraphObject();
-        $result = $graphObject->asArray();
-        $fbid2 = $graphObject->getProperty('first_name');
-        var_dump($result);
-                 
+            // see if we have a session
+                if ( isset( $session ) ) 
+                {
+                echo "youpii";
+                }
+
              }
              else {
                     echo "nooo";
