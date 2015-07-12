@@ -1,9 +1,7 @@
 <?php
 
-
+require_once 'fbconfig-upload.php';
 require_once 'fbconfig-participer.php';
-
-require 'fbconfig-upload.php';
 
 
 
@@ -51,11 +49,7 @@ require 'fbconfig-upload.php';
 </html> 
 
     
-    
 
-    
-    
-    
     
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
     
