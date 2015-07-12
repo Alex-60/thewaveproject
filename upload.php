@@ -30,9 +30,7 @@ session_start();
 
 
     
-if (isset($_POST['submit'])) 
-{
- 
+
         echo "yes";
     
      // init app with app id and secret
@@ -94,7 +92,6 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
              header("Location: ".$loginUrl);
             }
  
-}
 
 die();
 
