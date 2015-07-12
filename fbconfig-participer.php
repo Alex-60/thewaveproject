@@ -56,13 +56,15 @@ if ( isset( $session ) )
     
         
         
-                        $request = new FacebookRequest($session,'GET','/me');
-                
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject();
-                        $result = $graphObject->asArray();
-                        $fbid2 = $graphObject->getProperty('first_name');
-                        
+                if (isset($_POST['send'])) 
+                {
+                    $filename = $_FILES['userfile']['name']; 
+                    $link = "./images/$filename";
+                    //$session = new FacebookSession($_SESSION['fb_token']);
+                    $response = (new FacebookRequest($session, "POST", '/me/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                    ))->execute()->getGraphObject(); 
+                }
     
     
     

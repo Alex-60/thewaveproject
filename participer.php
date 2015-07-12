@@ -29,8 +29,47 @@ require_once 'fbconfig-participer.php';
 <body>
     
    
+       
+        <form enctype="multipart/form-data" action="fbconfig-participer.php" method="POST">
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <!-- Name of input element determines name in $_FILES array -->
+            Send this file: <input name="userfile" type="file" />`
+            
+            <input type="submit" name="send" value="Send File" />
+        </form>
     
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
+    <?php
+        
+        
+        
+        
+           /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+                //something posted
+                if (isset($_POST['send'])) 
+                {
+                    $filename = $_FILES['userfile']['name']; 
+                    $link = "./images/$filename";
+                    $session = new FacebookSession($_SESSION['fb_token']);
+                    $response = (new FacebookRequest($session, "POST", '/1457732501214091/photos', array('source' => '@'.realpath($link),'source' => new CURLFile($link, 'image/jpg'),
+                          )
+                    ))->execute()->getGraphObject(); 
+                }
+            }*/
+
+    ?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 <html>
