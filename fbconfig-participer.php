@@ -56,12 +56,16 @@ if ( isset( $session ) )
     
         
         
-                        $request = new FacebookRequest($session,'GET','/me');
+         $request = new FacebookRequest($session,'GET','/me');
                 
-                        $response = $request->execute();
-                        $graphObject = $response->getGraphObject();
-                        $result = $graphObject->asArray();
-                        $fbid2 = $graphObject->getProperty('first_name');
+        $response = $request->execute();
+        $graphObject = $response->getGraphObject();
+        $result = $graphObject->asArray();
+        $fbid2 = $graphObject->getProperty('first_name');
+    
+    var_dump($result);
+    
+    die();
                         
     
     
