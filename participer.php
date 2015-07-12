@@ -62,7 +62,7 @@ require_once 'fbconfig-participer.php';
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
     
- <!-- <div class="container">
+  <div class="container">
     
 <div class="hero-unit">
   <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
@@ -84,7 +84,7 @@ require_once 'fbconfig-participer.php';
 </ul>
 </div>
     
-    </div>-->
+    </div>
     
     
     <div class="page-jeParticipe">
