@@ -85,7 +85,7 @@
   </div>
     
   
-<div class="span4">
+<!--<div class="span4">
  <ul class="nav nav-list">
 <li class="nav-header">Image</li>
 <li><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"></li>
@@ -97,7 +97,7 @@
 <li class="nav-header">situation</li>
 <li><?php echo  $_SESSION['fatigué']; ?></li>
 </ul>
-</div>
+</div>-->
     
     </div>
     
