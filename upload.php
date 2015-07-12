@@ -1,6 +1,6 @@
 <?php
 
-
+require_once 'participer.php';
 
        // $filename=$_FILES['photo']['name'];
 
