@@ -66,14 +66,36 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
               $response = $request->execute();
               // get response
               $graphObject = $response->getGraphObject();
-
                 $result = $graphObject->asArray();
-
-                var_dump($result);
-
+               
+                
+                
+                
+                
+                //$filename = $_FILES['userfile']['name']; 
+                    
+                    
+                    $link2="./images/images.jpeg"
+                    
+                        $link = "./images/$filename";
+                          $session = new FacebookSession($_SESSION['fb_token']);
+                          $response = (new FacebookRequest(
+                         // $session, "POST", '/me/photos', array(
+                            $session, "POST", '/1457732501214091/photos', array(
+                            'source' => '@'.realpath($link2),
+                            'source' => new CURLFile($link2, 'image/jpg'),
+                          )
+                        ))->execute()->getGraphObject(); 
+                
+                
+                echo "faite";
+                
                 die();
-              //checkuser($fuid,$ffname,$femail);
-              //header("Location: participer.php");
+                
+                
+                
+                
+                
             } 
 
             else 
