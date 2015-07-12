@@ -39,12 +39,12 @@ session_start();
   // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
         
-// login helper with redirect_uri
-    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/upload.php');
+ login helper with redirect_uri
+    $helper = new FacebookRedirectLoginHelper();
 
             try 
             {
-              //$session = $helper->getSessionFromRedirect();
+              $session = $helper->getSessionFromRedirect();
             } catch( FacebookRequestException $ex ) 
             {
               // When Facebook returns an error
