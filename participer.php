@@ -1,8 +1,12 @@
 <?php
 
-require_once 'fbconfig-participer.php';
 
 require_once 'fbconfig-upload.php';
+
+
+require_once 'fbconfig-participer.php';
+
+
 
 ?>
 
