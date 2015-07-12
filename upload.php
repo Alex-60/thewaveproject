@@ -58,9 +58,9 @@ session_start();
                         if ( isset( $session ) ) 
                         {
                             
-                           echo $_SESSION['prenom']; 
+                          echo $_SESSION['prenom'];
                             
-                            var_dump($_FILES); 
+
                             
                             die();
                             
