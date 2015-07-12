@@ -69,7 +69,7 @@ if ( isset( $session ) )
   //header("Location: participer.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+  //$loginUrl = $helper->getLoginUrl();
+ //header("Location: ".$loginUrl);
 }
 ?>

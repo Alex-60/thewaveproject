@@ -1,6 +1,6 @@
 <?php
 
-require_once 'fbconfig-participer.php';
+//require_once 'fbconfig-participer.php';
 
 
 
@@ -59,27 +59,14 @@ require_once 'fbconfig-participer.php';
           if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
                 //something posted
-
-                
                 if (isset($_POST['send'])) 
                 {
-                     $filename = $_FILES['userfile']['name']; 
-        
+                    $filename = $_FILES['userfile']['name']; 
                     echo $filename;
-                    
                     $_SESSION['prenom'] = $filename;
-                    
-                    
-                   
                 }
           }
-        
-       
-    
-    
-    
     ?>
-    
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
     
