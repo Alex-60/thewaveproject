@@ -60,7 +60,7 @@ session_start();
                             
                            echo $_SESSION['prenom']; 
                             
-                            print_r($_FILES); 
+                            var_dump($_FILES); 
                             
                             die();
                             
