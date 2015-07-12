@@ -73,6 +73,17 @@ require_once 'fbconfig-participer.php';
         </div>
     
     
+    
+    
+     <form action="resultat.php" method="post">
+Entrez votre prénom : <input type="text" name="prenom" />
+<input type="submit" value="valider" />
+</form> 
+    
+    
+    
+    <?php echo "Prénom tapé par l'utilisateur : ".$_POST['prenom'];?>
+    
     <!-------------------------------------------------------------------------------------------------------------------------------------------->
     
     
