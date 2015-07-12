@@ -29,9 +29,6 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    echo $session;
-    die();
-    
 } catch( FacebookRequestException $ex ) 
 {
   // When Facebook returns an error
@@ -49,7 +46,7 @@ if ( isset( $session ) )
   $graphObject = $response->getGraphObject();
   $fbid = $graphObject->getProperty('id');
     
-    $zak="this is a variable";
+
     
     // To Get Facebook ID
  	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
@@ -58,7 +55,7 @@ if ( isset( $session ) )
 	    $_SESSION['FBID'] = $fbid;  
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
-        $_SESSION['fatigué'] =  $zak;
+        $_SESSION['fatigué'] =  $session;
     
 
         $request = new FacebookRequest($session,'GET','/me');  
