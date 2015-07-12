@@ -1,5 +1,8 @@
 <?php
 
+require_once 'fbconfig-participer.php';
+
+
 session_start();
                 // added in v4.0.0
 
@@ -46,7 +49,7 @@ session_start();
         echo "test";
         
         
-       /* 
+  
         
         
         // init app with app id and secret
@@ -84,7 +87,7 @@ if ( isset( $session ) )
   $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
 }
-    */    
+   
         
 
  }
