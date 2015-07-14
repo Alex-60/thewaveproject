@@ -133,6 +133,8 @@
                     );
                     $fqlResult = $this->facebook->api($param);
                     return $fqlResult;
+                    
+                    var_dump($fqlResult);
                 }
 
 
