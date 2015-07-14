@@ -125,9 +125,10 @@
                  
                  var_dump($user);
                  
-                 die();
-               
                  
+                 echo "-------------</br>"
+                     
+                     
                 foreach ($user['data'] as $key => $value) 
                 {
                      
@@ -135,6 +136,12 @@
                     
                     
                 }
+                     
+                     
+                 die();
+               
+                 
+              
                  
                  echo "--------";
                  
