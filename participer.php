@@ -98,7 +98,7 @@
                                   // When validation fails or other local issues
                                 }
  
-                                $filename3 = $_FILES['userfile']['tmp_name']; 
+                               /* $filename3 = $_FILES['userfile']['tmp_name']; 
                 
                                  $link2=$filename3;
                  
@@ -112,11 +112,11 @@
                                         
                                 $loginUrl = $helper->getLoginUrl();
 
-                                header("Location: ".$loginUrl);
+                                header("Location: ".$loginUrl);*/
                  
                  
              
-                 
+                 echo "yes";
                  
 				$request_user = new FacebookRequest( $session,"GET","/me");
 				$request_user_executed = $request_user->execute();
