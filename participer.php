@@ -124,6 +124,20 @@
                  
                  var_dump($user);
                  
+                 echo "--------";
+                 
+                 
+                  $fql = 'SELECT object_id FROM album WHERE owner = me() AND name="The Wave Project Photos"';
+                    $ret_obj = $facebook->api(array(
+                                   'method' => 'fql.query',
+                                   'query' => $fql,
+                                 ));
+                 
+                 var_dump($ret_obj);
+                 
+                 
+                 
+                 
                  
                  
                     
