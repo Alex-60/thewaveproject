@@ -127,7 +127,7 @@
                         $result = $graphObject->asArray();
                  
                  
-                foreach ($user['data'] as $key => $value) 
+                foreach ($result['data'] as $key => $value) 
                 {
                      
                     echo $value->name;
