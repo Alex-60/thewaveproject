@@ -98,24 +98,35 @@
                                   // When validation fails or other local issues
                                 }
                  
-                                //echo "code valide";
+                              
                  
                                 //echo $_FILES['userfile']['name'];
                  
                  
                                 $filename2 = $_FILES['userfile']['name'];
                  
-                                 
-                                 //$link2="./$filename2";
+
+                                 $link2="./images/$filename2";
+                 
+                                var_dump($link2);
+                 
+                                die();
+                 
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($filename2),
-                                                        'source' => new CURLFile($filename2, 'image/jpg'),
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                         
                                 $loginUrl = $helper->getLoginUrl();
 
                                 header("Location: ".$loginUrl);
+                 
+                 
+             
+
+                 
+                    
 
 
                     }
