@@ -106,11 +106,9 @@
                                 $filename2 = $_FILES['userfile']['name'];
                  
 
-                                 $link2="./images/$filename2";
+                                 $link2="../$filename2";
                  
-                                var_dump($link2);
-                 
-                                die();
+                                
                  
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
