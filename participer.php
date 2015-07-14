@@ -122,7 +122,13 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject();
                  
-                 var_dump($user->name);
+                foreach ($user['data'] as $key => $value) 
+                {
+                     
+                    echo $value->picture;
+                    
+                    
+                }
                  
                  echo "--------";
                  
