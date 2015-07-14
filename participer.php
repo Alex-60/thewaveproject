@@ -116,11 +116,16 @@
                  
                  
              
-                 echo "yes";
+          
                  
-				$request_user = new FacebookRequest( $session,"GET","/me/albums");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject();
+                 
+                 
+                  $request = new FacebookRequest($session,'GET','/me/albums');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+                 
                  
                 foreach ($user['data'] as $key => $value) 
                 {
