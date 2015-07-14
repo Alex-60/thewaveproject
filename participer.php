@@ -121,6 +121,23 @@
                  
                  
                  echo "yes";
+                 
+                 
+
+                function get_album_id_by_album_name(){//return array of data
+                    $fql = 'SELECT object_id FROM album WHERE owner = me() AND name="The Wave Project Photos"';
+                    $param = array(
+                        'method'    => 'fql.query',
+                        'query'     => $fql,
+                        'callback'  => ''
+                    );
+                    $fqlResult = $this->facebook->api($param);
+                    return $fqlResult;
+                }
+
+
+                 
+                 
                     
 
                     }
