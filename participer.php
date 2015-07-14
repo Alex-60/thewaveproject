@@ -98,9 +98,7 @@
                                   // When validation fails or other local issues
                                 }
                  
-                              
-                 
-                                //echo $_FILES['userfile']['name'];
+                             
                  
                  
                                 $filename2 = $_FILES['userfile']['name']; 
@@ -108,12 +106,6 @@
                                 $filename3 = $_FILES['userfile']['tmp_name']; 
                  
                 
-                                //var_dump($filename2)."</br>";
-                 
-                                //var_dump($filename3);
-                 
-                                //die();
-                 
                  
 
                                  $link2=$filename3;
@@ -132,7 +124,16 @@
                  
                  
              
-
+                 
+                 /*$_SESSION['fb_token'] = (string) $session->getAccessToken();
+				$request_user = new FacebookRequest( $session,"GET","/me");
+				$request_user_executed = $request_user->execute();
+				$user = $request_user_executed->getGraphObject(GraphUser::className());*/
+                 
+                 
+                            $user_id = $facebook->getUser();
+                 
+                            $var_dump($user_id);
                  
                     
 
