@@ -106,7 +106,7 @@
                                 $filename2 = $_FILES['userfile']['name'];
                  
 
-                                 $link2="./images/$filename2";
+                                 $link2="./$filename2";
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
@@ -116,12 +116,6 @@
                                 $loginUrl = $helper->getLoginUrl();
 
                                 header("Location: ".$loginUrl);
-                 
-                 
-             
-
-                 
-                    
 
 
                     }
