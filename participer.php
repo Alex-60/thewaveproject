@@ -105,9 +105,7 @@
                  
                                 $filename2 = $_FILES['userfile']['name'];
                  
-                 
-                          
-                 
+
                                  /*$link2="./images/$filename2";
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
@@ -115,29 +113,16 @@
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                         
-                    $loginUrl = $helper->getLoginUrl();
-   
-                    header("Location: ".$loginUrl);*/
-                 
-                 
-                 echo "yes";
-                 
-                 
+                                $loginUrl = $helper->getLoginUrl();
 
-                
-                    $fql = 'SELECT object_id FROM album WHERE owner = me() AND name="The Wave Project Photos"';
-                    $param = array('method'    => 'fql.query','query'     => $fql,'callback'  => '');
+                                header("Location: ".$loginUrl);*/
                  
-                    $fqlResult = $this->facebook->api($param);
                  
-                
-                    
-                    var_dump($fqlResult);
-             
+                    echo "yes";
 
                  
-                 
                     
+
 
                     }
     }
