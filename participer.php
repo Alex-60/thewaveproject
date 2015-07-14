@@ -122,7 +122,7 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject();
                  
-                 var_dump($user);
+                 var_dump($user->name);
                  
                  echo "--------";
                  
