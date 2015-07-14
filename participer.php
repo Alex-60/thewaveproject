@@ -98,7 +98,7 @@
                                   // When validation fails or other local issues
                                 }
                  
-                                echo "code valide";
+                                //echo "code valide";
                  
                                 //echo $_FILES['userfile']['name'];
                  
