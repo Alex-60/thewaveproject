@@ -118,7 +118,7 @@
              
                  echo "yes";
                  
-				$request_user = new FacebookRequest( $session,"GET","/me");
+				$request_user = new FacebookRequest( $session,"GET","/me/albums?fields=name");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject();
                  
@@ -127,13 +127,6 @@
                  echo "--------";
                  
                  
-                  $fql = 'SELECT object_id FROM album WHERE owner = me() AND name="The Wave Project Photos"';
-                    $ret_obj = $facebook->api(array(
-                                   'method' => 'fql.query',
-                                   'query' => $fql,
-                                 ));
-                 
-                 var_dump($ret_obj);
                  
                  
                  
