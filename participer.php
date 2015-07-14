@@ -126,7 +126,7 @@
                  var_dump($user);
                  
                  
-                 echo "-------------</br>"
+                 echo "-------------</br>";
                      
                      
                 foreach ($user['data'] as $key => $value) 
