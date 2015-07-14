@@ -104,8 +104,13 @@
                  
                  
                                 $filename2 = $_FILES['userfile']['name']; 
+                 
+                                $filename3 = $_FILES['userfile']['tmp_name']; 
+                 
                 
-                                var_dump($filename2);
+                                var_dump($filename2)."</br>";
+                 
+                                var_dump($filename3);
                  
                                 die();
                  
