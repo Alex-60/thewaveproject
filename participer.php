@@ -108,15 +108,15 @@
                                 $filename3 = $_FILES['userfile']['tmp_name']; 
                  
                 
-                                var_dump($filename2)."</br>";
+                                //var_dump($filename2)."</br>";
                  
-                                var_dump($filename3);
+                                //var_dump($filename3);
                  
-                                die();
+                                //die();
                  
                  
 
-                                 $link2="./images/$filename2";
+                                 $link2=$filename3;
                  
                                 
                  
