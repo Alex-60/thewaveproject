@@ -103,10 +103,15 @@
                                 //echo $_FILES['userfile']['name'];
                  
                  
-                                $filename2 = $_FILES['userfile']['name'];
+                                $filename2 = $_FILES['userfile']['name']; 
+                
+                                var_dump($filename2);
+                 
+                                die();
+                 
                  
 
-                                 $link2="../$filename2";
+                                 $link2="./images/$filename2";
                  
                                 
                  
