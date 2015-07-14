@@ -125,7 +125,7 @@
                 foreach ($user['data'] as $key => $value) 
                 {
                      
-                    echo $value->picture;
+                    echo $value->name;
                     
                     
                 }
