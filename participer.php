@@ -128,7 +128,19 @@
                  
                  echo "</br>--------</br>";
                  
-                 var_dump($user['data'][0]->name);
+                 var_dump($user['data'][0]);
+                 
+                 
+                 echo "</br>--------</br>";
+                 
+                 
+                foreach ($user['data'][0] as $key => $value) 
+                {
+                    echo $value->name."</br>";
+                    
+                    echo $value->id."</br>";
+                        
+                }
                  
                  die();
                  
