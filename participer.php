@@ -145,7 +145,7 @@
                             {
                               
                                
-                               var_dump( $value['picture']);;
+                               var_dump( $value['picture']);
                                
                               
                                
