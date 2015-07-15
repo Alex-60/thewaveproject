@@ -141,6 +141,12 @@
                     echo $value->id."</br>";
                     
                     
+                    if($value->name)
+                        
+                    {
+                        echo "existe";
+                    }
+                    
                 }
                      
                      
