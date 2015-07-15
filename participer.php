@@ -142,7 +142,7 @@
                            
                            foreach ($user['data'][0] as $key => $value) 
                             {
-                               var_dump($value);
+                               var_dump($value[0]);
                             }
                            
                           
