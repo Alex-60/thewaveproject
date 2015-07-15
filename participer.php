@@ -141,7 +141,7 @@
                            
                            echo "</br>------</br>";
                            
-                           foreach ($user['data'][0] as $key => $value) 
+                           foreach ($user['data'][0] as $value) 
                             {
                               
                                
