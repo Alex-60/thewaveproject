@@ -141,6 +141,12 @@
                                 echo $value->name."</br>";
 
                                 echo $value->id."</br>";
+                       
+                       if(isset($value->name == "The Wave Project Photos") )
+                           
+                       {
+                           echo "l'id est". $value->id."</br>";
+                       }
 
                            
                    }
