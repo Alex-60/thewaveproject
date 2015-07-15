@@ -125,22 +125,22 @@
                 
                  
                  
-                 var_dump($user['data']);
+                 /*var_dump($user['data']);
                  
                  echo "</br>--------</br>";
                  
                  var_dump($user['data'][0]);
                  
-                 echo "</br>--------</br>";
+                 echo "</br>--------</br>";*/
                  
                    foreach ($user['data'] as $key => $value) 
                     {
                  
                           
 
-                                echo $value->name."</br>";
+                               // echo $value->name."</br>";
 
-                                echo $value->id."</br>";
+                                //echo $value->id."</br>";
                        
                        if($value->name == "The Wave Project Photos")
                            
