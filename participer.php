@@ -122,7 +122,7 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
-                  json_decode(json_encode($user),TRUE)
+                  json_decode(json_encode($user),TRUE);
                       
                       die();
                  
