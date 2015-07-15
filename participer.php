@@ -138,7 +138,7 @@
                     echo $value->id."</br>";
                     
                     
-                    if($value->name)
+                    if($value->name="The Wave Project Photos")
                         
                     {
                         echo "existe";
