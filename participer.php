@@ -122,7 +122,12 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
+                 echo $user->data[0]->id;
                  
+                var_dump($user->data[0]->id);
+                 
+                 die();
+                     
                  var_dump($user['data']);
                  
                  echo "</br>--------</br>";
