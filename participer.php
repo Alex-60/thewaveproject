@@ -113,9 +113,9 @@
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                         
-                                $loginUrl = $helper->getLoginUrl();
+                               // $loginUrl = $helper->getLoginUrl();
 
-                                header("Location: ".$loginUrl);
+                                //header("Location: ".$loginUrl);
                  
 
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
@@ -133,8 +133,6 @@
                    }
 
 
-                     
-                 die();
 
                     }
     }
