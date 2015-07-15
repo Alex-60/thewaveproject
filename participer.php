@@ -150,7 +150,7 @@
                                
                                foreach ($value as $valuer) 
                                 {
-                                   echo $valuer['picture'];
+                                   echo $valuer->picture;
                                    
                                 }
                                
