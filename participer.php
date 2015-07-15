@@ -149,7 +149,7 @@
                                
                                  echo "</br>------</br>";
                                
-                                var_dump ($value[0]);
+                                var_dump ($value["picture"]);
                              
                             }
                            
