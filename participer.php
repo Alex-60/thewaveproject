@@ -146,7 +146,10 @@
                               
                                
                                var_dump ($value);
-    
+                               
+                                 echo "</br>------</br>";
+                               
+                                var_dump ($value[0]);
                              
                             }
                            
