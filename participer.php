@@ -122,6 +122,16 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
+                 
+                 
+                 foreach($user as $row)
+                 
+                 {
+                        var_dump($row);
+                    }
+                 
+                 die();
+                 
                  print_r($user);
                  
                  echo "</br>--------</br>";
