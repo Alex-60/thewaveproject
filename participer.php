@@ -141,6 +141,11 @@
                            
                            echo "</br>------</br>";
                            
+                           
+                            var_dump($user['data'][0]["picture"]);
+                           
+                           
+                           /*
                            foreach ($user['data'][0] as $key => $value) 
                             {
                               
@@ -151,7 +156,7 @@
                                var_dump($value[0]);
                                
                              
-                            }
+                            }*/
                            
                           
                            
