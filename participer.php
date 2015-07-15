@@ -143,11 +143,11 @@
                            
                            foreach ($user['data'][0] as $key => $value) 
                             {
-                               echo "</br>this is before last</br>";
+                              
                                
                                var_dump ($value);
-                               
-                                echo "</br>this is the last</br>";
+                               echo $value["picture"];
+                              
                                
                              
                             }
