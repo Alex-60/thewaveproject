@@ -123,9 +123,15 @@
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
                  var_dump($user['data'][0]);
+                 
+                 
+                 echo "</br>--------</br>";
                      
                  
-                     echo "--------</br>";
+                 var_dump($user['data'][0]['id']);
+                     
+                 
+                     echo "</br>--------</br>";
                      
                 foreach ($user['data'] as $key => $value) 
                 {
