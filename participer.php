@@ -134,7 +134,7 @@
                  echo "</br>--------</br>";
                  
                 
-                  foreach ($user['data'] as $key => $value) 
+                  foreach ($user['data'][0] as $key => $value) 
                 {
                      
                     echo $value->name."</br>";
