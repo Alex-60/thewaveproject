@@ -8,7 +8,6 @@
                                 // added in v4.0.0
 
                                 require_once 'autoload.php';
-                                require_once 'facebook.php';
 
                                 //require_once 'index.php';
 
