@@ -127,7 +127,7 @@
                  foreach($user as $row)
                  
                  {
-                        var_dump($row);
+                        var_dump($row[0]);
                     }
                  
                  die();
