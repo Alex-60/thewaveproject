@@ -133,7 +133,16 @@
                  
                  echo "</br>--------</br>";
                  
-                 var_dump($user['data'][0]["id"]);
+                
+                  foreach ($user['data'] as $key => $value) 
+                {
+                     
+                    echo $value->name."</br>";
+                    
+                    echo $value->id."</br>";
+            
+                }
+                 
                  
                  
                  die();
