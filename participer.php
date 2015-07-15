@@ -146,16 +146,7 @@
                               
                                
                                var_dump ($value);
-                               
-                               echo "</br>this is last</br>";
-                               
-                               echo $value["picture"];
-                               
-                               echo "</br>this is last last last</br>";
-                               
-                               echo $value[0];
-                              
-                               
+    
                              
                             }
                            
