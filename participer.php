@@ -148,7 +148,7 @@
                             {
                               
                               
-                               echo $value->updated_time;
+                               var_dump( $value[]);
                              
                             }
                            
