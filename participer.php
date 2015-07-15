@@ -138,11 +138,11 @@
 
                            
                            var_dump($user['data'][0]);
-                           echo "------";
+                           echo "</br>------</br>";
                            
                            foreach ($user['data'][0] as $key => $value) 
                             {
-                               var_dump($value[0]);
+                               var_dump($value["picture"]);
                             }
                            
                           
