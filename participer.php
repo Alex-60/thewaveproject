@@ -145,7 +145,7 @@
                             {
                               
                                
-                               echo $value['picture'];
+                               var_dump( $value['picture']);;
                                
                               
                                
