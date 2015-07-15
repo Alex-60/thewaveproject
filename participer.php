@@ -118,11 +118,9 @@
              
                  echo "yes";
                  
-                 $user = $facebook->getUser();
+             
                  
-                 echo $user;
-                 
-                 die();
+                
                  
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
@@ -138,6 +136,8 @@
                 foreach ($user['data'] as $key => $value) 
                 {
                      
+                    echo $value->name."</br>";
+                    
                     echo $value->name;
                     
                     
