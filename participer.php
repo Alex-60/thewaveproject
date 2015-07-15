@@ -145,7 +145,7 @@
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                           echo "yes";
+                           echo $value->id."</br>";
                        }
 
                            
