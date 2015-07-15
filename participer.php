@@ -136,14 +136,13 @@
                    foreach ($user['data'] as $key => $value) 
                     {
                  
-                              foreach ($value as $key => $value2) 
-                            {
+                          
 
-                                echo $value2->name."</br>";
+                                echo $value->name."</br>";
 
-                                echo $value2->id."</br>";
+                                echo $value->id."</br>";
 
-                            }
+                           
                    }
                  
                  
