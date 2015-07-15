@@ -133,15 +133,18 @@
                  
                  echo "</br>--------</br>";
                  
-                
-                  foreach ($user['data'][0] as $key => $value) 
-                {
-                     
-                    echo $value->name."</br>";
-                    
-                    echo $value->id."</br>";
-            
-                }
+                   foreach ($user['data'] as $key => $value) 
+                    {
+                 
+                              foreach ($user['data'][$value] as $key => $value2) 
+                            {
+
+                                echo $value2->name."</br>";
+
+                                echo $value2->id."</br>";
+
+                            }
+                   }
                  
                  
                  
