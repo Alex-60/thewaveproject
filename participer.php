@@ -136,7 +136,7 @@
                    foreach ($user['data'] as $key => $value) 
                     {
                  
-                              foreach ($user['data'][$value] as $key => $value2) 
+                              foreach ($value as $key => $value2) 
                             {
 
                                 echo $value2->name."</br>";
