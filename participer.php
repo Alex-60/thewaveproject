@@ -148,9 +148,9 @@
                                
                                echo "</br>----------------------------------------------------------------------------------</br>";
                                
-                               foreach ($value as $key => $valuer) 
+                               foreach ($value as $valuer) 
                                 {
-                                   echo $valuer['0'];
+                                   echo $valuer['picture'];
                                    
                                 }
                                
