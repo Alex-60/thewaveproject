@@ -139,24 +139,18 @@
                            
                            var_dump($user['data'][0]);
                            
-                           echo "</br>------</br>";
+                           echo "</br>--------------------------------------------</br>";
                            
                            
-                            var_dump($user['data'][0][1]);
+                            
                            
-                           
-                           /*
                            foreach ($user['data'][0] as $key => $value) 
                             {
                               
-                               var_dump($value);
-                               
-                               echo "</br>----------------------------------------------------------------------------------</br>";
-                                
-                               var_dump($value[0]);
-                               
+                              
+                               echo $value->updated_time;
                              
-                            }*/
+                            }
                            
                           
                            
