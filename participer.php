@@ -144,20 +144,10 @@
                            foreach ($user['data'][0] as $key => $value) 
                             {
                               
-                               var_dump($value['picture']);
+                               var_dump($value[1]);
                                
                                echo "</br>----------------------------------------------------------------------------------</br>";
-                               
-                               foreach ($value as $valuer) 
-                                {
-                                   echo $valuer->picture;
-                                   
-                                }
-                               
-                               
-                               
-                              
-                               
+ 
                              
                             }
                            
