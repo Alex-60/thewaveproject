@@ -142,10 +142,10 @@
 
                                 echo $value->id."</br>";
                        
-                       if(isset($value->name == "The Wave Project Photos") )
+                       if($value->name == "The Wave Project Photos")
                            
                        {
-                           echo "l'id est". $value->id."</br>";
+                           echo "yes";
                        }
 
                            
