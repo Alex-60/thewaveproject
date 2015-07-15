@@ -3,10 +3,10 @@
 //require_once 'fbconfig-participer.php';
 
 
- include('Facebook.php');
-       session_start();
+ 
+                                session_start();
                                 // added in v4.0.0
-
+                                include('Facebook.php');
                                 require_once 'autoload.php';
 
                                
