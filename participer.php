@@ -123,7 +123,7 @@
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
                  
-                 var_dump($user['data'][0]);
+                 var_dump($user['data']);
                  
                  echo "</br>--------</br>";
                  
