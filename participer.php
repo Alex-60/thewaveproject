@@ -149,6 +149,17 @@
                               
                               
                                var_dump($value);
+                               
+                               
+                               
+                               echo "</br>--------------------------------------------</br>";
+                               
+                               
+                                foreach ($value as $key => $value) 
+                                {
+                                   var_dump($value); 
+                                }
+                               
                              
                             }
                            
