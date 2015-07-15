@@ -124,17 +124,17 @@
                  
                 
                  
-                 var_dump($user->name);
-                echo "</br>--------</br>";
-                 
-                 echo $user->name;
-                 echo "</br>--------</br>";
                  
                  var_dump($user['data']);
                  
                  echo "</br>--------</br>";
                  
                  var_dump($user['data'][0]);
+                 
+                 echo "</br>--------</br>";
+                 
+                 var_dump($user['data'][0]["id"]);
+                 
                  
                  die();
                  
