@@ -122,27 +122,12 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
-                 
-                 
-                 foreach($user as $row)
-                 
-                 {
-                        var_dump($row[0]);
-                    }
-                 
-                 die();
-                 
-                 print_r($user);
-                 
-                 echo "</br>--------</br>";
-                 
-                 json_decode($user['data']);
-                 
-                   echo "</br>--------</br>";
+         
                  
                  var_dump($user['data'][0]);
                  
                 
+                 die();
                  
                  
                  echo "</br>--------</br>";
