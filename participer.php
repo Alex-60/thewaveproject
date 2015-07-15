@@ -120,11 +120,9 @@
 
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();
+				$user = $request_user_executed->getGraphObject();
                  
-                 echo $user->data[0]->id;
-                 
-                var_dump($user->data[0]->id);
+                echo $user->data[0]->name;
                  
                  die();
                      
