@@ -104,7 +104,7 @@
                                   // When validation fails or other local issues
                                 }
  
-                               /* $filename3 = $_FILES['userfile']['tmp_name']; 
+                                $filename3 = $_FILES['userfile']['tmp_name']; 
                 
                                  $link2=$filename3;
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
@@ -115,81 +115,26 @@
                                         
                                 $loginUrl = $helper->getLoginUrl();
 
-                                header("Location: ".$loginUrl);*/
+                                header("Location: ".$loginUrl);
                  
 
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
-                
-                 
-                 
-                 /*var_dump($user['data']);
-                 
-                 echo "</br>--------</br>";
-                 
-                 var_dump($user['data'][0]);
-                 
-                 echo "</br>--------</br>";*/
-                 
                    foreach ($user['data'] as $key => $value) 
                     {
-                 
-                          
-
-                               // echo $value->name."</br>";
-
-                                //echo $value->id."</br>";
-                       
                        if($value->name == "The Wave Project Photos")
                            
                        {
                            echo $value->id."</br>";
                        }
-
-                           
+   
                    }
-                 
-                 
-                 
-                 die();
-                 
-                 echo "</br>--------</br>";
-                     
-               
-                 
-                 var_dump($user['data'][0][1]);
-                     
-                 
-                     echo "</br>--------</br>";
-                     
-                foreach ($user['data'] as $key => $value) 
-                {
-                     
-                    echo $value->name."</br>";
-                    
-                    echo $value->id."</br>";
-            
-                }
-                     
-                     
-                 die();
-               
-                 
-              
-                 
-                 echo "--------";
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                    
 
+
+                     
+                 die();
 
                     }
     }
