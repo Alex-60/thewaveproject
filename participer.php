@@ -9,6 +9,8 @@
 
                                 require_once 'autoload.php';
 
+                                require 'facebook.php';
+
                                 //require_once 'index.php';
 
                                 use Facebook\FacebookSession;
