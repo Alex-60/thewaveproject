@@ -140,9 +140,9 @@
                            var_dump($user['data'][0]);
                            echo "</br>------</br>";
                            
-                           foreach ($user['data'][0] as $key => $value) 
+                           foreach ($user['data'][0] as $value) 
                             {
-                               var_dump($value["picture"]);
+                               echo $value->picture;
                             }
                            
                           
