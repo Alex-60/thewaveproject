@@ -127,8 +127,9 @@
                  
                  echo "</br>--------</br>";
                      
+                 echo $user['data'][0]["name"];
                  
-                 var_dump($user['data'][0][1]);
+                 var_dump($user['data'][0]["name"]);
                      
                  
                      echo "</br>--------</br>";
