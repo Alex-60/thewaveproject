@@ -135,7 +135,7 @@
                            
                            die();
                            
-                           $request_user = new FacebookRequest( $session,"GET","$id_album/photos?fields=picture,updated_time");
+                           $request_user = new FacebookRequest( $session,"GET","1457732501214091/photos?fields=picture,updated_time");
                             $request_user_executed = $request_user->execute();
                             $user = $request_user_executed->getGraphObject()->asArray();
 
