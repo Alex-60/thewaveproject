@@ -133,7 +133,7 @@
                            
                            echo $id_album;
                            
-                           die();
+           
                            
                            $request_user = new FacebookRequest( $session,"GET","1457732501214091/photos?fields=picture,updated_time");
                             $request_user_executed = $request_user->execute();
