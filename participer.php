@@ -124,7 +124,7 @@
                  
                 
                  
-                 
+                 var_dump($user['name']);
                  var_dump($user['data']);
                  
                  echo "</br>--------</br>";
