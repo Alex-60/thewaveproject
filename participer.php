@@ -124,6 +124,10 @@
                  
                  print_r($user);
                  
+                 echo "</br>--------</br>";
+                 
+                 json_decode($user['data']);
+                 
                    echo "</br>--------</br>";
                  
                  var_dump($user['data'][0]);
