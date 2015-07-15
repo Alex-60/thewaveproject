@@ -142,7 +142,7 @@
                            echo "</br>------</br>";
                            
                            
-                            var_dump($user['data'][0]["picture"]);
+                            var_dump($user['data'][0][1]);
                            
                            
                            /*
