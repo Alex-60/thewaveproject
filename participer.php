@@ -118,10 +118,7 @@
              
                  echo "yes";
                  
-             
-                 
-                
-                 
+        
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
@@ -145,6 +142,8 @@
                         
                     {
                         echo "existe";
+                        echo $value->id."</br>";
+                        
                     }
                     
                 }
