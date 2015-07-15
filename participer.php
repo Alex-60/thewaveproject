@@ -149,10 +149,7 @@
                                
                                 echo "</br>this is the last</br>";
                                
-                               foreach ($value as $key => $value2) 
-                               {
-                                   echo $value2[0];
-                               }
+                             
                             }
                            
                           
