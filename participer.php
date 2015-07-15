@@ -9,7 +9,7 @@
 
                                 require_once 'autoload.php';
 
-                                require 'facebook.php';
+                             
 
                                 //require_once 'index.php';
 
@@ -24,6 +24,7 @@
                                 use Facebook\Entities\AccessToken;
                                 use Facebook\HttpClients\FacebookCurlHttpClient;
                                 use Facebook\HttpClients\FacebookHttpable;
+                                use Facebook\HttpClients\facebook;
                                
 
 
