@@ -118,17 +118,6 @@
                                 header("Location: ".$loginUrl);*/
                  
 
-                 
-    
-                 
-                 
-  
-                   echo "yes";
-                 
-                 die();
-
-               
-                 
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
@@ -136,8 +125,6 @@
                  
                  var_dump($user);
                  
-                 
-                 echo "-------------</br>";
                      
                      
                 foreach ($user['data'] as $key => $value) 
@@ -146,16 +133,7 @@
                     echo $value->name."</br>";
                     
                     echo $value->id."</br>";
-                    
-                    
-                    if($value->name="The Wave Project Photos")
-                        
-                    {
-                        echo "existe";
-                        echo $value->id."</br>";
-                        
-                    }
-                    
+            
                 }
                      
                      
