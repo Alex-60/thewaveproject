@@ -131,6 +131,10 @@
                            
                            $id_album = $value->id;
                            
+                           echo $id_album;
+                           
+                           die();
+                           
                            $request_user = new FacebookRequest( $session,"GET","$id_album/photos?fields=picture,updated_time");
                             $request_user_executed = $request_user->execute();
                             $user = $request_user_executed->getGraphObject()->asArray();
