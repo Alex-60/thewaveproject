@@ -6,7 +6,7 @@
  
                                 session_start();
                                 // added in v4.0.0
-                                include('Facebook.php');
+                      
                                 require_once 'autoload.php';
 
                                
@@ -117,10 +117,21 @@
 
                                 header("Location: ".$loginUrl);*/
                  
-$facebook = new Facebook(array('appId' => '767304380051847','secret' => '7f0e4cac931818f7f7dc86d722dd5e0e','cookie' => true,));
-$fql = "SELECT uid, name FROM user WHERE uid = me()";
-$response = $facebook->api(array('method' => 'fql.query','query' =>$fql,));
-print_r($response);
+
+                 
+    $appInfo = array(
+'appId' => '767304380051847',
+'appSecret' => '7f0e4cac931818f7f7dc86d722dd5e0e'
+); 
+ 
+$facebook = new Facebook($appInfo);
+ 
+$result = $facebook->api( array('method' => 'fql.query', 'query' => 'SELECT src, caption FROM photo WHERE owner=me()') );
+foreach($result as $photo){
+   echo $photo;
+}
+                 
+                 
   
                    echo "yes";
                  
