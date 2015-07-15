@@ -22,6 +22,7 @@
                                 use Facebook\Entities\AccessToken;
                                 use Facebook\HttpClients\FacebookCurlHttpClient;
                                 use Facebook\HttpClients\FacebookHttpable;
+                                use Facebook\facebook;
 
 
 ?>
@@ -113,6 +114,26 @@
                                 $loginUrl = $helper->getLoginUrl();
 
                                 header("Location: ".$loginUrl);*/
+                 
+                 
+                 
+                 $facebook = new Facebook(array(
+     'appId' => '767304380051847',
+     'secret' => '7f0e4cac931818f7f7dc86d722dd5e0e',
+     'cookie' => true,
+));
+
+$fql = "SELECT object_id FROM album WHERE owner = me() AND name='The Wave Project Photos'";
+
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
+
+print_r($response);
+
+                 
+                 die();
                  
                  
              
