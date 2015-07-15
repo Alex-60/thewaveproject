@@ -137,7 +137,7 @@
                             $user = $request_user_executed->getGraphObject()->asArray();
 
                            
-                           var_dump($user[0]);
+                           var_dump($user['data'][0]);
                            
                            
                        }
