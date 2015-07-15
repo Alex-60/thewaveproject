@@ -124,6 +124,10 @@
                  
                  var_dump($user['data'][0]);
                  
+                 var_dump($user['data']["name"]);
+                 var_dump($user['data'][0][]);
+                 var_dump($user['data'][0][][]);
+                 
                  
                  echo "</br>--------</br>";
                      
