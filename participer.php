@@ -138,7 +138,7 @@
                      
                     echo $value->name."</br>";
                     
-                    echo $value->name;
+                    echo $value->id."</br>";
                     
                     
                 }
