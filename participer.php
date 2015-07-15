@@ -9,7 +9,6 @@
                       
                                 require_once 'autoload.php';
 
-                                require_once 'Facebook.php';
                                
 
                              
@@ -23,7 +22,7 @@
                                 use Facebook\FacebookSDKException;
                                 use Facebook\FacebookRequestException;
                                 use Facebook\FacebookAuthorizationException;
-                                //use Facebook\GraphObject;
+                                use Facebook\GraphObject;
                                 use Facebook\Entities\AccessToken;
                                 use Facebook\HttpClients\FacebookCurlHttpClient;
                                 use Facebook\HttpClients\FacebookHttpable;
@@ -120,17 +119,7 @@
                  
 
                  
-    $appInfo = array(
-'appId' => '767304380051847',
-'appSecret' => '7f0e4cac931818f7f7dc86d722dd5e0e'
-); 
- 
-$facebook = new Facebook($appInfo);
- 
-$result = $facebook->api( array('method' => 'fql.query', 'query' => 'SELECT src, caption FROM photo WHERE owner=me()') );
-foreach($result as $photo){
-   echo $photo;
-}
+    
                  
                  
   
