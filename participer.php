@@ -142,14 +142,14 @@
                            
                            var_dump($user['data'][0]);*/
                            
-                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                      $request = new FacebookRequest($session,'GET','/me/photos');
                 
                         $response = $request->execute();
                         $graphObject = $response->getGraphObject(GraphUser::className());
                         $result = $graphObject->asArray();
                            
                            
-                           var_dump($result);
+                        var_dump($result);
         
                            
                           
