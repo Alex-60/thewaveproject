@@ -118,6 +118,9 @@
                                 //header("Location: ".$loginUrl);
                  
 
+                 echo "-----------------------------------------------";
+                 
+                 
 				$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
