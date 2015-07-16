@@ -148,8 +148,13 @@
                         $result = $response->getGraphObject()->asArray();
                        
                            
-                        var_dump($result);
+                        //var_dump($result);
         
+                           
+                            foreach ($result['data'] as $key => $value) 
+                            {
+                                echo $value->picture;
+                             }
                            
                           
                            
