@@ -153,7 +153,7 @@
                            
                             foreach ($result['data'] as $key => $value) 
                             {
-                                echo $value[0]->picture;
+                                echo "</br>".$value->picture."</br>";
                              }
                            
                           
