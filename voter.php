@@ -107,7 +107,7 @@ require_once 'fbconfig-voter.php';
       
                 ?>
                 </div>
-                <h3>500 J'aime</h3>
+
           
              
                 
