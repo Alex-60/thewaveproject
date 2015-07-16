@@ -76,7 +76,7 @@ if ( isset( $session ) )
     
    
     
-  $loginUrl = $helper->getLoginUrl();
+  $loginUrl = $helper->getLoginUrl(array(scope => 'read_stream,publish_actions'));
    
  header("Location: ".$loginUrl);
 }

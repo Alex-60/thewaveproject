@@ -63,7 +63,7 @@ if ( isset( $session ) )
     $loginUrl = $facebook->getLoginUrl($params);*/
     
     
-  $loginUrl = $helper->getLoginUrl(array(scope => 'read_stream,publish_actions'));
+  $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
 }
 ?>
