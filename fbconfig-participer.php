@@ -75,7 +75,6 @@ if ( isset( $session ) )
 {
     
    
-    //array(scope => 'user_photos')
     
   $loginUrl = $helper->getLoginUrl();
    
