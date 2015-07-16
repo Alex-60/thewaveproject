@@ -151,12 +151,12 @@
                         //var_dump($result);
         
                            
-                            foreach ($result['data'] as $key => $value) 
+                            /*foreach ($result['data'] as $key => $value) 
                             {
                                 echo "</br>".$value->picture."</br>";
                              }
                            
-                           echo "------------------------";
+                           echo "------------------------";*/
                            
                           echo $result['data'][0]->picture;
                           
