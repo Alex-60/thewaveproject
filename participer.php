@@ -157,15 +157,12 @@
                                
                                 foreach ($value as $key => $value2) 
                                 {
-                                   var_dump($value2); 
+                                   var_dump($value2[0]); 
                                 }
                                
                                 echo "</br>--------------------------------------------</br>";
                                
-                                foreach ($value2 as  $value3) 
-                                {
-                                   var_dump($value3[0]); 
-                                }
+                               
                                
                              
                             }
