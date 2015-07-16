@@ -76,7 +76,7 @@ if ( isset( $session ) )
     
    
     
-  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions');
+  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
    
  header("Location: ".$loginUrl);
 }
