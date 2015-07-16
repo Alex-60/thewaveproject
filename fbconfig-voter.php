@@ -5,7 +5,6 @@ session_start();
 
 require_once 'autoload.php';
 
-
 //require_once 'index.php';
   
 use Facebook\FacebookSession;
@@ -59,7 +58,7 @@ if ( isset( $session ) )
   //header("Location: voter.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl();
+  $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
  header("Location: ".$loginUrl);
 }
 ?>

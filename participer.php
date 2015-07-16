@@ -149,11 +149,6 @@
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
                        
-                           
-                           echo $result['data'][0]->picture;
-                           
-                        
-                           
                         $photo_base = $result['data'][0]->picture;
                            
 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
@@ -164,8 +159,6 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        }
    
                    }
-
-
 
                     }
     }
