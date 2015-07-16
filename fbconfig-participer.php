@@ -65,7 +65,9 @@ if ( isset( $session ) )
         $fbid2 = $graphObject->getProperty('first_name');
     
    
-  
+   $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
+   
+ header("Location: ".$loginUrl);
     
  
     
