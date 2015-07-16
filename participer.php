@@ -134,9 +134,7 @@
                            $id_album = $value->id;
                            
        
-                           echo "yes";
-                           
-                           die();
+                          
                            
                            /*$request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
                             $request_user_executed = $request_user->execute();
@@ -146,7 +144,7 @@
                            
                            var_dump($user['data'][0]);*/
                            
-                      $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture,updated_time');
+                      $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
                 
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
