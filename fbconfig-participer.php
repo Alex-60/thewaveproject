@@ -39,6 +39,7 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
+    
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
@@ -65,9 +66,7 @@ if ( isset( $session ) )
         $fbid2 = $graphObject->getProperty('first_name');
     
    
-   $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
-   
- header("Location: ".$loginUrl);
+  
     
  
     
