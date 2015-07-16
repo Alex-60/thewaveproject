@@ -145,9 +145,8 @@
                       $request = new FacebookRequest($session,'GET','/me/photos');
                 
                         $response = $request->execute();
-                        $graphObject = $response->getGraphObject(GraphUser::className());
-                        $result = $graphObject->asArray();
-                           
+                        $result = $response->getGraphObject()->asArray();
+                       
                            
                         var_dump($result);
         
