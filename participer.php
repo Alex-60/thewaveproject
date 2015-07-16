@@ -122,6 +122,8 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
+                 
+                 
                    foreach ($user['data'] as $key => $value) 
                     {
                        if($value->name == "The Wave Project Photos")
@@ -132,21 +134,23 @@
                            $id_album = $value->id;
                            
        
-                           $request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
+                           /*$request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
                             $request_user_executed = $request_user->execute();
                             $user = $request_user_executed->getGraphObject()->asArray();
-
+                            
                            
-                           var_dump($user['data'][0]);
                            
-              
-                           foreach ($user['data'][0] as $key => $value) 
-                            {
-                              
-                               var_dump($value);
-
-                             
-                            }
+                           var_dump($user['data'][0]);*/
+                           
+                        $request = new FacebookRequest($session,'GET','/1457732501214091/photos?fields=picture');
+                
+                        $response = $request->execute();
+                        $graphObject = $response->getGraphObject(GraphUser::className());
+                        $result = $graphObject->asArray();
+                           
+                           
+                           var_dump($result);
+        
                            
                           
                            
