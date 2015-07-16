@@ -58,7 +58,12 @@ if ( isset( $session ) )
   //header("Location: voter.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl(['publish_actions','user_likes','user_photos','user_posts','read_stream','user_friends','manage_pages']);
+    
+    /*$params = array(scope => 'read_stream,publish_stream,publish_actions',redirect_uri => 'Redirect_URL');
+    $loginUrl = $facebook->getLoginUrl($params);*/
+    
+    
+  $loginUrl = $helper->getLoginUrl(array(scope => 'read_stream,publish_stream,publish_actions'));
  header("Location: ".$loginUrl);
 }
 ?>
