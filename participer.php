@@ -151,7 +151,7 @@
                         //var_dump($result);
         
                            
-                            foreach ($result['data'] as $key => $value) 
+                            foreach ($result['data'][0] as $key => $value) 
                             {
                                 echo $value->picture;
                              }
