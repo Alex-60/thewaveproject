@@ -142,7 +142,7 @@
                            
                            var_dump($user['data'][0]);*/
                            
-                      $request = new FacebookRequest($session,'GET','1457732501214091/photos?fields=picture,updated_time');
+                      $request = new FacebookRequest($session,'GET','1457732501214091/photos?fields=updated_time,picture');
                 
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
