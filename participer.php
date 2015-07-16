@@ -122,6 +122,8 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject()->asArray();
                  
+                 var_dump($user);
+                 die();
                  
                  
                    foreach ($user['data'] as $key => $value) 
