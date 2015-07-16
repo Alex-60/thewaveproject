@@ -156,6 +156,12 @@
                                 echo "</br>".$value->picture."</br>";
                              }
                            
+                           echo "------------------------";
+                           
+                              foreach ($result[0] as $key => $value) 
+                            {
+                                echo "</br>".$value->picture."</br>";
+                             }
                           
                            
                            
