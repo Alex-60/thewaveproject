@@ -147,18 +147,14 @@
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
                        
+                        $photo_base = $result['data'][0]->picture;
                            
-                        //var_dump($result);
-        
-                           
-                            /*foreach ($result['data'] as $key => $value) 
-                            {
-                                echo "</br>".$value->picture."</br>";
-                             }
-                           
-                           echo "------------------------";*/
-                           
-                          echo $result['data'][0]->picture;
+                     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                            
+                                         
+                                            $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
+                            
+                                            echo "<p>photo ajouté dans la base</p>";
                           
                            
                            
