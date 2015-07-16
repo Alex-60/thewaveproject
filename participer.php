@@ -133,7 +133,7 @@
                            
                            $id_album = $value->id;
                            
-                            echo "the user album id is ".$id_album
+                            echo "the user album id is ".$id_album;
                           die();
                            
                            /*$request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
