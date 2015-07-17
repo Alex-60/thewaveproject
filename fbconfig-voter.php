@@ -28,11 +28,11 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    $loginUrl = $helper->getLoginUrl('https://www.google.fr/');
+    $loginUrl = $helper->getLoginUrl();
     
     echo $loginUrl;
     
-    header("Location: ".$loginUrl);
+
     
     die();
 
