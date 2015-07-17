@@ -28,10 +28,10 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
+    //$loginUrl = $helper->getLoginUrl();
+    
+    
     $loginUrl = $helper->getLoginUrl();
-    
-    
-    $loginUrl = $facebook->getLoginUrl(array('req_perms' => 'publish_stream'));
 
 echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
