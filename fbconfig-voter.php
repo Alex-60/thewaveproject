@@ -30,6 +30,9 @@ try
     
     $loginUrl = $helper->getLoginUrl();
     
+    
+     header('Location: https://www.facebook.com/v2.2/dialog/oauth?client_id=767304380051847&redirect_uri=https%3A%2F%2Fthewave.herokuapp.com%2Fvoter.php&state=10d0a3ca72d80fd286b6370ee066867a&sdk=php-sdk-4.0.15&scope=');
+    
     echo $loginUrl;
     
 
