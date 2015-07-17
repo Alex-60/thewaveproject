@@ -28,7 +28,7 @@ require_once 'fbconfig.php';
             <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
           
            <div class="btn-jeux">
-            <a href='' class="btnParticiper">PARTICIPER</a>
+            <a href='http://www.w3schools.com' class="btnParticiper">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">

@@ -63,7 +63,7 @@ if ( isset( $session ) )
   //header("Location: voter.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
+  $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
 }
 ?>
