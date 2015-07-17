@@ -28,15 +28,12 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    //$loginUrl = $helper->getLoginUrl();
+    $loginUrl = $helper->getLoginUrl();
     
-    
-     header('Location: https://www.google.com');
-    
-    echo $loginUrl;
+    //echo $loginUrl;
     
 
-    die();
+    //die();
 
 
 } catch( FacebookRequestException $ex ) 
@@ -45,6 +42,10 @@ try
 } catch( Exception $ex ) 
 {
   // When validation fails or other local issues
+    
+    echo $ex->getMessage();
+        
+        
 }
 // see if we have a session
 if ( isset( $session ) ) 
