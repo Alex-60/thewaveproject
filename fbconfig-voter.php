@@ -32,7 +32,7 @@ try
     
     echo $loginUrl;
     
-    die();
+
 
 } catch( FacebookRequestException $ex ) 
 {
@@ -68,6 +68,9 @@ if ( isset( $session ) )
   //header("Location: voter.php");
 } else 
 {
+    
+    echo "no session";
+    
   $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
 }
