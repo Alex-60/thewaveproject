@@ -29,11 +29,6 @@ try
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
-    
-    
-    //$loginUrl = $helper->getLoginUrl();
-
-   // echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
 
 } catch( FacebookRequestException $ex ) 
@@ -80,8 +75,7 @@ if ( isset( $session ) )
      $loginUrl = $helper->getLoginUrl();
 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
-
-    
+  
     
 }
 ?>
