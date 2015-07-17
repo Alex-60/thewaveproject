@@ -74,13 +74,11 @@ if ( isset( $session ) )
   //header("Location: participer.php");
 } else 
 {
-    
-   
-    
+
   //$loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
  //header("Location: ".$loginUrl);
     
-     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
+     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
     
