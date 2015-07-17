@@ -28,12 +28,12 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
+  $loginUrl = $helper->getLoginUrl();
+    
+    
     //$loginUrl = $helper->getLoginUrl();
-    
-    
-    $loginUrl = $helper->getLoginUrl();
 
-    echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
+   // echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
 
 } catch( FacebookRequestException $ex ) 
@@ -44,6 +44,7 @@ try
   // When validation fails or other local issues
         
 }
+
 // see if we have a session
 if ( isset( $session ) ) 
 {
@@ -73,7 +74,14 @@ if ( isset( $session ) )
 {
     
     
-  $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+  //$loginUrl = $helper->getLoginUrl();
+ //header("Location: ".$loginUrl);
+    
+     $loginUrl = $helper->getLoginUrl();
+
+    echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
+
+    
+    
 }
 ?>
