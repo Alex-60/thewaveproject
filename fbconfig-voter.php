@@ -42,9 +42,6 @@ try
 } catch( Exception $ex ) 
 {
   // When validation fails or other local issues
-    
-    echo $ex->getMessage();
-        
         
 }
 // see if we have a session
