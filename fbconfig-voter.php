@@ -32,6 +32,9 @@ try
     
     echo $loginUrl;
     
+    header("Location: ".$loginUrl);
+    
+    die();
 
 
 } catch( FacebookRequestException $ex ) 
@@ -69,7 +72,6 @@ if ( isset( $session ) )
 } else 
 {
     
-    echo "no session";
     
   $loginUrl = $helper->getLoginUrl();
  header("Location: ".$loginUrl);
