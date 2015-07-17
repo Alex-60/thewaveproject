@@ -74,6 +74,7 @@ if ( isset( $session ) )
     
      $loginUrl = $helper->getLoginUrl();
 
+    
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
   
     
