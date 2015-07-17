@@ -31,6 +31,10 @@ try
     
     $loginUrl = $helper->getLoginUrl();
     
+    echo "yes";
+    
+    die();
+    
     
 } catch( FacebookRequestException $ex ) 
 {
@@ -69,10 +73,7 @@ if ( isset( $session ) )
         $result = $graphObject->asArray();
         $fbid2 = $graphObject->getProperty('first_name');
     
-   
-  
-    
- 
+
     
   //checkuser($fuid,$ffname,$femail);
   //header("Location: participer.php");
@@ -84,7 +85,7 @@ if ( isset( $session ) )
   //$loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
  //header("Location: ".$loginUrl);
     
-     $loginUrl = $helper->getLoginUrl('scope' => 'publish_actions');
+     $loginUrl = $helper->getLoginUrl();
 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
     
