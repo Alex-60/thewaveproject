@@ -48,9 +48,14 @@ if ( isset( $session ) )
   $response = $request->execute();
   // get response
   $graphObject = $response->getGraphObject();
+    
+    var_dump($graphObject);
+    
+    die();
+    
   $fbid = $graphObject->getProperty('id');
     
-    $zak="nuit blanche";
+    
     
     // To Get Facebook ID
  	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
