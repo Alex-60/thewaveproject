@@ -30,12 +30,7 @@ try
   $session = $helper->getSessionFromRedirect();
     
     $loginUrl = $helper->getLoginUrl();
-    
-    echo "yes";
-    
-    die();
-    
-    
+
 } catch( FacebookRequestException $ex ) 
 {
   // When Facebook returns an error
