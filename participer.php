@@ -9,10 +9,7 @@
                       
                                 require_once 'autoload.php';
 
-                               
-
-                             
-
+        
                                 //require_once 'index.php';
 
                                 use Facebook\FacebookSession;
@@ -197,25 +194,44 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             <img src="img/logo.png" alt="logo">
             <h2>Envoyer votre plus belle photos</h2>
         </header>
-        <section class="content">
-           <article class="my-photo">
-               <div class="bloc-photo-upload">
-                   <div id="cadre" dropzone="copy">
-				        <p>DEPOSEZ VOS PHOTOS ICI</p>
-                        <h2>+</h2><br>
-                   </div>
-               </div>
-           </article>
-
+        
+       
+        
+         <section class="content">
+            
+                     <?php
+        
+                   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "SELECT * FROM photo");
+                    
+                        while ($row2 = pg_fetch_row($result2)) 
+                            {
+                ?>
+         
             <article class="participants">
+                
+       
+                
                 <div class="img-participants">
-                    <img src="" alt="">
+                <?php
+                
+                echo "<img src='$row2[0]'/>";      
+      
+                ?>
                 </div>
-                <h3>500 J'aime</h3>
-                <div class="like"></div>
-                <div class="partage"></div>
+
+          
+             
+                
+                <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+
             </article>
+                <?
+    }
+?>
         </section>
+        
+        
     </div>
 </body>
 </html>
