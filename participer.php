@@ -74,7 +74,7 @@
  </body>
 </html> -->
 
-      <form enctype="multipart/form-data" action="profil.php" method="POST">
+      <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
             <!-- Name of input element determines name in $_FILES array -->
@@ -162,14 +162,12 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                          
                     $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
 
-                          
-                           include ('fbconfig-profil.php');
-                   
-                           
+
                        }
    
                    }
                  
+                 header('Location: https://thewave.herokuapp.com/profil');    
                     
                  
                  /*
