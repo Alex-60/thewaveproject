@@ -60,10 +60,10 @@ if ( isset( $session ) )
 
     
   //checkuser($fuid,$ffname,$femail);
-  header("Location: voter.php");
+  //header("Location: voter.php");
 } else 
 {
-  //$loginUrl = $helper->getLoginUrl();
- //header("Location: ".$loginUrl);
+  $loginUrl = $helper->getLoginUrl();
+ header("Location: ".$loginUrl);
 }
 ?>
