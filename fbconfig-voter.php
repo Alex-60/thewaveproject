@@ -28,6 +28,11 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
+    $loginUrl = $helper->getLoginUrl();
+    
+    echo $loginUrl;
+    
+    die();
 
 } catch( FacebookRequestException $ex ) 
 {
