@@ -166,6 +166,11 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
    
                    }
                     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                 
+                    echo $helper2;
+                 
+                    die();
+                 
                     $session = $helper->getSessionFromRedirect();
                     $loginUrl = $helper->getLoginUrl();
                     
