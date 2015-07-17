@@ -1,5 +1,5 @@
 <?php
 
-echo "yeeeees";
+Header("Location: profil.php");
 
 ?>

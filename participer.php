@@ -163,9 +163,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                     $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
 
                           
-                               window.location.href = "profil.php";
-                               
-                         
+                           include ('fbconfig-profil.php');
                    
                            
                        }
