@@ -31,12 +31,11 @@ try
     $loginUrl = $helper->getLoginUrl();
     
     
-    ("Location:" . $helper->getLoginUrl);
-    //echo $loginUrl;
-    
+    $loginUrl = $facebook->getLoginUrl(array('req_perms' => 'publish_stream'));
 
-    //die();
+echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
+    die();
 
 } catch( FacebookRequestException $ex ) 
 {
