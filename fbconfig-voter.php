@@ -28,6 +28,10 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
+    
+     $loginUrl = $helper->getLoginUrl();
+    header("Location: ".$loginUrl);
+    
     echo "yes";
     
     die();
