@@ -28,7 +28,7 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    $loginUrl = $helper->getLoginUrl();
+    $loginUrl = $helper->getLoginUrl('https://www.google.fr/');
     
     echo $loginUrl;
     
