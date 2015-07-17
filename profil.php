@@ -42,38 +42,10 @@
                 <div class="like"></div>
                 <div class="partage"></div>
             </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>NB J'aime </h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>NB J'aime </h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>NB J'aime </h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
-            <article class="participants">
-                <div class="img-participants">
-                    <img src="" alt="">
-                </div>
-                <h3>NB J'aime </h3>
-                <div class="like"></div>
-                <div class="partage"></div>
-            </article>
+          
+          
+            
+            
         </section>
     </div>
 </body>
