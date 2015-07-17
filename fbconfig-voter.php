@@ -28,15 +28,7 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    
-     $loginUrl = $helper->getLoginUrl();
-    header("Location: ".$loginUrl);
-    
-    echo "yes";
-    
-    die();
-    
-    
+
 } catch( FacebookRequestException $ex ) 
 {
   // When Facebook returns an error
@@ -71,7 +63,7 @@ if ( isset( $session ) )
   //header("Location: voter.php");
 } else 
 {
-  $loginUrl = $helper->getLoginUrl();
+  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
  header("Location: ".$loginUrl);
 }
 ?>
