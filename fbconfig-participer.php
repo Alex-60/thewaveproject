@@ -39,9 +39,7 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
-    echo "yes";
-    
-    die();
+   
     
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
