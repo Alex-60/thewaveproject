@@ -29,6 +29,9 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
+    $loginUrl = $helper->getLoginUrl();
+    
+    
 } catch( FacebookRequestException $ex ) 
 {
   // When Facebook returns an error
