@@ -29,7 +29,7 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-    $loginUrl = $helper->getLoginUrl();
+    //$loginUrl = $helper->getLoginUrl();
 
 } catch( FacebookRequestException $ex ) 
 {
@@ -80,7 +80,7 @@ if ( isset( $session ) )
   //$loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
  //header("Location: ".$loginUrl);
     
-     $loginUrl = $helper->getLoginUrl();
+     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_stream'));
 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
     
