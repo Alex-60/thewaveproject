@@ -33,9 +33,8 @@ try
     
     $loginUrl = $helper->getLoginUrl();
 
-echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
+    echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
-    die();
 
 } catch( FacebookRequestException $ex ) 
 {
