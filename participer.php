@@ -50,6 +50,17 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="js/dnd.js"></script>
+    
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=350490031815871";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+    
+    
 </head>
 <body>
 
@@ -195,9 +206,18 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             <h2>Envoyer votre plus belle photos</h2>
         </header>
         
+        <section class="content">
+           <article class="my-photo">
+               <div class="bloc-photo-upload">
+                   <div id="cadre" dropzone="copy">
+				        <p>DEPOSEZ VOS PHOTOS ICI</p>
+                        <h2>+</h2><br>
+                   </div>
+               </div>
+           </article>
+
        
-        
-         <section class="content">
+             <section class="content">
             
                      <?php
         
@@ -230,8 +250,11 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
     }
 ?>
         </section>
-        
-        
+            
+            
+            
+            
+        </section>
     </div>
 </body>
 </html>
