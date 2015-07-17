@@ -30,6 +30,8 @@ try
     
     $loginUrl = $helper->getLoginUrl();
     
+    
+    ("Location:" . $helper->getLoginUrl);
     //echo $loginUrl;
     
 

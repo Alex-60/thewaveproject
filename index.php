@@ -1,6 +1,6 @@
 <?php
 require_once 'fbconfig.php';
-session_start();
+
 
 //session_start(); 
 ?>
