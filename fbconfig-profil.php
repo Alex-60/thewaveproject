@@ -33,22 +33,19 @@ try
 {
     
    
-    
-echo "-----------------------------------------------";
 
-echo "yes";
 
  if (isset($_POST['submit'])) 
             {
-                 echo "yes click in sumbit";
+                // echo "yes click in sumbit";
                      $filename = $_FILES['file']['tmp_name'];
      
-                        echo $filename;
+                        //echo $filename;
                         $_SESSION['imgd'] = $filename;
                  
              }
                     
-echo "-----------------------------------------------";
+
     
     
 
@@ -82,13 +79,7 @@ if ( isset( $session ) )
     
     //echo $_SESSION['imgd'];
     
-    if(isset($_SESSION['imgd']))
-        
-    {
-        echo "la valeur est ".$_SESSION['imgd'];
-        
-    }
-  
+
  
 
     
@@ -150,6 +141,15 @@ if ( isset( $session ) )
                                        }
                                }
     
+    
+    
+                                if(isset($_SESSION['imgd']))
+
+                                {
+                                    echo "la valeur est ".$_SESSION['imgd'];
+
+                                }
+
 
     
     
