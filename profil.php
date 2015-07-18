@@ -19,32 +19,21 @@ require_once 'fbconfig-profil.php';
  <form action="fbconfig-profil.php" method="POST" enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
-     <input type="submit" name="submit" value="Submit">
+     <input type="submit" name="imgchange" value="Submit">
   </form>
     
 
-         <?php
-                
-           if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
         
-             if (isset($_POST['send'])) 
-                    {
-                 echo "yes";
-                 
-                 die();
-                 
-             }
-               
-               
-           }
-
-                
-                ?>
+     <!--<form enctype="multipart/form-data" action="" method="POST">
+          
+            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+          
+            Send this file: <input name="userfile" type="file" />`
             
+            <input type="submit" name="send" value="Send File" />
+        </form>-->
     
-    
-    
+            
     
     
     <div class="page-profil">    

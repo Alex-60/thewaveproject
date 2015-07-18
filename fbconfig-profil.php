@@ -34,18 +34,20 @@ try
     
    
 
-
- if (isset($_POST['submit'])) 
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
-                // echo "yes click in sumbit";
-                     $filename = $_FILES['file']['tmp_name'];
-     
-                        //echo $filename;
-                        $_SESSION['imgd'] = $filename;
-                 
-             }
-                    
+    
+                 if (isset($_POST['imgchange'])) 
+                            {
+                                // echo "yes click in sumbit";
+                                     $filename = $_FILES['file']['tmp_name'];
 
+                                        //echo $filename;
+                                        $_SESSION['imgd'] = $filename;
+
+                             }
+
+   }
     
     
 
