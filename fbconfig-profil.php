@@ -57,6 +57,7 @@ try
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
                      
+   
                                        
                              }
    }
@@ -111,7 +112,11 @@ if ( isset( $session ) )
                                                 $photo_base = $result['data'][0]->picture;
 
                                                 $_SESSION['IMG'] = $photo_base;
-            
+                                        
+                                        
+                                        
+                                        
+
 
                                        }
                                }
@@ -121,7 +126,7 @@ if ( isset( $session ) )
                                 if(isset($_SESSION['imgd']))
 
                                 {
-                                        
+    
                                        /* $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
@@ -137,27 +142,21 @@ if ( isset( $session ) )
                                     
                                     
                                     
-                                    /*    $filename3 = $_FILES['userfile']['tmp_name']; 
+                                        $filename3 = $_FILES['userfile']['tmp_name']; 
+                
+                          
+                 
                                  $link2=$filename3;
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
                                  'source' => new CURLFile($link2, 'image/jpg'),
                                   )
                                   ))->execute()->getGraphObject(); 
-                                     */   
+                                        
                                     
                                     
                                     
                                     
-                                   
-                                    
-                                     $link2="$_SESSION['imgsend']";
-                                    
-                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
-                                  )
-                                  ))->execute()->getGraphObject(); 
                                     
                                     
                                     
