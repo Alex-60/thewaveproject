@@ -16,25 +16,25 @@ require_once 'fbconfig-profil.php';
 
 <body>
     
- <form action="fbconfig-profil.php" method="POST" enctype="multipart/form-data">
+ <!--<form action="fbconfig-profil.php" method="POST" enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
      <input type="submit" name="imgchange" value="Submit">
-  </form>
+  </form>-->
     
     
     
     
 
         
-     <!--<form enctype="multipart/form-data" action="" method="POST">
+     <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
           
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
           
-            Send this file: <input name="userfile" type="file" />`
+            Send this file: <input name="file" type="file" />`
             
-            <input type="submit" name="send" value="Send File" />
-        </form>-->
+            <input type="submit" name="imgchange" value="Send File" />
+        </form>
     
             
     
