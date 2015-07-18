@@ -348,6 +348,17 @@ a, a:hover, a:link, a:visited, a:active {
     margin-left: 10px;
     cursor: pointer;
 }
+.pluginCountBox{
+    width: 113px !important;
+}
+._51mx{
+    float: left;
+}
+._51m- hCent _51mw{
+    float: left !important;
+    width: 50px !important;
+    
+}
 
 /*************************    FIN STYLE PAGE JE VOTE    ****************************/
 
