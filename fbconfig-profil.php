@@ -87,8 +87,11 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
+                                                    
+                                   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+                                    {
     
-      if(isset($_SESSION['imgd']))
+                                                    if(isset($_SESSION['imgd']))
 
                                                     {
                                                         $filename=$_SESSION['imgd'];
@@ -103,7 +106,7 @@ if ( isset( $session ) )
                                                         ))->execute()->getGraphObject(); 
 
                                                }
-                                        
+                                   }
     
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
