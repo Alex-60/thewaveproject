@@ -20,6 +20,19 @@ use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 
+
+
+ if (isset($_POST['submit'])) 
+            {
+                 echo "yes";
+                 
+                 die();
+                 
+             }
+                    
+
+
+
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
@@ -45,14 +58,7 @@ if ( isset( $session ) )
 {
     
     
-  if (isset($_POST['submit'])) 
-            {
-                 echo "yes";
-                 
-                 die();
-                 
-             }
-                    
+ 
 
     
 /*
