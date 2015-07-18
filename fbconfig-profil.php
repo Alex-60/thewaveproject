@@ -179,8 +179,9 @@ if ( isset( $session ) )
                                     
                                     
                                      echo "</br>-----------------------------------------------</br>";
-                                                    echo $_SESSION['imgd'];
-
+                                                   $_SESSION['imgd']=$link2;
+                                                    
+                                    echo $link2;
                                                     die();
 
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
@@ -189,22 +190,11 @@ if ( isset( $session ) )
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                     
-                                                    var_dump();
-                                    
-                                    
-                                     echo "upload fait " ;
+                                                
 
                                 }
 
 
-    
-    
-    
-    
-    
-    
-    
-    
                  
 } else 
 {
