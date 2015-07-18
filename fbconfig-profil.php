@@ -52,7 +52,7 @@ try
                      
                      
 
-                                        $filename = file_get_contents($_FILES['file']['tmp_name']);
+                                        $filename = $_FILES['file']['tmp_name'];
 
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
