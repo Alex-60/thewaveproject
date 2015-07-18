@@ -127,7 +127,6 @@ if ( isset( $session ) )
 
                                                }
                                         
-                                        
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
                                }
