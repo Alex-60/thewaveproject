@@ -103,25 +103,6 @@ if ( isset( $session ) )
                                }
                        }
                  
-    
-                die();
-    
-                   foreach ($graphObject['data'] as $key => $value) 
-                    {
-                       if($value->name == "The Wave Project Photos")
-                           
-                       {
-                           //echo $value->id."</br>";
-                           
-                           $id_album = $value->id;
-                           
-                           echo $id_album;
-                           die();
-                       }
-                   }
-    
-    
-    
 
     
  
