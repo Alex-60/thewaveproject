@@ -163,13 +163,13 @@ if ( isset( $session ) )
                                 {
                                     
                                     
-                                    echo "url ancien photo est".$photo_base;
+                                   /* echo "url ancien photo est".$photo_base;
                                     
                                     echo "</br>-----------------------------------------------</br>";
                                     
                                     echo "la valeur de la nouvelle photo est ".$_SESSION['imgd'];
                                     
-                                      echo "</br>-----------------------------------------------</br>";
+                                      echo "</br>-----------------------------------------------</br>";*/
                                     
 
                                     //suppresiond e la photo de la base de donnée;
@@ -180,7 +180,7 @@ if ( isset( $session ) )
                                 echo "la suppression de l'ancienn photo a été éffectué " ;
                                     
                                     
-                                       echo "</br>-----------------------------------------------</br>";
+                                      /* echo "</br>-----------------------------------------------</br>";
                                     
                                     //upload de la nouvelle photo
                                     
@@ -191,7 +191,7 @@ if ( isset( $session ) )
                                                     echo "linke2=".$link2;
                                     
                                     
-                                     echo "</br>-----------------------------------------------</br>";
+                                     echo "</br>-----------------------------------------------</br>";*/
                                                   
                                                   
 
@@ -236,9 +236,15 @@ if ( isset( $session ) )
                                             $photo_base = $result['data'][0]->picture;
                                            
                                            
-                                           var_dump($photo_base);
+        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                            
+                                         
+        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
                                            
-                                           $_SESSION['IMG']=$photo_base;
+                                           
+                                           
+                                           
+                $_SESSION['IMG']=$photo_base;
                                            
                                            
                                            
