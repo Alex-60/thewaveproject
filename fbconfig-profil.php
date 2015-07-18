@@ -82,8 +82,7 @@ if ( isset( $session ) )
     
     echo $_SESSION['imgd'];
     
-    die();
-    
+  
  
 
     
