@@ -43,33 +43,55 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
-  // graph api request for user data
+/*
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
-  // get response
   $graphObject = $response->getGraphObject();
     
-    var_dump($graphObject);
+ 
     
-    die();
-    
-  $fbid = $graphObject->getProperty('id');
-    
-    
-    
+        $fbid = $graphObject->getProperty('id');
     // To Get Facebook ID
  	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
 	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
-	/* ---- Session Variables -----*/
+
 	    $_SESSION['FBID'] = $fbid;  
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
-        $_SESSION['fatigué'] =  $zak;
+        $_SESSION['fatigué'] =  $zak;*/
+    
+    
+    
+/*$request = new FacebookRequest( $session, 'GET', '/me' );
+  $response = $request->execute();
+  $graphObject = $response->getGraphObject();*/
+    
+    
+                $request_user = new FacebookRequest( $session,"GET","/me/albums");
+				$request_user_executed = $request_user->execute();
+				$user = $request_user_executed->getGraphObject()->asArray();
+                 
+              
+                 
+                 
+                   foreach ($user['data'] as $key => $value) 
+                    {
+                       if($value->name == "The Wave Project Photos")
+                           
+                       {
+                           //echo $value->id."</br>";
+                           
+                           $id_album = $value->id;
+                           
+                           die();
+                       }
+                   }
+    
+    
     
 
     
-  //checkuser($fuid,$ffname,$femail);
-  //header("Location: voter.php");
+ 
 } else 
 {
     
