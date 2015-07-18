@@ -323,7 +323,6 @@ a, a:hover, a:link, a:visited, a:active {
 .img-participants img{
     width: 120px;
     height: 120px;
-    background: rgba(0,0,0,0.6);
     /*overflow: hidden;*/
 }
 .img-participants img{
