@@ -113,10 +113,7 @@ if ( isset( $session ) )
 
                                                 $_SESSION['IMG'] = $photo_base;
                                         
-                                        
-                                        
-                                        
-
+    
 
                                        }
                                }
@@ -139,17 +136,9 @@ if ( isset( $session ) )
                                         ))->execute()->getGraphObject(); 
                                     
                                     
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
+                         
+  /* $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");*/
 
                             
                                     
