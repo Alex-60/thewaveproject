@@ -182,15 +182,15 @@ if ( isset( $session ) )
                                     
                                                     echo "SESSION[imgd]=".$_SESSION['imgd'];
 
-                                                    die();
+                                            
 
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                        'source' => '@'.realpath($_SESSION['imgd']),
+                                                        'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                     
-                                                    var_dump();
+                                              
                                     
                                     
                                      echo "upload fait " ;
