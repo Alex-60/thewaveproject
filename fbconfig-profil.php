@@ -205,8 +205,9 @@ if ( isset( $session ) )
                                     
                            
                                     
-                                     //$filename = $_FILES['userfile']['name']; 
-                    
+                                     //$filename = $_FILES['userfile']['name'];
+                                    
+                                        $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
                                           $session = new FacebookSession($_SESSION['fb_token']);
