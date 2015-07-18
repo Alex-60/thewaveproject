@@ -152,7 +152,7 @@ if ( isset( $session ) )
                 
                           
                  
-                                 $link2= "$_SESSION['imgd']";
+                                 $link2= $_SESSION['imgd'];
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
                                  'source' => new CURLFile($link2, 'image/jpg'),
