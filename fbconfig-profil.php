@@ -89,11 +89,19 @@ if ( isset( $session ) )
                             if($value->name == "The Wave Project Photos")
 
                                {
-                                   //echo $value->id."</br>";
+                                 
 
                                    $id_album = $value->id;
 
-                                   echo $id_album;
+                                     $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                
+                                        $response = $request->execute();
+                                        $result = $response->getGraphObject()->asArray();
+
+                                        $photo_base = $result['data'][0]->picture;
+                                
+                                echo $photo_base;
+                                
                                  
                                }
                        }
