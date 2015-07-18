@@ -175,32 +175,16 @@ if ( isset( $session ) )
                                         $link2 = $_SESSION['imgd'];
                                     
 
+                                     
+                                                    $link2 = $filename;
                                     
-                            $request = new FacebookRequest( $session, 'GET', '/me/albums' );
-                            $response = $request->execute();
-                            $graphObject = $response->getGraphObject()->asArray();
-                                    
-                            var_dump($graphObject);
-                                    
-                                    
-                                    
-                                    die();
-                                    
-                                         $request = new FacebookRequest( $session, 'POST', '/me/photos',array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      ));
-                            $response = $request->execute();
-                            $graphObject = $response->getGraphObject();
-                                    
-                                    
-                                     /*
-                                                    $link2=$filename;
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
                                                       )
-                                                    ))->execute()->getGraphObject(); */
+                                                    ))->execute()->getGraphObject(); 
+                                    
+                                                    var_dump();
                                     
                                     
                                      echo "upload fait " ;
