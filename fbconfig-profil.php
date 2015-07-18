@@ -181,16 +181,17 @@ if ( isset( $session ) )
                                      echo "</br>-----------------------------------------------</br>";
                                                    $link2=$_SESSION['imgd'];
                                                     
-                                                    echo "link2=". $link2;
+                                                    echo "link2=" .$link2 ;
                                                   
 
-                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      )
-                                                    ))->execute()->getGraphObject(); 
+                                                      $request = new FacebookRequest( $session, 'GET', '/me/photos' );
+                                                        $response = $request->execute();
+                                                        $graphObject = $response->getGraphObject()->asArray();
+                                                        
+                                                        var_dump();
                                     
-                             
+                                    die();
+                                    
                                     
                                                 
 
