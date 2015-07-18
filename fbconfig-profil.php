@@ -41,7 +41,9 @@ echo "yes";
  if (isset($_POST['submit'])) 
             {
                  echo "yes click in sumbit";
-
+                     $filename = $_FILES['file']['tmp_name'];
+     
+                        echo $filename;
                  
              }
                     
