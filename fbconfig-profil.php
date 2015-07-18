@@ -62,7 +62,7 @@ if ( isset( $session ) )
     
     echo $varid;
  
-    die();
+
     
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
