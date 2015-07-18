@@ -19,7 +19,13 @@ require_once 'fbconfig-profil.php';
 
 <body>
     
-
+ <form action="" method="post"enctype="multipart/form-data">
+   <label for="file">Filename:</label>
+     <input type="file" name="file" id="file"><br>
+     <input type="submit" name="submit" value="Submit">
+  </form>
+    
+    
     
     <div class="page-profil">    
         <article class="header">
@@ -72,14 +78,14 @@ require_once 'fbconfig-profil.php';
           
           
             
-              <form enctype="multipart/form-data" action="" method="POST">
-                        <!-- MAX_FILE_SIZE must precede the file input field -->
+                    <!--<form enctype="multipart/form-data" action="" method="POST">
+                        
                         <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                        <!-- Name of input element determines name in $_FILES array -->
+                      
                         <input name="userfile" type="file" />`
 
                         <input type="submit"  value="Send File" />
-                    </form>
+                    </form>-->
             
             
             <?php
