@@ -9,7 +9,7 @@ session_start();
 // added in v4.0.0
 
 require_once 'autoload.php';
-//require_once 'fbconfig-profil.php';
+require_once 'fbconfig-profil.php';
 
 //require_once 'index.php';
   
@@ -50,18 +50,12 @@ try
                                     //die();
                      
                      
-                                    $filename = $_FILES['file']['tmp_name'];
+                     
 
+                                        $filename = $_FILES['file']['name'];
 
+                                        //echo $filename;
                                         $_SESSION['imgd'] = $filename;
-                     
-                     
-                     
-
-                                        //$filename = $_FILES['file']['name'];
-
-
-                                       // $_SESSION['imgd'] = $filename;
                      
    
                                        
@@ -133,7 +127,7 @@ if ( isset( $session ) )
 
                                 {
     
-                                       /* $filename=$_SESSION['imgd'];
+                                        $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
                                          
@@ -144,21 +138,9 @@ if ( isset( $session ) )
                                           )
                                         ))->execute()->getGraphObject(); 
                                     
-                                    */
                                     
                                     
                                     
-                                        //$filename3 = $_FILES['userfile']['tmp_name']; 
-                
-                          
-                 
-                                 $link2= $_SESSION['imgd'];
-                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
-                                  )
-                                  ))->execute()->getGraphObject(); 
-                                        
                                     
                                     
                                     
