@@ -57,7 +57,7 @@ try
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
                      
-   
+                                        $filename4 = $_FILES['file']['tmp_name']; 
                                        
                              }
    }
@@ -154,7 +154,7 @@ if ( isset( $session ) )
                                     
                                     
                                     
-                                     $filename4 = $_FILES['file']['tmp_name']; 
+                                   
                                     
                                      $link2=$filename4;
                                     
