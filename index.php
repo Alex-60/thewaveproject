@@ -26,8 +26,9 @@ require_once 'fbconfig.php';
         </header>
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
+            <div class="btn-jeux">
             <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
-          
+              </div>
            <div class="btn-jeux">
             <a href='fbconfig-participer.php' class="btnParticiper">PARTICIPER</a>
             </div>
