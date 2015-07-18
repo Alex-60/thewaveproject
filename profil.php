@@ -37,7 +37,7 @@ require_once 'fbconfig-profil.php';
                         <h2>+</h2>
                         <h3>Modifier votre photo</h3>
                         
-                             <a href="" class="btnVoter">Modifier</a>
+                            
                     </div>
                 </article>
                 
@@ -47,6 +47,9 @@ require_once 'fbconfig-profil.php';
                     <div class="like"></div>
                     <div class="partage"></div>
                 </div>
+                
+                 <a href="" class="btnVoter">Modifier</a>
+                
             </article>
 
             <article class="participants">
