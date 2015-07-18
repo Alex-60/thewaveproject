@@ -186,9 +186,20 @@ if ( isset( $session ) )
 
                                                        $id_album = $value->id;
                                                        
-                                                       echo $id_album ;
+                                                        
+                                                        $link2 = $filename;
+                                    
+                                                      $response = (new FacebookRequest($session, "POST", "/ $id_album", array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                      )
+                                                    ))->execute()->getGraphObject();
                                                        
-                                                       die();
+                                                       
+                                                        echo "upload fait " ;
+                                                       
+                                                       
+                                                       
 
 
                                                    }
@@ -199,13 +210,7 @@ if ( isset( $session ) )
                                     die();
                                     
                  
-                                                    $link2 = $filename;
-                                    
-                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      )
-                                                    ))->execute()->getGraphObject(); 
+                                                    
                                     
                                                     var_dump();
                                     
