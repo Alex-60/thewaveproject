@@ -238,7 +238,7 @@ if ( isset( $session ) )
                                            
                                            var_dump($photo_base);
                                            
-                                           
+                                           $_SESSION['IMG']=$photo_base;
                                            
                                            
                                            
