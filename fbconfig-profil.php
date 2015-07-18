@@ -57,8 +57,7 @@ try
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
                      
-                                        $filename4 = $_FILES['file']['tmp_name']; 
-                                        $_SESSION['imgsend']=$filename4;
+                                       
                              }
    }
     
