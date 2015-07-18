@@ -176,16 +176,41 @@ if ( isset( $session ) )
                                                     //$link2 = $filename ;
                                     
                                     
-                                    
-                                                        $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                    try {
+`                                           
+                                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($_SESSION['imgd']),
                                                         'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                     
                                                         
-                                                        echo "upload fait " ;
+                      
+   
+                                          } catch(FacebookRequestException $e) 
+                                    
+                                    {
 
+                                            echo "Exception occured, code: " . $e->getCode();
+                                            echo " with message: " . $e->getMessage();
+
+                                    }   
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                                    
                                 }
 
 
