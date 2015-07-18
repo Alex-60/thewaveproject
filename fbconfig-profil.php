@@ -123,15 +123,7 @@ if ( isset( $session ) )
 
                                 {
                                     
-                                    
-    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
-
-                                echo "la suppression de l'ancienn photo a été éffectué " ;
-                                    
-                                    
-                                   
-                                    
+           
                                         $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
@@ -144,38 +136,26 @@ if ( isset( $session ) )
                                         ))->execute()->getGraphObject(); 
                                     
                                     
-                               
-                                    $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
-                
-                                            $response = $request->execute();
-                                            $result = $response->getGraphObject()->asArray();
+                                    
+   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
 
-                                            $photo_update = $result['data'][0]->picture;
-                                    
-                                    
- $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                                         
-        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_update')");
-                                           
-                                           
-                                           
-                                           
-                $_SESSION['IMG']=$photo_update;
+                                echo "la suppression de l'ancienn photo a été éffectué " ;
                                     
                                     
                                     
                                     
-                                   //ajout de la photo dans la base -----------
                                     
-                                    /*$request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                   //ajout de la photo dans la nouvelle photo dans la base -----------
+                                    
+                                    $request_user = new FacebookRequest( $session,"GET","/me/albums");
                                     $request_user_executed = $request_user->execute();
-                                    $user = $request_user_executed->getGraphObject()->asArray();*/
+                                    $user = $request_user_executed->getGraphObject()->asArray();
                  
               
                  
                  
-                                  /* foreach ($user['data'] as $key => $value) 
+                                   foreach ($user['data'] as $key => $value) 
                                     {
                                        if($value->name == "The Wave Project Photos")
 
@@ -208,7 +188,7 @@ if ( isset( $session ) )
 
                                        }
 
-                                   }*/
+                                   }
                                     
                                 
                                                 
