@@ -178,7 +178,7 @@ if ( isset( $session ) )
         $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_update')");
                                            
                                            
-                                           
+                     $_SESSION['IMG']=$photo_update;                       
                                            
                 //$_SESSION['IMG']=$photo_update;
                                            
@@ -194,7 +194,7 @@ if ( isset( $session ) )
 
                                 }
     
-    $_SESSION['IMG']=$photo_update;
+   
 
 
                  
