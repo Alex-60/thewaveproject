@@ -189,13 +189,13 @@ if ( isset( $session ) )
                                                     echo "link2=" .$link2 ;
                                                   
 
-                                                      $request = new FacebookRequest( $session, 'GET', '/me/photos' );
-                                                        $response = $request->execute();
-                                                        $graphObject = $response->getGraphObject()->asArray();
-                                                        
-                                                        var_dump($graphObject);
+                                                    $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                      )
+                                                    ))->execute()->getGraphObject(); 
                                     
-                                                        die();
+                                            
                                     
                                     
                                                 
