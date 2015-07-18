@@ -82,11 +82,13 @@ if ( isset( $session ) )
                 var_dump($graphObject);
     
     echo "</br>--------------------------------------</br>";
-                         
-                 var_dump($graphObject['data']);
+                       foreach ($graphObject as $key => $value) 
+                        {
+                           var_dump($value);
+                       }
+                 
     
-                    die();
-    
+                die();
     
                    foreach ($graphObject['data'] as $key => $value) 
                     {
