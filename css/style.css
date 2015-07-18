@@ -348,10 +348,24 @@ a, a:hover, a:link, a:visited, a:active {
     margin-left: 10px;
     cursor: pointer;
 }
-._51mx{
-    width: 120px;
+._51mx:first-child {
+    float: none;
 }
-
+._51mx {
+    float: left;
+}
+._51mz {
+    width: 120px;
+}
+.pts{
+	padding-top:0px;
+}
+._51mx:last-child {
+    float: right;
+}
+.fb-like span {
+    width: 120px !important;
+}
 
 /*************************    FIN STYLE PAGE JE VOTE    ****************************/
 
