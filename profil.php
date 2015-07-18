@@ -70,6 +70,8 @@ require_once 'fbconfig-profil.php';
                     {
 
                         echo "yes";
+                 
+                 die();
                 
                     }
     }
