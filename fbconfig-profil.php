@@ -1,5 +1,10 @@
 <?php
 
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
 session_start();
 // added in v4.0.0
 
@@ -190,7 +195,7 @@ if ( isset( $session ) )
                                                         
                                                         var_dump($graphObject);
                                     
-                                    die();
+                                                        die();
                                     
                                     
                                                 
