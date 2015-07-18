@@ -28,12 +28,8 @@ echo "yes";
 
  if (isset($_POST['submit'])) 
             {
-                 //echo "yes";
-                 
-                 //die();
-     
-     
-                $varid = " facebook " ;
+                 echo "yes click in sumbit";
+
                  
              }
                     
