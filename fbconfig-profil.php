@@ -44,15 +44,23 @@ try
     
                  if (isset($_POST['imgchange'])) 
                             {
+                                
+                                         print_r($_FILES);
+                     
+                     die();
                                 // echo "yes click in sumbit";
                                      $filename = $_FILES['file']['tmp_name'];
 
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
                      
-                     print_r($filename);
                      
-                     die();
+                 
+                     
+                     
+                     move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['tmp_name']);
+                         
+                
                                        
                              }
    }
