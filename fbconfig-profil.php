@@ -34,7 +34,7 @@ try
     
    
     
-    echo "-----------------------------------------------";
+echo "-----------------------------------------------";
 
 echo "yes";
 
@@ -44,6 +44,7 @@ echo "yes";
                      $filename = $_FILES['file']['tmp_name'];
      
                         echo $filename;
+                        $_SESSION['imgd'] = $filename;
                  
              }
                     
@@ -78,7 +79,9 @@ if ( isset( $session ) )
     
 
 
+    echo $_SESSION['imgd'];
     
+    die();
     
  
 
@@ -114,34 +117,32 @@ if ( isset( $session ) )
               
                  
     
-        $request = new FacebookRequest( $session, 'GET', '/me/albums' );
-    $response = $request->execute();
-    $graphObject = $response->getGraphObject()->asArray();
+                            $request = new FacebookRequest( $session, 'GET', '/me/albums' );
+                            $response = $request->execute();
+                            $graphObject = $response->getGraphObject()->asArray();
     
 
-                       foreach ($graphObject['data'] as $key => $value) 
-                        {
-                           
-                           
-                            if($value->name == "The Wave Project Photos")
+                               foreach ($graphObject['data'] as $key => $value) 
+                                {
 
-                               {
-                                 
 
-                                   $id_album = $value->id;
+                                    if($value->name == "The Wave Project Photos")
 
-                                     $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
-                
-                                        $response = $request->execute();
-                                        $result = $response->getGraphObject()->asArray();
+                                       {
+                                           $id_album = $value->id;
 
-                                        $photo_base = $result['data'][0]->picture;
-                                
-                                        $_SESSION['IMG'] = $photo_base;
-                                
-                                 
+                                             $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+
+                                                $response = $request->execute();
+                                                $result = $response->getGraphObject()->asArray();
+
+                                                $photo_base = $result['data'][0]->picture;
+
+                                                $_SESSION['IMG'] = $photo_base;
+
+
+                                       }
                                }
-                       }
     
 
     
