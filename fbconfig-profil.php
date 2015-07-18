@@ -53,14 +53,14 @@ if ( isset( $session ) )
                  
                  echo "yes";
                  
-                 die();
+                
              
              }
     
     
     }
     
-    
+     die();
     
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
