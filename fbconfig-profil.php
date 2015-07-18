@@ -45,23 +45,11 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
-                                   // move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['name']);
-           
-                                    //die();
-                     
-                     
-                     
-
                                         $filename = $_FILES['file']['name'];
-
-                                        //echo $filename;
                                         $_SESSION['imgd'] = $filename;
-                     
    
-                                       
                              }
    }
-    
     
     
     //$cpt = 1;
