@@ -105,6 +105,23 @@ if ( isset( $session ) )
                                }
     
     
+	
+								
+                
+                          
+                 
+                                 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     
                                if(isset($_SESSION['imgd']))
 

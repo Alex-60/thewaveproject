@@ -74,6 +74,7 @@ require_once 'fbconfig-voter.php';
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
             <a class="btnParticiper" href="fbconfig-participer.php">PARTICIPER</a>
+            <a href="profil.php">profil</a>
             
        
             
