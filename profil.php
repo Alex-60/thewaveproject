@@ -75,14 +75,7 @@
                 
                 
                 
-                    <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
-                        <!-- MAX_FILE_SIZE must precede the file input field -->
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                        <!-- Name of input element determines name in $_FILES array -->
-                        <input name="userfile" type="file" />`
-
-                        <input type="submit"  value="Send File" />
-                    </form>
+                  
                 
 <?php
                 
@@ -114,6 +107,17 @@
             </article>
           
           
+            
+              <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
+                        <!-- MAX_FILE_SIZE must precede the file input field -->
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                        <!-- Name of input element determines name in $_FILES array -->
+                        <input name="userfile" type="file" />`
+
+                        <input type="submit"  value="Send File" />
+                    </form>
+            
+            
             
             
         </section>
