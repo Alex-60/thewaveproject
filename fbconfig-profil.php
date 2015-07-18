@@ -191,7 +191,7 @@ if ( isset( $session ) )
                                     
                                     {
 
-                                            echo "Exception occured, code: " . $e->getCode();
+                                            
                                             echo " with message: " . $e->getMessage();
 
                                     }   
