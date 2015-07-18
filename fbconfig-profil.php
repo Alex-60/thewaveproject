@@ -32,7 +32,14 @@ FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc8
 try 
 {
     
-    echo "-----------------------------------------------";
+   
+    
+  $session = $helper->getSessionFromRedirect();
+    
+  $loginUrl = $helper->getLoginUrl();
+
+    
+     echo "-----------------------------------------------";
 
 echo "yes";
 
@@ -46,10 +53,7 @@ echo "yes";
 echo "-----------------------------------------------";
     
     
-  $session = $helper->getSessionFromRedirect();
     
-  $loginUrl = $helper->getLoginUrl();
-
 
 } catch( FacebookRequestException $ex ) 
 {
