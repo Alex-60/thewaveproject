@@ -172,13 +172,22 @@ if ( isset( $session ) )
                                     //upload de la nouvelle photo
                                     
                                     
-                                     
+                                        $link2= $_SESSION['imgd'];
+                                         $request = new FacebookRequest( $session, 'POST', '/me/photos',array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                      ));
+                            $response = $request->execute();
+                            $graphObject = $response->getGraphObject();
+                                    
+                                    
+                                     /*
                                                     $link2=$filename;
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
                                                       )
-                                                    ))->execute()->getGraphObject(); 
+                                                    ))->execute()->getGraphObject(); */
                                     
                                     
                                      echo "upload fait " ;
