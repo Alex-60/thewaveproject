@@ -77,21 +77,7 @@
                 
                   
                 
-<?php
-                
-                
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-                {
-        
-                     if (isset($_POST['send'])) 
-                            {
-                                echo "yes";
-                                die();
-                            }
-                 }
-                
-                
-                ?>
+
                 
                 
                 
@@ -116,6 +102,22 @@
 
                         <input type="submit"  value="Send File" />
                     </form>
+            
+            
+            <?php
+                
+                
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+                {
+        
+                                echo "yes";
+                                die();
+                            
+                 }
+                
+                
+                ?>
+            
             
             
             

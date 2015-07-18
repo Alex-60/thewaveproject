@@ -46,7 +46,7 @@ if ( isset( $session ) )
     
     
       
-     die();
+ 
     
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
