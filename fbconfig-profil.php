@@ -156,7 +156,7 @@ if ( isset( $session ) )
                                     
                                     echo "la valeur de la nouvelle photo est ".$_SESSION['imgd'];
                                     
-                                    
+                                      echo "</br>-----------------------------------------------</br>";
                                     
 
     $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
