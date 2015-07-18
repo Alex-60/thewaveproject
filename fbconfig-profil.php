@@ -172,50 +172,19 @@ if ( isset( $session ) )
                                     //upload de la nouvelle photo
                                     
                                     
-                                    
-                                    $request_user = new FacebookRequest( $session,"GET","/me/albums");
-                                    $request_user_executed = $request_user->execute();
-                                    $user = $request_user_executed->getGraphObject()->asArray();
-                                    
-                                    foreach ($user['data'] as $key => $value) 
-                                    {
-                                                   if($value->name == "The Wave Project Photos")
-
-                                                   {
-                                                
-
-                                                       $id_album = $value->id;
-                                                       
-                                                        
-                                                        $link2 = $filename;
-                                    
-                                                      $response = (new FacebookRequest($session, "POST", "/ $id_album", array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      )
-                                                    ))->execute()->getGraphObject();
-                                                       
-                                                       
-                                                        echo "upload fait " ;
-                                                       
-                                                       
-                                                       
-
-
-                                                   }
-                                    }
-                                    
-                                    
-                                    
-                                    die();
-                                    
                  
-                                                    
-                                    
-                                                    var_dump();
+                                                    //$link2 = $filename ;
                                     
                                     
-                                     echo "upload fait " ;
+                                    
+                                                        $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                        'source' => '@'.realpath($_SESSION['imgd']),
+                                                        'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
+                                                      )
+                                                    ))->execute()->getGraphObject(); 
+                                    
+                                                        
+                                                        echo "upload fait " ;
 
                                 }
 
