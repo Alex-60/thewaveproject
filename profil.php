@@ -66,32 +66,9 @@ require_once 'fbconfig-profil.php';
           if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
         
-             if (isset($_POST['send'])) 
-                    {
-
-                         // init app with app id and secret
-                                    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
-                                // login helper with redirect_uri
-                                    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-                                try 
-                                {
-                                  $session = $helper->getSessionFromRedirect();
-
-                                } catch( FacebookRequestException $ex ) 
-                                {
-                                  // When Facebook returns an error
-                                } catch( Exception $ex ) 
-                                {
-                                  // When validation fails or other local issues
-                                }
- 
-                                echo "nooooooo";
-                 
-                                    die();
-                 
-               
-                
-                    }
+             echo "yes";
+              
+              die();
     }
    
 
