@@ -140,7 +140,7 @@ if ( isset( $session ) )
                                 {
                                         $filename=$_SESSION['imgd'];
                     
-                                        $link = "./images/$filename";
+                                        $link = "../$filename";
                                          
                                           $response = (new FacebookRequest(
                                             $session, "POST", '/me/photos', array(
