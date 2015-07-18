@@ -25,6 +25,25 @@ require_once 'fbconfig-profil.php';
      <input type="submit" name="submit" value="Submit">
   </form>
     
+    <?php
+    
+    
+If($submit){
+    
+    echo "yes";
+                 
+                 die();
+
+}else{
+
+   
+
+}  
+
+    ?>
+    
+    
+    
     
          <?php
                 
