@@ -179,7 +179,7 @@ if ( isset( $session ) )
                                     
                                     
                                      echo "</br>-----------------------------------------------</br>";
-                                                   $_SESSION['imgd']=$link2;
+                                                   $_SESSION['imgd']===$link2;
                                                     
                                     echo $link2;
                                                     die();
