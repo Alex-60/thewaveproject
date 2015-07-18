@@ -59,20 +59,7 @@ require_once 'fbconfig-profil.php';
                         <input type="submit" name="send" value="Send File" />
                     </form>
                 
-                
-                
-                    <?php 
-        
-          if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-        
-             echo "yes";
-              
-              die();
-    }
-   
 
-    ?>
                 
                 
                 
