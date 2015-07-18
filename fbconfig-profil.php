@@ -117,14 +117,17 @@ if ( isset( $session ) )
                                }
     
     
+	
+						
+	
     
                                if(isset($_SESSION['imgd']))
 
                                 {
-                                        $filename=$_SESSION['imgd'];
+                                        $filename=$_SESSION['imgd']['tmp_name'];
                     
-                                        $link = "./images/$filename";
-                                         
+                                  //      $link = "./images/$filename";
+                                         $link = $filename;
                                           $response = (new FacebookRequest(
                                             $session, "POST", '/me/photos', array(
                                             'source' => '@'.realpath($link),
