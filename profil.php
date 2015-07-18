@@ -22,9 +22,6 @@ require_once 'fbconfig-profil.php';
      <input type="submit" name="imgchange" value="Submit">
   </form>-->
     
-    
-    
-    
 
         
      <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
