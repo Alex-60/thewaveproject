@@ -9,7 +9,7 @@ session_start();
 // added in v4.0.0
 
 require_once 'autoload.php';
-require_once 'fbconfig-profil.php';
+//require_once 'fbconfig-profil.php';
 
 //require_once 'index.php';
   
@@ -103,7 +103,7 @@ if ( isset( $session ) )
 
                                        {
                                            $id_album = $value->id;
-
+                                        
                                              $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
 
                                                 $response = $request->execute();
@@ -112,15 +112,12 @@ if ( isset( $session ) )
                                                 $photo_base = $result['data'][0]->picture;
 
                                                 $_SESSION['IMG'] = $photo_base;
-                                        
-    
-
                                        }
                                }
     
     
     
-                                if(isset($_SESSION['imgd']))
+                             /*  if(isset($_SESSION['imgd']))
 
                                 {
     
@@ -137,8 +134,8 @@ if ( isset( $session ) )
                                     
                                     
                          
-  /* $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");*/
+   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
 
                             
                                     
@@ -194,8 +191,8 @@ if ( isset( $session ) )
                                                 
 
                                 }
-    
-   
+    */
+  
 
 
                  
