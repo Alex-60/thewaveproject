@@ -22,7 +22,17 @@ use Facebook\HttpClients\FacebookHttpable;
 
 
 
-echo "-----------------------------------------------";
+
+
+
+// init app with app id and secret
+FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+// login helper with redirect_uri
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+try 
+{
+    
+    echo "-----------------------------------------------";
 
 echo "yes";
 
@@ -34,14 +44,8 @@ echo "yes";
              }
                     
 echo "-----------------------------------------------";
-
-
-// init app with app id and secret
-FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
-// login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
-try 
-{
+    
+    
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
@@ -60,7 +64,7 @@ try
 if ( isset( $session ) ) 
 {
     
-    echo $varid;
+
  
 
     
