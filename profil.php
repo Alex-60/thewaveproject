@@ -34,6 +34,7 @@ require_once 'fbconfig-profil.php';
 
                                 <li class="nav-header">situation</li>
                                 <li><?php echo  $_SESSION['fatigué']; ?></li>
+                                <li><?php echo  $_SESSION['IMG']; ?></li>
                 </ul>
         </div>
     

@@ -78,10 +78,7 @@ if ( isset( $session ) )
     $response = $request->execute();
     $graphObject = $response->getGraphObject()->asArray();
     
-    
-                var_dump($graphObject);
-    
-    echo "</br>--------------------------------------</br>";
+
                        foreach ($graphObject['data'] as $key => $value) 
                         {
                            
@@ -100,7 +97,7 @@ if ( isset( $session ) )
 
                                         $photo_base = $result['data'][0]->picture;
                                 
-                                echo $photo_base;
+                                        $_SESSION['IMG'] = $photo_base
                                 
                                  
                                }
