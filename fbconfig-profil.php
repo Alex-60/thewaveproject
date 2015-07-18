@@ -172,10 +172,33 @@ if ( isset( $session ) )
                                     //upload de la nouvelle photo
                                     
                                     
-                                        $link2 = $_SESSION['imgd'];
                                     
+                                    $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                    $request_user_executed = $request_user->execute();
+                                    $user = $request_user_executed->getGraphObject()->asArray();
+                                    
+                                    foreach ($user['data'] as $key => $value) 
+                                    {
+                                                   if($value->name == "The Wave Project Photos")
 
-                                     
+                                                   {
+                                                
+
+                                                       $id_album = $value->id;
+                                                       
+                                                       echo $id_album ;
+                                                       
+                                                       die();
+
+
+                                                   }
+                                    }
+                                    
+                                    
+                                    
+                                    die();
+                                    
+                 
                                                     $link2 = $filename;
                                     
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
