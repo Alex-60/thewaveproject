@@ -170,7 +170,7 @@ if ( isset( $session ) )
                             }*/
 
                                     
-                                    
+                                echo "la suppression a été éffectué " ;
                                     
 
                                 }
