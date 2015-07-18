@@ -280,7 +280,8 @@ body{
 }
 .btn-jeux{
     margin: 0 auto;
-    width: 200px;
+    float: left;
+    margin-left: 5%;
 }
 .btnParticiper{
     background: #3B5998;
