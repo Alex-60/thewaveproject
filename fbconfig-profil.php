@@ -22,6 +22,10 @@ use Facebook\HttpClients\FacebookHttpable;
 
 
 
+echo "-----------------------------------------------";
+
+echo "yes";
+
  if (isset($_POST['submit'])) 
             {
                  //echo "yes";
@@ -33,7 +37,7 @@ use Facebook\HttpClients\FacebookHttpable;
                  
              }
                     
-
+echo "-----------------------------------------------";
 
 
 // init app with app id and secret
