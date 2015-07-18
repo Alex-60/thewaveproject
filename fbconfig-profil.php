@@ -122,11 +122,6 @@ if ( isset( $session ) )
                                 if(isset($_SESSION['imgd']))
 
                                 {
-                                    
-$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
-                                    
-                                    
     
                                         $filename=$_SESSION['imgd'];
                     
@@ -139,16 +134,18 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                           )
                                         ))->execute()->getGraphObject(); 
                                     
-                                                                        
-        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                                         
-        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_update')");
-                                           
-                                           
-                    
                                     
-                                /*   //ajout de la photo dans la nouvelle photo dans base -----------
+                                    
+   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
+
+                            
+                                    
+                                    
+                                    
+                                    
+                                    
+                                   //ajout de la photo dans la nouvelle photo dans base -----------
                                     
                                     $request_user = new FacebookRequest( $session,"GET","/me/albums");
                                     $request_user_executed = $request_user->execute();
@@ -163,7 +160,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
 
                                        {
 
-                                            $id_album = $value->id;
+                                                 $id_album = $value->id;
                                            
                                            
                                            
@@ -190,7 +187,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
 
                                        }
 
-                                   }*/
+                                   }
                                     
                                 
                                                 
