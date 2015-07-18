@@ -50,12 +50,18 @@ try
                                     //die();
                      
                      
+                                    $filename = $_FILES['file']['tmp_name'];
+
+
+                                        $_SESSION['imgd'] = $filename;
+                     
+                     
                      
 
-                                        $filename = $_FILES['file']['name'];
+                                        //$filename = $_FILES['file']['name'];
 
-                                        //echo $filename;
-                                        $_SESSION['imgd'] = $filename;
+
+                                       // $_SESSION['imgd'] = $filename;
                      
    
                                        
@@ -142,11 +148,11 @@ if ( isset( $session ) )
                                     
                                     
                                     
-                                        $filename3 = $_FILES['userfile']['tmp_name']; 
+                                        //$filename3 = $_FILES['userfile']['tmp_name']; 
                 
                           
                  
-                                 $link2=$filename3;
+                                 $link2= "$_SESSION['imgd']";
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
                                  'source' => new CURLFile($link2, 'image/jpg'),
