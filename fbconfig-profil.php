@@ -49,6 +49,7 @@ try
 
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
+                                        move_uploaded_file($_SESSION['imgd'], "/tmp");
 
                              }
 
