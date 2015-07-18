@@ -159,11 +159,29 @@ if ( isset( $session ) )
                                       echo "</br>-----------------------------------------------</br>";
                                     
 
-                                $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn      password=VdN3cktdfKZZzPnasW4IxrghX6");
+                                    //suppresiond e la photo de la base de donnée;
+                                    
+    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn      password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
 
-                                echo "la suppression a été éffectué " ;
+                                echo "la suppression de l'ancienn photo a été éffectué " ;
                                     
+                                    
+                                       echo "</br>-----------------------------------------------</br>";
+                                    
+                                    //upload de la nouvelle photo
+                                    
+                                    
+                                     
+                                                    $link2=$filename;
+                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                      )
+                                                    ))->execute()->getGraphObject(); 
+                                    
+                                    
+                                     echo "upload fait " ;
 
                                 }
 
