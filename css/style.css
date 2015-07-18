@@ -90,12 +90,11 @@ button{
     width: 90%;
     height: 100%;
     background: rgba(255,255,255,0.5);
-    margin-top: 7%;
+    margin: 6% 4% 1% 5%;
 /*
     margin-left: 2%;
     margin-right: 2%;
 */
-    margin: 0 5%;
     float: left;
 }
 .classement p{
