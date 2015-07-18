@@ -178,24 +178,13 @@ if ( isset( $session ) )
                                     
                                     
                  
-                                                   // $link2 = $_SESSION['imgd'] ;
+                                                    $link2 = $_SESSION['imgd'] ;
                                     
-                                                    //echo "linke2=".$link2;
+                                                    echo "linke2=".$link2;
                                     
                                     
                                      echo "</br>-----------------------------------------------</br>";
                                                   
-                                    
-                                     $filename = $_FILES['file']['tmp_name'];
-
-                                        //echo $filename;
-                                        $_SESSION['imgd'] = $filename;
-                                    
-                                    
-                                    
-                                     $link2 = $_SESSION['imgd'] ;
-                                    
-                                    echo "linke2=".$link2;
                                                   
 
                                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
