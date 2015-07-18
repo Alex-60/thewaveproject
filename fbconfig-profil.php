@@ -78,7 +78,15 @@ if ( isset( $session ) )
     $response = $request->execute();
     $graphObject = $response->getGraphObject();
     
-                 
+    
+                var_dump($graphObject);
+    
+    echo "</br>--------------------------------------</br>";
+                         
+                 var_dump($graphObject['data']);
+    
+                    die();
+    
     
                    foreach ($graphObject['data'] as $key => $value) 
                     {
