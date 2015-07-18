@@ -48,6 +48,8 @@ require_once 'fbconfig-profil.php';
                     <div class="partage"></div>
                 </div>
                 
+                
+                
                     <form enctype="multipart/form-data" action="" method="POST">
                         <!-- MAX_FILE_SIZE must precede the file input field -->
                         <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
@@ -56,6 +58,26 @@ require_once 'fbconfig-profil.php';
 
                         <input type="submit" name="send" value="Send File" />
                     </form>
+                
+                
+                
+                    <?php 
+        
+          if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+        
+             if (isset($_POST['send'])) 
+                    {
+
+                        echo "yes";
+                
+                    }
+    }
+   
+
+    ?>
+                
+                
                 
             </article>
 
