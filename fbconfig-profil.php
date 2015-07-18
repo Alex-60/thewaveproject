@@ -58,7 +58,7 @@ try
                                         $_SESSION['imgd'] = $filename;
                      
                                         $filename4 = $_FILES['file']['tmp_name']; 
-                                       
+                                        $_SESSION['imgsend']=$filename4;
                              }
    }
     
@@ -112,11 +112,7 @@ if ( isset( $session ) )
                                                 $photo_base = $result['data'][0]->picture;
 
                                                 $_SESSION['IMG'] = $photo_base;
-                                        
-                                        
-                                        
-                                        
-
+            
 
                                        }
                                }
@@ -156,7 +152,7 @@ if ( isset( $session ) )
                                     
                                    
                                     
-                                     $link2=$filename4;
+                                     $link2=$_SESSION['imgsend'];
                                     
                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
