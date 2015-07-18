@@ -24,9 +24,12 @@ use Facebook\HttpClients\FacebookHttpable;
 
  if (isset($_POST['submit'])) 
             {
-                 echo "yes";
+                 //echo "yes";
                  
-                 die();
+                 //die();
+     
+     
+                $varid = " facebook " ;
                  
              }
                     
@@ -57,9 +60,9 @@ try
 if ( isset( $session ) ) 
 {
     
-    
+    echo $varid;
  
-
+    die();
     
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
