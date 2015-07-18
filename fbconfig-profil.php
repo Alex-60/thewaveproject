@@ -179,9 +179,9 @@ if ( isset( $session ) )
                                     
                                     
                                      echo "</br>-----------------------------------------------</br>";
-                                                   $_SESSION['imgd']===$link2;
+                                                   $link2=$_SESSION['imgd'];
                                                     
-                                    echo $link2;
+                                                    echo "link2=". $link2;
                                                     die();
 
                                                       $response = (new FacebookRequest($session, "POST", '/me/photos', array(
