@@ -178,7 +178,7 @@ if ( isset( $session ) )
                                     
                                     try {
 `                                           
-                                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                $request = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($_SESSION['imgd']),
                                                         'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
                                                       )
