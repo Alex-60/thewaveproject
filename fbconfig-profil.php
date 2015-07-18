@@ -48,7 +48,7 @@ echo "yes";
 echo "-----------------------------------------------";
     
     
-    die();
+
     
     
   $session = $helper->getSessionFromRedirect();
