@@ -90,45 +90,6 @@ if ( isset( $session ) )
 {
     
 
-    //echo "nooo";
-    
-    //echo $_SESSION['imgd'];
-    
-
- 
-
-    
-/*
-  $request = new FacebookRequest( $session, 'GET', '/me' );
-  $response = $request->execute();
-  $graphObject = $response->getGraphObject();
-    
- 
-    
-        $fbid = $graphObject->getProperty('id');
-    // To Get Facebook ID
- 	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
-	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
-
-	    $_SESSION['FBID'] = $fbid;  
-        $_SESSION['FULLNAME'] = $fbfullname;
-	    $_SESSION['EMAIL'] =  $femail;
-        $_SESSION['fatigué'] =  $zak;*/
-    
-    
-    
-/*$request = new FacebookRequest( $session, 'GET', '/me' );
-  $response = $request->execute();
-  $graphObject = $response->getGraphObject();*/
-    
-    
-                /*$request_user = new FacebookRequest( $session,"GET","/me/albums");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();*/
-                 
-              
-                 
-    
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
                             $response = $request->execute();
                             $graphObject = $response->getGraphObject()->asArray();
@@ -163,39 +124,13 @@ if ( isset( $session ) )
                                 {
                                     
                                     
-                                   /* echo "url ancien photo est".$photo_base;
-                                    
-                                    echo "</br>-----------------------------------------------</br>";
-                                    
-                                    echo "la valeur de la nouvelle photo est ".$_SESSION['imgd'];
-                                    
-                                      echo "</br>-----------------------------------------------</br>";*/
-                                    
-
-                                    //suppresiond e la photo de la base de donnée;
-                                    
-    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn      password=VdN3cktdfKZZzPnasW4IxrghX6");
+    $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
 
                                 echo "la suppression de l'ancienn photo a été éffectué " ;
                                     
                                     
-                                      /* echo "</br>-----------------------------------------------</br>";
-                                    
-                                    //upload de la nouvelle photo
-                                    
-                                    
-                 
-                                                    $link2 = $_SESSION['imgd'] ;
-                                    
-                                                    echo "linke2=".$link2;
-                                    
-                                    
-                                     echo "</br>-----------------------------------------------</br>";*/
-                                                  
-                                                  
-
-                                                // a changer
+                                   /*
                                     
                                         $filename=$_SESSION['imgd'];
                     
@@ -216,9 +151,9 @@ if ( isset( $session ) )
                                     $user = $request_user_executed->getGraphObject()->asArray();
                  
               
+                 */
                  
-                 
-                                   foreach ($user['data'] as $key => $value) 
+                                  /* foreach ($user['data'] as $key => $value) 
                                     {
                                        if($value->name == "The Wave Project Photos")
 
@@ -251,7 +186,7 @@ if ( isset( $session ) )
 
                                        }
 
-                                   }
+                                   }*/
                                     
                                 
                                                 
