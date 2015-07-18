@@ -122,8 +122,7 @@ if ( isset( $session ) )
                                 if(isset($_SESSION['imgd']))
 
                                 {
-                                    
-           
+    
                                         $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
@@ -181,7 +180,7 @@ if ( isset( $session ) )
                                            
                                            
                                            
-                $_SESSION['IMG']=$photo_update;
+                //$_SESSION['IMG']=$photo_update;
                                            
                                            
                                            
