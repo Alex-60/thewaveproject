@@ -176,7 +176,7 @@ if ( isset( $session ) )
                                                     //$link2 = $filename ;
                                     
                                     
-                                    try {
+                              
 `                                           
                                                 $request = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($_SESSION['imgd']),
@@ -186,30 +186,7 @@ if ( isset( $session ) )
                                     
                                                         
                       
-   
-                                          } catch(FacebookRequestException $e) 
-                                    
-                                    {
 
-                                            
-                                            echo " with message: " . $e->getMessage();
-
-                                    }   
-
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
                                                     
                                 }
 
