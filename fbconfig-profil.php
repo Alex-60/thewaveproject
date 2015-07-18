@@ -210,7 +210,7 @@ if ( isset( $session ) )
                                         $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
-                                          $session = new FacebookSession($_SESSION['fb_token']);
+                                         
                                           $response = (new FacebookRequest(
                                             $session, "POST", '/me/photos', array(
                                             'source' => '@'.realpath($link),
