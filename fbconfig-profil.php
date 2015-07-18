@@ -188,7 +188,7 @@ if ( isset( $session ) )
                                                         $response = $request->execute();
                                                         $graphObject = $response->getGraphObject()->asArray();
                                                         
-                                                        var_dump();
+                                                        var_dump($graphObject);
                                     
                                     die();
                                     
