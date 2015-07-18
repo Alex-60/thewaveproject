@@ -60,20 +60,17 @@ require_once 'fbconfig-profil.php';
             <article class="profils">
                 <article class="image-profil">
                     <div class="modifier-img">
-                        
                         <img src="<?php echo $_SESSION['IMG']; ?>">
-      
                     </div>
                 </article>
-                
                 <h3 class="classement-profils">Votre classement : 17</h3>
                 <h3 class="cpt-profils">Nombre de j'aime : 500</h3>
                 <div class="reseau-profil">
+                    <div class="fb-like" data-href="<?php echo $_SESSION['IMG'] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    
                     <div class="like"></div>
                     <div class="partage"></div>
                 </div>
-                
-
             </article>
 
             <article class="participants">
@@ -93,21 +90,11 @@ require_once 'fbconfig-profil.php';
                 ?>
          
             <article class="participants">
-                
-       
-                
                 <div class="img-participants">
-                <?php
-                
-                echo "<img src='$row2[0]'/>";      
-      
-                ?>
+                <?php echo "<img src='$row2[0]'/>";?>
                 </div>
 
-          
-             
-                
-                <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
             </article>
                 <?
