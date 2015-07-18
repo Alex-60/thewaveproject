@@ -78,10 +78,16 @@ if ( isset( $session ) )
 {
     
 
-    echo "nooo";
+    //echo "nooo";
     
-    echo $_SESSION['imgd'];
+    //echo $_SESSION['imgd'];
     
+    if(isset($_SESSION['imgd']))
+        
+    {
+        echo "la valeur est ".$_SESSION['imgd'];
+        
+    }
   
  
 
