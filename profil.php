@@ -17,18 +17,7 @@ require_once 'fbconfig-profil.php';
 <body>
     
     
-       <div class="hero-unit">
-          <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
-          <p>Welcome to "facebook login" tutorial</p>
-          </div>
-        <div class="span4">
-                 <ul class="nav nav-list">
-
-                                <li class="nav-header">Image</li>
-                                <li><?php echo $_SESSION['IMG']; ?></li>
-                                
-                </ul>
-        </div>
+   
     
     
     <div class="page-profil">    
