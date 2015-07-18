@@ -17,7 +17,7 @@ require_once 'fbconfig-profil.php';
 <body>
     
     
-       <div class="hero-unit">
+       <!--<div class="hero-unit">
           <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
           <p>Welcome to "facebook login" tutorial</p>
           </div>
@@ -34,9 +34,8 @@ require_once 'fbconfig-profil.php';
 
                                 <li class="nav-header">situation</li>
                                 <li><?php echo  $_SESSION['fatigué']; ?></li>
-                                <li><?php echo  $_SESSION['IMG']; ?></li>
                 </ul>
-        </div>
+        </div>-->
     
     
     <div class="page-profil">    
