@@ -178,20 +178,18 @@ if ( isset( $session ) )
                                     
                                     
                  
-                                                    $link2 = $filename ;
+                                                    $link2 = $_SESSION['imgd'] ;
                                     
                                                     echo "linke2=".$link2;
                                     
                                     
                                      echo "</br>-----------------------------------------------</br>";
-                                                   $link2=$_SESSION['imgd'];
-                                                    
-                                                    echo "link2=" .$link2 ;
+                                                  
                                                   
 
                                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
+                                                        'source' => '@'.realpath($_SESSION['imgd']),
+                                                        'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                     
