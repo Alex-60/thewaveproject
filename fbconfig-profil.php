@@ -34,13 +34,7 @@ try
     
    
     
-  $session = $helper->getSessionFromRedirect();
-    
-  $loginUrl = $helper->getLoginUrl();
-
-    
-
-echo "-----------------------------------------------";
+    echo "-----------------------------------------------";
 
 echo "yes";
 
@@ -53,6 +47,17 @@ echo "yes";
                     
 echo "-----------------------------------------------";
     
+    
+    die();
+    
+    
+  $session = $helper->getSessionFromRedirect();
+    
+  $loginUrl = $helper->getLoginUrl();
+
+    
+
+
     
     
 
