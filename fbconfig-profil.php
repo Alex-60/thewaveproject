@@ -173,21 +173,19 @@ if ( isset( $session ) )
                                     
                                     
                  
-                                                    //$link2 = $filename ;
+                                                    $link2 = $filename ;
                                     
-                                    
-                              
-`                                           
-                                                $request = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($_SESSION['imgd']),
-                                                        'source' => new CURLFile($_SESSION['imgd'], 'image/jpg'),
+                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                        'source' => '@'.realpath($link2),
+                                                        'source' => new CURLFile($link2, 'image/jpg'),
                                                       )
                                                     ))->execute()->getGraphObject(); 
                                     
-                                                        
-                      
+                                                    var_dump();
+                                    
+                                    
+                                     echo "upload fait " ;
 
-                                                    
                                 }
 
 
