@@ -39,19 +39,7 @@ try
   $loginUrl = $helper->getLoginUrl();
 
     
-     echo "-----------------------------------------------";
 
-echo "yes";
-
- if (isset($_POST['submit'])) 
-            {
-                 echo "yes click in sumbit";
-
-                 
-             }
-                    
-echo "-----------------------------------------------";
-    
     
     
 
@@ -69,6 +57,21 @@ if ( isset( $session ) )
 {
     
 
+         echo "-----------------------------------------------";
+
+echo "yes";
+
+ if (isset($_POST['submit'])) 
+            {
+                 echo "yes click in sumbit";
+
+                 
+             }
+                    
+echo "-----------------------------------------------";
+    
+    
+    
  
 
     
