@@ -97,7 +97,7 @@ if ( isset( $session ) )
 
                                         $photo_base = $result['data'][0]->picture;
                                 
-                                        $_SESSION['IMG'] = $photo_base
+                                        $_SESSION['IMG'] = $photo_base;
                                 
                                  
                                }
