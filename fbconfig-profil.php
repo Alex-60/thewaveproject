@@ -67,13 +67,21 @@ if ( isset( $session ) )
   $graphObject = $response->getGraphObject();*/
     
     
-                $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                /*$request_user = new FacebookRequest( $session,"GET","/me/albums");
 				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();
+				$user = $request_user_executed->getGraphObject()->asArray();*/
                  
               
                  
+    
+        $request = new FacebookRequest( $session, 'GET', '/me/albums' );
+    $response = $request->execute();
+    $graphObject = $response->getGraphObject();
+    
                  
+    var_dump($graphObject);
+    die();
+    
                    foreach ($user['data'] as $key => $value) 
                     {
                        if($value->name == "The Wave Project Photos")
