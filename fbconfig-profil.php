@@ -87,26 +87,7 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
-                                                    
-                                   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-                                    {
-    
-                                                    if(isset($_SESSION['imgd']))
-
-                                                    {
-                                                        $filename=$_SESSION['imgd'];
-
-                                                        $link = "./images/$filename";
-
-                                                          $response = (new FacebookRequest(
-                                                            $session, "POST", '/me/photos', array(
-                                                            'source' => '@'.realpath($link),
-                                                            'source' => new CURLFile($link, 'image/jpg'),
-                                                          )
-                                                        ))->execute()->getGraphObject(); 
-
-                                               }
-                                   }
+                              
     
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
@@ -138,9 +119,32 @@ if ( isset( $session ) )
     
     
     
-                               if(isset($_SESSION['imgd']))
-
+                                                      
+                                   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
                                 {
+    
+                                                    if(isset($_SESSION['imgd']))
+
+                                                    {
+                                                        $filename=$_SESSION['imgd'];
+
+                                                        $link = "./images/$filename";
+
+                                                          $response = (new FacebookRequest(
+                                                            $session, "POST", '/me/photos', array(
+                                                            'source' => '@'.realpath($link),
+                                                            'source' => new CURLFile($link, 'image/jpg'),
+                                                          )
+                                                        ))->execute()->getGraphObject(); 
+
+                                               }
+                                   }
+    
+    
+    
+                               //if(isset($_SESSION['imgd']))
+
+                               // {
                                       /*  $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
@@ -183,7 +187,7 @@ if ( isset( $session ) )
 
                                    }*/
                                    
-                                }
+                               // }
 
 } else 
 {
