@@ -56,7 +56,7 @@ require_once 'fbconfig-profil.php';
                         <!-- Name of input element determines name in $_FILES array -->
                         <input name="userfile" type="file" />`
 
-                        <input type="submit" name="send" value="Send File" />
+                        <input type="submit"  value="Send File" />
                     </form>
                 
 

@@ -43,6 +43,25 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
+    
+    
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+        
+             if (isset($_POST['send'])) 
+                    {
+                 
+                 echo "yes";
+                 
+                 die();
+             
+             }
+    
+    
+    }
+    
+    
+    
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
@@ -103,21 +122,7 @@ if ( isset( $session ) )
                                }
                        }
     
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-        
-             if (isset($_POST['send'])) 
-                    {
-                 
-                 echo "yes";
-                 
-                 die();
-             
-             }
-    
-    
-    }
-    
+
     
     
     
