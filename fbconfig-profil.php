@@ -79,10 +79,8 @@ if ( isset( $session ) )
     $graphObject = $response->getGraphObject();
     
                  
-    var_dump($graphObject);
-    die();
     
-                   foreach ($user['data'] as $key => $value) 
+                   foreach ($graphObject['data'] as $key => $value) 
                     {
                        if($value->name == "The Wave Project Photos")
                            
@@ -91,6 +89,7 @@ if ( isset( $session ) )
                            
                            $id_album = $value->id;
                            
+                           echo $id_album;
                            die();
                        }
                    }
