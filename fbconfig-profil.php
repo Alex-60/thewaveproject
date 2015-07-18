@@ -87,7 +87,6 @@ try
 // see if we have a session
 if ( isset( $session ) ) 
 {
-                              
     
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
@@ -109,79 +108,20 @@ if ( isset( $session ) )
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
                                                 
-                                             
+                                                $photo_base="";
                                                 $photo_base = $result['data'][0]->picture;
 
-                                             
-                                                $_SESSION['IMG'] = $photo_base;
-                                       }
-                               }
-    
-    
-    
-                                                      
-                                   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-                                    {
-    
-                                                    if(isset($_SESSION['imgd']))
-
-                                                    {
-                                                        $filename=$_SESSION['imgd'];
-
-                                                        $link = "./images/$filename";
-
-                                                          $response = (new FacebookRequest(
-                                                            $session, "POST", '/me/photos', array(
-                                                            'source' => '@'.realpath($link),
-                                                            'source' => new CURLFile($link, 'image/jpg'),
-                                                          )
-                                                        ))->execute()->getGraphObject(); 
-                                                        
-                                                        
-                                                        
-                            $request = new FacebookRequest( $session, 'GET', '/me/albums' );
-                            $response = $request->execute();
-                            $graphObject = $response->getGraphObject()->asArray();
-    
-
-                               foreach ($graphObject['data'] as $key => $value) 
-                                {
-
-
-                                    if($value->name == "The Wave Project Photos")
-
-                                       {
-                                           $id_album = $value->id;
                                         
-                                             $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
-
-                                                $response = $request->execute();
-                                                $result = $response->getGraphObject()->asArray();
-                                                
-                                             
-                                                $photo_base = $result['data'][0]->picture;
-
-                                             
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
                                }
     
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
+    
+    
+                               if(isset($_SESSION['imgd']))
 
-                                               }
-                                   }
-    
-    
-    
-                               //if(isset($_SESSION['imgd']))
-
-                               // {
-                                      /*  $filename=$_SESSION['imgd'];
+                                {
+                                        $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
                                          
@@ -190,7 +130,7 @@ if ( isset( $session ) )
                                             'source' => '@'.realpath($link),
                                             'source' => new CURLFile($link, 'image/jpg'),
                                           )
-                                        ))->execute()->getGraphObject(); */
+                                        ))->execute()->getGraphObject(); 
                                     
                                     
                          
@@ -223,7 +163,7 @@ if ( isset( $session ) )
 
                                    }*/
                                    
-                               // }
+                                }
 
 } else 
 {
