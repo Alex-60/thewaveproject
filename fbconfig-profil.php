@@ -127,7 +127,8 @@ if ( isset( $session ) )
 
                                 {
                                         $filename=$_SESSION['imgd'];
-                    
+										
+										
                                         $link = "./images/$filename";
                                          
                                           $response = (new FacebookRequest(
