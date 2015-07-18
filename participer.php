@@ -115,11 +115,11 @@
                           
                  
                                  $link2=$filename3;
-                                                      $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      )
-                                                    ))->execute()->getGraphObject(); 
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
                                         
                                // $loginUrl = $helper->getLoginUrl();
 
@@ -152,7 +152,7 @@
                            
                            var_dump($user['data'][0]);*/
                            
-                      $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                        $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
                 
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();

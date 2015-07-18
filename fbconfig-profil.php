@@ -112,6 +112,10 @@ if ( isset( $session ) )
                                                 $photo_base = $result['data'][0]->picture;
 
                                                 $_SESSION['IMG'] = $photo_base;
+                                        
+                                        
+                                        
+                                        
 
 
                                        }
@@ -123,7 +127,7 @@ if ( isset( $session ) )
 
                                 {
     
-                                        $filename=$_SESSION['imgd'];
+                                       /* $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
                                          
@@ -133,6 +137,32 @@ if ( isset( $session ) )
                                             'source' => new CURLFile($link, 'image/jpg'),
                                           )
                                         ))->execute()->getGraphObject(); 
+                                    
+                                    */
+                                    
+                                    
+                                    
+                                    /*    $filename3 = $_FILES['userfile']['tmp_name']; 
+                                 $link2=$filename3;
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
+                                     */   
+                                    
+                                    
+                                    
+                                    
+                                     $filename4 = $_FILES['file']['tmp_name']; 
+                                    
+                                     $link2=$filename4;
+                                    
+                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
                                     
                                     
                                     
