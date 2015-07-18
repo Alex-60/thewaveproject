@@ -43,6 +43,10 @@ require_once 'fbconfig-profil.php';
             <article class="profils">
                 <article class="image-profil">
                     <div class="modifier-img">
+                        
+                        <img src="<?php echo $_SESSION['IMG']; ?>">
+                        
+                        
                         <h2>+</h2>
                         <h3>Modifier votre photo</h3>
                     </div>
