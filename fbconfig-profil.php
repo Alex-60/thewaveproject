@@ -103,9 +103,6 @@ if ( isset( $session ) )
                                }
                        }
                  
-
-    
- 
 } else 
 {
     
