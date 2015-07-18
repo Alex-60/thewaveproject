@@ -63,18 +63,17 @@ try
    }
     
     
-
+    
+    $cpt = 1;
+    echo $cpt++ ;
+    
     
     
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
 
-    
 
-
-    
-    
 
 } catch( FacebookRequestException $ex ) 
 {
@@ -108,7 +107,8 @@ if ( isset( $session ) )
 
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
-
+                                                
+                                                $photo_base="";
                                                 $photo_base = $result['data'][0]->picture;
 
                                                 $_SESSION['IMG'] = $photo_base;
@@ -117,7 +117,7 @@ if ( isset( $session ) )
     
     
     
-                           /*    if(isset($_SESSION['imgd']))
+                               /*if(isset($_SESSION['imgd']))
 
                                 {
     
@@ -138,9 +138,6 @@ if ( isset( $session ) )
                         $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
 
                             
-                                    
-                                    
-                                    
                                     
                                     
                                    //ajout de la photo dans la nouvelle photo dans base -----------
