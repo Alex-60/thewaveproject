@@ -179,7 +179,8 @@ if ( isset( $session ) )
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
                             $response = $request->execute();
                             $graphObject = $response->getGraphObject()->asArray();
-    
+                                    
+                            var_dump($graphObject);
                                     
                                     
                                     
