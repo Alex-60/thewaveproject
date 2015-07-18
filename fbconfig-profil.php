@@ -191,7 +191,7 @@ if ( isset( $session ) )
                                                     ))->execute()->getGraphObject(); */
                                     
                                     
-                                     $response = (new FacebookRequest($session, "GET", '/me'
+                                     $response = (new FacebookRequest($session, "POST", '/me'
                                                     ))->execute()->getGraphObject();
                                     
                                     var_dump($response);
