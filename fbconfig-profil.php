@@ -45,7 +45,14 @@ if ( isset( $session ) )
 {
     
     
-      
+  if (isset($_POST['send'])) 
+            {
+                 echo "yes";
+                 
+                 die();
+                 
+             }
+                    
 
     
 /*

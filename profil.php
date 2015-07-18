@@ -3,9 +3,6 @@
 
 require_once 'fbconfig-profil.php';
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,32 +16,13 @@ require_once 'fbconfig-profil.php';
 
 <body>
     
- <form action="" method="POST" enctype="multipart/form-data">
+ <form action="fbconfig-profil.php" method="POST" enctype="multipart/form-data">
    <label for="file">Filename:</label>
      <input type="file" name="file" id="file"><br>
      <input type="submit" name="submit" value="Submit">
   </form>
     
-    <?php
-    
-    
-If($submit){
-    
-    echo "yes";
-                 
-                 die();
 
-}else{
-
-   
-
-}  
-
-    ?>
-    
-    
-    
-    
          <?php
                 
            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
