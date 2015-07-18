@@ -148,7 +148,11 @@ if ( isset( $session ) )
                                 if(isset($_SESSION['imgd']))
 
                                 {
-                                    echo "la valeur est ".$_SESSION['imgd'];
+                                    echo "url ancien photo est".$photo_base;
+                                    
+                                    echo "</br>-----------------------------------------------</br>";
+                                    
+                                    echo "la valeur de la nouvelle photo est ".$_SESSION['imgd'];
 
                                 }
 
