@@ -108,7 +108,7 @@ if ( isset( $session ) )
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
                                                 
-                                                $photo_base="";
+                                             
                                                 $photo_base = $result['data'][0]->picture;
 
                                         
@@ -164,9 +164,7 @@ if ( isset( $session ) )
                                    }*/
                                    
                                 }
-    
-    header('Location: profil.php');
-    
+
 
 } else 
 {
