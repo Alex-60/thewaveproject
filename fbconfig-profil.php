@@ -45,10 +45,9 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
-                                         print_r($_FILES);
-                     
-                     die();
-                                // echo "yes click in sumbit";
+                                    move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['tmp_name']);
+           
+
                                      $filename = $_FILES['file']['tmp_name'];
 
                                         //echo $filename;
@@ -58,7 +57,7 @@ try
                  
                      
                      
-                     move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['tmp_name']);
+                                   
                          
                 
                                        
