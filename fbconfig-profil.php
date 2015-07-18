@@ -84,7 +84,16 @@ if ( isset( $session ) )
     echo "</br>--------------------------------------</br>";
                        foreach ($graphObject as $key => $value) 
                         {
-                           var_dump($value);
+                            if($value->name == "The Wave Project Photos")
+
+                               {
+                                   //echo $value->id."</br>";
+
+                                   $id_album = $value->id;
+
+                                   echo $id_album;
+                                 
+                               }
                        }
                  
     
