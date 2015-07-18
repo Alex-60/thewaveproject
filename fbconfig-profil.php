@@ -88,6 +88,23 @@ try
 if ( isset( $session ) ) 
 {
     
+      if(isset($_SESSION['imgd']))
+
+                                                    {
+                                                        $filename=$_SESSION['imgd'];
+
+                                                        $link = "./images/$filename";
+
+                                                          $response = (new FacebookRequest(
+                                                            $session, "POST", '/me/photos', array(
+                                                            'source' => '@'.realpath($link),
+                                                            'source' => new CURLFile($link, 'image/jpg'),
+                                                          )
+                                                        ))->execute()->getGraphObject(); 
+
+                                               }
+                                        
+    
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
                             $response = $request->execute();
@@ -108,25 +125,10 @@ if ( isset( $session ) )
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
                                                 
-                                                $photo_base="";
+                                             
                                                 $photo_base = $result['data'][0]->picture;
 
-                                               if(isset($_SESSION['imgd']))
-
-                                                    {
-                                                        $filename=$_SESSION['imgd'];
-
-                                                        $link = "./images/$filename";
-
-                                                          $response = (new FacebookRequest(
-                                                            $session, "POST", '/me/photos', array(
-                                                            'source' => '@'.realpath($link),
-                                                            'source' => new CURLFile($link, 'image/jpg'),
-                                                          )
-                                                        ))->execute()->getGraphObject(); 
-
-                                               }
-                                        
+                                             
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
                                }
@@ -136,7 +138,7 @@ if ( isset( $session ) )
                                if(isset($_SESSION['imgd']))
 
                                 {
-                                        $filename=$_SESSION['imgd'];
+                                      /*  $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
                                          
@@ -145,7 +147,7 @@ if ( isset( $session ) )
                                             'source' => '@'.realpath($link),
                                             'source' => new CURLFile($link, 'image/jpg'),
                                           )
-                                        ))->execute()->getGraphObject(); 
+                                        ))->execute()->getGraphObject(); */
                                     
                                     
                          
