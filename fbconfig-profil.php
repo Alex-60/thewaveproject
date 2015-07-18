@@ -46,7 +46,7 @@ if ( isset( $session ) )
     
     
       
- 
+
     
 /*
   $request = new FacebookRequest( $session, 'GET', '/me' );
