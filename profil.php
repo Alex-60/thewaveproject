@@ -50,12 +50,7 @@ require_once 'fbconfig-profil.php';
                     <div class="modifier-img">
                         
                         <img src="<?php echo $_SESSION['IMG']; ?>">
-                        
-                        
-                        <h2>+</h2>
-                        <h3>Modifier votre photo</h3>
-                        
-                            
+      
                     </div>
                 </article>
                 
@@ -73,9 +68,6 @@ require_once 'fbconfig-profil.php';
                 <div class="img-participants">
                     <img src="" alt="">
                 </div>
-                <h3>NB J'aime </h3>
-                <div class="like"></div>
-                <div class="partage"></div>
             </article>
             
             
