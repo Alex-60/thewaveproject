@@ -172,9 +172,16 @@ if ( isset( $session ) )
                                     //upload de la nouvelle photo
                                     
                                     
-                                        $link2= $_SESSION['imgd'];
+                                        $link2 = $_SESSION['imgd'];
                                     
-                                    echo $link2;
+
+                                    
+                            $request = new FacebookRequest( $session, 'GET', '/me/albums' );
+                            $response = $request->execute();
+                            $graphObject = $response->getGraphObject()->asArray();
+    
+                                    
+                                    
                                     
                                     die();
                                     
