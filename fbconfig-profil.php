@@ -195,17 +195,7 @@ if ( isset( $session ) )
                                                   
                                                   
 
-                                                   /* $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                                        'source' => '@'.realpath($link2),
-                                                        'source' => new CURLFile($link2, 'image/jpg'),
-                                                      )
-                                                    ))->execute()->getGraphObject(); */
-                                    
-                                            
-                                    
-                           
-                                    
-                                     //$filename = $_FILES['userfile']['name'];
+                                                // a changer
                                     
                                         $filename=$_SESSION['imgd'];
                     
@@ -219,7 +209,45 @@ if ( isset( $session ) )
                                         ))->execute()->getGraphObject(); 
                                     
                                     
-                                    echo "yes";
+                                   //ajout de la photo dans la base -----------
+                                    
+                                    $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                    $request_user_executed = $request_user->execute();
+                                    $user = $request_user_executed->getGraphObject()->asArray();
+                 
+              
+                 
+                 
+                                   foreach ($user['data'] as $key => $value) 
+                                    {
+                                       if($value->name == "The Wave Project Photos")
+
+                                       {
+
+                                                 $id_album = $value->id;
+                                           
+                                           
+                                           
+                                            $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                
+                                            $response = $request->execute();
+                                            $result = $response->getGraphObject()->asArray();
+
+                                            $photo_base = $result['data'][0]->picture;
+                                           
+                                           
+                                           var_dump($photo_base);
+                                           
+                                           
+                                           
+                                           
+                                           
+
+                                       }
+
+                                   }
+                                    
+                                
                                                 
 
                                 }
