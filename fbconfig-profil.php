@@ -120,7 +120,6 @@ if ( isset( $session ) )
                                if(isset($_SESSION['imgd']))
 
                                 {
-    
                                         $filename=$_SESSION['imgd'];
                     
                                         $link = "./images/$filename";
@@ -137,9 +136,6 @@ if ( isset( $session ) )
   /* $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");*/
 
-                            
-                                    
-                                    
                                    //ajout de la photo dans la nouvelle photo dans base -----------
                                     
                                    /* $request_user = new FacebookRequest( $session,"GET","/me/albums");
@@ -168,17 +164,13 @@ if ( isset( $session ) )
                                    
                                 }
 
-                 
 } else 
 {
     
     
   //$loginUrl = $helper->getLoginUrl();
  //header("Location: ".$loginUrl);
-    
-     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
-
-    
+     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos')); 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
   
     
