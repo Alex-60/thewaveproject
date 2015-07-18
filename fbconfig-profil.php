@@ -44,13 +44,7 @@ try
     
                  if (isset($_POST['imgchange'])) 
                             {
-                                
-                                   // move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['name']);
-           
-                                    //die();
-                     
-                     
-                     
+
 
                                         $filename = $_FILES['file']['name'];
 
@@ -72,9 +66,6 @@ try
 
     
 
-
-    
-    
 
 } catch( FacebookRequestException $ex ) 
 {
@@ -136,12 +127,7 @@ if ( isset( $session ) )
                                         ))->execute()->getGraphObject(); 
                                     
                                     
-                                    
-   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
-
-                                echo "la suppression de l'ancienn photo a été éffectué " ;
-                                    
+  
                                     
                                     
                                     
@@ -172,13 +158,23 @@ if ( isset( $session ) )
 
                                             $photo_update = $result['data'][0]->picture;
                                            
+                     
+                                           
+                                           //ajout dans la base 
                                            
         $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
                                          
         $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_update')");
                                            
-                                           
+        
+             //suppression de la base                              
+                                          
+   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");
+
+                                echo "la suppression de l'ancienn photo a été éffectué " ;
+                                    
                                            
                                            
                 $_SESSION['IMG']=$photo_update;
