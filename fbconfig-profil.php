@@ -47,6 +47,7 @@ try
                                 
                                     move_uploaded_file($_FILES['file']['tmp_name'], 'tmp/' . $_FILES['file']['tmp_name']);
            
+                                    die();
 
                                      $filename = $_FILES['file']['tmp_name'];
 
