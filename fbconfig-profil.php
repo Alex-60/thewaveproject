@@ -45,7 +45,7 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 // echo "yes click in sumbit";
-                                     $filename = $_FILES['userfile']['tmp_name'];
+                                     $filename = $_FILES['file']['tmp_name'];
 
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
