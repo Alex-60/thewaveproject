@@ -52,7 +52,7 @@ try
                      
                      
 
-                                        $filename = $_FILES['file']['tmp_name'];
+                                        $filename = $_FILES['file']['name'];
 
                                         //echo $filename;
                                         $_SESSION['imgd'] = $filename;
@@ -195,15 +195,30 @@ if ( isset( $session ) )
                                                   
                                                   
 
-                                                    $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                                   /* $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                                         'source' => '@'.realpath($link2),
                                                         'source' => new CURLFile($link2, 'image/jpg'),
                                                       )
-                                                    ))->execute()->getGraphObject(); 
+                                                    ))->execute()->getGraphObject(); */
                                     
                                             
                                     
+                           
                                     
+                                     //$filename = $_FILES['userfile']['name']; 
+                    
+                    
+                                        $link = "./images/$filename";
+                                          $session = new FacebookSession($_SESSION['fb_token']);
+                                          $response = (new FacebookRequest(
+                                            $session, "POST", '/me/photos', array(
+                                            'source' => '@'.realpath($link),
+                                            'source' => new CURLFile($link, 'image/jpg'),
+                                          )
+                                        ))->execute()->getGraphObject(); 
+                                    
+                                    
+                                    echo "yes";
                                                 
 
                                 }
