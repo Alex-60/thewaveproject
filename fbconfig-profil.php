@@ -200,6 +200,10 @@ if ( isset( $session ) )
                                    
                                  $test = $_SESSION['image'];
                                    
+                                   
+                                   echo "la veleur est".$test;
+                                   
+                                   die();
            
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($test),
