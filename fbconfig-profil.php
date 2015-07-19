@@ -83,13 +83,14 @@ try
                                     echo "Sorry, file already exists.";
                                     //$uploadOk = 0;
                                 } 
+                                
+                                
+                                $_SESSION['image']="images/".$_FILES["file"]["name"];
                             
                             }
 
                      die();
-                     
-                     
-                     
+
                                             $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
                      
                                             if($doug)
@@ -197,7 +198,7 @@ if ( isset( $session ) )
 					mysql_close();
 			}*/
                                    
-                                 $test = "depot/".$_FILES["file"]["name"];
+                                 $test = $_SESSION['image'];
                                    
            
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
