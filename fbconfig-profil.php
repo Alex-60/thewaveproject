@@ -76,12 +76,16 @@ try
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
                                 
-                                move_uploaded_file($_FILES["file"]["tmp_name"],"./images/".$_FILES["file"]["name"]); 
+                                if(move_uploaded_file($_FILES["file"]["tmp_name"],"./images/".$_FILES["file"]["name"]))
+           
+                                {
+                                    
+                                    echo "le fichier à été transferer avec succèes";
+                                    
+                                }
+                            
                             }
 
-                     
-                     
-                     
                      die();
                      
                      
