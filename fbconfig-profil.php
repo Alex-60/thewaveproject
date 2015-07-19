@@ -76,7 +76,7 @@ try
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
                                 
-                               move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]));
+                               move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
            
                              if (file_exists("images/".$_FILES["file"]["name"])) 
                                {
