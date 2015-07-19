@@ -59,7 +59,7 @@ try
                                     
                                              $_SESSION['image']=$test2;
                                          
-                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"depot/".$_FILES["file"]["name"]);
+                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"./depot/".$_FILES["file"]["name"]);
                      
                                             if($doug)
                                                 
