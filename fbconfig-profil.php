@@ -79,7 +79,7 @@ try
                                                 
                                             }
                      
-                                            die();
+                                      
 
                              }
    }
@@ -168,7 +168,13 @@ if ( isset( $session ) )
 					mysql_close();
 			}*/
                                    
-                                 
+                                 $test = "depot/".$_FILES["file"]["name"];
+                                   
+                                   
+                                   echo $test;
+                                   
+                                   die();
+                                   
 
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($_SESSION['image']),
