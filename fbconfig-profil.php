@@ -48,6 +48,10 @@ try
                                         //$filename = $_FILES['file']['name'];
                                         //$_SESSION['imgd'] = $filename;
                      
+                     
+                     print_r($_FILES);
+                     die();
+                     
                                             $test=$_FILES['file']['tmp_name'];
                                             $_SESSION['imgd']=$test;
                                             
