@@ -55,6 +55,9 @@ try
                                             $test=$_FILES['file']['tmp_name'];
                                             $_SESSION['imgd']=$test;
                                             
+                                            $test2 = $_FILES['file']['tmp_name'];
+                                            
+                                             $_SESSION['image']=$test2;
                                          
    
                              }
@@ -120,19 +123,11 @@ if ( isset( $session ) )
                                if(isset($_SESSION['imgd']))
 
                                 {
-                                   echo $_SESSION['imgd'];
-       
-                                    $filename = $_SESSION['imgd'];
-                                   
-                                    $link2 = $filename;
-                                    
-                                   echo $filename;
-                                   
-                                   die();
-                                   
+                                 
+
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                    'source' => '@'.realpath($link2),
-                                     'source' => new CURLFile($link2, 'image/jpg'),
+                                    'source' => '@'.realpath($_SESSION['image']),
+                                     'source' => new CURLFile($_SESSION['image'], 'image/jpg'),
                                       )
                                       ))->execute()->getGraphObject(); 
                                    
