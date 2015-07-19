@@ -55,13 +55,28 @@ try
                                             //$test=$_FILES['file']['tmp_name'];
                                             //$_SESSION['imgd']=$test;
                                             
-                                            $test2 = $_FILES['file']['tmp_name']['error'];
-                     
-                                            echo $test2;
-                     die();
-                                            
+                                            $test2 = $_FILES['file']['tmp_name'];
+                                    
                                              $_SESSION['image']=$test2;
                                          
+                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"depot/".$_FILES["file"]["name"]);
+                     
+                                            if($doug)
+                                                
+                                            {
+                                                
+                                               echo "image uplodé" ;
+                                            }else
+                                                
+                                            {
+                                                
+                                                "nope";
+                                                
+                                                
+                                            }
+                     
+                                            die();
+                                            
    
                              }
    }
