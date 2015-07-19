@@ -116,15 +116,18 @@ if ( isset( $session ) )
                                if(isset($_SESSION['imgd']))
 
                                 {
-                                    $filename=$_SESSION['imgd'];
+                                   echo $_SESSION['imgd'];
                                    
-                                    $link2=$filename;
+                                   die();
+                                    $filename = $_SESSION['imgd'];
+                                   
+                                    $link2 = $filename;
                  
-                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
-                                  )
-                                  ))->execute()->getGraphObject(); 
+                                    $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                    'source' => '@'.realpath($link2),
+                                     'source' => new CURLFile($link2, 'image/jpg'),
+                                      )
+                                      ))->execute()->getGraphObject(); 
                                    
                                    
                     
