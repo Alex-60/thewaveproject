@@ -64,7 +64,12 @@ try
                                             if($doug)
                                                 
                                             {
+                                                
+                                                echo $doug;
+                                                
                                                echo "image uplodé" ;
+                                                
+                                                echo 
                                             }else
                                                 
                                             {
