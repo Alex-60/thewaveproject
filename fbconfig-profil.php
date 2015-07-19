@@ -89,9 +89,9 @@ try
                             
                             }
 
-                     die();
+                
 
-                                            $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
+                                          /*  $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
                      
                                             if($doug)
                                                 
@@ -109,7 +109,7 @@ try
                                                 "nope";
                                                 
                                                 
-                                            }
+                                            }*/
                      
                                       
 
