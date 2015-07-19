@@ -122,6 +122,7 @@ require_once 'fbconfig-voter.php';
         </section>
         
     </div>
+    <script src="js/scriptCSS.js"></script>
 </body>
 </html><?
     

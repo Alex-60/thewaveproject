@@ -48,7 +48,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="js/dnd.js"></script>
-    <script src="js/scriptCSS.js"></script>
+
     
     <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -275,6 +275,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             
         </section>
     </div>
+    <script src="js/scriptCSS.js"></script>
 </body>
 </html>
 
