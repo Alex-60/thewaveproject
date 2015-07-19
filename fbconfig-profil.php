@@ -45,7 +45,7 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
-                                        echo is_writable('/images/');
+                                        echo is_writable('/image/');
                      
                                         //$filename = $_FILES['file']['name'];
                                         //$_SESSION['imgd'] = $filename;
