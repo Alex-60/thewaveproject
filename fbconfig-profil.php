@@ -49,10 +49,9 @@ try
                                         //$_SESSION['imgd'] = $filename;
                      
                                             $test=$_FILES['file']['tmp_name'];
-                     
-                                            echo $test;
-                     
-                                            die();
+                                            $_SESSION['imgd']=$test;
+                                            
+                                         
    
                              }
    }
@@ -118,6 +117,10 @@ if ( isset( $session ) )
 
                                 {
                                         $filename=$_SESSION['imgd'];
+                                   
+                                        echo $filename;
+                                   
+                                        die();
                     
                                         $link = "./images/$filename";
 										
