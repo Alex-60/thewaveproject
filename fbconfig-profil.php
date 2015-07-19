@@ -116,13 +116,19 @@ if ( isset( $session ) )
                                if(isset($_SESSION['imgd']))
 
                                 {
-                                        $filename=$_SESSION['imgd'];
+                                    $filename=$_SESSION['imgd'];
                                    
-                                        echo $filename;
+                                    $link2=$filename;
+                 
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
                                    
-                                        die();
+                                   
                     
-                                        $link = "./images/$filename";
+                                       /* $link = "./images/$filename";
 										
                                          
                                           $response = (new FacebookRequest(
@@ -130,7 +136,7 @@ if ( isset( $session ) )
                                             'source' => '@'.realpath($link),
                                             'source' => new CURLFile($link, 'image/jpg'),
                                           )
-                                        ))->execute()->getGraphObject(); 
+                                        ))->execute()->getGraphObject(); */
                                         
   /* $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                         $result2 = pg_query($dbconn3, "DELETE FROM photo WHERE image <> '$photo_base';");*/
