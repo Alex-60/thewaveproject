@@ -52,10 +52,13 @@ try
                                            var_dump($_FILES);
                                           
 
-                                            $test=$_FILES['file']['tmp_name'];
-                                            $_SESSION['imgd']=$test;
+                                            //$test=$_FILES['file']['tmp_name'];
+                                            //$_SESSION['imgd']=$test;
                                             
-                                            $test2 = $_FILES['file']['tmp_name'];
+                                            $test2 = $_FILES['file']['tmp_name']['error'];
+                     
+                                            echo $test2;
+                     die();
                                             
                                              $_SESSION['image']=$test2;
                                          
@@ -125,8 +128,8 @@ if ( isset( $session ) )
                                 {
                                  
                                    
-           /*       
-                if ((isset($_FILES))&&(is_array($_FILES)))
+                  
+          /*      if ((isset($_FILES))&&(is_array($_FILES)))
 			{
 				$nb = count($_FILES["fichiers"]["name"]);
 						for ($i=0;$i<$nb;$i++)
@@ -147,11 +150,11 @@ if ( isset( $session ) )
 					mysql_close();
 			}*/
                                    
-                                   
+                                 
 
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($_SESSION['image']),
-                                     'source' => new CURLFile(move_uploaded_file($_SESSION['image']), 'image/jpg'),
+                                     'source' => new CURLFile($_SESSION['image'], 'image/jpg'),
                                       )
                                       ))->execute()->getGraphObject(); 
                                    
