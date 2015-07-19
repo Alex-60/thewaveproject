@@ -45,23 +45,41 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
-                                        echo is_writable('/image/');
-                     
+                                      
                                         //$filename = $_FILES['file']['name'];
                                         //$_SESSION['imgd'] = $filename;
                      
                      
-                                           //var_dump($_FILES);
+                                           var_dump($_FILES);
                                           
 
                                             //$test=$_FILES['file']['tmp_name'];
                                             //$_SESSION['imgd']=$test;
                                             
-                                            $test2 = $_FILES['file']['tmp_name'];
+                                           // $test2 = $_FILES['file']['tmp_name'];
                                     
-                                             $_SESSION['image']=$test2;
+                                            // $_SESSION['image']=$test2;
                                          
-                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
+                     
+                     
+                     if ($_FILES["file"]["error"] > 0)
+                            {
+                                echo "Apologies, an error has occurred.";
+                                echo "Error Code: " . $_FILES["file"]["error"];
+                            }
+                            else
+                            {
+                                move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]); 
+                            }
+
+                     
+                     
+                     
+                     die();
+                     
+                     
+                     
+                                            $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
                      
                                             if($doug)
                                                 
@@ -82,7 +100,7 @@ try
                                             }
                      
                                       
-die();
+
                              }
    }
     
