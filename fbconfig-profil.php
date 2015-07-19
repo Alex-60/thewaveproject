@@ -48,11 +48,11 @@ try
                                         //$filename = $_FILES['file']['name'];
                                         //$_SESSION['imgd'] = $filename;
                      
-                                            $test=$_FILES['file']['name'];
+                                            $test=$_FILES['file']['tmp_name'];
                      
                                             echo $test;
                      
-                     die();
+                                            die();
    
                              }
    }
