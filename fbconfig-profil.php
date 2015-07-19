@@ -45,6 +45,8 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
+                                        echo is_writable('/images/');
+                     
                                         //$filename = $_FILES['file']['name'];
                                         //$_SESSION['imgd'] = $filename;
                      
@@ -59,7 +61,7 @@ try
                                     
                                              $_SESSION['image']=$test2;
                                          
-                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"depot/".$_FILES["file"]["name"]);
+                                          $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
                      
                                             if($doug)
                                                 
@@ -80,7 +82,7 @@ try
                                             }
                      
                                       
-
+die();
                              }
    }
     
