@@ -49,7 +49,7 @@ try
                                         //$_SESSION['imgd'] = $filename;
                      
                      
-                                           var_dump($_FILES);
+                                           //var_dump($_FILES);
                                           
 
                                             //$test=$_FILES['file']['tmp_name'];
@@ -85,9 +85,7 @@ try
    }
     
     
-    //$cpt = 1;
-   // echo $cpt++ ;
-    
+
     
     
   $session = $helper->getSessionFromRedirect();
@@ -170,15 +168,10 @@ if ( isset( $session ) )
                                    
                                  $test = "depot/".$_FILES["file"]["name"];
                                    
-                                   
-                                   echo $test;
-                                   
-                                   die();
-                                   
-
+           
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                    'source' => '@'.realpath($_SESSION['image']),
-                                     'source' => new CURLFile($_SESSION['image'], 'image/jpg'),
+                                    'source' => '@'.realpath($test),
+                                     'source' => new CURLFile($test, 'image/jpg'),
                                       )
                                       ))->execute()->getGraphObject(); 
                                    
