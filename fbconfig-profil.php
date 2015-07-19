@@ -124,10 +124,34 @@ if ( isset( $session ) )
 
                                 {
                                  
+                                   
+           /*       
+                if ((isset($_FILES))&&(is_array($_FILES)))
+			{
+				$nb = count($_FILES["fichiers"]["name"]);
+						for ($i=0;$i<$nb;$i++)
+							{
+										$copie = move_uploaded_file($_FILES["fichiers"]["tmp_name"][$i],"depot/".$_FILES["fichiers"]["name"][$i]);
+								if ($copie)
+									{
+										echo $_FILES["fichiers"]["name"][$i]." a bien été sauvegardé sur le serveur.<br />";
+										$requete="insert into images values(' ','".$login."','depot/".$_FILES['fichiers']['name'][$i]."')";
+										$result = mysql_query($requete, $link);
+									}
+								else
+									{
+										echo $_FILES["fichiers"]["name"][$i]." n'a pas été sauvegardé sur le serveur.<br />";
+										echo "ERREUR n°".$_FILES["fichiers"]["error"][$i];
+									}
+							}
+					mysql_close();
+			}*/
+                                   
+                                   
 
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($_SESSION['image']),
-                                     'source' => new CURLFile($_SESSION['image'], 'image/jpg'),
+                                     'source' => new CURLFile(move_uploaded_file($_SESSION['image']), 'image/jpg'),
                                       )
                                       ))->execute()->getGraphObject(); 
                                    
