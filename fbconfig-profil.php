@@ -76,13 +76,13 @@ try
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
                                 
-                                if(move_uploaded_file($_FILES["file"]["tmp_name"],"./images/".$_FILES["file"]["name"]))
+                               move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]))
            
-                                {
-                                    
-                                    echo "le fichier à été transferer avec succèes";
-                                    
-                                }
+                             if (file_exists("images/".$_FILES["file"]["name"])) 
+                               {
+                                    echo "Sorry, file already exists.";
+                                    //$uploadOk = 0;
+                                } 
                             
                             }
 
