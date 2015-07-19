@@ -101,13 +101,7 @@ require_once 'fbconfig-profil.php';
     }
 ?>
             
-            
-            
-            
-            
-          
-          
-            
+
                   
         </section>
     </div>

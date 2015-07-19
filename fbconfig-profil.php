@@ -45,8 +45,14 @@ try
                  if (isset($_POST['imgchange'])) 
                             {
                                 
-                                        $filename = $_FILES['file']['name'];
-                                        $_SESSION['imgd'] = $filename;
+                                        //$filename = $_FILES['file']['name'];
+                                        //$_SESSION['imgd'] = $filename;
+                     
+                                            $test=$_FILES['file']['name'];
+                     
+                                            echo $test;
+                     
+                     die();
    
                              }
    }
@@ -106,29 +112,13 @@ if ( isset( $session ) )
     
     
 	
-								
-                
-                          
-                 
-                                 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			
     
                                if(isset($_SESSION['imgd']))
 
                                 {
                                         $filename=$_SESSION['imgd'];
-										
-										
+                    
                                         $link = "./images/$filename";
                                          
                                           $response = (new FacebookRequest(
