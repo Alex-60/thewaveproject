@@ -76,7 +76,7 @@ try
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
                                 
-                                if(move_uploaded_file($_FILES["file"]["tmp_name"],"./images/".$_FILES["file"]["name"]))
+                                if(move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]))
            
                                 {
                                     
@@ -90,7 +90,7 @@ try
                      
                      
                      
-                                            $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
+                                            $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/.$_FILES["file"]["name"]);
                      
                                             if($doug)
                                                 
