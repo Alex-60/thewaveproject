@@ -85,39 +85,17 @@ try
                                  
                                  $_SESSION['image']="images/".$_FILES["file"]["tmp_name"];
                                  
-                                 echo  $_SESSION['image'];
+                                 echo  "la valeur est".$_SESSION['image'];
                                  
-                                 die();
+                               
                                  
                                 } 
                                 
                                 
-                                
+                                  die();
                             
                             }
 
-                
-
-                                          /*  $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
-                     
-                                            if($doug)
-                                                
-                                            {
-                                                
-                                                echo $doug;
-                                                
-                                               echo "image uplodé" ;
-                                                
-                                            
-                                            }else
-                                                
-                                            {
-                                                
-                                                "nope";
-                                                
-                                                
-                                            }*/
-                     
                                       
 
                              }
