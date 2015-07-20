@@ -9,7 +9,7 @@ session_start();
 // added in v4.0.0
 
 require_once 'autoload.php';
-
+//require_once 'fbconfig-profil.php';
 
 //require_once 'index.php';
   
@@ -39,7 +39,7 @@ try
     
    
 
-   /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
     
                  if (isset($_POST['imgchange'])) 
@@ -74,15 +74,47 @@ try
                                   echo "Type: " . $_FILES["file"]["type"] . "<br>";
                                   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
-                                    
                                 
-                                    
+                                
+                               move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
+           
+                             if (file_exists("images/".$_FILES["file"]["name"])) 
+                               {
+                                    echo "Sorry, file already exists.";
+                                    //$uploadOk = 0;
+                                } 
+                                
+                                
+                                $_SESSION['image']="images/".$_FILES["file"]["name"];
+                            
                             }
 
+                
+
+                                          /*  $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
+                     
+                                            if($doug)
+                                                
+                                            {
+                                                
+                                                echo $doug;
+                                                
+                                               echo "image uplodé" ;
+                                                
+                                            
+                                            }else
+                                                
+                                            {
+                                                
+                                                "nope";
+                                                
+                                                
+                                            }*/
+                     
                                       
 
                              }
-   }*/
+   }
     
     
 
@@ -107,7 +139,6 @@ try
 if ( isset( $session ) ) 
 {
     
-
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
                             $response = $request->execute();
@@ -167,7 +198,12 @@ if ( isset( $session ) )
 					mysql_close();
 			}*/
                                    
-                               
+                                 $test = $_SESSION['image'];
+                                   
+                                   
+                                   echo "la veleur est".$test;
+                                   
+                                   die();
            
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($test),

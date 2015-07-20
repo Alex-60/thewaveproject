@@ -1,33 +1,7 @@
 
 <?php
 
-//require_once 'fbconfig-profil.php';
-
-      session_start();
-                                // added in v4.0.0
-                      
-                                require_once 'autoload.php';
-
-        
-                                //require_once 'index.php';
-
-                                use Facebook\FacebookSession;
-                                use Facebook\FacebookRedirectLoginHelper;
-                                use Facebook\FacebookRequest;
-                                use Facebook\FacebookResponse;
-                                use Facebook\FacebookSDKException;
-                                use Facebook\FacebookRequestException;
-                                use Facebook\FacebookAuthorizationException;
-                                use Facebook\GraphObject;
-                                use Facebook\Entities\AccessToken;
-                                use Facebook\HttpClients\FacebookCurlHttpClient;
-                                use Facebook\HttpClients\FacebookHttpable;
-                                use Facebook\HttpClients\facebook;
-                               
-
-
-
-
+require_once 'fbconfig-profil.php';
 
 ?>
 <!DOCTYPE html>
@@ -62,7 +36,7 @@
     
 
         
-     <form enctype="multipart/form-data" action="" method="POST">
+     <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
           
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
           
@@ -70,28 +44,7 @@
             
             <input type="submit" name="imgchange" value="Send File" />
         </form>
-    <?php
-
-
-   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-        
-             if (isset($_POST['imgchange']))  
-                    {
-                        
-                        echo "yes";
-                 
-                        die();
-                 
-                    }
-   
-   
-   }
-
-
-
-
-?>
+    
             
     
     
