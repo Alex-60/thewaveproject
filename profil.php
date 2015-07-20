@@ -76,14 +76,6 @@
   </form>-->
     
     
-      <form enctype="multipart/form-data" action="" method="POST">
-          
-            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-          
-            Send this file: <input name="file" type="file" />`
-            
-            <input type="submit" name="imgchange" value="Send File" />
-        </form>
     
     
 
@@ -91,15 +83,14 @@
             
     
 
-   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+   /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             
         {
         
              if (isset($_POST['imgchange']))  
                     {
                         
-                            if ( isset( $session ) ) 
-                                {
+                          
 
 
 
@@ -114,12 +105,11 @@
                                           )
                                           ))->execute()->getGraphObject(); 
 
-                                }
 
                     }
                 
             }
-
+*/
 
     
     ?>  
@@ -142,7 +132,38 @@
             <img src="img/logo.png" alt="logo">
             <h2>Envoyer votre plus belle photos</h2>
         </article>
+            
+            
+            
+      <form enctype="multipart/form-data" action="" method="POST">
+          
+            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+          
+            Send this file: <input name="file" type="file" />`
+            
+            <input type="submit" name="imgchange" value="Send File" />
+        </form>
+            
+            
 
+            
+       <?php     
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            
+        {
+        
+             if (isset($_POST['imgchange']))  
+                {
+
+                    echo "yes";
+                 
+                    die();
+                    
+                }
+            
+        }
+            
+            ?>
         <section class="content">
             <article class="profils">
                 <article class="image-profil">
