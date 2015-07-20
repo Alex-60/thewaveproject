@@ -25,7 +25,7 @@
 
 
 
-                           /*     // init app with app id and secret
+                                // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
                                     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
@@ -39,7 +39,7 @@
                                 } catch( Exception $ex ) 
                                 {
                                   // When validation fails or other local issues
-                                }*/
+                                }
 
 
 
@@ -90,35 +90,7 @@
              if (isset($_POST['imgchange']))  
                     {
                         
-                            // init app with app id and secret
-                                    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
-                                // login helper with redirect_uri
-                                    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
-                                try 
-                                {
-                                  $session = $helper->getSessionFromRedirect();
-
-                                } catch( FacebookRequestException $ex ) 
-                                {
-                                  // When Facebook returns an error
-                                } catch( Exception $ex ) 
-                                {
-                                  // When validation fails or other local issues
-                                }
-
-
-
-                                    $filename3 = $_FILES['file']['tmp_name']; 
-
-                                         $link2=$filename3;
-
-
-                                        $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                        'source' => '@'.realpath($link2),
-                                         'source' => new CURLFile($link2, 'image/jpg'),
-                                          )
-                                          ))->execute()->getGraphObject(); 
-
+         
 
                     }
                 
