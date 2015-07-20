@@ -92,12 +92,9 @@
         if ( isset( $session ) ) 
         {
             
-            echo "there is a session";
-        }
-
-    ?>
+            ?>
     
-    <div class="page-profil">    
+        <div class="page-profil">    
         <article class="header">
             <h1>GRAND JEU CONCOURS</h1>
             <p>Du 1er Juin au 31 Juillet 2015</p>
@@ -154,5 +151,18 @@
                   
         </section>
     </div>
+    
+    
+    
+    
+    <?
+            
+            
+            
+        }
+
+    ?>
+    
+
 </body>
 </html>
