@@ -25,7 +25,7 @@
 
 
 
-                                // init app with app id and secret
+                           /*     // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
                                     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
@@ -39,7 +39,7 @@
                                 } catch( Exception $ex ) 
                                 {
                                   // When validation fails or other local issues
-                                }
+                                }*/
 
 
 
@@ -83,14 +83,28 @@
             
     
 
-   /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             
         {
         
              if (isset($_POST['imgchange']))  
                     {
                         
-                          
+                            // init app with app id and secret
+                                    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                                // login helper with redirect_uri
+                                    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+                                try 
+                                {
+                                  $session = $helper->getSessionFromRedirect();
+
+                                } catch( FacebookRequestException $ex ) 
+                                {
+                                  // When Facebook returns an error
+                                } catch( Exception $ex ) 
+                                {
+                                  // When validation fails or other local issues
+                                }
 
 
 
@@ -109,7 +123,7 @@
                     }
                 
             }
-*/
+
 
     
     ?>  
@@ -144,24 +158,6 @@
             <input type="submit" name="imgchange" value="Send File" />
         </form>
             
-            
-
-            
-       <?php     
-     
-        
-             if (isset($_POST['imgchange']))  
-                {
-
-                    echo "yes";
-                 
-                    die();
-                    
-                }
-            
-       
-            
-            ?>
         <section class="content">
             <article class="profils">
                 <article class="image-profil">
