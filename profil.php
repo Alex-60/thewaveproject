@@ -4,7 +4,7 @@
 //require_once 'fbconfig-profil.php';
 
 
-       session_start();
+                                session_start();
                                 // added in v4.0.0
                       
                                 require_once 'autoload.php';
@@ -100,23 +100,10 @@
                         
                  
                  
+                 echo "yes";
                  
-                         $filename3 = $_FILES['file']['tmp_name']; 
-                
-                              
-                 echo $filename3;
-                 
-                 die();
-                 
-                                 $link2=$filename3;
-                 
-                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
-                                  )
-                                  ))->execute()->getGraphObject(); 
-                 
-                 
+                       
+                       
                             
                     }
                 
