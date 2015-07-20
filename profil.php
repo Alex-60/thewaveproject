@@ -109,10 +109,17 @@
              if (isset($_POST['imgchange']))  
                     {
                  
-                 echo "yeesssssssss";
+                 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                              
+                 $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+                 
+                  $session = $helper->getSessionFromRedirect();
+                 
+                 echo $session;
                  
                  die();
-               
+                 
+                 
                  
              }
                 
