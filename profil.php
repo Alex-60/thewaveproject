@@ -44,7 +44,29 @@ require_once 'fbconfig-profil.php';
             
             <input type="submit" name="imgchange" value="Send File" />
         </form>
+    <?php
+
+
+($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
     
+                        if (isset($_POST['imgchange'])) 
+                            {
+                     
+                            $_FILES['file']['name']       = $_SESSION["name"];
+                            
+                            
+                            
+                            
+                            
+                            }
+                
+            }
+
+
+
+
+?>
             
     
     

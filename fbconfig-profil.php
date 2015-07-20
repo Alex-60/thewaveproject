@@ -38,8 +38,12 @@ try
 {
     
    
+    
+    echo $_SESSION["name"];
+    
+    die();
 
-   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+   /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
     
                  if (isset($_POST['imgchange'])) 
@@ -74,35 +78,15 @@ try
                                   echo "Type: " . $_FILES["file"]["type"] . "<br>";
                                   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
-                                
-                                mkdir('upload','777');
-                                
-                                echo "dossier crée";
-                                
-                                die();
-                                
-                                //$up = "upload/";
+                                    
                                 
                                     
-                                    move_uploaded_file($_FILES["file"]["tmp_name"],$up.$_FILES["file"]["name"]);
-                                
-                                
-                                
-                                    die();
-                                    
-                              //$zak= move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
-           
-                                
-                                //echo $zak;
-                                
-                                 // die();
-                            
                             }
 
                                       
 
                              }
-   }
+   }*/
     
     
 
