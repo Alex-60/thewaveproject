@@ -86,34 +86,7 @@
         {
           
             
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-            {
-        
-             if (isset($_POST['imgchange']))  
-                    {
-                 
-                 echo "yeesssssssss";
-                 
-                 die();
-                 
-                 /*
-                                $filename3 = $_FILES['file']['tmp_name']; 
-                
-                              
-                 
-                                 $link2=$filename3;
-                 
-                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
-                                'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
-                                  )
-                                  ))->execute()->getGraphObject(); */
-                 
-                 
-                 
-             }
-                
-            }
+           
             ?>
     
     
@@ -126,6 +99,23 @@
             <input type="submit" name="imgchange" value="Send File" />
         </form>
     
+    
+    <?php
+     if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+        
+             if (isset($_POST['imgchange']))  
+                    {
+                 
+                 echo "yeesssssssss";
+                 die();
+               
+                 
+             }
+                
+            }
+    
+    ?>
     
     
     
