@@ -38,10 +38,6 @@ try
 {
     
    
-    
-    echo $_SESSION["name"];
-    
-    die();
 
    /*if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
@@ -131,19 +127,12 @@ if ( isset( $session ) )
 
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
-                                                
-                                             
-                                                $photo_base = $result['data'][0]->picture;
 
-                                        
+                                                $photo_base = $result['data'][0]->picture;
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
                                }
-    
-    
-	
-			
-    
+
                                if(isset($_SESSION['imgd']))
 
                                 {
@@ -231,8 +220,7 @@ if ( isset( $session ) )
 
 } else 
 {
-    
-    
+
   //$loginUrl = $helper->getLoginUrl();
  //header("Location: ".$loginUrl);
      $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos')); 
