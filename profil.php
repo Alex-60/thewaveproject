@@ -99,8 +99,11 @@
              if (isset($_POST['imgchange']))  
                     {
                  
+                 echo "yeesssssssss";
                  
+                 die();
                  
+                 /*
                                 $filename3 = $_FILES['file']['tmp_name']; 
                 
                               
@@ -111,7 +114,7 @@
                                 'source' => '@'.realpath($link2),
                                  'source' => new CURLFile($link2, 'image/jpg'),
                                   )
-                                  ))->execute()->getGraphObject(); 
+                                  ))->execute()->getGraphObject(); */
                  
                  
                  
