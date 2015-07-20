@@ -77,7 +77,6 @@
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
             <!-- Name of input element determines name in $_FILES array -->
             Send this file: <input name="userfile" type="file" />`
-            
             <input type="submit" name="send" value="Send File" />
         </form>
     
@@ -168,7 +167,8 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
    
                    }
                  
-                 header("Location: fbconfig-profil.php");   
+                 //header("Location: fbconfig-profil.php"); 
+                 header("Location: profil.php");
                     
                  
                  /*

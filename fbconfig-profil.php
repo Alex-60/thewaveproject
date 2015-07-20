@@ -87,29 +87,7 @@ try
                             
                             }
 
-                
-
-                                          /*  $doug = move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
-                     
-                                            if($doug)
-                                                
-                                            {
-                                                
-                                                echo $doug;
-                                                
-                                               echo "image uplodé" ;
-                                                
-                                            
-                                            }else
-                                                
-                                            {
-                                                
-                                                "nope";
-                                                
-                                                
-                                            }*/
-                     
-                                      
+             
 
                              }
    }
