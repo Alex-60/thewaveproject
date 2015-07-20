@@ -2,14 +2,10 @@
 
 //require_once 'fbconfig-participer.php';
 
-
- 
                                 session_start();
                                 // added in v4.0.0
                       
                                 require_once 'autoload.php';
-
-        
                                 //require_once 'index.php';
 
                                 use Facebook\FacebookSession;
@@ -25,6 +21,7 @@
                                 use Facebook\HttpClients\FacebookHttpable;
                                 use Facebook\HttpClients\facebook;
                                
+
 ?>
 
 
