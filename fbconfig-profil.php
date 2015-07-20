@@ -75,12 +75,18 @@ try
                                   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
-                                $up = "upload/";
+                                mkdir('upload','777');
+                                
+                                echo "dossier crée";
+                                
+                                die();
+                                
+                                //$up = "upload/";
                                 
                                     
                                     move_uploaded_file($_FILES["file"]["tmp_name"],$up.$_FILES["file"]["name"]);
                                 
-                                echo "photo uplodé";
+                                
                                 
                                     die();
                                     
