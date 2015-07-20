@@ -90,19 +90,8 @@
           <?php
             
     
-    
-    ?>  
-    
-    
-            
-    <?php
 
-        if ( isset( $session ) ) 
-        {
-          
-           
-            
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') 
             
         {
         
@@ -118,12 +107,25 @@
                  echo $session;
                  
                  die();
-                 
-                 
-                 
+
              }
                 
             }
+
+
+    
+    ?>  
+    
+    
+            
+    <?php
+
+        if ( isset( $session ) ) 
+        {
+          
+           
+            
+     
             
             
            
