@@ -87,7 +87,15 @@
         </form>
     
             
-    
+    <?php
+
+        if ( isset( $session ) ) 
+        {
+            
+            echo "there is a session";
+        }
+
+    ?>
     
     <div class="page-profil">    
         <article class="header">
