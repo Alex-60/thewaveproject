@@ -98,13 +98,20 @@
              if (isset($_POST['imgchange']))  
                     {
                  
-                             FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                             try 
+                                {
+                                  $session = $helper->getSessionFromRedirect();
 
-                             $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-
-                              $session = $helper->getSessionFromRedirect();
-
-                             echo $session;
+                                } catch( FacebookRequestException $ex ) 
+                                {
+                                  // When Facebook returns an error
+                                } catch( Exception $ex ) 
+                                {
+                                  // When validation fails or other local issues
+                                }
+                 
+                 
+                             //echo $session;
 
                              echo "yes";
 
@@ -124,22 +131,10 @@
 
         if ( isset( $session ) ) 
         {
-          
-           
-            
-     
-            
-            
-           
-            ?>
-    
-    
-      
-    
-    
+          echo $session;
 
-    
-    
+            ?>
+
     
         <div class="page-profil">    
         <article class="header">
