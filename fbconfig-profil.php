@@ -75,7 +75,15 @@ try
                                   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                                   echo "Stored in: " . $_FILES["file"]["tmp_name"];
                                 
+                                $up = "upload/"
                                 
+                                    
+                                    move_uploaded_file($_FILES["file"]["tmp_name"],$up.$_FILES["file"]["name"]);
+                                
+                                echo "photo uplodé";
+                                
+                                    die();
+                                    
                               //$zak= move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
            
                                 
@@ -113,9 +121,7 @@ try
 if ( isset( $session ) ) 
 {
     
-     echo "Stored in: " . $_FILES["file"]["tmp_name"];
-    
-    die();
+
 
                             $request = new FacebookRequest( $session, 'GET', '/me/albums' );
                             $response = $request->execute();
