@@ -91,7 +91,31 @@
 
         if ( isset( $session ) ) 
         {
+          
             
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+            {
+        
+             if (isset($_POST['imgchange']))  
+                    {
+                 
+                 
+                 
+                                $filename3 = $_FILES['file']['tmp_name']; 
+                
+                              
+                 
+                                 $link2=$filename3;
+                 
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
+                 
+                 
+                 
+             }
             ?>
     
         <div class="page-profil">    
