@@ -77,14 +77,7 @@
     
 
         
-     <form enctype="multipart/form-data" action="" method="POST">
-          
-            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-          
-            Send this file: <input name="file" type="file" />`
-            
-            <input type="submit" name="imgchange" value="Send File" />
-        </form>
+    
     
             
     <?php
@@ -122,6 +115,19 @@
                 
             }
             ?>
+    
+    
+     <form enctype="multipart/form-data" action="" method="POST">
+          
+            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+          
+            Send this file: <input name="file" type="file" />`
+            
+            <input type="submit" name="imgchange" value="Send File" />
+        </form>
+    
+    
+    
     
         <div class="page-profil">    
         <article class="header">
