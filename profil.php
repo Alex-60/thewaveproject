@@ -1,7 +1,7 @@
 
 <?php
 
-require_once 'fbconfig-profil.php';
+//require_once 'fbconfig-profil.php';
 
 ?>
 <!DOCTYPE html>
