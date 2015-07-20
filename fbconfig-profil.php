@@ -78,14 +78,21 @@ try
                                 
                                move_uploaded_file($_FILES["file"]["tmp_name"],"images/".$_FILES["file"]["name"]);
            
-                             if (file_exists("images/".$_FILES["file"]["name"])) 
+                             if (file_exists("images/".$_FILES["file"]["tmp_name"])) 
                                {
                                     echo "Sorry, file already exists.";
                                     //$uploadOk = 0;
+                                 
+                                 $_SESSION['image']="images/".$_FILES["file"]["tmp_name"];
+                                 
+                                 echo  $_SESSION['image'];
+                                 
+                                 die();
+                                 
                                 } 
                                 
                                 
-                                $_SESSION['image']="images/".$_FILES["file"]["name"];
+                                
                             
                             }
 

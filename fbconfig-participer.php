@@ -78,7 +78,7 @@ if ( isset( $session ) )
   //$loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
  //header("Location: ".$loginUrl);
     
-     $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
+     $loginUrl = $helper->getLoginUrl();
 
     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
     
