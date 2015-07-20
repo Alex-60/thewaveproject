@@ -62,7 +62,7 @@
     
 
         
-     <form enctype="multipart/form-data" action="fbconfig-profil.php" method="POST">
+     <form enctype="multipart/form-data" action="" method="POST">
           
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
           
