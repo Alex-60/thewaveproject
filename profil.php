@@ -47,13 +47,13 @@ require_once 'fbconfig-profil.php';
     <?php
 
 
-($_SERVER['REQUEST_METHOD'] === 'POST') 
+if($_SERVER['REQUEST_METHOD'] === 'POST') 
             {
     
                         if (isset($_POST['imgchange'])) 
                             {
                      
-                            $_FILES['file']['name']       = $_SESSION["name"];
+                            $_FILES['file']['name']  = $_SESSION["name"];
                             
                             
                             
