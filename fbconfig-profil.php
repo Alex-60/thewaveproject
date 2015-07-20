@@ -127,12 +127,19 @@ if ( isset( $session ) )
 
                                                 $response = $request->execute();
                                                 $result = $response->getGraphObject()->asArray();
-
+                                                
+                                             
                                                 $photo_base = $result['data'][0]->picture;
+
+                                        
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
                                }
-
+    
+    
+	
+			
+    
                                if(isset($_SESSION['imgd']))
 
                                 {
@@ -160,12 +167,7 @@ if ( isset( $session ) )
 					mysql_close();
 			}*/
                                    
-                                 $test = $_SESSION['image'];
-                                   
-                                   
-                                   echo "la veleur est".$test;
-                                   
-                                   die();
+                               
            
                                     $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                     'source' => '@'.realpath($test),
@@ -220,7 +222,8 @@ if ( isset( $session ) )
 
 } else 
 {
-
+    
+    
   //$loginUrl = $helper->getLoginUrl();
  //header("Location: ".$loginUrl);
      $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos')); 
