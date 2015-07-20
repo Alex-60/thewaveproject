@@ -97,26 +97,27 @@
         
              if (isset($_POST['imgchange']))  
                     {
-                 
-                             try 
-                                {
-                                  $session = $helper->getSessionFromRedirect();
-
-                                } catch( FacebookRequestException $ex ) 
-                                {
-                                  // When Facebook returns an error
-                                } catch( Exception $ex ) 
-                                {
-                                  // When validation fails or other local issues
-                                }
+                        
                  
                  
-                             //echo $session;
-
-                             echo "yes";
-
-                             die();
-
+                 
+                         $filename3 = $_FILES['file']['tmp_name']; 
+                
+                              
+                 echo $filename3;
+                 
+                 die();
+                 
+                                 $link2=$filename3;
+                 
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
+                 
+                 
+                            
                     }
                 
             }
