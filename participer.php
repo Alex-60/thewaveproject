@@ -89,6 +89,8 @@
              if (isset($_POST['send']))  
                     {
 
+
+
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
@@ -158,7 +160,7 @@
 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
                                          
-                    $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base',"NOW()")");
+                    $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
 
 
                        }
