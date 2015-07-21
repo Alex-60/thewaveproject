@@ -29,11 +29,13 @@ use Facebook\HttpClients\FacebookHttpable;
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try 
 {
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
+$loginUrl2 = $helper2->getLoginUrl();
 
 
 } catch( FacebookRequestException $ex ) 
@@ -70,11 +72,11 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
-                <li><a href="<?php echo $loginUrl ?>">Je vote</a></li>
+            <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
+                
             </div>
            <div class="btn-jeux">
-            <a href='fbconfig-participer.php' class="btnParticiper">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">
