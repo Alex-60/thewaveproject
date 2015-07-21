@@ -41,6 +41,9 @@
                                   // When validation fails or other local issues
                                 }
 
+                                 $_SESSION['session'] =  $session;
+
+        
 
 
 
@@ -112,7 +115,7 @@
             
     <?php
 
-        if ( isset( $session ) ) 
+        if ( isset( $_SESSION['session'] ) ) 
         {
        
 
@@ -137,7 +140,7 @@
                     <div class="modifier-img">
                         <?php
                         
-                               $request = new FacebookRequest( $session, 'GET', '/me/albums' );
+                               $request = new FacebookRequest( $_SESSION['session'], 'GET', '/me/albums' );
                             $response = $request->execute();
                             $graphObject = $response->getGraphObject()->asArray();
     
