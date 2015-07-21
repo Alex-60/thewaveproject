@@ -100,6 +100,12 @@
         
              if (isset($_POST['imgchange']))  
                     {
+                 
+                          $filename = $_FILES['userfile']['tmp_name']; 
+                
+                              echo $filename;
+                 
+                                die();
                         
                         /*echo "yesss</br>";
                  
