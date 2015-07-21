@@ -107,19 +107,35 @@
                                   ))->execute()->getGraphObject(); 
 
                     }
-    }
+                }
         
         
-          if ( isset( $session ) ) 
-              
-          {
-              
-            echo "there is a session";
-              
-              
-              
-          }
-   
+                               FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                                    // login helper with redirect_uri
+                                        $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+                                    try 
+                                    {
+                                      $session = $helper->getSessionFromRedirect();
+
+                                        //$loginUrl = $helper->getLoginUrl();
+
+                                    } catch( FacebookRequestException $ex ) 
+                                    {
+                                      // When Facebook returns an error
+                                    } catch( Exception $ex ) 
+                                    {
+                                      // When validation fails or other local issues
+                                    }
+                                    // see if we have a session
+                                    if ( isset( $session ) ) 
+                                    {
+                                            echo "yessss";
+                                    }
+        
+        
+        
+        
+        
 
     ?>
     
