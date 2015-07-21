@@ -181,6 +181,9 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                        
                         $result = pg_query($dbconn3, 'SELECT image FROM photo ORDER BY "ID" DESC LIMIT 1');
+        
+                        echo "la photo est : ".$result;
+        
                         ?> 
                         <img src="<?php echo $result;?>">
                         
