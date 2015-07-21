@@ -24,7 +24,7 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('/participer.php');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try 
 {
   $session = $helper->getSessionFromRedirect();
