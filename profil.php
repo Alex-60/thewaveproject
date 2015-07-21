@@ -138,8 +138,18 @@
                                   // When validation fails or other local issues
                                 }
                  
-                                    //echo "yes";
-                                    echo $_FILES['file']['tmp_name'];
+                                $filename3 = $_FILES['userfile']['tmp_name']; 
+                
+                              
+                 
+                                 $link2=$filename3;
+                 
+                                $response = (new FacebookRequest($session, "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
+                 
                  
                                     
                  
