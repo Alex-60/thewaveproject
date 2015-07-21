@@ -163,11 +163,9 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                          
-                           
-                           $id_album = $value->id;
 
-                           
+                        $id_album = $value->id;
+
                         $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
                 
                         $response = $request->execute();
@@ -177,37 +175,19 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                            
                        
                         $_SESSION['imageuser'] = $photo_base;
-                          
-                           
-                           
+
                        }
                    
                    }
-                 
-                 
-                 
-                 
-                 
-                 //header("Location: fbconfig-profil.php"); 
-                 
-                 $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
-                 
-                $loginUrl = $helper->getLoginUrl();
 
+                $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                $loginUrl = $helper->getLoginUrl();
                 echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
-                 
-                
-                 
-                
+
                     }
     }
-   
-
     ?>
-    
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-    
  <div class="page-profil">    
         <article class="header">
             <h1>GRAND JEU CONCOURS</h1>
@@ -219,20 +199,15 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             <article class="profils">
                 <article class="image-profil">
                     <div class="modifier-img">
-                        
-                        
-                        
+
                      <img src="<?php echo $_SESSION['imageuser'];?>">
-                        
-                        
-                        
-                        
+
                     </div>
                 </article>
                 <h3 class="classement-profils">Votre classement : 17</h3>
                 <h3 class="cpt-profils">Nombre de j'aime : 500</h3>
                 <div class="reseau-profil">
-                    <div class="fb-like" data-href="" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    <div class="fb-like" data-href="<?php echo $_SESSION['imageuser'];?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
                     
                     <div class="like"></div>
                     <div class="partage"></div>
@@ -269,12 +244,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
 </body>
 </html>
 
-
-
 <?
     
             }
-
-
-
 ?>
