@@ -1,8 +1,12 @@
 <?php
-//require_once 'fbconfig.php';
+require_once 'fbconfig.php';
 
 
-//session_start(); 
+$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+
+ $loginUrl1 = $helper->getLoginUrl();
+
+
 ?>
 <!doctype html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
@@ -28,6 +32,7 @@
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
             <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
+            <li><a href="<?php echo $loginUrl1 ?>">Je vote</a></li>
             </div>
            <div class="btn-jeux">
             <a href='fbconfig-participer.php' class="btnParticiper">PARTICIPER</a>
