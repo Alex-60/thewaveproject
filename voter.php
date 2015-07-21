@@ -32,8 +32,7 @@ try
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
-$loginUrl2 = $helper2->getLoginUrl();
-
+   
 
 } catch( FacebookRequestException $ex ) 
 {
@@ -80,7 +79,7 @@ $loginUrl2 = $helper2->getLoginUrl();
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
-            <a class="btnParticiper" href="fbconfig-participer.php">PARTICIPER</a>
+            <a class="btnParticiper" href="<?php echo $loginUrl; ?>">PARTICIPER</a>
             <a href="profil.php">profil</a>
             
        
@@ -114,9 +113,6 @@ $loginUrl2 = $helper2->getLoginUrl();
                 ?>
                 </div>
 
-          
-             
-                
                 <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
             </article>
