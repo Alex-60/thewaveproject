@@ -175,10 +175,9 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        
                         $photo_base = $result['data'][0]->picture;
                            
-                           echo $photo_base;
-                           
-                           die();
-                           
+                       
+                        $_SESSION['imageuser'] = $photo_base;
+                          
                            
                            
                        }
