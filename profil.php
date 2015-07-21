@@ -51,7 +51,8 @@ require_once 'participer.php';
     <script src="js/dnd.js"></script>
 
     
-    <script>(function(d, s, id) {
+    <script>(function(d, s, id) 
+{
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -185,7 +186,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                         
                         
                         
-                     <img src="">
+                     <img src="<?php echo $_SESSION['imageuser'];?>">
                         
                         
                         
