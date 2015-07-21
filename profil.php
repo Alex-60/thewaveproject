@@ -138,6 +138,18 @@
                                   // When validation fails or other local issues
                                 }
                  
+                                    echo "yes";
+                 
+                 
+                                  $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                 
+                                    $loginUrl = $helper->getLoginUrl();
+
+                                    echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
+                 
+                 
+                 
+                 
                  
                  
                  
