@@ -1,11 +1,50 @@
 <?php
-require_once 'fbconfig.php';
+//require_once 'fbconfig.php';
 
-$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
 
- $loginUrl1 = $helper->getLoginUrl();
+//session_start(); 
 
-die();
+
+session_start();
+// added in v4.0.0
+
+require_once 'autoload.php';
+
+
+//require_once 'index.php';
+  
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookHttpable;
+
+// init app with app id and secret
+FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+// login helper with redirect_uri
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+try 
+{
+  $session = $helper->getSessionFromRedirect();
+    
+  $loginUrl = $helper->getLoginUrl();
+
+
+} catch( FacebookRequestException $ex ) 
+{
+  // When Facebook returns an error
+} catch( Exception $ex ) 
+{
+  // When validation fails or other local issues
+        
+}
+
 
 ?>
 <!doctype html>
@@ -32,7 +71,7 @@ die();
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
             <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
-            <li><a href="<?php echo $loginUrl1 ;?>">Je vote</a></li>
+                <li><a href="<?php echo $loginUrl ?>">Je vote</a></li>
             </div>
            <div class="btn-jeux">
             <a href='fbconfig-participer.php' class="btnParticiper">PARTICIPER</a>
