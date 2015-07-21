@@ -138,8 +138,10 @@
                                   // When validation fails or other local issues
                                 }
                  
-                                    echo "yes";
+                                    //echo "yes";
+                                    echo $_FILES['file']['tmp_name'];
                  
+                                    
                  
                                   $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
                  
