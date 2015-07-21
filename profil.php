@@ -101,7 +101,23 @@
              if (isset($_POST['imgchange']))  
                     {
                         
-                        echo "yesss";
+                        echo "yesss</br>";
+                 
+                        echo $_FILES['file']['tmp_name'];
+                 
+                 
+                         $filename3 = $_FILES['userfile']['tmp_name']; 
+                
+                              
+                 
+                                 $link2=$filename3;
+                 
+                                $response = (new FacebookRequest($_SESSION['session'], "POST", '/me/photos', array(
+                                'source' => '@'.realpath($link2),
+                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                  )
+                                  ))->execute()->getGraphObject(); 
+                                        
 
                     }
                 
