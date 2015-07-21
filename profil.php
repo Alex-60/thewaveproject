@@ -108,6 +108,17 @@
 
                     }
     }
+        
+        
+          if ( isset( $session ) ) 
+              
+          {
+              
+            echo "there is a session";
+              
+              
+              
+          }
    
 
     ?>
