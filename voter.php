@@ -2,7 +2,6 @@
 
 //require_once 'fbconfig-voter.php';
 
-
 session_start();
 // added in v4.0.0
 
@@ -26,8 +25,8 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+    
 try 
 {
   $session = $helper->getSessionFromRedirect();
@@ -44,8 +43,6 @@ $loginUrl2 = $helper2->getLoginUrl();
   // When validation fails or other local issues
         
 }
-
-
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
@@ -77,21 +74,7 @@ $loginUrl2 = $helper2->getLoginUrl();
     
 </head>
 <body>
-    
-    
-    
-<?php if ($_SESSION['FBID']): ?>      
 
-    <?php else: ?>   
-<div class="container">
-<h1>Login with Facebook</h1>
-           Not Connected
-<div>
-      <a href="fbconfig.php">Login with Facebook</a></div>
-</div>
-    <?php endif ?>
-    
-    
     <div class="page-jeVote">
         <header class="header">
             <h1>GRAND JEU CONCOURS</h1>
@@ -106,10 +89,7 @@ $loginUrl2 = $helper2->getLoginUrl();
         </header>
         
         
-            <?php 
-                
-
-            ?>
+ 
 
         <section class="content">
             
