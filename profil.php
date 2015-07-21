@@ -25,7 +25,7 @@
 
 
 
-                                // init app with app id and secret
+                          /*      // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
                                     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
@@ -41,7 +41,7 @@
                                   // When validation fails or other local issues
                                 }
 
-                                 $_SESSION['session'] =  $session;
+                                 $_SESSION['session'] =  $session;*/
 
         
 
@@ -206,7 +206,7 @@
                     <div class="modifier-img">
                         <?php
                         
-                               $request = new FacebookRequest( $_SESSION['session'], 'GET', '/me/albums' );
+                           /*    $request = new FacebookRequest( $_SESSION['session'], 'GET', '/me/albums' );
                             $response = $request->execute();
                             $graphObject = $response->getGraphObject()->asArray();
     
@@ -231,7 +231,7 @@
                                         
                                                 $_SESSION['IMG'] = $photo_base;
                                        }
-                               }
+                               }*/
                         ?>
                         
                         
