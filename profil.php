@@ -138,11 +138,15 @@
                                   // When validation fails or other local issues
                                 }
                  
-                                $filename3 = $_FILES['userfile']['tmp_name']; 
+                               $filename = $_FILES['userfile']['tmp_name']; 
                 
                               
                  
-                                 $link2=$filename3;
+                                 $link2=$filename;
+                 
+                                echo $link2;
+                 
+                                die(); 
                  
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
