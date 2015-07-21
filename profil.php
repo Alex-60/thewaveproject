@@ -66,8 +66,6 @@
 <body>
 
 
-   <?php echo $_SESSION['imageuser'];?>
-
       <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
@@ -113,16 +111,13 @@
                                   )
                                   ))->execute()->getGraphObject(); 
                                         
-                               // $loginUrl = $helper->getLoginUrl();
+                             
 
-                                //header("Location: ".$loginUrl);
-                 
+                                $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                $request_user_executed = $request_user->execute();
+                                $user = $request_user_executed->getGraphObject()->asArray();
 
-				$request_user = new FacebookRequest( $session,"GET","/me/albums");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();
-                 
-              
+
                  
                  
                    foreach ($user['data'] as $key => $value) 
@@ -130,7 +125,7 @@
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                           //echo $value->id."</br>";
+                          
                            
                            $id_album = $value->id;
 
@@ -145,12 +140,54 @@
 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
                                          
-                    $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
+                        $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base')");
 
 
                        }
    
                    }
+                 
+                 
+                 
+                 
+                 
+                                $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                $request_user_executed = $request_user->execute();
+                                $user = $request_user_executed->getGraphObject()->asArray();
+
+
+                 
+                 
+                   foreach ($user['data'] as $key => $value) 
+                    {
+                       if($value->name == "The Wave Project Photos")
+                           
+                       {
+                          
+                           
+                           $id_album = $value->id;
+
+                           
+                        $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                
+                        $response = $request->execute();
+                        $result = $response->getGraphObject()->asArray();
+                       
+                        $photo_base = $result['data'][0]->picture;
+                           
+                           echo $photo_base;
+                           
+                           die();
+                           
+                           
+                           
+                       }
+                   
+                   }
+                 
+                 
+                 
+                 
                  
                  //header("Location: fbconfig-profil.php"); 
                  
