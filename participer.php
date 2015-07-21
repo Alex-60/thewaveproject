@@ -124,7 +124,7 @@ try
                                 {
                                   $session = $helper->getSessionFromRedirect();
                                     
-                                     $loginUrl = $helper->getLoginUrl();
+                                     //$loginUrl = $helper->getLoginUrl();
                                     
 
                                 } catch( FacebookRequestException $ex ) 
