@@ -1,6 +1,52 @@
 <?php
 
-require_once 'fbconfig-voter.php';
+//require_once 'fbconfig-voter.php';
+
+
+session_start();
+// added in v4.0.0
+
+require_once 'autoload.php';
+
+
+//require_once 'index.php';
+  
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookHttpable;
+
+// init app with app id and secret
+FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+// login helper with redirect_uri
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+try 
+{
+  $session = $helper->getSessionFromRedirect();
+    
+  $loginUrl = $helper->getLoginUrl();
+$loginUrl2 = $helper2->getLoginUrl();
+
+
+} catch( FacebookRequestException $ex ) 
+{
+  // When Facebook returns an error
+} catch( Exception $ex ) 
+{
+  // When validation fails or other local issues
+        
+}
+
+
+
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
@@ -36,28 +82,6 @@ require_once 'fbconfig-voter.php';
     
 <?php if ($_SESSION['FBID']): ?>      
 
-<div class="container">
-    
-        <!--<div class="hero-unit">
-          <h1>Hello <?php echo $_SESSION['FULLNAME']; ?></h1>
-          <p>Welcome to "facebook login" tutorial</p>
-          </div>
-        <div class="span4">
-                 <ul class="nav nav-list">
-
-                                <li class="nav-header">Image</li>
-                                <li><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"></li>
-                                <li class="nav-header">Facebook ID</li>
-                                <li><?php echo  $_SESSION['FBID']; ?></li>
-                                <li class="nav-header">Facebook fullname</li>
-                                <li><?php echo $_SESSION['FULLNAME']; ?></li>
-                                <div><a href="logout.php">Logout</a></div>
-
-                                <li class="nav-header">situation</li>
-                                <li><?php echo  $_SESSION['fatigué']; ?></li>
-                </ul>
-        </div>-->
-</div>
     <?php else: ?>   
 <div class="container">
 <h1>Login with Facebook</h1>
