@@ -166,13 +166,55 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
     
-<p>testttttttttttt</p>
-    
-    
-    <div class="page-jeParticipe">
-  
+ <div class="page-profil">    
+        <article class="header">
+            <h1>GRAND JEU CONCOURS</h1>
+            <p>Du 1er Juin au 31 Juillet 2015</p>
+            <img src="img/logo.png" alt="logo">
+            <h2>Envoyer votre plus belle photos</h2>
+        </article>
+        <section class="content">
+            <article class="profils">
+                <article class="image-profil">
+                    <div class="modifier-img">
+                     <img src="?>">
+                    </div>
+                </article>
+                <h3 class="classement-profils">Votre classement : 17</h3>
+                <h3 class="cpt-profils">Nombre de j'aime : 500</h3>
+                <div class="reseau-profil">
+                    <div class="fb-like" data-href="" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    
+                    <div class="like"></div>
+                    <div class="partage"></div>
+                </div>
+            </article>
+
+            <article class="participants">
+                <div class="img-participants">
+                    <img src="" alt="">
+                </div>
+            </article>
+                  <?php
         
-       
+                   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                        $result2 = pg_query($dbconn3, "SELECT * FROM photo");
+                    
+                        while ($row2 = pg_fetch_row($result2)) 
+                            {
+                ?>
+            <article class="participants">
+                <div class="img-participants">
+                <?php echo "<img src='$row2[0]'/>";?>
+                </div>
+
+        <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+
+            </article>
+                <?
+    }
+?>    
+        </section>
     </div>
     <script src="js/scriptCSS.js"></script>
 </body>
