@@ -21,6 +21,22 @@
                                 use Facebook\HttpClients\FacebookHttpable;
                                 use Facebook\HttpClients\facebook;
                                
+                                // init app with app id and secret
+                                    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                                // login helper with redirect_uri
+                                    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                                try 
+                                {
+                                  $session = $helper->getSessionFromRedirect();
+
+                                } catch( FacebookRequestException $ex ) 
+                                {
+                                  // When Facebook returns an error
+                                } catch( Exception $ex ) 
+                                {
+                                  // When validation fails or other local issues
+                                }
+
 
 ?>
 
@@ -177,20 +193,13 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             <article class="profils">
                 <article class="image-profil">
                     <div class="modifier-img">
-                       <?php 
-$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                       
-                        $result = pg_query($dbconn3, "SELECT image FROM photo ORDER BY ID DESC LIMIT 1");
-        
-                        echo "la photo est : ".$result;
-        
-                        ?> 
-                        <img src="<?php echo $result;?>">
                         
-                        <?
-        
-                        ?>
-
+                        
+                        
+                     <img src="">
+                        
+                        
+                        
                         
                     </div>
                 </article>
