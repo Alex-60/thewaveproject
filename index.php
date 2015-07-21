@@ -32,7 +32,7 @@ $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.p
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
             <a href="fbconfig-voter.php" class="btnVoter">VOTER</a>
-            <li><a href="<?php echo $loginUrl1 ?>">Je vote</a></li>
+            <li><a href="<?php echo $loginUrl1 ;?>">Je vote</a></li>
             </div>
            <div class="btn-jeux">
             <a href='fbconfig-participer.php' class="btnParticiper">PARTICIPER</a>
