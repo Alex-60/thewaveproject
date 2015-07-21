@@ -1,8 +1,7 @@
 <?php
 require_once 'fbconfig.php';
 
-
-$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com');
 
  $loginUrl1 = $helper->getLoginUrl();
 
