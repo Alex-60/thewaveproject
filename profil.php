@@ -65,7 +65,7 @@ require_once 'participer.php';
 <body>
 
 
-   <?php echo $_SESSION['imageuser']?;?>
+   <?php echo $_SESSION['imageuser'];?>
 
       <form enctype="multipart/form-data" action="" method="POST">
             <!-- MAX_FILE_SIZE must precede the file input field -->
