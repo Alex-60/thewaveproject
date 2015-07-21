@@ -115,7 +115,7 @@
                  
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                 'source' => new CURLFile($link2, 'image/jpg','image/jpeg', 'image/gif', 'image/png'),
                                   )
                                   ))->execute()->getGraphObject(); 
                                         

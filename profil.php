@@ -107,7 +107,7 @@
                  
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
-                                 'source' => new CURLFile($link2, 'image/jpg'),
+                                 'source' => new CURLFile($link2, 'image/jpg','image/jpeg', 'image/gif', 'image/png'),
                                   )
                                   ))->execute()->getGraphObject(); 
                                         
@@ -146,11 +146,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        }
    
                    }
-                 
-                 
-                 
-                 
-                 
+
                                 $request_user = new FacebookRequest( $session,"GET","/me/albums");
                                 $request_user_executed = $request_user->execute();
                                 $user = $request_user_executed->getGraphObject()->asArray();
