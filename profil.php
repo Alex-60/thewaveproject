@@ -140,7 +140,9 @@
                  
                                $filename = $_FILES['userfile']['tmp_name']; 
                 
-                              
+                              echo $filename;
+                 
+                            die();
                  
                                  $link2=$filename;
                  
