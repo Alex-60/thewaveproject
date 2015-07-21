@@ -20,18 +20,32 @@
                                 use Facebook\HttpClients\FacebookCurlHttpClient;
                                 use Facebook\HttpClients\FacebookHttpable;
                                 use Facebook\HttpClients\facebook;
-
-
-FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+                            
+// init app with app id and secret
+    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    //$helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+   
 
 
- $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
-                 
-$loginUrl = $helper->getLoginUrl();
 
-                               
+try 
+{
+  $session = $helper->getSessionFromRedirect();
+    
+  $loginUrl = $helper->getLoginUrl();
+$loginUrl2 = $helper2->getLoginUrl();
+
+
+} catch( FacebookRequestException $ex ) 
+{
+  // When Facebook returns an error
+} catch( Exception $ex ) 
+{
+  // When validation fails or other local issues
+        
+}
+
 
 ?>
 
@@ -184,7 +198,10 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                  
                  //header("Location: fbconfig-profil.php"); 
                  
-                
+                 $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                 
+                $loginUrl = $helper->getLoginUrl();
+
                 echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
                  
                  //header("Location: profil.php");
