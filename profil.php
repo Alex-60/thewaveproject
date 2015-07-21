@@ -110,23 +110,18 @@
                                  'source' => new CURLFile($link2, 'image/jpg'),
                                   )
                                   ))->execute()->getGraphObject(); 
-                                        
-                             
 
+                 
                                 $request_user = new FacebookRequest( $session,"GET","/me/albums");
                                 $request_user_executed = $request_user->execute();
                                 $user = $request_user_executed->getGraphObject()->asArray();
 
-
-                 
-                 
                    foreach ($user['data'] as $key => $value) 
                     {
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                          
-                           
+ 
                            $id_album = $value->id;
 
                            
@@ -146,14 +141,10 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        }
    
                    }
-
                                 $request_user = new FacebookRequest( $session,"GET","/me/albums");
                                 $request_user_executed = $request_user->execute();
                                 $user = $request_user_executed->getGraphObject()->asArray();
 
-
-                 
-                 
                    foreach ($user['data'] as $key => $value) 
                     {
                        if($value->name == "The Wave Project Photos")
