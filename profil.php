@@ -144,10 +144,6 @@
                  
                                  $link2=$filename;
                  
-                                echo $link2;
-                 
-                                die(); 
-                 
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
                                 'source' => '@'.realpath($link2),
                                  'source' => new CURLFile($link2, 'image/jpg'),
@@ -155,7 +151,8 @@
                                   ))->execute()->getGraphObject(); 
                  
                  
-                                    
+                                    echo "yes";
+                 
                  
                                   $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
                  
