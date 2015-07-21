@@ -100,12 +100,6 @@
         
              if (isset($_POST['imgchange']))  
                     {
-                 
-                          $filename = $_FILES['userfile']['tmp_name']; 
-                
-                              echo $filename;
-                 
-                                die();
                         
                         /*echo "yesss</br>";
                  
@@ -144,11 +138,9 @@
                                   // When validation fails or other local issues
                                 }
                  
-                               $filename = $_FILES['userfile']['tmp_name']; 
+                               $filename = $_FILES['file']['tmp_name']; 
                 
-                              echo $filename;
-                 
-                            die();
+                              
                  
                                  $link2=$filename;
                  
