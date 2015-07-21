@@ -204,13 +204,11 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
 
                     </div>
                 </article>
-                <h3 class="classement-profils">Votre classement : 17</h3>
-                <h3 class="cpt-profils">Nombre de j'aime : 500</h3>
+                
                 <div class="reseau-profil">
                     <div class="fb-like" data-href="<?php echo $_SESSION['imageuser'];?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
                     
-                    <div class="like"></div>
-                    <div class="partage"></div>
+                   
                 </div>
             </article>
 
