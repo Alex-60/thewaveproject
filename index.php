@@ -81,12 +81,18 @@ try
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
                 
-                <a href="voter.php" target="_blank" >bla bla bla</a>
+               
                 
 
             </div>
            <div class="btn-jeux">
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
+               
+               
+                <a href="" target="_blank" onclick="window.location('http://www.google.com')">bla bla bla</a>
+              
+               
+               
             </div>
         </article>
         <section class="classement">
