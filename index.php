@@ -1,4 +1,8 @@
 <?php
+
+
+header('X-Frame-Options: GOFORIT'); 
+
 //require_once 'fbconfig.php';
 
 
