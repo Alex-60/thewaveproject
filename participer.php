@@ -246,9 +246,6 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                    </div>
                </div>
            </article>
-
-       
-             <section class="content">
             
                      <?php
         
@@ -280,7 +277,6 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                 <?
     }
 ?>
-        </section>
             
             
             
