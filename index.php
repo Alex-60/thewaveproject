@@ -79,7 +79,7 @@ try
                
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
                
-               <a href='<?php echo "<a href='index.php' ></a>"; ?>' class="btnParticiper">PARTICIPER</a>
+               <a href='<?php echo $helper->getLoginUrl() ; ?>' class="btnParticiper">PARTICIPER</a>
                
  
             </div>
