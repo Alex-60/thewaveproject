@@ -417,6 +417,8 @@ a, a:hover, a:link, a:visited, a:active {
         .js .input-file-container {
             position: relative;
             width: 225px;
+            float: left;
+            margin: 1.5% 1.85%;
         }
         .js .input-file-trigger {
             display: block;
