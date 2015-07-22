@@ -79,7 +79,10 @@ try
                
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
                
-               <a href='<?php $loginUrl; ?>' class="btnParticiper">PARTICIPER</a>
+               <a href='<?php echo "<script>window.parent.location = '$loginUrl';</script>" ;?>' class="btnParticiper">PARTICIPER</a>
+               
+               
+              
                
                <p><?php echo $loginUrl ?></p>
                
