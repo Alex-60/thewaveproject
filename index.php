@@ -82,7 +82,7 @@ try
              
 
              
-             <!-- <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>-->
+              <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>
           
             
                
