@@ -82,7 +82,7 @@ try
                <a href='' onclick="window.location('http://www.google.com')">PARTICIPER</a>
 
              
-              <a href="<?php echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';?>">yes</a>
+              <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>
           
             
                
