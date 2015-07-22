@@ -59,13 +59,10 @@ try
     <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    
-    
 </head>
 <section>
 <body>
     
-
       <?php if (!isset($_SESSION['FBID']) || isset($_SESSION['FBID']) ): ?>   
 <div class="page-home">
         <header class="header">
@@ -82,9 +79,8 @@ try
             </div>
            <div class="btn-jeux">
             <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
-               
-               
-                <!--<a href=""  onclick="window.location('http://www.google.com')">bla bla bla</a>-->
+   
+            <a href='<?php echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';?>' >bla bla bla</a>
               
                
                
