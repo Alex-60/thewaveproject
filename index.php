@@ -76,7 +76,12 @@ try
                 
             </div>
            <div class="btn-jeux">
+               
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
+               
+               <a href='<?php echo "<a href='index.php' ></a>"; ?>' class="btnParticiper">PARTICIPER</a>
+               
+ 
             </div>
         </article>
         <section class="classement">
