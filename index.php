@@ -37,7 +37,7 @@ try
   $loginUrl = $helper->getLoginUrl();
     $loginUrl2 = $helper2->getLoginUrl(array('scope' => 'publish_actions'));
     
-     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
+    
 
 
 } catch( FacebookRequestException $ex ) 
@@ -75,6 +75,9 @@ try
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
+                
+                <a href="<?php echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>'; ?>" class="btnVoter">VOTER2</a>
+                
                 
             </div>
            <div class="btn-jeux">
