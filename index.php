@@ -74,7 +74,7 @@ try
             <div class="btn-jeux">
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
-             <a href="<?php echo header("Location: $loginUrl");?>" class="btnVoter">VOTER2</a>
+             <a href="<?php echo " <a href=\"$loginUrl/\"></a>";  ;?>" class="btnVoter">VOTER2</a>
                 
                 
             </div>
