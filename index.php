@@ -89,7 +89,7 @@ try
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
                
                
-                <a href="" target="_blank" onclick="window.location('http://www.google.com')">bla bla bla</a>
+                <a href=""  onclick="window.location('http://www.google.com')">bla bla bla</a>
               
                
                
