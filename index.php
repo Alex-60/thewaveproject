@@ -36,6 +36,8 @@ try
     
   $loginUrl = $helper->getLoginUrl();
     $loginUrl2 = $helper2->getLoginUrl(array('scope' => 'publish_actions'));
+    
+     echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
 
 
 } catch( FacebookRequestException $ex ) 
