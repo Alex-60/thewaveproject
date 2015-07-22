@@ -60,7 +60,6 @@ try
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     
-    <base target="_parent" />
     
 </head>
 <section>
@@ -78,18 +77,14 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
-                
-                
-               
-                
-
+            <a href="<?php echo $loginUrl ; ?>" class="btnVoter">VOTER</a>
+      
             </div>
            <div class="btn-jeux">
-            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
                
                
-                <a href=""  onclick="window.location('http://www.google.com')">bla bla bla</a>
+                <!--<a href=""  onclick="window.location('http://www.google.com')">bla bla bla</a>-->
               
                
                
