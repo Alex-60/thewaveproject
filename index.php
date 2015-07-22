@@ -74,9 +74,6 @@ try
             <div class="btn-jeux">
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
-           
-                
-                
             </div>
            <div class="btn-jeux">
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
