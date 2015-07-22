@@ -74,7 +74,7 @@ try
             <div class="btn-jeux">
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
-             <a href="<?php echo ('<a href="index.php?sobitemplate2Id=">titre</a>') ;?>">VOTER2</a>
+             <a href="<?php echo "<a href="">titre</a>"; ?>">VOTER2</a>
                 
                 
             </div>
@@ -83,7 +83,7 @@ try
             </div>
         </article>
         <section class="classement">
-            <p>TOP 5</p>
+            <p>Les 5 dernières images mise en jeux</p>
             <?php 
                 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                 $result2 = pg_query($dbconn3, "SELECT * FROM photo ORDER BY date DESC LIMIT 5");
