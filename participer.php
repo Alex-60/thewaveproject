@@ -238,14 +238,21 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
         </header>
         
         <section class="content">
-           <article class="my-photo">
+<!--           <article class="my-photo">-->
+               <article class="input-file-container">
+                    <input class="input-file" id="my-file" type="file">
+                    <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
+                    <p class="file-return"></p>
+                </article>
+<!--
                <div class="bloc-photo-upload">
                    <div id="cadre" dropzone="copy">
 				        <p>DEPOSEZ VOS PHOTOS ICI</p>
                         <h2>+</h2><br>
                    </div>
                </div>
-           </article>
+-->
+<!--           </article>-->
             
                      <?php
         
@@ -285,13 +292,38 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
     </div>
     <script src="js/scriptCSS.js"></script>
     <script>
-        var btnJaime = document.querySelectorAll('.btn-jaime');
-        for(var i=0, n=btnJaime.length;i<n;i++){
-            btnJaime[i].addEventListener("click", changeEtat);
-        }
-        function changeEtat(){
-            this.classList.add('btnJaimeClic');
-        }
+//        var btnJaime = document.querySelectorAll('.btn-jaime');
+//        for(var i=0, n=btnJaime.length;i<n;i++){
+//            btnJaime[i].addEventListener("click", changeEtat);
+//        }
+//        function changeEtat(){
+//            this.classList.add('btnJaimeClic');
+//        }
+        // ajout de la classe JS à HTML
+        document.querySelector("html").classList.add('js');
+
+        // initialisation des variables
+        var fileInput  = document.querySelector( ".input-file" ),  
+            button     = document.querySelector( ".input-file-trigger" ),
+            the_return = document.querySelector(".file-return");
+
+        // action lorsque la "barre d'espace" ou "Entrée" est pressée
+        button.addEventListener( "keydown", function( event ) {
+            if ( event.keyCode == 13 || event.keyCode == 32 ) {
+                fileInput.focus();
+            }
+        });
+
+        // action lorsque le label est cliqué
+        button.addEventListener( "click", function( event ) {
+           fileInput.focus();
+           return false;
+        });
+
+        // affiche un retour visuel dès que input:file change
+        fileInput.addEventListener( "change", function( event ) {  
+            the_return.innerHTML = this.value;  
+        });
     </script>
 </body>
 </html>
