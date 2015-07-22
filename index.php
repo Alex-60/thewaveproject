@@ -29,16 +29,13 @@ use Facebook\HttpClients\FacebookHttpable;
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
-
-
     $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try 
 {
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
-    
-    $loginUrl2 = $helper2->getLoginUrl(array('scope' => 'publish_actions'));
+    $loginUrl2 = $helper2->getLoginUrl();
 
 
 } catch( FacebookRequestException $ex ) 
@@ -46,9 +43,9 @@ try
   // When Facebook returns an error
 } catch( Exception $ex ) 
 {
-  // When validation fails or other local issues   
+  // When validation fails or other local issues
+        
 }
-
 
 
 ?>
@@ -63,6 +60,7 @@ try
 <section>
 <body>
     
+
       <?php if (!isset($_SESSION['FBID']) || isset($_SESSION['FBID']) ): ?>   
 <div class="page-home">
         <header class="header">
@@ -74,16 +72,11 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ; ?>" class="btnVoter">VOTER</a>
-      
+            <a href="<?php echo $loginUrl ;?>" class="btnVoter">VOTER</a>
+                
             </div>
            <div class="btn-jeux">
             <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
-   
-            <a href='<?php echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';?>' >bla bla bla</a>
-              
-               
-               
             </div>
         </article>
         <section class="classement">
