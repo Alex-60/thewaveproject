@@ -55,7 +55,7 @@ try
     <meta charset="UTF-8">
     <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
 </head>
 <section>
 <body>
