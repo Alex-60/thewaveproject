@@ -74,7 +74,7 @@ try
             <div class="btn-jeux">
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
-             <a href="<?php echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';?>" class="btnVoter">VOTER2</a>
+             <a href="<?php echo ('<a href="index.php?sobitemplate2Id=">titre</a>') ;?>">VOTER2</a>
                 
                 
             </div>
