@@ -72,25 +72,15 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ?>" class="btnVoter" target="_self">VOTER</a>
+            <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
             </div>
            <div class="btn-jeux">
-               
-            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper" target="_parent">PARTICIPER</a>
-               
-             
-
-             
-              <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>
-          
-            
-               
- 
+            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">
-            <p>Les 5 dernières images mise en jeu</p>
+            <p>TOP 5</p>
             <?php 
                 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                 $result2 = pg_query($dbconn3, "SELECT * FROM photo ORDER BY date DESC LIMIT 5");
