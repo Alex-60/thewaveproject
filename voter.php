@@ -71,6 +71,7 @@ try
 }(document, 'script', 'facebook-jssdk'));
 </script>
     
+    <base target="_parent" />
     
 </head>
 <body>
