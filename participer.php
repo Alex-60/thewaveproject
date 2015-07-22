@@ -271,7 +271,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
           
              
                 
-                <div id="fb-button" class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                <div class="btn-jaime fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
 
             </article>
                 <?
@@ -284,6 +284,15 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
         </section>
     </div>
     <script src="js/scriptCSS.js"></script>
+    <script>
+        var btnJaime = document.querySelectorAll('.btn-jaime');
+        for(var i=0, n=btnJaime.length;i<n;i++){
+            btnJaime[i].addEventListener("click", changeEtat);
+        }
+        function changeEtat(){
+            this.classList.add('btnJaimeClic');
+        }
+    </script>
 </body>
 </html>
 
