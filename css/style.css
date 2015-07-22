@@ -443,7 +443,8 @@ a, a:hover, a:link, a:visited, a:active {
         .js .input-file:hover + .input-file-trigger,
         .js .input-file:focus + .input-file-trigger,
         .js .input-file-trigger:hover,
-        .js .input-file-trigger:focus {
+        .js .input-file-trigger:focus, 
+        .file-return:hover{
           background: #22A7F0;
           color: #FFF;
         }
