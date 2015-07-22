@@ -79,7 +79,10 @@ try
                
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
                
-             <a href="<?php echo $loginUrl = $helper->getLoginUrl() ;?>" class="btnParticiper">PARTICIPER</a>
+               <p><?php echo $loginUrl ?></p>
+               
+          
+            
                
  
             </div>
