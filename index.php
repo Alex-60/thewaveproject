@@ -81,7 +81,7 @@ try
  
             </div>
            <div class="btn-jeux">
-            <a href='<?php  echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>'; ?>' class="btnParticiper">PARTICIPER</a>
+            <a href='<?php '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>'; ?>' class="btnParticiper">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">
