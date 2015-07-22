@@ -35,7 +35,8 @@ try
   $session = $helper->getSessionFromRedirect();
     
   $loginUrl = $helper->getLoginUrl();
-    $loginUrl2 = $helper2->getLoginUrl();
+    
+    $loginUrl2 = $helper2->getLoginUrl(array('scope' => 'publish_actions'));
 
 
 } catch( FacebookRequestException $ex ) 
@@ -43,8 +44,7 @@ try
   // When Facebook returns an error
 } catch( Exception $ex ) 
 {
-  // When validation fails or other local issues
-        
+  // When validation fails or other local issues   
 }
 
 
