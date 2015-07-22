@@ -78,7 +78,7 @@ try
             <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
                 
-                <a href="voter.php" target="_blank" >bla bla bla</a>
+                <a href="voter.php" target="_parent" >bla bla bla</a>
                 
 
             </div>
