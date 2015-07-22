@@ -48,7 +48,6 @@ try
     {
        //header('Location: https://thewave.herokuapp.com/');
        
-       echo "yeeees";
     }
     else
 
