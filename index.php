@@ -74,7 +74,10 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ;?>" class="btnVoter">VOTER</a>
+            <a href="<?php echo $loginUrl;?>" class="btnVoter">VOTER</a>
+                
+            <a href="<?php echo header("Location: $loginUrl");?>" class="btnVoter">VOTER2</a>
+                
                 
                
                 
