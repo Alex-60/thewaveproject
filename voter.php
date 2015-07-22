@@ -31,7 +31,7 @@ try
 {
   $session = $helper->getSessionFromRedirect();
     
-  $loginUrl = $helper->getLoginUrl();
+  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions'));
    
 
 } catch( FacebookRequestException $ex ) 
