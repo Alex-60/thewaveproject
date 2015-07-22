@@ -79,7 +79,7 @@ try
                
             <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
                
-               <a href='<?php echo '<script type="text/javascript">window.location.href = "http://www.google.com";</script>' ;?>'>PARTICIPER</a>
+               <a href='<?php echo ("<script>location.href='$loginUrl'</script>");?>'>PARTICIPER</a>
                
                
               
