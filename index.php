@@ -72,17 +72,17 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
+            <a href="<?php echo $loginUrl ?>" class="btnVoter" target="_parent">VOTER</a>
                 
             </div>
            <div class="btn-jeux">
                
-            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper" target="_parent">PARTICIPER</a>
                
-               <a href='' onclick="window.location('http://www.google.com')">PARTICIPER</a>
+             
 
              
-              <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>
+             <!-- <a target="_parent" href="<?php echo $loginUrl2; ?>">link</a>-->
           
             
                
