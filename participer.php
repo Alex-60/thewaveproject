@@ -238,7 +238,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                         <input class="input-file" id="my-file" name="userfile" type="file">
                         <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
                         <input class="file-return" name="userfile" type="file" />
-                        <p class="file-return"></p>
+<!--                        <p class="file-return"></p>-->
                         <input type="submit" name="send" value="Send File" />
                    </form>
                    
