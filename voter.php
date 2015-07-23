@@ -113,7 +113,7 @@ try
                 ?>
                 </div>
 
-                <div class="fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                <div class="btn-jaime fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
 
             </article>
                 <?
