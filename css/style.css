@@ -127,7 +127,7 @@ footer{
     background: rgba(0,0,0,0.5);
     color: white;
     font-size: 13px;
-    margin-top: 33px;
+    margin-top: 52px;
     float: left;
 }
 
@@ -410,7 +410,6 @@ a, a:hover, a:link, a:visited, a:active {
 .btn-jaime{
     text-align: center !important;
     width: 120px;
-    opacity: 0.6;
     filter: alpha(opacity=60);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
