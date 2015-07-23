@@ -1,14 +1,7 @@
 <?php
-
-//require_once 'fbconfig-voter.php';
-
 session_start();
-// added in v4.0.0
 
 require_once 'autoload.php';
-
-
-//require_once 'index.php';
   
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
@@ -23,35 +16,32 @@ use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 
 // init app with app id and secret
-FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
+    FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
     $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
     
-try 
-{
-  $session = $helper->getSessionFromRedirect();
+    try 
+        {
+            $session = $helper->getSessionFromRedirect();
     
-  $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
+            $loginUrl = $helper->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
    
-
-} catch( FacebookRequestException $ex ) 
-{
-  // When Facebook returns an error
-} catch( Exception $ex ) 
-{
-  // When validation fails or other local issues
-        
-}
+        } catch( FacebookRequestException $ex ) 
+        {
+            // When Facebook returns an error
+        } catch( Exception $ex ) 
+        {
+            // When validation fails or other local issues
+        }
 
 
    if (isset($_GET['error']) && $_GET['error'] == 'access_denied')
     {
        //header('Location: https://thewave.herokuapp.com/');
-       
     }
     else
-
-   {    ?>   
+        {    
+?>   
                
 <!DOCTYPE html>
 <html lang="fr">
