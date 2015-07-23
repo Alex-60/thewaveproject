@@ -436,6 +436,7 @@ a, a:hover, a:link, a:visited, a:active {
             width: 36.3%;
             float: left;
             margin: 1.5% 1.85%;
+            text-align: center;
         }
         .js .input-file-trigger {
             display: block;
@@ -468,7 +469,7 @@ a, a:hover, a:link, a:visited, a:active {
         /* styles du retour visuel */
         .file-return {
             margin-left: 15px !important;
-            margin-top: -60px !important;
+            margin-top: -100px !important;
         }
         .file-return:not(:empty) {
           margin: 1em 0;
