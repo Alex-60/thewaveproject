@@ -88,9 +88,10 @@
         
              if (isset($_POST['send']))  
                     {
-
-
-
+                 
+                 echo "yes";
+                 
+                 die();
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
@@ -136,29 +137,16 @@
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                           //echo $value->id."</br>";
+                    
                            
                            $id_album = $value->id;
                            
-                        
-                           
-                           /*$request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
-                            $request_user_executed = $request_user->execute();
-                            $user = $request_user_executed->getGraphObject()->asArray();
-                            
-                           
-                           
-                           var_dump($user['data'][0]);*/
                            
                         $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
                 
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
-                           
-                           var_dump($result);
-                           
-                           die();
-                       
+    
                         $photo_base = $result['data'][0]->picture;
                            
                          $_SESSION['imageuser'] = $photo_base;
@@ -170,7 +158,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                                          
                     $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base','NOW()')");
                            
-                    //INSERT INTO photo VALUES ('bbb', NOW());
+                   
                            
 
                        }
