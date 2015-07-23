@@ -190,7 +190,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                         <form enctype="multipart/form-data" action="" method="POST">
                             <input class="input-file" id="my-file" name="userfile" type="file">
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                            <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
+                            <label for="my-file" class="input-file-trigger" tabindex="0">Modifier ma photo...</label>
                             <p class="file-return" name="userfile"></p>
                             <img src="<?php echo $_SESSION['imageuser'];?>">
                             <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
