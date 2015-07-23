@@ -156,12 +156,16 @@ footer{
     float: left;
 }
 .modifier-img{
+/*
     width: 100%;
     height: 190px;
-    border:1px black dashed;
     float: left;
+*/
+    border:1px black dashed;
+
     text-align: center;
 }
+/*
 .modifier-img > h3 {
     font-size: 20px;
     margin: 1.5%;
@@ -170,6 +174,7 @@ footer{
     font-size: 90px;
     margin: 3%;
 }
+*/
 .classement-profils{
     width: auto;
     color: #2BA2E6;
