@@ -157,7 +157,7 @@ footer{
 .modifier-img{
     width: 100%;
     height: 190px;
-    background: rgba(0,0,0,0.5);
+    border:1px black dashed;
     float: left;
     text-align: center;
 }
