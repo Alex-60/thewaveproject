@@ -383,6 +383,7 @@ a, a:hover, a:link, a:visited, a:active {
 /*************************    FIN STYLE PAGE JE VOTE    ****************************/
 
 /*************************      STYLE PAGE JE PARTICIPE    ****************************/
+/*
 .my-photo{
     width: 36.3%;
     height: 360px;
@@ -401,6 +402,7 @@ a, a:hover, a:link, a:visited, a:active {
 .bloc-photo-upload h2{
     font-size: 90px;
 }
+*/
 
 /*************************     FIN STYLE PAGE JE PARTICIPE    ****************************/
 /*
@@ -423,9 +425,13 @@ a, a:hover, a:link, a:visited, a:active {
     background-color:rgba(34, 167, 240, 0.5);
 }
 */
-
-
-
+.btn-envoyer{
+    background-color: blue;
+    border: 0 none;
+    color: white;
+    height: 25px;
+    width: 100px;
+}
 /* styles de base si JS est activé */
         .js .input-file-container {
             position: relative;
