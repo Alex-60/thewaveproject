@@ -90,7 +90,7 @@ button{
     width: 90%;
     height: 100%;
     background: rgba(255,255,255,0.5);
-    margin: 6% 4% 1% 5%;
+    margin: 50px 4% 0 5%;
 /*
     margin-left: 2%;
     margin-right: 2%;
@@ -322,7 +322,7 @@ a, a:hover, a:link, a:visited, a:active {
 .content{
     height: 358px;
     margin: 0 5%;
-    width: 90%;
+    width: 91%;
     background: rgba(255,255,255,0.6);
     float: left;
     margin-top: 10px;
