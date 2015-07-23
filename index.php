@@ -49,7 +49,7 @@ use Facebook\HttpClients\FacebookHttpable;
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
             <body>
-                <?php if (!isset($_SESSION['FBID']) || isset($_SESSION['FBID']) ): ?>   
+              
                     <div class="page-home">
                         <header class="header">
                             <h1>GRAND JEU CONCOURS</h1>
@@ -86,7 +86,7 @@ use Facebook\HttpClients\FacebookHttpable;
         </footer>
     </div>
     
-    <?php endif ?>
+ 
     
         </body>
  
