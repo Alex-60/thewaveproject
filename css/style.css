@@ -420,7 +420,7 @@ a, a:hover, a:link, a:visited, a:active {
     filter: grayscale(100%);
 }
 .btn-envoyer{
-    background-color: blue;
+    background-color: #22A7F0;
     border: 0 none;
     color: #fff;
     height: 25px;
@@ -428,8 +428,8 @@ a, a:hover, a:link, a:visited, a:active {
     cursor:pointer;
 }
 .btn-envoyer:hover{
-    background-color: #22A7F0;
-    color: #fff;
+    background-color: #fff;
+    color: #22A7F0;
 }
 
 /* styles de base si JS est activé */

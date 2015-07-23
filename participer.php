@@ -143,10 +143,9 @@
                                         <input class="input-file" id="my-file" name="userfile" type="file">
                                         <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                                         <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
-                <!--                        <input class="file-return" name="userfile" type="file" />-->
                                         <p class="file-return" name="userfile"></p>
                                         <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
-                                   </form>   
+                                   </form>
                                 </article>
                                      <?php
 
