@@ -487,14 +487,14 @@ a, a:hover, a:link, a:visited, a:active {
 
 
 /* STYLE UPLOAD PROFIL */
-.js .modifier-img .input-file-container {
+.js .image-profil .input-file-container {
     position: relative;
     width: 36.3%;
     float: left;
     margin: 1.5% 1.85%;
     text-align: center;
 }
-.js .modifier-img .input-file-trigger {
+.js .image-profil .input-file-trigger {
     display: block;
     padding: 87px 14px 87px 14px;
     background: #FFF;
@@ -504,7 +504,7 @@ a, a:hover, a:link, a:visited, a:active {
     cursor: pointer;
     border: 2px dashed #ADB3BB;
 }
-.js .modifier-img .input-file {
+.js .image-profil .input-file {
     position: absolute;
     top: 0; left: 0;
     width: 225px;
@@ -523,7 +523,7 @@ a, a:hover, a:link, a:visited, a:active {
 }
 
 /* styles du retour visuel */
- .modifier-img .file-return {
+ .image-profil .file-return {
     margin-left: 15px !important;
     margin-top: -100px !important;
 }
