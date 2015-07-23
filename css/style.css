@@ -127,7 +127,7 @@ footer{
     background: rgba(0,0,0,0.5);
     color: white;
     font-size: 13px;
-    margin-top: 22px;
+    margin-top: 42px;
     float: left;
 }
 
@@ -428,10 +428,16 @@ a, a:hover, a:link, a:visited, a:active {
 .btn-envoyer{
     background-color: blue;
     border: 0 none;
-    color: white;
+    color: #fff;
     height: 25px;
     width: 100px;
+    cursor:pointer;
 }
+.btn-envoyer:hover{
+    background-color: blue;
+    color: #fff;
+}
+
 /* styles de base si JS est activé */
         .js .input-file-container {
             position: relative;
