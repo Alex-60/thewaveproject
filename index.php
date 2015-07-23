@@ -5,6 +5,14 @@
 //session_start(); 
 
 
+session_start();
+// added in v4.0.0
+
+require_once 'autoload.php';
+
+
+//require_once 'index.php';
+  
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
