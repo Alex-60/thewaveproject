@@ -82,7 +82,7 @@ try
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
             <a class="btnParticiper" href="<?php echo $loginUrl; ?>">PARTICIPER</a>
-            <a href="profil.php">profil</a>
+            
  
             <h2>Voter pour la meilleure photo</h2>
         </header>
