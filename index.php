@@ -1,7 +1,4 @@
 <?php
-
-
-
 //require_once 'fbconfig.php';
 
 
@@ -58,7 +55,7 @@ try
     <meta charset="UTF-8">
     <title>Grand jeu concours THE WAVE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <section>
 <body>
@@ -75,19 +72,11 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ;?>" class="btnVoter">VOTER</a>
+            <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
                 
             </div>
            <div class="btn-jeux">
-            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
-               
-               <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
-               
-                <a href='' onclick="window.location('<?php echo $loginUrl ; ?>')">PART</a>
-               
-               
-                
-               
+            <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">
