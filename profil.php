@@ -197,7 +197,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                 <div class="reseau-profil">
 
                     
-                                           <div class="btn-jaime fb-like" data-href="<?php echo $_SESSION['imageuser'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
+                <div class="btn-jaime fb-like" data-href="<?php echo $_SESSION['imageuser'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
                     
                    
                 </div>

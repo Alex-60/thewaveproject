@@ -60,21 +60,6 @@
 </head>
 <body>
 
-    
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--<html>
- <body>
-  <form action="upload.php" method="post"enctype="multipart/form-data">
-   <label for="file">Filename:</label>
-     <input type="file" name="file" id="file"><br>
-     <input type="submit" name="submit" value="Submit">
-  </form>
- </body>
-</html> -->
-
-
-    
-    
     <?php 
         
           if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -112,15 +97,10 @@
                                  'source' => new CURLFile($link2, 'image/jpg'),
                                   )
                                   ))->execute()->getGraphObject(); 
-                                        
-                               // $loginUrl = $helper->getLoginUrl();
-
-                                //header("Location: ".$loginUrl);
-                 
-
-				$request_user = new FacebookRequest( $session,"GET","/me/albums");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();
+         
+                                $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                $request_user_executed = $request_user->execute();
+                                $user = $request_user_executed->getGraphObject()->asArray();
                  
               
                  
@@ -130,42 +110,24 @@
                        if($value->name == "The Wave Project Photos")
                            
                        {
-                           //echo $value->id."</br>";
-                           
                            $id_album = $value->id;
-                           
-                        
-                           
-                           /*$request_user = new FacebookRequest( $session,"GET","/$id_album/photos?fields=picture,updated_time");
-                            $request_user_executed = $request_user->execute();
-                            $user = $request_user_executed->getGraphObject()->asArray();
-                            
-                           
-                           
-                           var_dump($user['data'][0]);*/
-                           
-                        $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
-                
-                        $response = $request->execute();
-                        $result = $response->getGraphObject()->asArray();
-                       
-                        $photo_base = $result['data'][0]->picture;
-                           
-                         $_SESSION['imageuser'] = $photo_base;
+                            $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                            $response = $request->execute();
+                            $result = $response->getGraphObject()->asArray();
+                            $photo_base = $result['data'][0]->picture;
+                            $_SESSION['imageuser'] = $photo_base;
                            
 $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
                             
                                          
                     $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base','NOW()')");
                            
-                    //INSERT INTO photo VALUES ('bbb', NOW());
-                           
-
+                  
                        }
    
                    }
                  
-                 //header("Location: fbconfig-profil.php"); 
+              
                  
                  $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
                  
@@ -174,54 +136,13 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                  header("Location: $loginUrl");
                  
 
-                ///echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
-                 
-                 //header("Location: profil.php");
-                    
-                 
-                 /*
-                    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
-                 
-                    echo $helper;
-                 
-                    die();
-                 
-                    $session = $helper->getSessionFromRedirect();
-                    $loginUrl = $helper->getLoginUrl();
-                    
-                    echo '<script type="text/javascript">top.window.location="'.$loginUrl.'";</script>';
-                 */
-                 
-                
                     }
     }
    
 
     ?>
     
-    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-    
-  <div class="container">
-
-    
-  
-<!--<div class="span4">
- <ul class="nav nav-list">
-<li class="nav-header">Image</li>
-<li><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"></li>
-<li class="nav-header">Facebook ID</li>
-<li><?php echo  $_SESSION['FBID']; ?></li>
-<li class="nav-header">Facebook fullname</li>
-<li><?php echo $_SESSION['FULLNAME']; ?></li>
-<div><a href="logout.php">Logout</a></div>  
-<li class="nav-header">situation</li>
-<li><?php echo  $_SESSION['fatigué']; ?></li>
-</ul>
-</div>-->
-    
-    </div>
-    
     
     <div class="page-jeParticipe">
         <header class="header">
@@ -240,7 +161,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                         <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
 <!--                        <input class="file-return" name="userfile" type="file" />-->
                         <p class="file-return" name="userfile"></p>
-                        <input type="submit" name="send" value="Send File" />
+                        <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
                    </form>
                    
 <!--                         <form enctype="multipart/form-data" action="" method="POST">-->
