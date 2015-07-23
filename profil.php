@@ -200,7 +200,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                     </div>
                 </article>
                 
-                <div class="imgUtil"><?php echo "<img src='$row2[0]'/>";?></div>
+                <div class="imgUtil"></div>
                 <div class="reseau-profil">
 
                     
