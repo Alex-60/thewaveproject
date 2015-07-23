@@ -325,6 +325,7 @@ a, a:hover, a:link, a:visited, a:active {
     width: 90%;
     background: rgba(255,255,255,0.6);
     float: left;
+    margin-top: 3%;
 }
 .participants{
     width: 118px;
