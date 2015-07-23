@@ -75,11 +75,16 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ;?>" class="btnVoter" target="_top">VOTER</a>
+            <a href="<?php echo $loginUrl ;?>" class="btnVoter">VOTER</a>
                 
             </div>
            <div class="btn-jeux">
-            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper" target="_top">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
+               
+               <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
+               
+                <a target="_parent" href="http://www.stackoverflow.com">Stack Overflow</a>
+               
             </div>
         </article>
         <section class="classement">
