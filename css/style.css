@@ -489,9 +489,9 @@ a, a:hover, a:link, a:visited, a:active {
 /* STYLE UPLOAD PROFIL */
 .js .image-profil .input-file-container {
     position: relative;
-    width: 36.3%;
+    width: 100%;
     float: left;
-    margin: 1.5% 1.85%;
+    margin: 0%;
     text-align: center;
 }
 .js .image-profil .input-file-trigger {
