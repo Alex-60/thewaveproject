@@ -48,7 +48,8 @@ use Facebook\HttpClients\FacebookHttpable;
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
-    <section>
+  
+    
             <body>
                 <?php if (!isset($_SESSION['FBID']) || isset($_SESSION['FBID']) ): ?>   
                     <div class="page-home">
@@ -90,5 +91,6 @@ use Facebook\HttpClients\FacebookHttpable;
     <?php endif ?>
     
         </body>
-    </section>    
+ 
+    
 </html>
