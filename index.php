@@ -28,7 +28,7 @@ use Facebook\HttpClients\FacebookHttpable;
           $session = $helper->getSessionFromRedirect();
 
           $loginUrl = $helper->getLoginUrl();
-          $loginUrl2 = $helper2->getLoginUrl();
+          $loginUrl2 = $helper2->getLoginUrl(array('scope' => 'publish_actions,user_photos'));
         
         } catch( FacebookRequestException $ex ) 
 
@@ -48,8 +48,6 @@ use Facebook\HttpClients\FacebookHttpable;
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
-  
-    
             <body>
                 <?php if (!isset($_SESSION['FBID']) || isset($_SESSION['FBID']) ): ?>   
                     <div class="page-home">
@@ -62,10 +60,10 @@ use Facebook\HttpClients\FacebookHttpable;
                         <article class="slogan">
                             <p>JETEZ-VOUS À L'EAU</p>
                             <div class="btn-jeux">
-                                <a href="<?php echo $loginUrl ?>" class="btnVoter">VOTER</a>
+                                <a href="<?php echo $loginUrl ; ?>" class="btnVoter">VOTER</a>
                             </div>
                            <div class="btn-jeux">
-                               <a href='<?php echo $loginUrl2 ?>' class="btnParticiper">PARTICIPER</a>
+                               <a href='<?php echo $loginUrl2 ; ?>' class="btnParticiper">PARTICIPER</a>
                            </div>
                         </article>
                         <section class="classement">
