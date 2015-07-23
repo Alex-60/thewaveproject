@@ -154,6 +154,10 @@
                 
                         $response = $request->execute();
                         $result = $response->getGraphObject()->asArray();
+                           
+                           var_dump($result);
+                           
+                           die();
                        
                         $photo_base = $result['data'][0]->picture;
                            
@@ -172,11 +176,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
                        }
    
                    }
-                 
-                 echo $_SESSION['imageuser'];
-                 
-                 die();
-                 
+ 
                  //header("Location: fbconfig-profil.php"); 
                  
                  $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
