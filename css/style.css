@@ -302,7 +302,7 @@ body{
     display: block;
     width: 137px;
 }
-.btnParticiper:hover, .btnVoter:hover{
+.btnParticiper:hover, .btnVoter:hover, .btnParticiper2:hover{
     background: #FFF;
     color: #3B5998;
 }
