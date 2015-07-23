@@ -5,7 +5,17 @@
 //session_start(); 
 
 
-require 'fbconfig.php';
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookHttpable;
 
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
