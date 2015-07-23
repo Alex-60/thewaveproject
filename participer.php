@@ -72,13 +72,7 @@
  </body>
 </html> -->
 
-      <form enctype="multipart/form-data" action="" method="POST">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
-            <input type="submit" name="send" value="Send File" />
-        </form>
+
     
     
     <?php 
@@ -240,9 +234,23 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
         <section class="content">
 <!--           <article class="my-photo">-->
                <article class="input-file-container">
-                    <input class="input-file" id="my-file" type="file">
-                    <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
-                    <p class="file-return"></p>
+                    <form enctype="multipart/form-data" action="" method="POST">
+                        <input class="input-file" id="my-file" name="userfile" type="file">
+                        <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
+                        <input class="file-return" name="userfile" type="file" />
+                        <p class="file-return"></p>
+                        <input type="submit" name="send" value="Send File" />
+                   </form>
+                   
+<!--                         <form enctype="multipart/form-data" action="" method="POST">-->
+                            <!-- MAX_FILE_SIZE must precede the file input field -->
+<!--                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />-->
+                            <!-- Name of input element determines name in $_FILES array -->
+<!--
+                            Send this file: <input name="userfile" type="file" />
+                            <input type="submit" name="send" value="Send File" />
+                        </form>
+-->
                 </article>
 <!--
                <div class="bloc-photo-upload">
