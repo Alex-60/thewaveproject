@@ -44,7 +44,7 @@
     <title>Participez au concours</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="js/dnd.js"></script>
+    
 
     
     <script>(function(d, s, id) {
@@ -67,9 +67,6 @@
         
              if (isset($_POST['send']))  
                     {
-
-
-
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
@@ -105,156 +102,79 @@
               
                  
                  
-                   foreach ($user['data'] as $key => $value) 
-                    {
-                       if($value->name == "The Wave Project Photos")
-                           
-                       {
-                           $id_album = $value->id;
-                            $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
-                            $response = $request->execute();
-                            $result = $response->getGraphObject()->asArray();
-                            $photo_base = $result['data'][0]->picture;
-                            $_SESSION['imageuser'] = $photo_base;
-                           
-$dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                            
-                                         
-                    $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base','NOW()')");
-                           
-                  
-                       }
-   
-                   }
-                 
-              
-                 
-                 $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
-                 
-                $loginUrl = $helper->getLoginUrl();
-                 
-                 header("Location: $loginUrl");
-                 
-
-                    }
-    }
-   
-
-    ?>
-    
-
-    
-    <div class="page-jeParticipe">
-        <header class="header">
-            <h1>GRAND JEU CONCOURS</h1>
-            <p>du 1er Juin au 31 Juillet 2015</p>
-            <img src="img/logo.png" alt="logo">
-            <h2>Envoyer votre plus belle photos</h2>
-        </header>
-        
-        <section class="content">
-<!--           <article class="my-photo">-->
-               <article class="input-file-container">
-                    <form enctype="multipart/form-data" action="" method="POST">
-                        <input class="input-file" id="my-file" name="userfile" type="file">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                        <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
-<!--                        <input class="file-return" name="userfile" type="file" />-->
-                        <p class="file-return" name="userfile"></p>
-                        <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
-                   </form>
-                   
-<!--                         <form enctype="multipart/form-data" action="" method="POST">-->
-                            <!-- MAX_FILE_SIZE must precede the file input field -->
-<!--                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />-->
-                            <!-- Name of input element determines name in $_FILES array -->
-<!--
-                            Send this file: <input name="userfile" type="file" />
-                            <input type="submit" name="send" value="Send File" />
-                        </form>
--->
-                </article>
-<!--
-               <div class="bloc-photo-upload">
-                   <div id="cadre" dropzone="copy">
-				        <p>DEPOSEZ VOS PHOTOS ICI</p>
-                        <h2>+</h2><br>
-                   </div>
-               </div>
--->
-<!--           </article>-->
-            
-                     <?php
-        
-                   $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
-                        $result2 = pg_query($dbconn3, "SELECT * FROM photo");
-                    
-                        while ($row2 = pg_fetch_row($result2)) 
+                           foreach ($user['data'] as $key => $value) 
                             {
-                ?>
-         
-            <article class="participants">
-                
-       
-                
-                <div class="img-participants">
-                <?php
-                
-                echo "<img src='$row2[0]'/>";      
-      
-                ?>
-                </div>
+                               if($value->name == "The Wave Project Photos")
 
-          
-             
-                
-                <div class="btn-jaime fb-like" data-href="<?php echo $row2[0] ;?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
+                               {
+                                   $id_album = $value->id;
+                                    $request = new FacebookRequest($session,'GET',"/$id_album/photos?fields=picture,updated_time");
+                                    $response = $request->execute();
+                                    $result = $response->getGraphObject()->asArray();
+                                    $photo_base = $result['data'][0]->picture;
+                                    $_SESSION['imageuser'] = $photo_base;
 
-            </article>
-                <?
-    }
-?>
-            
-            
-            
-            
-        </section>
-    </div>
-    <script src="js/scriptCSS.js"></script>
-    <script>
-//        var btnJaime = document.querySelectorAll('.btn-jaime');
-//        for(var i=0, n=btnJaime.length;i<n;i++){
-//            btnJaime[i].addEventListener("click", changeEtat);
-//        }
-//        function changeEtat(){
-//            this.classList.add('btnJaimeClic');
-//        }
-        // ajout de la classe JS à HTML
-        document.querySelector("html").classList.add('js');
+        $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
 
-        // initialisation des variables
-        var fileInput  = document.querySelector( ".input-file" ),  
-            button     = document.querySelector( ".input-file-trigger" ),
-            the_return = document.querySelector(".file-return");
 
-        // action lorsque la "barre d'espace" ou "Entrée" est pressée
-        button.addEventListener( "keydown", function( event ) {
-            if ( event.keyCode == 13 || event.keyCode == 32 ) {
-                fileInput.focus();
+                                $result3 = pg_query($dbconn3, "INSERT INTO photo VALUES ('$photo_base','NOW()')");
+
+
+                               }
+
+                           }
+                 
+                        $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/profil.php');
+                        $loginUrl = $helper->getLoginUrl();
+                        header("Location: $loginUrl");
+  
+                    }
             }
-        });
+   
+    ?>
+    <div class="page-jeParticipe">
+                <header class="header">
+                    <h1>GRAND JEU CONCOURS</h1>
+                    <p>du 1er Juin au 31 Juillet 2015</p>
+                    <img src="img/logo.png" alt="logo">
+                    <h2>Envoyer votre plus belle photos</h2>
+                </header>
+        
+                <section class="content">
+        <!--           <article class="my-photo">-->
+                       <article class="input-file-container">
+                            <form enctype="multipart/form-data" action="" method="POST">
+                                <input class="input-file" id="my-file" name="userfile" type="file">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                                <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
+        <!--                        <input class="file-return" name="userfile" type="file" />-->
+                                <p class="file-return" name="userfile"></p>
+                                <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
+                           </form>   
+                        </article>
+                             <?php
 
-        // action lorsque le label est cliqué
-        button.addEventListener( "click", function( event ) {
-           fileInput.focus();
-           return false;
-        });
+                           $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 dbname=dfhf24ft89btrp user=iclwqstdcanbnn password=VdN3cktdfKZZzPnasW4IxrghX6");
+                                $result2 = pg_query($dbconn3, "SELECT * FROM photo");
 
-        // affiche un retour visuel dès que input:file change
-        fileInput.addEventListener( "change", function( event ) {  
-            the_return.innerHTML = this.value;  
-        });
-    </script>
+                                while ($row2 = pg_fetch_row($result2)) 
+                                    {
+                                        ?>
+                                            <article class="participants">
+                                                <div class="img-participants">
+                                                    <?php
+                                                        echo "<img src='$row2[0]'/>";      
+                                                    ?>
+                                                </div>
+                                                <div class="btn-jaime fb-like" data-href="<?php echo $row2[0];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">J'aime</div>
+                                            </article>
+                                        <?
+                                    }
+        ?>
+                </section>
+    </div>
+     <script src="js/script.js"></script>
+
 </body>
 </html>
 
