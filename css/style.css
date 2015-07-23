@@ -416,13 +416,13 @@ a, a:hover, a:link, a:visited, a:active {
 /* styles de base si JS est activé */
         .js .input-file-container {
             position: relative;
-            width: 225px;
+            width: 36.3%;
             float: left;
             margin: 1.5% 1.85%;
         }
         .js .input-file-trigger {
             display: block;
-            padding: 123px 14px 123px 14px;
+            padding: 166px 14px 166px 14px;
             background: #FFF;
             color: #444;
             font-size: 1em;
@@ -443,8 +443,7 @@ a, a:hover, a:link, a:visited, a:active {
         .js .input-file:hover + .input-file-trigger,
         .js .input-file:focus + .input-file-trigger,
         .js .input-file-trigger:hover,
-        .js .input-file-trigger:focus, 
-        .file-return:hover{
+        .js .input-file-trigger:focus{
           background: #22A7F0;
           color: #FFF;
         }
@@ -465,7 +464,7 @@ a, a:hover, a:link, a:visited, a:active {
         /* on complète l'information d'un contenu textuel
            uniquement lorsque le paragraphe n'est pas vide */
         .js .file-return:not(:empty):before {
-          content: "Selected file: ";
+          content: "Photo : ";
           font-style: normal;
           font-weight: normal;
         }
