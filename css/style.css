@@ -137,10 +137,11 @@ footer{
 /*---------------------------- Style de la page profils ----------------------------------------- */
 
 .profils{
-    height: 210px;
-    width: 96%;
-    margin: 0 auto;
     background: white;
+    float: left;
+    height: 210px;
+    margin: 0 auto 0 14px;
+    width: 94%;
 }
 .profils h3{
     font-size: 25px;
@@ -182,7 +183,7 @@ footer{
     float: left;
 }
 .reseau-profil {
-    margin: 2.5% auto;
+    margin: 90px auto;
     width: 45%;
     float: left;
 }
