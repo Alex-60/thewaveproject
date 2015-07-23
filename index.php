@@ -31,8 +31,8 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php&output=embed');
-    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php&output=embed');
+    $helper = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/voter.php');
+    $helper2 = new FacebookRedirectLoginHelper('https://thewave.herokuapp.com/participer.php');
 try 
 {
   $session = $helper->getSessionFromRedirect();
@@ -75,11 +75,11 @@ try
         <article class="slogan">
             <p>JETEZ-VOUS À L'EAU</p>
             <div class="btn-jeux">
-            <a href="<?php echo $loginUrl ;?>" class="btnVoter">VOTER</a>
+            <a href="<?php echo $loginUrl ;?>" class="btnVoter" target="_top">VOTER</a>
                 
             </div>
            <div class="btn-jeux">
-            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
+            <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper" target="_top">PARTICIPER</a>
             </div>
         </article>
         <section class="classement">
