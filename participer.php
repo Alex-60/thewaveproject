@@ -89,9 +89,7 @@
              if (isset($_POST['send']))  
                     {
                  
-                 echo "yes";
-                 
-                 die();
+              
                                 // init app with app id and secret
                                     FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
                                 // login helper with redirect_uri
@@ -109,9 +107,7 @@
                                 }
  
                                 $filename3 = $_FILES['userfile']['tmp_name']; 
-                
-                              
-                 
+
                                  $link2=$filename3;
                  
                                 $response = (new FacebookRequest($session, "POST", '/me/photos', array(
@@ -125,10 +121,12 @@
                                 //header("Location: ".$loginUrl);
                  
 
-				$request_user = new FacebookRequest( $session,"GET","/me/albums");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject()->asArray();
-                 
+                                    $request_user = new FacebookRequest( $session,"GET","/me/albums");
+                                    $request_user_executed = $request_user->execute();
+                                    $user = $request_user_executed->getGraphObject()->asArray();
+                                    
+                                    var_dump($user);
+                                    die();
               
                  
                  
