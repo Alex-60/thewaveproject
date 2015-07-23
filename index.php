@@ -83,7 +83,7 @@ try
                
                <a href='<?php echo $loginUrl2 ;?>' class="btnParticiper">PARTICIPER</a>
                
-                <a target="_parent" href="http://www.stackoverflow.com">Stack Overflow</a>
+               
                
             </div>
         </article>
