@@ -64,13 +64,13 @@
 <body>
 
 
+<!--
       <form enctype="multipart/form-data" action="" method="POST">
-            <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-            <!-- Name of input element determines name in $_FILES array -->
-            Send this file: <input name="userfile" type="file" />`
+            Send this file: <input name="userfile" type="file" />
             <input type="submit" name="send" value="Send File" />
         </form>
+-->
     
     
     <?php 
@@ -188,9 +188,16 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
         <section class="content">
             <article class="profils">
                 <article class="image-profil">
-                    <div class="modifier-img">
-                    
-                     <img src="<?php echo $_SESSION['imageuser'];?>">
+                    <div class="modifier-img input-file-container">
+                        <form enctype="multipart/form-data" action="" method="POST">
+                            <input class="input-file" id="my-file" name="userfile" type="file">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                            <label for="my-file" class="input-file-trigger" tabindex="0">Ajouter une photo...</label>
+                            <p class="file-return" name="userfile"></p>
+                            <img src="<?php echo $_SESSION['imageuser'];?>">
+                            <input class="btn-envoyer" type="submit" name="send" value="Envoyer" />
+                       </form>
+                     
 
                     </div>
                 </article>
@@ -224,7 +231,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
 ?>    
         </section>
     </div>
-    <script src="js/scriptCSS.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
