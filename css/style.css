@@ -410,6 +410,7 @@ a, a:hover, a:link, a:visited, a:active {
 .btn-jaime{
     text-align: center !important;
     width: 120px;
+    margin-top: 10px;
     filter: alpha(opacity=60);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -426,7 +427,7 @@ a, a:hover, a:link, a:visited, a:active {
     cursor:pointer;
 }
 .btn-envoyer:hover{
-    background-color: blue;
+    background-color: #22A7F0;
     color: #fff;
 }
 
