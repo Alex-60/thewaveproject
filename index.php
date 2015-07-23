@@ -5,7 +5,7 @@
 //session_start(); 
 
 
-include('fbconfig.php');
+require 'fbconfig.php';
 
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '767304380051847','7f0e4cac931818f7f7dc86d722dd5e0e' );
