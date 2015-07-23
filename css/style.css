@@ -336,12 +336,12 @@ a, a:hover, a:link, a:visited, a:active {
     margin: 1.5% 1.85%;
 }
 .img-participants{
-    width: 120px;
     height: 120px;
-    /*overflow: hidden;*/
+    overflow: hidden;
+    width: 120px;
 }
 .img-participants img{
-    max-height: 120px;
+    height: 120px;
 }
 .participants h3{
     font-size: 14px;
