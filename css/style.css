@@ -327,7 +327,8 @@ a, a:hover, a:link, a:visited, a:active {
     background: rgba(255,255,255,0.6);
     float: left;
     margin-top: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .participants{
     width: 118px;
