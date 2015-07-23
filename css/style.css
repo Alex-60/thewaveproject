@@ -152,30 +152,19 @@ footer{
     width: 25%;
     height: 190px;
     background: rgba(0,0,0,0.6);
-    margin: 10px 13%;
+    margin: 10px 6% 10px 13%;
     float: left;
 }
 .modifier-img{
-/*
-    width: 100%;
-    height: 190px;
-    float: left;
-    border:1px black dashed;
-*/
-    
-
     text-align: center;
 }
-/*
-.modifier-img > h3 {
-    font-size: 20px;
-    margin: 1.5%;
+.imgUtil {
+    float: left;
+    height: 120px;
+    margin-top: 45px;
+    overflow: hidden;
+    width: 120px;
 }
-.modifier-img h2{
-    font-size: 90px;
-    margin: 3%;
-}
-*/
 .classement-profils{
     width: auto;
     color: #2BA2E6;
@@ -190,7 +179,7 @@ footer{
 }
 .reseau-profil {
     margin: 90px auto;
-    width: 45%;
+    width: 15%;
     float: left;
 }
 .reseau-profil .like, .reseau-profil .partage{
@@ -498,14 +487,14 @@ a, a:hover, a:link, a:visited, a:active {
 
 
 /* STYLE UPLOAD PROFIL */
-.js .image-profil .input-file-container {
+.js .modifier-img .input-file-container {
     position: relative;
-    width: 100%;
+    width: 36.3%;
     float: left;
-    margin: 0;
+    margin: 1.5% 1.85%;
     text-align: center;
 }
-.js .image-profil .input-file-trigger {
+.js .modifier-img .input-file-trigger {
     display: block;
     padding: 87px 14px 87px 14px;
     background: #FFF;
@@ -515,7 +504,7 @@ a, a:hover, a:link, a:visited, a:active {
     cursor: pointer;
     border: 2px dashed #ADB3BB;
 }
-.js .image-profil .input-file {
+.js .modifier-img .input-file {
     position: absolute;
     top: 0; left: 0;
     width: 225px;
@@ -534,7 +523,7 @@ a, a:hover, a:link, a:visited, a:active {
 }
 
 /* styles du retour visuel */
-  .image-profil .file-return {
+ .modifier-img .file-return {
     margin-left: 15px !important;
     margin-top: -100px !important;
 }
