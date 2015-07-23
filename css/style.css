@@ -291,6 +291,11 @@ body{
     padding: 12px;
     font-weight: 100;
 }
+.btnParticiper2{
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+}
 .btnParticiper:hover, .btnVoter:hover{
     background: #FFF;
     color: #3B5998;

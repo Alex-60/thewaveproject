@@ -81,7 +81,7 @@ try
             <h1>GRAND JEU CONCOURS</h1>
             <p>du 1er Juin au 31 Juillet 2015</p>
             <img src="img/logo.png" alt="logo">
-            <a class="btnParticiper" href="<?php echo $loginUrl; ?>">PARTICIPER</a>
+            <a class="btnParticiper2" href="<?php echo $loginUrl; ?>">PARTICIPER</a>
             
  
             <h2>Voter pour la meilleure photo</h2>
