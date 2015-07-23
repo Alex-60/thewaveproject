@@ -188,7 +188,7 @@ $dbconn3 = pg_connect("host=ec2-54-83-25-238.compute-1.amazonaws.com port=5432 d
             <article class="profils">
                 <article class="image-profil">
                     <div class="modifier-img">
-                    <?php echo $_SESSION['imageuser'];?>
+                    
                      <img src="<?php echo $_SESSION['imageuser'];?>">
 
                     </div>
