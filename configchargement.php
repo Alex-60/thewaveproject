@@ -2,7 +2,7 @@
 
     session_start();
 
-        require_once 'autoload.php';
+        require 'autoload.php';
 
         use Facebook\FacebookSession;
         use Facebook\FacebookRedirectLoginHelper;
